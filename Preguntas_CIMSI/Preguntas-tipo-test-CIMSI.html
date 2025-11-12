@@ -4,7 +4,7 @@
   <meta name="google-adsense-account" content="ca-pub-4549916057843860">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tester ITIL/Cloud - Estudio y Examen</title>
+  <title>Tester CIMSI/PD - Estudio y Examen</title>
   <style>
     :root { --accent:#2563eb; --success:#16a34a; --danger:#dc2626; --muted:#6b7280; }
     html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;background:#0f172a;color:#e6eef8}
@@ -35,10 +35,42 @@
       .card{padding:12px}.controls{gap:6px}.enunciado{min-height:100px;font-size:14px}
       .opt{padding:8px;font-size:14px}.footer{flex-direction:column;align-items:flex-start}
     }
+
+    /* Pantalla de selección de asignatura */
+    .landing{
+      position:fixed; inset:0; display:grid; place-items:center; z-index:9999;
+      background:radial-gradient(1200px 600px at 50% -10%, rgba(37,99,235,.15), transparent), #0b1220;
+      padding:24px;
+    }
+    .landing .box{max-width:900px;width:100%;text-align:center}
+    .landing h2{margin:0 0 16px 0; font-size:28px}
+    .landing p{margin:0 0 24px 0; color:var(--muted)}
+    .landing .grid{display:grid; gap:16px; grid-template-columns:1fr 1fr;}
+    .bigbtn{
+      border:1px solid #1a2742; background:linear-gradient(180deg,#0e1b3a,#0b152c);
+      padding:28px 20px; border-radius:16px; font-size:22px; cursor:pointer;
+      transition:transform .05s ease, box-shadow .15s ease, border-color .2s ease;
+      box-shadow:0 10px 24px rgba(2,6,23,.45);
+    }
+    .bigbtn:hover{transform:translateY(-1px); border-color:#274a8f}
+    .hidden{display:none}
   </style>
 </head>
 <body>
-  <div class="app">
+  <!-- Pantalla de selección -->
+  <div id="landing" class="landing">
+    <div class="box">
+      <h2>¿Qué asignatura quieres estudiar?</h2>
+      <p>Elige una y te llevamos al generador de preguntas.</p>
+      <div class="grid">
+        <button class="bigbtn" id="btnITIL">🧩 CIMSI</button>
+        <button class="bigbtn" id="btnPD">📘 PD</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- App del generador -->
+  <div id="app" class="app hidden">
     <div class="card main">
       <header>
         <h1 id="headerTitle">Sin preguntas cargadas</h1>
@@ -50,10 +82,12 @@
           <button id="checkBtn" title="Comprobar">Comprobar</button>
           <button id="doubtBtn" title="Marcar/Demarcar como dudosa">★ Dudosa</button>
           <button id="examBtn" style="background:#f59e0b">Iniciar Examen (20)</button>
+          <button id="regenPDBtn" class="ghost" style="display:none">Generar PD</button>
+          <button id="changeSubject" class="ghost" title="Volver a elegir asignatura">Cambiar asignatura</button>
         </div>
       </header>
 
-      <div id="enunciado" class="enunciado">Cargue un JSON con preguntas (botón “Intentar cargar…” o “Carga manual”).</div>
+      <div id="enunciado" class="enunciado">Selecciona una asignatura para cargar preguntas automáticamente, o usa “Carga manual”.</div>
       <div class="opts" id="opts"></div>
 
       <div class="footer">
@@ -82,8 +116,9 @@
       </div>
 
       <div class="card" style="text-align:center">
-        <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Carga automática (GitHub Pages)</div>
-        <button id="tryAuto">Intentar cargar preguntas_estudio.json</button>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Carga automática</div>
+        <button id="tryAuto">Intentar cargar JSON de la asignatura</button>
+        <div id="autoHint" style="margin-top:6px;font-size:12px;color:var(--muted)"></div>
       </div>
 
       <div class="card" style="text-align:center">
@@ -94,6 +129,13 @@
   </div>
 
   <script>
+    // ========= Config de asignaturas =========
+    const SUBJECTS = {
+      ITIL: { label: 'ITIL', slug: 'itil' },
+      PD:   { label: 'PD',   slug: 'pd' }
+    };
+    let selectedSubject = null; // 'ITIL' o 'PD'
+
     // ========= Estado =========
     let allQuestions = [];
     let questions = [];
@@ -104,6 +146,8 @@
     let checkedQuestions = new Set();
 
     // ========= DOM =========
+    const landing = document.getElementById('landing');
+    const appEl = document.getElementById('app');
     const headerTitle = document.getElementById('headerTitle');
     const enunciado = document.getElementById('enunciado');
     const opts = document.getElementById('opts');
@@ -114,39 +158,174 @@
     const doubtsList = document.getElementById('doubtsList');
     const temaSelect = document.getElementById('temaSelect');
     const temaFilter = document.getElementById('temaFilter');
+    const tryAutoBtn = document.getElementById('tryAuto');
+    const autoHint = document.getElementById('autoHint');
+    const regenPDBtn = document.getElementById('regenPDBtn');
 
     const setStatus = (s) => statusText.textContent = s;
 
-    // ========= URL robusta para GitHub Pages =========
-    // Si estamos en *.github.io/<repo>/..., detecta el nombre del repo y arma la ruta absoluta.
-    (function(){
+    // ========= Utilidades de URL (GitHub Pages friendly) =========
+    function baseRoot(){
       const isPages = location.hostname.endsWith('github.io');
       const repoSegment = isPages ? location.pathname.split('/').filter(Boolean)[0] : '';
-      // Ajusta la ruta para entrar a la carpeta Preguntas_CIMSI
-      window.JSON_URL = `${location.origin}/${repoSegment ? repoSegment + '/' : ''}Preguntas_CIMSI/preguntas_estudio.json`;
-    })();
+      return `${location.origin}/${repoSegment ? repoSegment + '/' : ''}`;
+    }
+    // Candidatos de rutas para cada asignatura
+    function jsonCandidatesFor(subjectKey){
+      const root = baseRoot(); // ya maneja GitHub Pages /<repo>/
+      if (subjectKey === 'ITIL') {
+        return [
+          `${root}Preguntas_CIMSI/preguntas_estudioCIMSI.json`, // carpeta
+          `${root}preguntas_estudioCIMSI.json`                  // raíz (opcional)
+        ];
+      }
+      if (subjectKey === 'PD') {
+        return [
+          `${root}Preguntas_CIMSI/preguntas_estudioPD.json`,    // carpeta
+          `${root}preguntas_estudioPD.json`                     // raíz (opcional)
+        ];
+      }
+      return [];
+    }
 
-    // ========= Carga automática desde Pages =========
-    async function tryAutoLoad(){
-      try{
-        setStatus('Cargando preguntas_estudio.json…');
-        const r = await fetch(JSON_URL, { cache: 'no-store' });
-        if(!r.ok) throw new Error(`HTTP ${r.status} ${r.statusText} en ${JSON_URL}`);
-        const txt = (await r.text()).replace(/^\uFEFF/, '');  // quita BOM si lo hay
-        const data = JSON.parse(txt);
-        const arr = Array.isArray(data) ? data : (data.preguntas || []);
-        if(!Array.isArray(arr) || arr.length===0) throw new Error('JSON vacío o estructura inesperada');
+    // ========= Carga automática según asignatura =========
+    async function tryAutoLoadForSubject(subjectKey){
+      const candidates = jsonCandidatesFor(subjectKey);
+      autoHint.textContent = `Buscando en: ${candidates.map(c => c.replace(location.origin,'')).join('  •  ')}`;
+      for(const url of candidates){
+        try{
+          setStatus('Cargando: ' + url);
+          const r = await fetch(url, { cache: 'no-store' });
+          if(!r.ok) throw new Error(`HTTP ${r.status}`);
+          const txt = (await r.text()).replace(/^\uFEFF/, '');
+          const data = JSON.parse(txt);
+          const arr = Array.isArray(data) ? data : (data.preguntas || []);
+          if(!Array.isArray(arr) || arr.length===0) throw new Error('JSON vacío o estructura inesperada');
+          allQuestions = arr.map(q => ({...q}));
+          questions = allQuestions.slice();
+          populateTemas();
+          index = 0; modeExam=false; userAnswers={}; doubts=new Set(); checkedQuestions=new Set();
+          updateView();
+          setStatus('Banco cargado.');
+          return true;
+        }catch(e){
+          console.warn('No se pudo cargar en', url, e);
+        }
+      }
 
-        allQuestions = arr.map(q => ({...q}));
+      // Fallback: si es PD, generamos preguntas automáticamente
+      if(subjectKey === 'PD'){
+        allQuestions = generatePDQuestions();   // (puedes personalizar estas preguntas)
         questions = allQuestions.slice();
         populateTemas();
         index = 0; modeExam=false; userAnswers={}; doubts=new Set(); checkedQuestions=new Set();
-        updateView(); setStatus('Banco cargado.');
-      }catch(e){
-        console.error('AUTOLOAD ERROR:', e);
-        setStatus('No se pudo cargar: ' + e.message);
-        alert('Error cargando preguntas_estudio.json: ' + e.message);
+        updateView();
+        setStatus('Banco generado para PD.');
+        autoHint.textContent = 'Usando preguntas generadas (no se encontró JSON de PD).';
+        return true;
       }
+
+      setStatus('No se pudo cargar automáticamente ningún JSON.');
+      alert('No se pudo cargar automáticamente el JSON de la asignatura. Puedes usar "Carga manual".');
+      return false;
+    }
+
+    // ========= Generador de preguntas PD (fallback simple) =========
+    // Ahora mismo es el mismo generador de ejemplo que usábamos para Cloud.
+    // Si quieres que PD tenga su propio temario, dímelo y lo adapto.
+    function generatePDQuestions(){
+      const providers = [
+        { name:'AWS', tema:'AWS', sv:{
+          object:'Amazon S3', vm:'Amazon EC2', sql:'Amazon RDS', k8s:'Amazon EKS', container:'Amazon ECS',
+          functions:'AWS Lambda', cdn:'Amazon CloudFront', monitoring:'Amazon CloudWatch',
+          queue:'Amazon SQS', nosql:'Amazon DynamoDB', iac:'AWS CloudFormation', identity:'AWS IAM'
+        }},
+        { name:'Azure', tema:'Azure', sv:{
+          object:'Azure Blob Storage', vm:'Azure Virtual Machines', sql:'Azure SQL Database', k8s:'Azure Kubernetes Service (AKS)', container:'Azure Container Instances',
+          functions:'Azure Functions', cdn:'Azure CDN', monitoring:'Azure Monitor',
+          queue:'Azure Queue Storage', nosql:'Azure Cosmos DB', iac:'Azure Resource Manager (ARM/Bicep)', identity:'Azure Active Directory (Entra ID)'
+        }},
+        { name:'GCP', tema:'GCP', sv:{
+          object:'Google Cloud Storage', vm:'Compute Engine', sql:'Cloud SQL', k8s:'Google Kubernetes Engine (GKE)', container:'Cloud Run',
+          functions:'Cloud Functions', cdn:'Cloud CDN', monitoring:'Cloud Monitoring',
+          queue:'Pub/Sub', nosql:'Firestore', iac:'Deployment Manager', identity:'Cloud IAM'
+        }}
+      ];
+
+      const pools = {
+        object:['Amazon S3','Azure Blob Storage','Google Cloud Storage','Amazon EBS','Azure Files','EFS'],
+        vm:['Amazon EC2','Azure Virtual Machines','Compute Engine','AWS Fargate','App Engine','App Service'],
+        sql:['Amazon RDS','Azure SQL Database','Cloud SQL','Cloud Spanner','BigQuery','DynamoDB'],
+        k8s:['Amazon EKS','Azure Kubernetes Service (AKS)','Google Kubernetes Engine (GKE)','Amazon ECS','App Service','Cloud Run'],
+        functions:['AWS Lambda','Azure Functions','Cloud Functions','AWS Fargate','Cloud Run','App Service'],
+        cdn:['Amazon CloudFront','Azure CDN','Cloud CDN','Azure Front Door','S3 Transfer Acceleration','Cloudflare'],
+        monitoring:['Amazon CloudWatch','Azure Monitor','Cloud Monitoring','Datadog','New Relic','Prometheus'],
+        queue:['Amazon SQS','Azure Queue Storage','Pub/Sub','Amazon Kinesis','Azure Service Bus','RabbitMQ'],
+        nosql:['Amazon DynamoDB','Azure Cosmos DB','Firestore','Bigtable','Redis','MongoDB Atlas'],
+        iac:['AWS CloudFormation','Azure Resource Manager (ARM/Bicep)','Deployment Manager','Terraform','Pulumi','Ansible'],
+        identity:['AWS IAM','Azure Active Directory (Entra ID)','Cloud IAM','Okta','Auth0','Keycloak']
+      };
+
+      const wrong3 = (correct, arr) => {
+        const pool = arr.filter(x => x !== correct);
+        const pick = [];
+        while(pick.length<3 && pool.length){
+          const i = Math.floor(Math.random()*pool.length);
+          pick.push(pool.splice(i,1)[0]);
+        }
+        return pick;
+      };
+
+      const qprov = (p, field, texto) => ({
+        tema: p.tema,
+        enunciado: texto,
+        opciones: [p.sv[field], ...wrong3(p.sv[field], pools[field])],
+        correcta: 0
+      });
+
+      let out = [];
+      providers.forEach(p=>{
+        out.push(qprov(p,'object',`[PD] ¿Qué servicio de ${p.name} es almacenamiento de objetos?`));
+        out.push(qprov(p,'vm',`[PD] ¿Qué servicio de ${p.name} provee máquinas virtuales?`));
+        out.push(qprov(p,'sql',`[PD] ¿Qué servicio administrado de ${p.name} ofrece bases de datos relacionales?`));
+        out.push(qprov(p,'nosql',`[PD] ¿Qué servicio de ${p.name} es NoSQL clave-valor/documentos?`));
+        out.push(qprov(p,'functions',`[PD] ¿Qué servicio de ${p.name} permite ejecutar funciones sin servidor?`));
+        out.push(qprov(p,'k8s',`[PD] ¿Cuál es el servicio gestionado de Kubernetes en ${p.name}?`));
+        out.push(qprov(p,'cdn',`[PD] ¿Qué servicio de ${p.name} es una red de entrega de contenido (CDN)?`));
+        out.push(qprov(p,'monitoring',`[PD] ¿Qué servicio de ${p.name} se usa para monitorización y *logging*?`));
+        out.push(qprov(p,'queue',`[PD] ¿Qué servicio de ${p.name} ofrece colas de mensajería?`));
+        out.push(qprov(p,'iac',`[PD] ¿Qué solución nativa de ${p.name} es “infraestructura como código”?`));
+        out.push(qprov(p,'identity',`[PD] ¿Qué servicio de ${p.name} gestiona identidades y permisos?`));
+      });
+
+      const conceptos = [
+        {
+          tema:'Conceptos PD',
+          enunciado:'[PD] ¿Cuál describe mejor el modelo de “responsabilidad compartida”?',
+          opciones:[
+            'El proveedor asegura la seguridad de la nube; el cliente, la seguridad en la nube (configuraciones, datos, identidades).',
+            'El proveedor es 100% responsable de todo.',
+            'El cliente es 100% responsable de todo.',
+            'La responsabilidad se delega a un tercero por completo.'
+          ],
+          correcta: 0
+        },
+        {
+          tema:'Conceptos PD',
+          enunciado:'[PD] ¿Qué es una Zona de Disponibilidad (AZ)?',
+          opciones:[
+            'Uno o más centros de datos aislados dentro de una misma región.',
+            'Una ciudad donde hay clientes.',
+            'Una VPC que segmenta redes privadas.',
+            'Un grupo de cuentas bajo una organización.'
+          ],
+          correcta: 0
+        }
+      ];
+
+      out = out.concat(conceptos);
+      out.sort(()=>Math.random()-0.5);
+      return out;
     }
 
     // ========= Carga manual desde archivo =========
@@ -170,7 +349,6 @@
     });
 
     // ========= Controles =========
-    document.getElementById('tryAuto').addEventListener('click', tryAutoLoad);
     document.getElementById('prevBtn').addEventListener('click', ()=>{ if(index>0){ index--; updateView() } });
     document.getElementById('nextBtn').addEventListener('click', ()=>{ if(index<questions.length-1){ index++; updateView() } });
     document.getElementById('doubtBtn').addEventListener('click', ()=>{ toggleDoubt(); });
@@ -178,21 +356,72 @@
     document.getElementById('examBtn').addEventListener('click', ()=>{ startExam(20) });
     temaFilter.addEventListener('change', ()=>{ filterByTema(temaFilter.value=='Todos'?null:temaFilter.value) });
     temaSelect.addEventListener('change', ()=>{ filterByTema(temaSelect.value=='Todos'?null:temaSelect.value) });
+    tryAutoBtn.addEventListener('click', ()=> {
+      if(!selectedSubject){ alert('Primero elige una asignatura.'); return; }
+      tryAutoLoadForSubject(selectedSubject);
+    });
+    document.getElementById('changeSubject').addEventListener('click', ()=>{
+      appEl.classList.add('hidden');
+      landing.classList.remove('hidden');
+      selectedSubject = null;
+      headerTitle.textContent = 'Sin preguntas cargadas';
+      enunciado.textContent = 'Selecciona una asignatura para empezar.';
+      autoHint.textContent = '';
+      regenPDBtn.style.display = 'none';
+    });
+    regenPDBtn.addEventListener('click', ()=>{
+      if(selectedSubject === 'PD'){
+        allQuestions = generatePDQuestions();
+        questions = allQuestions.slice();
+        populateTemas();
+        index = 0; modeExam=false; userAnswers={}; doubts=new Set(); checkedQuestions=new Set();
+        updateView();
+        setStatus('Banco PD regenerado.');
+      }
+    });
+
+    // Botones grandes de la pantalla de selección
+    document.getElementById('btnITIL').addEventListener('click', ()=> selectSubject('ITIL', true));
+    document.getElementById('btnPD').addEventListener('click', ()=> selectSubject('PD', true));
+
+    // Deep-link: ?asignatura=itil|pd
+    window.addEventListener('load', ()=>{
+      const p = new URLSearchParams(location.search);
+      const a = (p.get('asignatura')||'').toUpperCase();
+      if(a && SUBJECTS[a]) selectSubject(a, true);
+      else setStatus('Elige una asignatura para empezar');
+    });
+
+    // ========= Lógica de asignatura =========
+    function selectSubject(subjectKey, autoLoad=false){
+      selectedSubject = subjectKey;
+      landing.classList.add('hidden');
+      appEl.classList.remove('hidden');
+      document.title = `Tester ${SUBJECTS[subjectKey].label} - Estudio y Examen`;
+      headerTitle.textContent = `[${SUBJECTS[subjectKey].label}] Sin preguntas cargadas`;
+      autoHint.textContent = `Asignatura: ${SUBJECTS[subjectKey].label}`;
+      regenPDBtn.style.display = subjectKey === 'PD' ? 'inline-block' : 'none';
+      setStatus('Preparado');
+      if(autoLoad) tryAutoLoadForSubject(subjectKey);
+    }
 
     // ========= Utilidades UI =========
     function populateTemas(){
       const temas = ['Todos',...Array.from(new Set(allQuestions.map(q=>q.tema || 'Sin tema'))).sort()];
       temaSelect.innerHTML = temas.map(t=>`<option>${t}</option>`).join('');
       temaFilter.innerHTML = temaSelect.innerHTML;
+      document.getElementById('progressLabel').textContent = `0/${allQuestions.length}`;
     }
 
     function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]] } return a }
 
     function updateView(){
       if(questions.length===0){
-        headerTitle.textContent='Sin preguntas cargadas';
-        enunciado.textContent='Cargue un JSON con preguntas.';
-        opts.innerHTML=''; progressBar.style.width='0%'; return;
+        headerTitle.textContent=`[${selectedSubject? SUBJECTS[selectedSubject].label : '—'}] Sin preguntas cargadas`;
+        enunciado.textContent='Cargue un JSON con preguntas (botón “Intentar cargar…” o “Carga manual”).';
+        opts.innerHTML=''; progressBar.style.width='0%';
+        document.getElementById('progressLabel').textContent = `0/0`;
+        return;
       }
       const q = questions[index];
       const opciones = q.opciones.map((op,i)=>({texto:op,i}));
@@ -200,7 +429,7 @@
       q._opcionesMezcladas = mezcladas;
       q._correctaIndex = mezcladas.findIndex(op => op.i === q.correcta);
 
-      headerTitle.textContent = `${q.tema || 'Tema'} — Pregunta ${index+1}/${questions.length} [${modeExam? 'Examen':'Estudio'}]`;
+      headerTitle.textContent = `[${SUBJECTS[selectedSubject]?.label || '—'}] ${q.tema || 'Tema'} — Pregunta ${index+1}/${questions.length} [${modeExam? 'Examen':'Estudio'}]`;
       enunciado.textContent = q.enunciado;
       opts.innerHTML = '';
 
@@ -218,6 +447,7 @@
       feedback.textContent=''; solution.textContent='';
       const pct = Math.round(((index+1)/questions.length)*100);
       progressBar.style.width = pct + '%';
+      document.getElementById('progressLabel').textContent = `${index+1}/${questions.length}`;
       refreshDoubtsList();
       setStatus('Listo');
     }
@@ -270,9 +500,6 @@
       questions = [...allQuestions].sort(()=>Math.random()-0.5).slice(0,Math.min(num,allQuestions.length));
       index=0; updateView();
     }
-
-    // Intenta cargar automáticamente al abrir (funciona en GitHub Pages)
-    window.addEventListener('load', ()=>{ tryAutoLoad(); });
   </script>
 </body>
 </html>

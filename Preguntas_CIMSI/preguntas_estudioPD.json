@@ -1,0 +1,2402 @@
+[
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 1,
+    "enunciado": "¿Qué paradigma principal caracteriza a Haskell?",
+    "opciones": [
+      "Imperativo y orientado a objetos",
+      "Funcional puro y perezoso",
+      "Lógico y declarativo con backtracking",
+      "Orientado a componentes"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 2,
+    "enunciado": "¿Qué intérprete se usa comúnmente para ejecutar Haskell interactivamente?",
+    "opciones": [
+      "GHI",
+      "GCH",
+      "GHCi",
+      "HGCI"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 3,
+    "enunciado": "¿Qué significa 'evaluación perezosa' en Haskell?",
+    "opciones": [
+      "Evaluar expresiones tan pronto se escriben",
+      "Evaluar expresiones solo cuando su valor es necesario",
+      "Evaluar expresiones al final del programa",
+      "Nunca evaluar expresiones"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 4,
+    "enunciado": "¿Qué propiedad describe la 'transparencia referencial'?",
+    "opciones": [
+      "Misma entrada, mismo resultado, sin efectos secundarios",
+      "Variables reasignables",
+      "Paralelismo implícito",
+      "Ejecución determinista pero con efectos"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 5,
+    "enunciado": "¿Cuál es el resultado de 2 + 3 * 4 en Haskell?",
+    "opciones": [
+      "20",
+      "14",
+      "24",
+      "10"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 6,
+    "enunciado": "¿Cuál es el operador para concatenar listas?",
+    "opciones": [
+      "::",
+      "++",
+      ":",
+      "<>"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 7,
+    "enunciado": "¿Qué produce head [1,2,3]?",
+    "opciones": [
+      "[2,3]",
+      "1",
+      "3",
+      "Error"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 8,
+    "enunciado": "¿Qué hace take 3 [1,2,3,4,5]?",
+    "opciones": [
+      "[1,2,3]",
+      "[3,4,5]",
+      "[1,2]",
+      "[2,3,4]"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 9,
+    "enunciado": "¿Qué tipo devuelve length [1,2,3]?",
+    "opciones": [
+      "Integer",
+      "Double",
+      "Int",
+      "Bool"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 10,
+    "enunciado": "¿Qué ocurre con head []?",
+    "opciones": [
+      "Devuelve Nothing",
+      "Devuelve 0",
+      "Lanza una excepción en tiempo de ejecución",
+      "Devuelve []"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 11,
+    "enunciado": "¿Cómo se denota la aplicación de función en Haskell?",
+    "opciones": [
+      "Con paréntesis: f(x)",
+      "Con espacios: f x",
+      "Con ->: f -> x",
+      "Con usar *"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 12,
+    "enunciado": "¿Qué operador entero se usa para la división entera en Haskell?",
+    "opciones": [
+      "//",
+      "div",
+      "/",
+      ":%"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 13,
+    "enunciado": "¿De qué año es el 'Haskell Report' citado en el temario?",
+    "opciones": [
+      "1998",
+      "2003",
+      "2010",
+      "2016"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 14,
+    "enunciado": "¿Qué estructura básica de colección usa Haskell ampliamente?",
+    "opciones": [
+      "Arreglos mutables",
+      "Listas inmutables",
+      "Mapas mutables",
+      "Set mutables"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 15,
+    "enunciado": "¿Qué significa que Haskell sea de 'tipado estático'?",
+    "opciones": [
+      "Tipos se comprueban en ejecución",
+      "Tipos se comprueban en compilación",
+      "No hay tipos",
+      "Tipos opcionales"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 16,
+    "enunciado": "¿Qué hace reverse [1,2,3]?",
+    "opciones": [
+      "[3,2,1]",
+      "[1,2,3]",
+      "3",
+      "Error"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 17,
+    "enunciado": "¿Qué comando carga un archivo en GHCi?",
+    "opciones": [
+      ":load",
+      "load()",
+      ":l",
+      "open"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 18,
+    "enunciado": "¿Cuál es la precedencia de la aplicación de funciones respecto a operadores?",
+    "opciones": [
+      "Baja",
+      "Media",
+      "Máxima",
+      "No definida"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 19,
+    "enunciado": "¿Qué error produce 1 `div` 0?",
+    "opciones": [
+      "Ninguno",
+      "NaN",
+      "Excepción de división por cero",
+      "Devuelve 0"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 20,
+    "enunciado": "¿Qué es un 'guión Haskell' según el tema?",
+    "opciones": [
+      "Programa con extensión .hs con definiciones",
+      "Script bash para compilar Haskell",
+      "Plantilla HTML",
+      "Un REPL embebido"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 1,
+    "enunciado": "¿Qué es un 'tipo' en Haskell?",
+    "opciones": [
+      "Una colección de valores relacionados",
+      "Una variable con múltiples valores",
+      "Una función de alto orden",
+      "Una clase instanciable"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 2,
+    "enunciado": "¿Qué sistema usa Haskell para deducir tipos?",
+    "opciones": [
+      "Tipado dinámico",
+      "Inferencia de tipos",
+      "Anotaciones obligatorias",
+      "Duck typing"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 3,
+    "enunciado": "¿Cuál NO es un tipo básico predefinido?",
+    "opciones": [
+      "Bool",
+      "Int",
+      "Decimal",
+      "Char"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 4,
+    "enunciado": "¿Qué expresa el tipo de length?",
+    "opciones": [
+      "length :: [a] -> Int",
+      "length :: [Int] -> Int",
+      "length :: [a] -> a",
+      "length :: a -> Int"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 5,
+    "enunciado": "¿Qué significa 'polimorfismo' en Haskell?",
+    "opciones": [
+      "Una función que acepta varios tipos",
+      "Una clase abstracta",
+      "Una interfaz de E/S",
+      "Optimización de memoria"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 6,
+    "enunciado": "¿Qué clase incluye la igualdad (==)?",
+    "opciones": [
+      "Ord",
+      "Eq",
+      "Show",
+      "Read"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 7,
+    "enunciado": "¿Qué clase define el orden (<, <=, >, >=)?",
+    "opciones": [
+      "Show",
+      "Num",
+      "Ord",
+      "Eq"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 8,
+    "enunciado": "¿Qué hace show?",
+    "opciones": [
+      "Convierte String a valor",
+      "Convierte valor a String",
+      "Ordena listas",
+      "Parcializa funciones"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 9,
+    "enunciado": "En 'sum :: (Num a) => [a] -> a', ¿qué es '(Num a) =>'?",
+    "opciones": [
+      "Una implementación",
+      "Una restricción de clase",
+      "Un comentario",
+      "Un alias"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 10,
+    "enunciado": "¿Qué tipo tiene '5' sin sufijos?",
+    "opciones": [
+      "Int",
+      "(Num t) => t",
+      "Integer",
+      "Double"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 11,
+    "enunciado": "¿Qué es 'overloading' (sobrecarga) en Haskell?",
+    "opciones": [
+      "Varios valores para una variable",
+      "Una restricción de clase sobre variables de tipo",
+      "Compilar con optimizaciones",
+      "Múltiple herencia"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 12,
+    "enunciado": "¿Qué devuelve 'head :: [a] -> a'?",
+    "opciones": [
+      "Una lista",
+      "El primer elemento de una lista",
+      "Un booleano",
+      "El tamaño de una lista"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 13,
+    "enunciado": "¿Cuál es el error de '[’a’, True]'?",
+    "opciones": [
+      "Ninguno",
+      "Tipos inconsistentes en la lista",
+      "Falta una coma",
+      "Char debe ir entre comillas dobles"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 14,
+    "enunciado": "¿Qué hace 'zip :: [a] -> [b] -> [(a,b)]'?",
+    "opciones": [
+      "Intercambia elementos",
+      "Empareja dos listas",
+      "Fusiona sumando",
+      "Corta por el más largo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 15,
+    "enunciado": "¿Qué clase incluye la división entera 'div'?",
+    "opciones": [
+      "Fractional",
+      "Num",
+      "Integral",
+      "Real"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 16,
+    "enunciado": "¿Qué clase incluye la división real '/'?",
+    "opciones": [
+      "Fractional",
+      "Integral",
+      "Enum",
+      "Bounded"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 17,
+    "enunciado": "¿Qué significa que los nombres de tipos empiecen por mayúscula?",
+    "opciones": [
+      "Convención del lenguaje",
+      "Requisito sintáctico para tipos y constructores",
+      "Opcional",
+      "Solo en módulos"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 18,
+    "enunciado": "¿Qué hace 'read :: String -> a'?",
+    "opciones": [
+      "Evalúa expresiones Haskell",
+      "Convierte String a un valor del tipo indicado",
+      "Lee archivos",
+      "Convierte a String"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 19,
+    "enunciado": "¿Qué significa 'a' en 'length :: [a] -> Int'?",
+    "opciones": [
+      "Un tipo concreto",
+      "Una variable de tipo",
+      "Un sinónimo de Int",
+      "Un constructor"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 20,
+    "enunciado": "¿Qué es 'curryficación'?",
+    "opciones": [
+      "Optimización de listas",
+      "Convertir funciones de tupla a múltiples argumentos",
+      "Estrategia de evaluación",
+      "Polimorfismo paramétrico"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 1,
+    "enunciado": "¿Qué constructo permite definir variables auxiliares en una función?",
+    "opciones": [
+      "let-in",
+      "where",
+      "case-of",
+      "module"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 2,
+    "enunciado": "¿Qué forma NO es un condicional en Haskell?",
+    "opciones": [
+      "if-then-else",
+      "guardas",
+      "case-of",
+      "switch-case"
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 3,
+    "enunciado": "¿Qué error produce una definición con patrones no exhaustivos?",
+    "opciones": [
+      "Ninguno",
+      "non-exhaustive patterns",
+      "Out of memory",
+      "Ambiguous type variable"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 4,
+    "enunciado": "¿Qué patrón define una lista no vacía?",
+    "opciones": [
+      "[]",
+      "(x:xs)",
+      "(x,y)",
+      "{x:xs}"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 5,
+    "enunciado": "¿Qué hace 'otherwise' en guardas?",
+    "opciones": [
+      "Cierra la función",
+      "Actúa como caso por defecto (True)",
+      "Niega la condición",
+      "Lanza excepción"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 6,
+    "enunciado": "¿Qué diferencia hay entre notación prefija e infija?",
+    "opciones": [
+      "Ninguna",
+      "Infija solo para unarios",
+      "Binarias pueden usarse infijas con backticks o símbolos",
+      "Prefija requiere operadores"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 7,
+    "enunciado": "¿Qué define 'infixr 2 ||'?",
+    "opciones": [
+      "Asociatividad izquierda nivel 2",
+      "Asociatividad derecha nivel 2",
+      "Precedencia 9",
+      "Operador prefijo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 8,
+    "enunciado": "¿Qué función convierte de Int (Integral) a Num en 'fromIntegral'?",
+    "opciones": [
+      "Int -> Double",
+      "Integral a Num genérico",
+      "Num a Integral",
+      "Solo a Float"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 9,
+    "enunciado": "¿Qué instrucción evalúa patrones dentro de la expresión?",
+    "opciones": [
+      "case-of",
+      "where",
+      "import",
+      "module"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 10,
+    "enunciado": "En Haskell, ¿las funciones tienen por defecto mayor precedencia que operadores?",
+    "opciones": [
+      "Sí",
+      "No",
+      "Depende de GHCi",
+      "No definido"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 11,
+    "enunciado": "¿Qué hace QuickCheck en este tema?",
+    "opciones": [
+      "Compila módulos",
+      "Genera tests aleatorios para propiedades",
+      "Gestiona paquetes",
+      "Optimiza código"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 12,
+    "enunciado": "¿Qué define 'and''' _ _ = False' usando variable anónima '_'?",
+    "opciones": [
+      "Ignorar argumentos no usados",
+      "Capturar todos los valores",
+      "Crear un comodín tipado",
+      "Patrón estrictamente tipado"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 13,
+    "enunciado": "¿Qué patrón coincide con lista de exactamente dos elementos?",
+    "opciones": [
+      "[x,y]",
+      "(x,y)",
+      "(x:y:xs)",
+      "x:xs"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 14,
+    "enunciado": "¿Qué significa 'infixl 8 ~+'?",
+    "opciones": [
+      "Precedencia 8, asociatividad izquierda",
+      "Nivel 8, asociatividad derecha",
+      "Nivel 6, izquierda",
+      "Solo prefijo"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 15,
+    "enunciado": "¿Qué diferencia hay entre guardas e if-then-else?",
+    "opciones": [
+      "Ninguna",
+      "Guardas permiten múltiples condiciones ordenadas",
+      "if no puede anidarse",
+      "Guardas no permiten otherwise"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 16,
+    "enunciado": "¿Qué hace 'div 8 2 * 2' según precedencias?",
+    "opciones": [
+      "(div 8 2) * 2",
+      "div 8 (2*2)",
+      "Error",
+      "8/(2*2)"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 17,
+    "enunciado": "¿Cómo se lanza un error amigable en un patrón de lista vacía?",
+    "opciones": [
+      "throw \"msg\"",
+      "error \"mensaje\"",
+      "panic()",
+      "fail"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 18,
+    "enunciado": "¿Qué es 'equiparación de patrones'?",
+    "opciones": [
+      "Un tipo de clase",
+      "Seleccionar ecuación por forma de los argumentos",
+      "Coincidencia por igualdad",
+      "Inferencia de tipos"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 19,
+    "enunciado": "¿Qué constructo ayuda a agrupar definiciones locales para varias ecuaciones?",
+    "opciones": [
+      "where",
+      "let global",
+      "module",
+      "import"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 4 - Definición de funciones",
+    "qnum": 20,
+    "enunciado": "¿Qué hace 'signo n | n<0 = -1 | n==0 = 0 | otherwise = 1'?",
+    "opciones": [
+      "Devuelve el valor absoluto",
+      "Devuelve el signo del entero",
+      "Devuelve Bool",
+      "Devuelve Double"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 1,
+    "enunciado": "¿Qué forma general tiene una lista por comprensión?",
+    "opciones": [
+      "[expr | generadores, guardas]",
+      "[expr (generadores)]",
+      "list(expr for ...)",
+      "{expr | ...}"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 2,
+    "enunciado": "¿Qué hace el generador 'x <- [1..3]' en una comprensión?",
+    "opciones": [
+      "Filtra pares",
+      "Itera x sobre la lista",
+      "Declara x como entero",
+      "Concatena listas"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 3,
+    "enunciado": "¿Qué devuelve '[x^2 | x <- [2..5]]'?",
+    "opciones": [
+      "[2,3,4,5]",
+      "[4,9,16,25]",
+      "[2,4,6,8]",
+      "[5,6,7,8]"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 4,
+    "enunciado": "¿Qué hace la guarda 'even x' en una comprensión?",
+    "opciones": [
+      "Descarta x pares",
+      "Selecciona solo x pares",
+      "Trunca la lista",
+      "Invierte la lista"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 5,
+    "enunciado": "¿Qué hace 'zip xs ys'?",
+    "opciones": [
+      "Empareja elementos posición a posición",
+      "Concatena ys en xs",
+      "Ordena xs",
+      "Filtra duplicados"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 6,
+    "enunciado": "¿Qué construye 'posiciones xs = zip xs [1..length xs]'?",
+    "opciones": [
+      "Pares (posición, elemento)",
+      "Pares (elemento, posición)",
+      "Índices desde 0",
+      "Nada"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 7,
+    "enunciado": "¿Qué devuelve 'concat [[1,3],[2,5,6],[4,7]]'?",
+    "opciones": [
+      "[[1,3,2],[5,6,4,7]]",
+      "[1,3,2,5,6,4,7]",
+      "[[1,3],[2,5,6],[4,7]]",
+      "[1,2,3,4,5,6,7]"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 8,
+    "enunciado": "¿Se pueden usar varios generadores en una comprensión?",
+    "opciones": [
+      "No",
+      "Sí, separados por comas",
+      "Solo dos",
+      "Solo si son del mismo tipo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 9,
+    "enunciado": "¿Cuál es el resultado de '[(x,y) | x <- [1,2], y <- [4,5]]'?",
+    "opciones": [
+      "[(1,4),(2,5)]",
+      "[(1,4),(1,5),(2,4),(2,5)]",
+      "[(1,2,4,5)]",
+      "[(4,1),(5,2)]"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 10,
+    "enunciado": "¿Qué hace 'primeros ps = [x | (x,_) <- ps]'?",
+    "opciones": [
+      "Devuelve segundas componentes",
+      "Devuelve primeras componentes",
+      "Cuenta elementos",
+      "Ordena por primera"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 11,
+    "enunciado": "¿Cómo se define length usando comprensión?",
+    "opciones": [
+      "length xs = sum [1 | _ <- xs]",
+      "length xs = [1 | xs]",
+      "length xs = sum xs",
+      "length xs = 1*xs"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 12,
+    "enunciado": "¿Qué clase debe pertenecer el tipo de un rango [a..b]?",
+    "opciones": [
+      "Ord",
+      "Ix",
+      "Enum",
+      "Monoid"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 13,
+    "enunciado": "¿Qué hace 'replicate 5 'a''?",
+    "opciones": [
+      "'aaaaa'",
+      "['a','a','a','a','a']",
+      "[1,2,3,4,5]",
+      "['aaaaa']"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 14,
+    "enunciado": "¿Qué devuelve 'words \"Hola mundo\"'?",
+    "opciones": [
+      "[\"Hola\",\"mundo\"]",
+      "\"Hola mundo\"",
+      "[\"Hola mundo\"]",
+      "[\"Hola\",\" mundo\"]"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 15,
+    "enunciado": "¿Qué produce 'unwords [\"Hola\",\"mundo\"]'?",
+    "opciones": [
+      "\"Hola mundo\"",
+      "\"Hola\\nmundo\"",
+      "\"Holamundo\"",
+      "['Hola','mundo']"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 16,
+    "enunciado": "Con dos generadores dependientes '[(x,y) | x <- [1..3], y <- [x..3]]', ¿qué se obtiene?",
+    "opciones": [
+      "Pares donde y>=x",
+      "Todos los pares",
+      "Solo iguales",
+      "Pares donde y<x"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 17,
+    "enunciado": "¿Qué hace 'isPrefixOf \"HOLA\" \"HOLA MUNDO\"'?",
+    "opciones": [
+      "False",
+      "True",
+      "Error",
+      "[]"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 18,
+    "enunciado": "¿Qué hace 'isSuffixOf \"MUNDO\" \"HOLA MUNDO\"'?",
+    "opciones": [
+      "True",
+      "False",
+      "Error",
+      "['MUNDO']"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 19,
+    "enunciado": "¿Cómo se construye una lista con 'cons'?",
+    "opciones": [
+      "xs ++ x",
+      "[x] ++ xs",
+      "x:xs",
+      "xs:x"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 20,
+    "enunciado": "¿Qué hace 'splitAt 5 [1..15]'?",
+    "opciones": [
+      "([1..5],[6..15])",
+      "[1..5,6..15]",
+      "([1..4],[5..15])",
+      "Divide pero sin pares"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 1,
+    "enunciado": "¿Qué requiere toda definición recursiva bien formada?",
+    "opciones": [
+      "Solo casos recursivos",
+      "Al menos un caso base",
+      "Múltiples parámetros",
+      "Tipos numéricos"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 2,
+    "enunciado": "La definición recursiva del factorial incluye:",
+    "opciones": [
+      "factorial 0 = 1",
+      "factorial 1 = 0",
+      "factorial 0 = 0",
+      "factorial n = n + factorial (n-1)"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 3,
+    "enunciado": "En la sucesión de Fibonacci, ¿qué se cumple?",
+    "opciones": [
+      "fib n = fib (n-1) - fib (n-2)",
+      "fib 0 = 0 y fib 1 = 1",
+      "fib 0 = 1 y fib 1 = 1",
+      "fib n = n * fib (n-1)"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 4,
+    "enunciado": "¿Qué caracteriza a la recursión de cola (tail recursion)?",
+    "opciones": [
+      "La llamada recursiva no es la última",
+      "Acumula el resultado en el último paso",
+      "Requiere listas",
+      "No tiene caso base"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 5,
+    "enunciado": "¿Qué patrón recursivo suma los elementos de una lista?",
+    "opciones": [
+      "suma [] = 1; suma (x:xs) = x",
+      "suma [] = 0; suma (x:xs) = x + suma xs",
+      "suma (x:y:xs) = x+y",
+      "suma xs = product xs"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 6,
+    "enunciado": "¿Qué devuelve 'ordenada [3,5,2,8]' según el ejemplo?",
+    "opciones": [
+      "True",
+      "False",
+      "3",
+      "Error"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 7,
+    "enunciado": "¿Qué hace 'productoEscalar xs ys'?",
+    "opciones": [
+      "Concatena listas",
+      "Suma de productos elemento a elemento",
+      "Calcula norma",
+      "Resta listas"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 8,
+    "enunciado": "¿Qué construye 'sucDecreciente n'?",
+    "opciones": [
+      "[0..n]",
+      "[n,n-1..0]",
+      "[n..]",
+      "[]"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 9,
+    "enunciado": "¿Qué hace 'quitaPrimera x ls'?",
+    "opciones": [
+      "Elimina todas las apariciones de x",
+      "Elimina la primera aparición de x",
+      "Inserta x al principio",
+      "Invierte la lista"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 10,
+    "enunciado": "¿Qué hace 'cambia x y ls'?",
+    "opciones": [
+      "Sustituye x por y en ls",
+      "Sustituye y por x",
+      "Quita y",
+      "Duplica ls"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 11,
+    "enunciado": "En recursión de cola con acumulador, ¿qué suele añadirse?",
+    "opciones": [
+      "Un argumento extra para el acumulado",
+      "Una guardia otherwise",
+      "Un 'case-of' siempre",
+      "Un módulo auxiliar"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 12,
+    "enunciado": "¿Qué hace 'factorialAux ac 0 = ac'?",
+    "opciones": [
+      "Caso recursivo",
+      "Caso base devolviendo acumulado",
+      "Error",
+      "Convierte a Float"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 13,
+    "enunciado": "¿Qué devuelve 'fibonacciT 7' en el ejemplo?",
+    "opciones": [
+      "8",
+      "13",
+      "21",
+      "5"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 14,
+    "enunciado": "¿Cómo se define 'pertenece x []'?",
+    "opciones": [
+      "True",
+      "False",
+      "[]",
+      "x"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 15,
+    "enunciado": "¿Qué patrón general sobre listas se puede reescribir con foldr/foldl?",
+    "opciones": [
+      "Todos  los de dos listas",
+      "Muchos esquemas recursivos lineales",
+      "Solo numéricos",
+      "Ninguno"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 16,
+    "enunciado": "¿Qué función determina si un número es primo según el tema?",
+    "opciones": [
+      "esPrimo",
+      "esPrimoT",
+      "primo?",
+      "isPrime"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 17,
+    "enunciado": "¿Qué hace 'menorDivisor k n' cuando k*k > n?",
+    "opciones": [
+      "Devuelve k",
+      "Devuelve n",
+      "Devuelve 0",
+      "Devuelve 1"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 18,
+    "enunciado": "¿Qué es 'recursión como divide y vencerás'?",
+    "opciones": [
+      "Partir problema en subproblemas más sencillos",
+      "Usar bucles for",
+      "Usar arrays",
+      "Solo con Float"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 19,
+    "enunciado": "¿Qué devuelve 'sumaListaT'?",
+    "opciones": [
+      "Producto de la lista",
+      "Suma usando acumulador",
+      "Longitud",
+      "Máximo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursión",
+    "qnum": 20,
+    "enunciado": "¿Qué patrón usa 'perteneceT x = perteneceAux x False'?",
+    "opciones": [
+      "Recursión de cola con acumulador booleano",
+      "Recursión no estructural",
+      "Paralelismo",
+      "Memoización"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 1,
+    "enunciado": "¿Cuándo es una función de orden superior?",
+    "opciones": [
+      "Cuando es recursiva",
+      "Cuando toma o devuelve funciones",
+      "Cuando usa listas",
+      "Cuando imprime"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 2,
+    "enunciado": "¿Qué hace 'map f xs'?",
+    "opciones": [
+      "Filtra xs",
+      "Aplica f a cada elemento de xs",
+      "Reduce xs a un valor",
+      "Invierte xs"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 3,
+    "enunciado": "¿Qué hace 'filter p xs'?",
+    "opciones": [
+      "Descarta los que cumplen p",
+      "Conserva los que cumplen p",
+      "Ordena xs",
+      "Transforma elementos"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 4,
+    "enunciado": "¿Qué hace 'foldr f v xs'?",
+    "opciones": [
+      "Plegado por la izquierda",
+      "Plegado por la derecha con valor base v",
+      "Map + filter",
+      "Nada"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 5,
+    "enunciado": "¿Cuál es una propiedad mostrada: sum (map (2*) xs) = ?",
+    "opciones": [
+      "sum xs",
+      "2 * sum xs",
+      "sum xs * xs",
+      "product xs"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 6,
+    "enunciado": "¿Qué es una función lambda?",
+    "opciones": [
+      "Función anónima \\args -> cuerpo",
+      "Una macro",
+      "Un módulo",
+      "Un operador"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 7,
+    "enunciado": "¿Qué hace 'takeWhile p xs'?",
+    "opciones": [
+      "Toma elementos iniciales que NO cumplen p",
+      "Toma iniciales que cumplen p",
+      "Elimina iniciales que cumplen p",
+      "Invierte xs"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 8,
+    "enunciado": "¿Qué hace 'dropWhile p xs'?",
+    "opciones": [
+      "Toma los primeros que cumplen p",
+      "Elimina los primeros que cumplen p",
+      "Filtra los que cumplen p",
+      "Nada"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 9,
+    "enunciado": "¿Qué devuelve 'scanl (+) 0 [3,5,2,1]'?",
+    "opciones": [
+      "[0,3,8,10,11]",
+      "[11,8,3,1,0]",
+      "[3,8,10,11]",
+      "[3,5,2,1]"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 10,
+    "enunciado": "¿Qué es la composición '(.)'?",
+    "opciones": [
+      "Suma de funciones",
+      "Componer f . g = \\x -> f (g x)",
+      "Producto de funciones",
+      "Filtro"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 11,
+    "enunciado": "En 'dosVeces f x = f (f x)', ¿qué tipo tiene dosVeces?",
+    "opciones": [
+      "(a -> a) -> a -> a",
+      "a -> (a -> a) -> a",
+      "(a -> b) -> a -> b",
+      "a -> a -> a"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 12,
+    "enunciado": "¿Qué hace 'id'?",
+    "opciones": [
+      "Devuelve 0",
+      "Devuelve su argumento",
+      "Invierte lista",
+      "Compone funciones"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 13,
+    "enunciado": "¿Qué diferencia hay entre foldr y foldl con (-)?",
+    "opciones": [
+      "Ninguna",
+      "Dan resultados distintos por asociatividad",
+      "Ambos fallan",
+      "foldl siempre gana"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 14,
+    "enunciado": "¿Qué hace 'foldr1'?",
+    "opciones": [
+      "Plegado con lista no vacía sin valor base",
+      "Plegado con valor base",
+      "Mapeado",
+      "Escaneo"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 15,
+    "enunciado": "¿Qué hace 'flip f x y'?",
+    "opciones": [
+      "Intercambia tipos",
+      "Llama f y x (invierte argumentos)",
+      "Convierte a infijo",
+      "Nada"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 16,
+    "enunciado": "¿Qué es 'parcialización' (currying)?",
+    "opciones": [
+      "Asignar menos argumentos para obtener una función",
+      "Optimización",
+      "Tipado ad-hoc",
+      "E/S"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 17,
+    "enunciado": "¿Qué hace 'sumaCuadradosPares = sum . map (^2) . filter even'?",
+    "opciones": [
+      "Suma pares",
+      "Suma cuadrados de pares",
+      "Cuenta pares",
+      "Multiplica pares"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 18,
+    "enunciado": "¿Qué produce 'composicionLista = foldr (.) id' aplicada a [(*2),(^2)] 3?",
+    "opciones": [
+      "18",
+      "36",
+      "6",
+      "9"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 19,
+    "enunciado": "¿Qué hace 'any p xs'?",
+    "opciones": [
+      "True si todos cumplen p",
+      "True si alguno cumple p",
+      "False siempre",
+      "Ordena xs"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 20,
+    "enunciado": "¿Qué hace 'all p xs'?",
+    "opciones": [
+      "True si todos cumplen p",
+      "True si alguno cumple p",
+      "Devuelve xs",
+      "Cuenta verdaderos"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 1,
+    "enunciado": "¿Qué define 'type String = [Char]'?",
+    "opciones": [
+      "Un nuevo tipo distinto",
+      "Un sinónimo de tipo",
+      "Un constructor de datos",
+      "Una clase"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 2,
+    "enunciado": "¿Qué exige Haskell para nombres de tipos y constructores?",
+    "opciones": [
+      "Empezar en minúscula",
+      "Empezar en mayúscula",
+      "Guiones permitidos",
+      "Sin restricciones"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 3,
+    "enunciado": "¿Qué declara 'data Bool = False | True'?",
+    "opciones": [
+      "Un alias",
+      "Un tipo algebraico con dos constructores",
+      "Una variable global",
+      "Una clase"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 4,
+    "enunciado": "¿Qué es un constructor con parámetros?",
+    "opciones": [
+      "'Circulo :: Float -> Figura'",
+      "Un sinónimo de tipo",
+      "Un módulo",
+      "Un import"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 5,
+    "enunciado": "¿Qué hace 'area (Rect x y) = x*y'?",
+    "opciones": [
+      "Patrón sobre constructor",
+      "Guarda",
+      "Tautología",
+      "Clase"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 6,
+    "enunciado": "¿Qué representa 'Maybe a = Nothing | Just a'?",
+    "opciones": [
+      "Un tipo parametrizado",
+      "Una clase",
+      "Un módulo",
+      "Un sinónimo"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 7,
+    "enunciado": "¿Qué hace 'divisionSegura m n' cuando n = 0?",
+    "opciones": [
+      "Devuelve 0",
+      "Devuelve Nothing",
+      "Lanza excepción",
+      "Devuelve Just 0"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 8,
+    "enunciado": "En tipos recursivos 'data Nat = Cero | Suc Nat', ¿qué es 'Suc'?",
+    "opciones": [
+      "Un valor",
+      "Un constructor que contiene otro Nat",
+      "Una clase",
+      "Una función especial"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 9,
+    "enunciado": "¿Qué hace 'nat2int Cero'?",
+    "opciones": [
+      "0",
+      "1",
+      "Error",
+      "Cero"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 10,
+    "enunciado": "¿Qué hace 'int2nat 3'?",
+    "opciones": [
+      "Cero",
+      "Suc (Suc (Suc Cero))",
+      "Suc Cero",
+      "Error"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 11,
+    "enunciado": "En árboles 'data Arbol = Hoja Int | Nodo Arbol Int Arbol', ¿qué representa Nodo?",
+    "opciones": [
+      "Hoja vacía",
+      "Nodo con subárbol izq, valor y subárbol der",
+      "Una lista",
+      "Un Maybe"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 12,
+    "enunciado": "¿Qué hace 'ocurre m a'?",
+    "opciones": [
+      "Aplana el árbol",
+      "Comprueba si m está en el árbol",
+      "Ordena el árbol",
+      "Cuenta nodos"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 13,
+    "enunciado": "¿Qué condición define un árbol binario de búsqueda (ordenado)?",
+    "opciones": [
+      "Valores iguales en ambos lados",
+      "Izquierdo < nodo < derecho",
+      "Todos mayores a la izquierda",
+      "Todos menores a la derecha"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 14,
+    "enunciado": "¿Qué hace 'aplana a' en el ejemplo?",
+    "opciones": [
+      "Preorden",
+      "Inorden (ls ++ [n] ++ rs)",
+      "Postorden",
+      "Nivel a nivel"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 15,
+    "enunciado": "¿Qué es 'class Eq a where (==),(/=) :: a -> a -> Bool'?",
+    "opciones": [
+      "Declaración de clase",
+      "Instancia",
+      "Sinónimo",
+      "Tipo recursivo"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 16,
+    "enunciado": "¿Qué hace 'instance Eq Bool where ...'?",
+    "opciones": [
+      "Define una clase",
+      "Declara una instancia para Bool",
+      "Importa Eq",
+      "Compone módulos"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 17,
+    "enunciado": "¿Qué es 'deriving (Eq,Ord,Read,Show)'?",
+    "opciones": [
+      "Herencia múltiple",
+      "Derivar automáticamente instancias comunes",
+      "Sobrecarga de operadores",
+      "Macros"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 18,
+    "enunciado": "¿Qué restricción hay al derivar para tipos con argumentos?",
+    "opciones": [
+      "Ninguna",
+      "Los tipos de los argumentos deben ser instancias de esas clases",
+      "Solo Show",
+      "Solo Eq"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 19,
+    "enunciado": "¿Qué hace 'type Pos = (Int,Int)'?",
+    "opciones": [
+      "Nuevo tipo distinto",
+      "Alias de (Int,Int)",
+      "Constructor de datos",
+      "Clase"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 20,
+    "enunciado": "¿Qué NO está permitido en sinónimos de tipo?",
+    "opciones": [
+      "Recursividad en la definición de type",
+      "Parámetros",
+      "Anidamiento",
+      "Reutilización"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 1,
+    "enunciado": "¿Qué ventaja ofrece la sintaxis de registro en Haskell?",
+    "opciones": [
+      "Campos mutables",
+      "Nombrar y acceder a campos por nombre",
+      "Sobrecarga automática",
+      "Valores por defecto integrados"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 2,
+    "enunciado": "¿Cuál es una definición con registro?",
+    "opciones": [
+      "data Persona = Pers { nombre :: String, actividad :: String, nacimiento :: Int, defuncion :: Int }",
+      "type Persona = (String,String,Int,Int)",
+      "class Persona a where",
+      "newtype Persona = String"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 3,
+    "enunciado": "¿Cómo se accede a un campo de registro?",
+    "opciones": [
+      "p.nombre",
+      "nombre p",
+      "p->nombre",
+      "p['nombre']"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 4,
+    "enunciado": "¿Cómo se actualiza un campo de un valor de registro?",
+    "opciones": [
+      "p = p.set nombre=\"Ana\"",
+      "p { nombre = \"Ana\" }",
+      "update(p,'nombre')",
+      "mutate p.nombre"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 5,
+    "enunciado": "¿El orden de los campos importa al construir con registro?",
+    "opciones": [
+      "Sí",
+      "No, pueden darse por nombre en cualquier orden",
+      "Solo si son Int",
+      "Depende del compilador"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 6,
+    "enunciado": "¿Tiene Haskell valores por defecto de campos nativamente?",
+    "opciones": [
+      "Sí",
+      "No",
+      "Solo con GHCi",
+      "Solo con pragma Default"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 7,
+    "enunciado": "¿Cómo se simulan valores por defecto según el tema?",
+    "opciones": [
+      "Con 'personaPorDefecto' y actualización de campos",
+      "Con variables globales",
+      "Con macros",
+      "No se puede"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 8,
+    "enunciado": "¿Qué hace 'instance Default Persona where def = ...'?",
+    "opciones": [
+      "Define una clase",
+      "Instancia Default para dar un valor por defecto",
+      "Crea mutabilidad",
+      "Deriva Show"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 9,
+    "enunciado": "¿Qué ocurre al actualizar p1 con p1 { nombre=\"Murillo\" }?",
+    "opciones": [
+      "Se modifica p1 in-place",
+      "Se crea un nuevo valor, p1 original no cambia",
+      "Error",
+      "Cambia el tipo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 10,
+    "enunciado": "¿Qué devuelve 'actividad p1' si p1 = Pers \"Cervantes\" \"Literatura\" 1547 1616?",
+    "opciones": [
+      "\"Cervantes\"",
+      "\"Literatura\"",
+      "1547",
+      "1616"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 11,
+    "enunciado": "¿Qué aporta la notación con registro sobre patrones manuales?",
+    "opciones": [
+      "Menos claridad",
+      "Evita repetir el orden de campos y da accesores automáticos",
+      "Peor rendimiento",
+      "Nada"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 12,
+    "enunciado": "¿Puede un registro tener dos campos con el mismo nombre?",
+    "opciones": [
+      "Sí",
+      "No",
+      "Solo si son diferentes tipos",
+      "Depende del módulo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 13,
+    "enunciado": "¿Las actualizaciones de registros son...",
+    "opciones": [
+      "Mutables",
+      "Inmutables (crean copia con cambios)",
+      "Atómicas",
+      "Peligrosas"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 14,
+    "enunciado": "¿Qué biblioteca se usa para Default en el ejemplo?",
+    "opciones": [
+      "Data.Default",
+      "Default.Prelude",
+      "System.Default",
+      "Control.Default"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 15,
+    "enunciado": "¿Cómo se crea un valor con campos nombrados sin orden?",
+    "opciones": [
+      "Pers { actividad=\"Lit\", nacimiento=1547, nombre=\"Cervantes\", defuncion=1616 }",
+      "Pers (actividad=\"Lit\", ...)",
+      "Persona { ... }",
+      "new Pers {...}"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 16,
+    "enunciado": "¿Qué retorna 'def' para Persona en la instancia Default del ejemplo?",
+    "opciones": [
+      "Valores vacíos/0 para cada campo",
+      "Nothing",
+      "Error",
+      "Valores aleatorios"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 17,
+    "enunciado": "¿Qué imprime GHCi de un registro derivando Show?",
+    "opciones": [
+      "Nada",
+      "Representación con nombres de campos",
+      "Solo el tipo",
+      "Solo la memoria"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 18,
+    "enunciado": "¿Registro y sinónimo de tipo son lo mismo?",
+    "opciones": [
+      "Sí",
+      "No, registro define un 'data' con campos nombrados",
+      "Depende del compilador",
+      "Solo en GHC"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 19,
+    "enunciado": "¿Qué ventaja tiene usar Default frente a un valor 'porDefecto' manual?",
+    "opciones": [
+      "Ninguna",
+      "Convención estándar y reutilizable",
+      "Mejor rendimiento",
+      "Soporte en el núcleo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 20,
+    "enunciado": "¿Los campos de registro pueden usarse como funciones?",
+    "opciones": [
+      "Sí, 'nombre :: Persona -> String'",
+      "No",
+      "Solo en GHCi",
+      "Solo si son Int"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 1,
+    "enunciado": "¿Cómo se importa un módulo en un archivo Haskell?",
+    "opciones": [
+      "include modulo",
+      "import Modulo",
+      "#use Modulo",
+      "require Modulo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 2,
+    "enunciado": "¿Qué hace 'import qualified Data.List as L'?",
+    "opciones": [
+      "Impide compilar",
+      "Importa calificado con alias L",
+      "Importa todo al espacio global",
+      "Solo importa nub"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 3,
+    "enunciado": "¿Cómo se limita la importación a ciertas funciones?",
+    "opciones": [
+      "import Data.List only (nub)",
+      "import Data.List (nub, sort)",
+      "import Data.List *",
+      "import Data.List hiding all"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 4,
+    "enunciado": "¿Cómo se crea un módulo propio?",
+    "opciones": [
+      "module Nombre where ... en un archivo Nombre.hs",
+      "create module Nombre",
+      "package Nombre",
+      "class module Nombre"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 5,
+    "enunciado": "¿Qué es un TAD (tipo abstracto de dato)?",
+    "opciones": [
+      "Una clase concreta",
+      "Una abstracción que expone interfaz y oculta implementación",
+      "Un patrón de diseño OO",
+      "Un paquete"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 6,
+    "enunciado": "¿Qué significa LIFO en pilas?",
+    "opciones": [
+      "Last In First Out",
+      "List In First Out",
+      "Left In First Out",
+      "Late In First Out"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 7,
+    "enunciado": "¿Qué signatura incluye la pila?",
+    "opciones": [
+      "push, pop, top, empty",
+      "vacia, apila, cima, desapila, esVacia",
+      "insert, head, tail",
+      "new, del"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 8,
+    "enunciado": "¿Cómo se representa una pila con TDA en el tema?",
+    "opciones": [
+      "data Pila a = Vacia | P a (Pila a)",
+      "type Pila a = [a,a]",
+      "newtype Pila a = [a]",
+      "data Pila = Int"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 9,
+    "enunciado": "¿Qué hace 'cima Vacia' en la implementación mostrada?",
+    "opciones": [
+      "Devuelve Nothing",
+      "Lanza error \"la pila vacia no tiene cima\"",
+      "Devuelve 0",
+      "Devuelve '-'"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 10,
+    "enunciado": "¿Qué ventaja ofrece 'qualified' para Data.List?",
+    "opciones": [
+      "Evitar colisiones de nombres",
+      "Mejor rendimiento",
+      "Persistencia",
+      "Paralelismo"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 11,
+    "enunciado": "¿Qué propiedad QuickCheck se mostró para pilas?",
+    "opciones": [
+      "prop_cima_apila",
+      "prop_insert",
+      "prop_head_tail",
+      "prop_sum"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 12,
+    "enunciado": "¿Qué instancia hace falta para testear pilas con QuickCheck?",
+    "opciones": [
+      "Show",
+      "Ord",
+      "Arbitrary",
+      "Eq"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 13,
+    "enunciado": "¿Qué característica define una cola (FIFO)?",
+    "opciones": [
+      "Inserción y extracción por el mismo extremo",
+      "Inserción por el final y extracción por el frente",
+      "Solo inserción",
+      "Solo extracción"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 14,
+    "enunciado": "¿Cómo se firma 'primero :: Cola a -> a'?",
+    "opciones": [
+      "Devuelve la cola",
+      "Devuelve el primer elemento",
+      "Devuelve Bool",
+      "Modifica la cola"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 15,
+    "enunciado": "En la implementación de colas con listas, ¿qué hace 'inserta x (C c)'?",
+    "opciones": [
+      "C (x:c)",
+      "C (c ++ [x])",
+      "C []",
+      "C (tail c)"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 16,
+    "enunciado": "¿Qué hace ':m + Data.List' en GHCi?",
+    "opciones": [
+      "Importa Data.List en la sesión",
+      "Compila Data.List",
+      "Elimina Data.List",
+      "Muestra el manual"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 17,
+    "enunciado": "¿Qué evita 'import Data.List hiding (nub)'?",
+    "opciones": [
+      "Importar nub",
+      "Importar sort",
+      "Compilar",
+      "Cargar en GHCi"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 18,
+    "enunciado": "¿Qué función de Data.List devuelve únicos?",
+    "opciones": [
+      "nub",
+      "unique",
+      "distinct",
+      "only"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 19,
+    "enunciado": "¿Qué hace 'module Geometry (sphereVolume,...) where'?",
+    "opciones": [
+      "Exporta solo las funciones listadas",
+      "Importa Geometry",
+      "Deriva clases",
+      "Crea un paquete"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 9 - Módulos y TADs",
+    "qnum": 20,
+    "enunciado": "En la impresión de la pila, ¿qué representación se muestra?",
+    "opciones": [
+      "Lista JSON",
+      "1|2|3|-",
+      "Top:1",
+      "[]"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 1,
+    "enunciado": "¿Qué módulo provee arrays inmutables indexados?",
+    "opciones": [
+      "Data.Array",
+      "Data.Matrix",
+      "Data.Vector",
+      "System.Array"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 2,
+    "enunciado": "¿Qué clase deben pertenecer los índices de Array?",
+    "opciones": [
+      "Enum",
+      "Ord",
+      "Ix",
+      "Bounded"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 3,
+    "enunciado": "¿Qué hace 'range (0,4)'?",
+    "opciones": [
+      "Devuelve [0..3]",
+      "Devuelve [0,1,2,3,4]",
+      "Devuelve (0,4)",
+      "Asigna valores"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 4,
+    "enunciado": "¿Qué hace 'index (3,9) 5'?",
+    "opciones": [
+      "5",
+      "2",
+      "6",
+      "Error"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 5,
+    "enunciado": "¿Qué hace 'inRange (0,4) 3'?",
+    "opciones": [
+      "False",
+      "True",
+      "Error",
+      "[]"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 6,
+    "enunciado": "¿Cuál es la forma del tipo Array?",
+    "opciones": [
+      "Array i v",
+      "Array v i",
+      "Matrix a",
+      "Vector a"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 7,
+    "enunciado": "¿Qué hace 'array (1,3) [(i,2*i) | i <- [1..3]]'?",
+    "opciones": [
+      "Crea una lista",
+      "Crea un array con pares índice-valor",
+      "Crea un vector mutable",
+      "Error"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 8,
+    "enunciado": "¿Cómo se crea un array desde lista secuencial?",
+    "opciones": [
+      "listArray (1,3) [4,5,6]",
+      "array [4,5,6]",
+      "Array.fromList",
+      "new Array(3)"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 9,
+    "enunciado": "¿Qué hace 'accumArray (+) 0 (1,3) [(1,4),(2,5),(1,2)]'?",
+    "opciones": [
+      "Asigna últimos valores",
+      "Acumula por índice con (+)",
+      "Concatena strings",
+      "Limpia el array"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 10,
+    "enunciado": "¿Cómo se accede a un elemento de un array 'a'?",
+    "opciones": [
+      "a(i)",
+      "a[i]",
+      "a ! i",
+      "a.get(i)"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 11,
+    "enunciado": "¿Qué devuelve 'bounds a'?",
+    "opciones": [
+      "El rango de índices",
+      "El tamaño",
+      "Los elementos",
+      "Los pares (i,v)"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 12,
+    "enunciado": "¿Qué hace 'a // [((1,1),10)]' en una matriz 2D?",
+    "opciones": [
+      "Modifica in-place",
+      "Devuelve nuevo array con actualización",
+      "Borra array",
+      "Concatena"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 13,
+    "enunciado": "¿Qué hace 'elems a'?",
+    "opciones": [
+      "Índices",
+      "Asociaciones (i,v)",
+      "Lista de valores",
+      "Tamaño"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 14,
+    "enunciado": "¿Qué hace 'assocs a'?",
+    "opciones": [
+      "Lista de (i,v)",
+      "Lista de índices",
+      "Rango",
+      "Nada"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 15,
+    "enunciado": "¿Qué construye 'M.matrix 3 4 (\\(i,j) -> i-j)'?",
+    "opciones": [
+      "Vector",
+      "Matriz 3x4 por función",
+      "Array 1D",
+      "Error"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 16,
+    "enunciado": "¿Cómo acceder al elemento (2,1) de una Matrix m?",
+    "opciones": [
+      "m(2,1)",
+      "m ! (2,1)",
+      "M.get (2,1) m",
+      "m.(2,1)"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 17,
+    "enunciado": "¿Qué devuelve 'M.fromLists [[1,2,3],[4,5,6]]'?",
+    "opciones": [
+      "Matriz 2x3",
+      "Array 3x2",
+      "Vector 6",
+      "Lista de listas"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 18,
+    "enunciado": "¿Qué devuelve 'M.getRow 2 (M.fromList 2 3 [1..6])'?",
+    "opciones": [
+      "fromList [1,2,3]",
+      "fromList [4,5,6]",
+      "2",
+      "Error"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 19,
+    "enunciado": "¿Qué módulo se recomienda importar 'as V'?",
+    "opciones": [
+      "Data.Array",
+      "Data.Matrix",
+      "Data.Vector",
+      "Ix"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 20,
+    "enunciado": "¿Qué relación hay entre Matrix y Vector según el tema?",
+    "opciones": [
+      "Ninguna",
+      "Se pueden extraer filas/columnas como Vector",
+      "Matrix es un alias de Vector",
+      "Vector depende de IO"
+    ],
+    "correcta": 1
+  }
+]
