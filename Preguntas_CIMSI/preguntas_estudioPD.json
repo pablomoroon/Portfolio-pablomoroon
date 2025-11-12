@@ -960,6 +960,156 @@
     "correcta": 0
   },
   {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 21,
+    "enunciado": "¿Qué hace la expresión [x | x <- [1..10], x `mod` 3 == 0]?",
+    "opciones": ["Filtra múltiplos de 3", "Genera rangos", "Aplica map", "Concatena listas"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 22,
+    "enunciado": "¿Qué produce [(x,y) | x <- [1..2], y <- ['a','b']]?",
+    "opciones": [
+      "[(1,'a'),(1,'b'),(2,'a'),(2,'b')]",
+      "[(1,2,'a','b')]",
+      "[('a',1),('b',2)]",
+      "[(1,2),(a,b)]"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 23,
+    "enunciado": "¿Qué hace la guarda x>5 en [x | x <- [1..10], x>5]?",
+    "opciones": ["Selecciona números >5", "Ordena la lista", "Transforma los elementos", "Elimina pares"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 24,
+    "enunciado": "¿Qué devuelve [x*y | x <- [1,2], y <- [3,4]]?",
+    "opciones": ["[3,4,6,8]", "[3,6,4,8]", "[3,4]", "[6,8]"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 25,
+    "enunciado": "¿Qué significa usar '_' en una comprensión?",
+    "opciones": ["Descartar un valor no usado", "Variable global", "Condicional", "Un alias"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 26,
+    "enunciado": "¿Qué hace [c | c <- \"hola\", c /= 'o']?",
+    "opciones": ["\"hla\"", "\"hola\"", "\"oa\"", "\"hlo\""],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 27,
+    "enunciado": "¿Qué genera [(x,y,z) | x <- [1..2], y <- [1..2], z <- [1..2]]?",
+    "opciones": ["8 tuplas", "4 tuplas", "2 tuplas", "6 tuplas"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 28,
+    "enunciado": "¿Qué hace concat [[x] | x <- [1,2,3]]?",
+    "opciones": ["[1,2,3]", "[[1],[2],[3]]", "[1,[2],3]", "Error"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 29,
+    "enunciado": "En [x | (x,y) <- [(1,2),(3,4)]], ¿qué toma x?",
+    "opciones": ["Las primeras componentes", "Las segundas", "Todo el par", "Nada"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 30,
+    "enunciado": "¿Qué genera [x | x <- [1..10], odd x]?",
+    "opciones": ["Números impares", "Números pares", "Números primos", "Error"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 31,
+    "enunciado": "¿Qué devuelve [(x,y) | x <- [1..3], y <- [x,x+1]]?",
+    "opciones": [
+      "[(1,1),(1,2),(2,2),(2,3),(3,3),(3,4)]",
+      "[(1,2),(2,3),(3,4)]",
+      "[(1,1),(2,2),(3,3)]",
+      "Error"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 32,
+    "enunciado": "¿Qué hace length [x | x <- [1..100], even x]?",
+    "opciones": ["50", "100", "25", "10"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 33,
+    "enunciado": "¿Qué hace [x | x <- [], True]?",
+    "opciones": ["[]", "[True]", "Error", "[0]"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 34,
+    "enunciado": "¿Qué hace [x^3 | x <- [1..4]]?",
+    "opciones": ["[1,8,27,64]", "[1,4,9,16]", "[1,2,3,4]", "[3,6,9,12]"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 35,
+    "enunciado": "¿Qué devuelve [x | x <- \"HASKELL\", x <= 'L']?",
+    "opciones": ["\"ASKELL\"", "\"HASKELL\"", "\"H\"", "\"LL\""],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 36,
+    "enunciado": "¿Qué efecto tiene una guarda falsa en una comprensión?",
+    "opciones": ["Descarta ese elemento", "Finaliza la comprensión", "Genera error", "Duplica valores"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 37,
+    "enunciado": "¿Qué devuelve sum [x | x <- [1..5]]?",
+    "opciones": ["15", "10", "5", "1"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 38,
+    "enunciado": "¿Qué hace [x | x <- [1..10], x `mod` 2 == 1, x > 5]?",
+    "opciones": ["[7,9]", "[1,3,5]", "[2,4,6]", "[5,7,9]"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 39,
+    "enunciado": "¿Qué produce [(x,y) | x <- [1,2], y <- []]?",
+    "opciones": ["[]", "[(1,2)]", "Error", "[1,2]"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de compresión",
+    "qnum": 40,
+    "enunciado": "¿Qué hace [x:y | x <- [1,2], y <- [[3,4]]]?",
+    "opciones": ["[[1,3,4],[2,3,4]]", "[[1],[2]]", "[3,4]", "Error"],
+    "correcta": 0
+  },
+  {
     "tema": "Tema 6 - Recursión",
     "qnum": 1,
     "enunciado": "¿Qué requiere toda definición recursiva bien formada?",
@@ -1437,6 +1587,151 @@
       "Devuelve xs",
       "Cuenta verdaderos"
     ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 21,
+    "enunciado": "¿Qué tipo tiene map . filter?",
+    "opciones": [
+      "(a -> b) -> (a -> Bool) -> [a] -> [b]",
+      "[a] -> [b]",
+      "Int -> Int",
+      "No tiene tipo"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 22,
+    "enunciado": "¿Qué hace foldl (+) 0 [1,2,3]?",
+    "opciones": ["6", "[1,2,3]", "Error", "0"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 23,
+    "enunciado": "¿Qué devuelve any even [1,3,5,7]?",
+    "opciones": ["False", "True", "[even]", "[]"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 24,
+    "enunciado": "¿Qué hace all (>0) [1,2,3]?",
+    "opciones": ["True", "False", "3", "Error"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 25,
+    "enunciado": "¿Qué evalúa (.) f g?",
+    "opciones": ["Función que primero aplica g y luego f", "Función que suma", "Error", "Función identidad"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 26,
+    "enunciado": "¿Qué devuelve filter (<3) [1,2,3,4]?",
+    "opciones": ["[1,2]", "[3,4]", "[]", "Error"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 27,
+    "enunciado": "¿Qué hace map (\\x -> x+1) [1,2,3]?",
+    "opciones": ["[2,3,4]", "[1,2,3]", "[1,3]", "Error"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 28,
+    "enunciado": "¿Qué devuelve scanr (*) 1 [2,3]?",
+    "opciones": ["[6,3,1]", "[1,3,6]", "[2,3]", "Error"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 29,
+    "enunciado": "¿Qué hace foldr (&&) True [True, False, True]?",
+    "opciones": ["False", "True", "Error", "[True,False]"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 30,
+    "enunciado": "¿Qué hace foldl1 (+) [1,2,3]?",
+    "opciones": ["6", "1", "3", "Error"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 31,
+    "enunciado": "¿Qué hace (flip div) 2 10?",
+    "opciones": ["5", "0", "2", "Error"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 32,
+    "enunciado": "¿Qué representa \\x y -> x+y?",
+    "opciones": ["Función lambda de dos argumentos", "Guardas", "Un módulo", "Un operador nuevo"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 33,
+    "enunciado": "¿Qué hace takeWhile (<4) [1,2,3,4,1]?",
+    "opciones": ["[1,2,3]", "[4,1]", "[]", "[1]"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 34,
+    "enunciado": "¿Qué resultado da dropWhile (<3) [1,2,3,4]?",
+    "opciones": ["[3,4]", "[1,2]", "[]", "[4]"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 35,
+    "enunciado": "¿Qué devuelve map head [[1,2],[3,4]]?",
+    "opciones": ["[1,3]", "[2,4]", "[[1],[3]]", "Error"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 36,
+    "enunciado": "¿Qué hace foldr1 max [3,5,2]?",
+    "opciones": ["5", "3", "2", "Error"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 37,
+    "enunciado": "¿Qué representa partial application?",
+    "opciones": ["Aplicar parcialmente una función", "Un error", "Un módulo", "Un tipo"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 38,
+    "enunciado": "¿Qué hace (sum . map (^2)) [1,2,3]?",
+    "opciones": ["14", "6", "9", "Error"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 39,
+    "enunciado": "¿Qué produce foldl (++) \"\" [\"ho\",\"la\"]?",
+    "opciones": ["\"hola\"", "\"ho la\"", "\"hola \"", "Error"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 40,
+    "enunciado": "¿Qué hace composicionLista = foldr (.) id aplicada a [(+1),(*2)] 3?",
+    "opciones": ["7", "8", "10", "6"],
     "correcta": 0
   },
   {
@@ -2398,5 +2693,145 @@
       "Vector depende de IO"
     ],
     "correcta": 1
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 1,
+    "enunciado": "¿Qué tipo tiene getLine?",
+    "opciones": ["IO String", "String", "Char", "IO Char"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 2,
+    "enunciado": "¿Qué hace putStrLn?",
+    "opciones": ["Imprime con salto de línea", "Imprime sin salto", "Lee texto", "Limpia pantalla"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 3,
+    "enunciado": "¿Qué representa IO a?",
+    "opciones": ["Acción con efectos que devuelve a", "Una lista", "Un módulo", "Un tipo algebraico"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 4,
+    "enunciado": "¿Qué hace return en IO?",
+    "opciones": ["Encapsula un valor sin efectos", "Detiene la ejecución", "Imprime", "Lee un archivo"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 5,
+    "enunciado": "¿Qué ocurre con getChar?",
+    "opciones": ["Lee un carácter", "Lee una línea", "Escribe un carácter", "Borra archivo"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 6,
+    "enunciado": "¿Qué hace readFile?",
+    "opciones": ["Lee un fichero completo", "Escribe fichero", "Borra fichero", "Lista directorios"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 7,
+    "enunciado": "¿Qué hace writeFile?",
+    "opciones": ["Escribe en fichero", "Lee texto", "Concatena archivos", "Abre directorio"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 8,
+    "enunciado": "¿Qué hace sequence_?",
+    "opciones": ["Ejecuta lista de acciones", "Concatena strings", "Ordena listas", "Lee caracteres"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 9,
+    "enunciado": "¿Qué hace lines?",
+    "opciones": ["Divide cadena en líneas", "Une líneas", "Borra líneas", "Ordena líneas"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 10,
+    "enunciado": "¿Qué hace unlines?",
+    "opciones": ["Une lista de líneas", "Separa por espacios", "Lee linealmente", "Convierte a números"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 11,
+    "enunciado": "¿Qué permite catch en IO?",
+    "opciones": ["Capturar excepciones", "Imprimir", "Compilar", "Ejecutar sin IO"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 12,
+    "enunciado": "¿Qué hace doesFileExist?",
+    "opciones": ["Comprueba existencia de archivo", "Crea archivo", "Lee archivo", "Escribe archivo"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 13,
+    "enunciado": "¿Qué es main en un programa compilado?",
+    "opciones": ["Punto de entrada IO", "Una variable", "Un módulo", "Un constructor"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 14,
+    "enunciado": "¿Qué hace hFlush stdout?",
+    "opciones": ["Fuerza vaciar buffer", "Borra pantalla", "Cierra archivo", "Sincroniza reloj"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 15,
+    "enunciado": "¿Qué hace hSetBuffering stdout NoBuffering?",
+    "opciones": ["Desactiva buffering", "Activa buffering", "Cierra stdout", "Lanza error"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 16,
+    "enunciado": "¿Qué hace words?",
+    "opciones": ["Separa una cadena en palabras", "Une palabras", "Lee fichero", "Elimina espacios"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 17,
+    "enunciado": "¿Qué hace unwords?",
+    "opciones": ["Une palabras con espacios", "Separa líneas", "Lee archivos", "Imprime"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 18,
+    "enunciado": "¿Qué tipo devuelve print?",
+    "opciones": ["IO ()", "()", "String", "Bool"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 19,
+    "enunciado": "¿Qué hace tablaCuadrados según el tema?",
+    "opciones": ["Escribe pares (n,n^2) en fichero", "Lee cuadrados", "Imprime tabla", "Ordena números"],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 20,
+    "enunciado": "¿Qué hace printf en IO?",
+    "opciones": ["Formatea texto", "Lee texto", "Escribe binario", "Ordena listas"],
+    "correcta": 0
   }
 ]
