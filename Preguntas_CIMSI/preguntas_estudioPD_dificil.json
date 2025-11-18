@@ -1,0 +1,398 @@
+[
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 2001,
+    "enunciado": "Que expresion genera una lista infinita pero se puede usar de forma segura con take 10",
+    "opciones": [
+      "[1..10]",
+      "repeat 1",
+      "[1,2..10]",
+      "take 10 [1..]"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 2002,
+    "enunciado": "Que resultado devuelve length (filter odd (take 100 [1..]))",
+    "opciones": [
+      "50",
+      "100",
+      "49",
+      "0"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 2 - Introducción a la programación con Haskell",
+    "qnum": 2003,
+    "enunciado": "Que ocurre al evaluar last [1..] en GHCi",
+    "opciones": [
+      "Devuelve el mayor entero",
+      "Devuelve Nothing",
+      "No termina",
+      "Da 1"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 2101,
+    "enunciado": "Cual es el tipo principal de (.) en Haskell",
+    "opciones": [
+      "(a -> b) -> (b -> c) -> a -> c",
+      "(b -> c) -> (a -> b) -> a -> c",
+      "(a -> b -> c) -> a -> b -> c",
+      "a -> a"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 2102,
+    "enunciado": "Que tipo tiene length",
+    "opciones": [
+      "[a] -> Int",
+      "Num a => [a] -> a",
+      "[Int] -> Int",
+      "Eq a => [a] -> a"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 3 - Tipos y Clases",
+    "qnum": 2103,
+    "enunciado": "En Num a => a -> a la parte Num a => indica",
+    "opciones": [
+      "Tipo de retorno",
+      "Restriccion de clase sobre a",
+      "Alias de tipo",
+      "Nada importante"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Definicion de funciones",
+    "qnum": 2201,
+    "enunciado": "Que devuelve f [] = 0; f (x:xs) = max x (f xs) aplicada a [-3,-1,-2]",
+    "opciones": [
+      "0",
+      "-1",
+      "-2",
+      "3"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Definicion de funciones",
+    "qnum": 2202,
+    "enunciado": "Que ocurre con g x y = x + y; h = g 3; h True",
+    "opciones": [
+      "Devuelve 3",
+      "Devuelve 4",
+      "Error de tipos en compilacion",
+      "Error en ejecucion"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 4 - Definicion de funciones",
+    "qnum": 2203,
+    "enunciado": "Que hace h (x:xs) | x>0 = x : h xs | otherwise = h xs; h [] = []",
+    "opciones": [
+      "Filtra positivos",
+      "Filtra no positivos",
+      "Duplica la lista",
+      "Ordena la lista"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de comprension",
+    "qnum": 2301,
+    "enunciado": "Que produce [ (x,y) | x <- [1..3], y <- [1..3], x+y==4 ]",
+    "opciones": [
+      "[(1,3),(2,2),(3,1)]",
+      "[(1,3),(3,1)]",
+      "[(2,2)]",
+      "[]"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de comprension",
+    "qnum": 2302,
+    "enunciado": "Que hace [ x | x <- [1..20], all (/=0) [x `mod` 2, x `mod` 3] ]",
+    "opciones": [
+      "Devuelve numeros no divisibles por 2 ni 3",
+      "Devuelve multiplos de 6",
+      "Devuelve primos",
+      "[]"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Listas de comprension",
+    "qnum": 2303,
+    "enunciado": "Que devuelve [ take n [1..] | n <- [1,3,5] ]",
+    "opciones": [
+      "[[1],[1,2,3],[1,2,3,4,5]]",
+      "[[1..5]]",
+      "[[1],[1,2,3]]",
+      "Lista infinita"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 6 - Recursion",
+    "qnum": 2401,
+    "enunciado": "Que devuelve f 0 = 1; f n = n * f (n-1) para n = 5",
+    "opciones": [
+      "120",
+      "24",
+      "5",
+      "0"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 6 - Recursion",
+    "qnum": 2402,
+    "enunciado": "Que complejidad temporal tiene g n | n==0 = 0 | otherwise = 1 + g (n-1)",
+    "opciones": [
+      "Constante",
+      "Lineal en n",
+      "Cuadratica",
+      "Exponencial"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Recursion",
+    "qnum": 2403,
+    "enunciado": "Que hace reversa [] = []; reversa (x:xs) = reversa xs ++ [x]",
+    "opciones": [
+      "Invierte la lista en tiempo lineal",
+      "Invierte la lista en tiempo cuadratico",
+      "La deja igual",
+      "Ordena la lista"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 2501,
+    "enunciado": "Que devuelve (map . map) (+1) [[1,2],[3]]",
+    "opciones": [
+      "[[2,3],[4]]",
+      "[[2,3,4]]",
+      "[2,3,4]",
+      "Error"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 2502,
+    "enunciado": "Que hace twice f = f . f; twice (map (+1)) [1,2]",
+    "opciones": [
+      "[2,3]",
+      "[3,4]",
+      "[1,2]",
+      "Error"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Orden superior",
+    "qnum": 2503,
+    "enunciado": "Que devuelve foldl (flip (:)) [] [1,2,3]",
+    "opciones": [
+      "[1,2,3]",
+      "[3,2,1]",
+      "[[1],[2],[3]]",
+      "Error"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 2601,
+    "enunciado": "Que representa Suc (Suc Cero) en data Nat = Cero | Suc Nat",
+    "opciones": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 2602,
+    "enunciado": "Que problema tiene type Arbol a = (Arbol a, Arbol a)",
+    "opciones": [
+      "Ninguno",
+      "Es sinonimo recursivo infinito y no se permite",
+      "Falta data",
+      "No admite parametros"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.1 - Declaraciones de tipos y clases",
+    "qnum": 2603,
+    "enunciado": "Que hace deriving Eq en una declaracion data",
+    "opciones": [
+      "Nada",
+      "Genera instancia Eq estructural",
+      "Hace el tipo mutable",
+      "Genera alias de tipo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 2701,
+    "enunciado": "En data Persona = Pers { nombre :: String, edad :: Int } que tipo tiene nombre",
+    "opciones": [
+      "String",
+      "Persona -> String",
+      "Int",
+      "Persona -> Int"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 2702,
+    "enunciado": "Que hace p { edad = edad p + 1 } para p :: Persona",
+    "opciones": [
+      "Modifica p",
+      "Crea nueva Persona con edad aumentada",
+      "Da error",
+      "Devuelve ()"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 8.2 - Sintaxis de registro",
+    "qnum": 2703,
+    "enunciado": "Que ocurre con los campos no mencionados en una actualizacion de registro",
+    "opciones": [
+      "Se ponen a cero",
+      "Se copian del valor original",
+      "Se borran",
+      "Da error"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 9 - Modulos y TADs",
+    "qnum": 2801,
+    "enunciado": "Que hace module Pila (Pila, vacia, apila, cima) where",
+    "opciones": [
+      "Importa Pila",
+      "Exporta solo los simbolos listados",
+      "Exporta todo",
+      "No compila"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 9 - Modulos y TADs",
+    "qnum": 2802,
+    "enunciado": "Que ventaja ofrece un TAD frente a exponer la representacion concreta",
+    "opciones": [
+      "Mejor rendimiento siempre",
+      "Permite cambiar implementacion sin tocar codigo cliente",
+      "Evita tipos",
+      "Ninguna"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 9 - Modulos y TADs",
+    "qnum": 2803,
+    "enunciado": "Que hace import Data.List (sort, nub)",
+    "opciones": [
+      "Importa todo",
+      "Importa solo sort y nub",
+      "Oculta sort y nub",
+      "No es valido"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 2901,
+    "enunciado": "En listArray (1,3) [10,20,30] que devuelve a ! 2",
+    "opciones": [
+      "10",
+      "20",
+      "30",
+      "Error"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 2902,
+    "enunciado": "Que hace accumArray (+) 0 (1,3) [(1,5),(2,7),(1,3)]",
+    "opciones": [
+      "Array [5,7,3]",
+      "Array [8,7,0]",
+      "Array [0,0,0]",
+      "Error"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 10 - Arrays, Matrices y Vectores",
+    "qnum": 2903,
+    "enunciado": "Que hace M.transpose (M.fromLists [[1,2,3],[4,5,6]])",
+    "opciones": [
+      "Devuelve matriz 2x3",
+      "Devuelve matriz 3x2",
+      "Vector",
+      "Error"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 3001,
+    "enunciado": "Que tipo tiene putStrLn . show",
+    "opciones": [
+      "IO ()",
+      "Show a => a -> IO ()",
+      "String -> IO ()",
+      "IO String"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 3002,
+    "enunciado": "Por que un putStr sin salto puede no mostrarse al instante en un ejecutable",
+    "opciones": [
+      "Bug de GHC",
+      "Por el buffering de stdout",
+      "Porque String es perezoso",
+      "Porque falta main"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 11 - Entrada y Salida",
+    "qnum": 3003,
+    "enunciado": "Que hace doesFileExist f",
+    "opciones": [
+      "Abre el fichero",
+      "Borra el fichero",
+      "Comprueba si existe y devuelve IO Bool",
+      "Devuelve ruta absoluta"
+    ],
+    "correcta": 2
+  }
+]

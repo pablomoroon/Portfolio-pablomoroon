@@ -83,6 +83,9 @@
           <button id="doubtBtn" title="Marcar/Demarcar como dudosa">★ Dudosa</button>
           <button id="examBtn" style="background:#f59e0b">Iniciar Examen (20)</button>
           <button id="regenPDBtn" class="ghost" style="display:none">Generar PD</button>
+          <!-- NUEVO: botón modo muy difícil PD -->
+          <button id="pdHardBtn" class="ghost" style="display:none;border-color:#b91c1c">PD Muy Difícil</button>
+          <!-- /NUEVO -->
           <button id="changeSubject" class="ghost" title="Volver a elegir asignatura">Cambiar asignatura</button>
         </div>
       </header>
@@ -144,6 +147,9 @@
     let userAnswers = {};
     let doubts = new Set();
     let checkedQuestions = new Set();
+    // NUEVO: modo de dificultad
+    let difficultyMode = 'normal'; // 'normal' | 'hard'
+    // /NUEVO
 
     // ========= DOM =========
     const landing = document.getElementById('landing');
@@ -161,6 +167,7 @@
     const tryAutoBtn = document.getElementById('tryAuto');
     const autoHint = document.getElementById('autoHint');
     const regenPDBtn = document.getElementById('regenPDBtn');
+    const pdHardBtn = document.getElementById('pdHardBtn'); // NUEVO
 
     const setStatus = (s) => statusText.textContent = s;
 
@@ -201,6 +208,7 @@
           const data = JSON.parse(txt);
           const arr = Array.isArray(data) ? data : (data.preguntas || []);
           if(!Array.isArray(arr) || arr.length===0) throw new Error('JSON vacío o estructura inesperada');
+          difficultyMode = 'normal'; // NUEVO: carga normal
           allQuestions = arr.map(q => ({...q}));
           questions = allQuestions.slice();
           populateTemas();
@@ -215,6 +223,7 @@
 
       // Fallback: si es PD, generamos preguntas automáticamente
       if(subjectKey === 'PD'){
+        difficultyMode = 'normal'; // NUEVO
         allQuestions = generatePDQuestions();   // (puedes personalizar estas preguntas)
         questions = allQuestions.slice();
         populateTemas();
@@ -229,6 +238,45 @@
       alert('No se pudo cargar automáticamente el JSON de la asignatura. Puedes usar "Carga manual".');
       return false;
     }
+
+    // ========= NUEVO: Carga automática PD muy difícil =========
+    async function tryLoadPDHard(){
+      if(selectedSubject !== 'PD'){
+        alert('El modo muy difícil solo está disponible para PD.');
+        return false;
+      }
+      const root = baseRoot();
+      const candidates = [
+        `${root}Preguntas_CIMSI/preguntas_estudioPD_dificil.json`,
+        `${root}preguntas_estudioPD_dificil.json`
+      ];
+      autoHint.textContent = `Modo muy difícil PD. Buscando en: ${candidates.map(c => c.replace(location.origin,'')).join('  •  ')}`;
+      for(const url of candidates){
+        try{
+          setStatus('Cargando (PD muy difícil): ' + url);
+          const r = await fetch(url, { cache: 'no-store' });
+          if(!r.ok) throw new Error(`HTTP ${r.status}`);
+          const txt = (await r.text()).replace(/^\uFEFF/, '');
+          const data = JSON.parse(txt);
+          const arr = Array.isArray(data) ? data : (data.preguntas || []);
+          if(!Array.isArray(arr) || arr.length===0) throw new Error('JSON vacío o estructura inesperada');
+          difficultyMode = 'hard';
+          allQuestions = arr.map(q => ({...q}));
+          questions = allQuestions.slice();
+          populateTemas();
+          index = 0; modeExam=false; userAnswers={}; doubts=new Set(); checkedQuestions=new Set();
+          updateView();
+          setStatus('Banco PD muy difícil cargado.');
+          return true;
+        }catch(e){
+          console.warn('No se pudo cargar PD difícil en', url, e);
+        }
+      }
+      setStatus('No se pudo cargar el JSON de PD muy difícil.');
+      alert('No se encontró el JSON de PD muy difícil. Asegúrate de que existe y tiene el formato correcto.');
+      return false;
+    }
+    // ========= FIN NUEVO =========
 
     // ========= Generador de preguntas PD (fallback simple) =========
     // Ahora mismo es el mismo generador de ejemplo que usábamos para Cloud.
@@ -338,6 +386,7 @@
         const arr = Array.isArray(data) ? data : (data.preguntas || []);
         if(!Array.isArray(arr) || arr.length===0) throw new Error('Estructura inesperada o vacía.');
 
+        difficultyMode = 'normal'; // NUEVO: por defecto al cargar manual
         allQuestions = arr.map(q => ({...q}));
         questions = allQuestions.slice();
         populateTemas();
@@ -364,13 +413,16 @@
       appEl.classList.add('hidden');
       landing.classList.remove('hidden');
       selectedSubject = null;
+      difficultyMode = 'normal'; // NUEVO reset
       headerTitle.textContent = 'Sin preguntas cargadas';
       enunciado.textContent = 'Selecciona una asignatura para empezar.';
       autoHint.textContent = '';
       regenPDBtn.style.display = 'none';
+      pdHardBtn.style.display = 'none';
     });
     regenPDBtn.addEventListener('click', ()=>{
       if(selectedSubject === 'PD'){
+        difficultyMode = 'normal'; // NUEVO
         allQuestions = generatePDQuestions();
         questions = allQuestions.slice();
         populateTemas();
@@ -379,6 +431,15 @@
         setStatus('Banco PD regenerado.');
       }
     });
+    // NUEVO: botón PD muy difícil
+    pdHardBtn.addEventListener('click', ()=>{
+      if(selectedSubject === 'PD'){
+        tryLoadPDHard();
+      }else{
+        alert('El modo muy difícil solo está disponible para PD.');
+      }
+    });
+    // /NUEVO
 
     // Botones grandes de la pantalla de selección
     document.getElementById('btnITIL').addEventListener('click', ()=> selectSubject('ITIL', true));
@@ -397,10 +458,12 @@
       selectedSubject = subjectKey;
       landing.classList.add('hidden');
       appEl.classList.remove('hidden');
+      difficultyMode = 'normal'; // NUEVO
       document.title = `Tester ${SUBJECTS[subjectKey].label} - Estudio y Examen`;
       headerTitle.textContent = `[${SUBJECTS[subjectKey].label}] Sin preguntas cargadas`;
       autoHint.textContent = `Asignatura: ${SUBJECTS[subjectKey].label}`;
       regenPDBtn.style.display = subjectKey === 'PD' ? 'inline-block' : 'none';
+      pdHardBtn.style.display = subjectKey === 'PD' ? 'inline-block' : 'none'; // NUEVO
       setStatus('Preparado');
       if(autoLoad) tryAutoLoadForSubject(subjectKey);
     }
@@ -429,7 +492,10 @@
       q._opcionesMezcladas = mezcladas;
       q._correctaIndex = mezcladas.findIndex(op => op.i === q.correcta);
 
-      headerTitle.textContent = `[${SUBJECTS[selectedSubject]?.label || '—'}] ${q.tema || 'Tema'} — Pregunta ${index+1}/${questions.length} [${modeExam? 'Examen':'Estudio'}]`;
+      const subjectLabel = SUBJECTS[selectedSubject]?.label || '—';
+      const diffLabel = difficultyMode === 'hard' ? ' (Muy difícil)' : '';
+      headerTitle.textContent = `[${subjectLabel}${diffLabel}] ${q.tema || 'Tema'} — Pregunta ${index+1}/${questions.length} [${modeExam? 'Examen':'Estudio'}]`;
+
       enunciado.textContent = q.enunciado;
       opts.innerHTML = '';
 
