@@ -45,7 +45,11 @@
     .landing .box{max-width:900px;width:100%;text-align:center}
     .landing h2{margin:0 0 16px 0; font-size:28px}
     .landing p{margin:0 0 24px 0; color:var(--muted)}
-    .landing .grid{display:grid; gap:16px; grid-template-columns:1fr 1fr;}
+    .landing .grid{
+      display:grid;
+      gap:16px;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    }
     .bigbtn{
       border:1px solid #1a2742; background:linear-gradient(180deg,#0e1b3a,#0b152c);
       padding:28px 20px; border-radius:16px; font-size:22px; cursor:pointer;
@@ -64,6 +68,7 @@
       <p>Elige una y te llevamos al generador de preguntas.</p>
       <div class="grid">
         <button class="bigbtn" id="btnITIL">🧩 CIMSI</button>
+        <button class="bigbtn" id="btnITILHard">🔥 CIMSI Difícil</button>
         <button class="bigbtn" id="btnPD">📘 PD</button>
       </div>
     </div>
@@ -83,9 +88,8 @@
           <button id="doubtBtn" title="Marcar/Demarcar como dudosa">★ Dudosa</button>
           <button id="examBtn" style="background:#f59e0b">Iniciar Examen (20)</button>
           <button id="regenPDBtn" class="ghost" style="display:none">Generar PD</button>
-          <!-- NUEVO: botón modo muy difícil PD -->
+          <!-- Botón modo muy difícil PD -->
           <button id="pdHardBtn" class="ghost" style="display:none;border-color:#b91c1c">PD Muy Difícil</button>
-          <!-- /NUEVO -->
           <button id="changeSubject" class="ghost" title="Volver a elegir asignatura">Cambiar asignatura</button>
         </div>
       </header>
@@ -134,10 +138,11 @@
   <script>
     // ========= Config de asignaturas =========
     const SUBJECTS = {
-      ITIL: { label: 'ITIL', slug: 'itil' },
-      PD:   { label: 'PD',   slug: 'pd' }
+      ITIL:      { label: 'CIMSI', slug: 'cimsi' },
+      ITIL_HARD: { label: 'CIMSI', slug: 'cimsi-hard' }, // CIMSI difícil
+      PD:        { label: 'PD',    slug: 'pd' }
     };
-    let selectedSubject = null; // 'ITIL' o 'PD'
+    let selectedSubject = null; // 'ITIL' | 'ITIL_HARD' | 'PD'
 
     // ========= Estado =========
     let allQuestions = [];
@@ -147,9 +152,7 @@
     let userAnswers = {};
     let doubts = new Set();
     let checkedQuestions = new Set();
-    // NUEVO: modo de dificultad
     let difficultyMode = 'normal'; // 'normal' | 'hard'
-    // /NUEVO
 
     // ========= DOM =========
     const landing = document.getElementById('landing');
@@ -167,7 +170,7 @@
     const tryAutoBtn = document.getElementById('tryAuto');
     const autoHint = document.getElementById('autoHint');
     const regenPDBtn = document.getElementById('regenPDBtn');
-    const pdHardBtn = document.getElementById('pdHardBtn'); // NUEVO
+    const pdHardBtn = document.getElementById('pdHardBtn');
 
     const setStatus = (s) => statusText.textContent = s;
 
@@ -177,19 +180,27 @@
       const repoSegment = isPages ? location.pathname.split('/').filter(Boolean)[0] : '';
       return `${location.origin}/${repoSegment ? repoSegment + '/' : ''}`;
     }
+
     // Candidatos de rutas para cada asignatura
     function jsonCandidatesFor(subjectKey){
-      const root = baseRoot(); // ya maneja GitHub Pages /<repo>/
+      const root = baseRoot(); // maneja GitHub Pages /<repo>/
       if (subjectKey === 'ITIL') {
         return [
-          `${root}Preguntas_CIMSI/preguntas_estudioCIMSI.json`, // carpeta
-          `${root}preguntas_estudioCIMSI.json`                  // raíz (opcional)
+          `${root}Preguntas_CIMSI/preguntas_estudioCIMSI.json`,
+          `${root}preguntas_estudioCIMSI.json`
+        ];
+      }
+      if (subjectKey === 'ITIL_HARD') {
+        // JSON "tipo test" para CIMSI difícil
+        return [
+          `${root}Preguntas_CIMSI/preguntas_examenCIMSI.json`,
+          `${root}preguntas_examenCIMSI.json`
         ];
       }
       if (subjectKey === 'PD') {
         return [
-          `${root}Preguntas_CIMSI/preguntas_estudioPD.json`,    // carpeta
-          `${root}preguntas_estudioPD.json`                     // raíz (opcional)
+          `${root}Preguntas_CIMSI/preguntas_estudioPD.json`,
+          `${root}preguntas_estudioPD.json`
         ];
       }
       return [];
@@ -198,7 +209,9 @@
     // ========= Carga automática según asignatura =========
     async function tryAutoLoadForSubject(subjectKey){
       const candidates = jsonCandidatesFor(subjectKey);
-      autoHint.textContent = `Buscando en: ${candidates.map(c => c.replace(location.origin,'')).join('  •  ')}`;
+      if (candidates.length) {
+        autoHint.textContent = `Buscando en: ${candidates.map(c => c.replace(location.origin,'')).join('  •  ')}`;
+      }
       for(const url of candidates){
         try{
           setStatus('Cargando: ' + url);
@@ -208,7 +221,10 @@
           const data = JSON.parse(txt);
           const arr = Array.isArray(data) ? data : (data.preguntas || []);
           if(!Array.isArray(arr) || arr.length===0) throw new Error('JSON vacío o estructura inesperada');
-          difficultyMode = 'normal'; // NUEVO: carga normal
+
+          // dificultad según asignatura
+          difficultyMode = (subjectKey === 'ITIL_HARD') ? 'hard' : 'normal';
+
           allQuestions = arr.map(q => ({...q}));
           questions = allQuestions.slice();
           populateTemas();
@@ -223,8 +239,8 @@
 
       // Fallback: si es PD, generamos preguntas automáticamente
       if(subjectKey === 'PD'){
-        difficultyMode = 'normal'; // NUEVO
-        allQuestions = generatePDQuestions();   // (puedes personalizar estas preguntas)
+        difficultyMode = 'normal';
+        allQuestions = generatePDQuestions();
         questions = allQuestions.slice();
         populateTemas();
         index = 0; modeExam=false; userAnswers={}; doubts=new Set(); checkedQuestions=new Set();
@@ -279,8 +295,6 @@
     // ========= FIN NUEVO =========
 
     // ========= Generador de preguntas PD (fallback simple) =========
-    // Ahora mismo es el mismo generador de ejemplo que usábamos para Cloud.
-    // Si quieres que PD tenga su propio temario, dímelo y lo adapto.
     function generatePDQuestions(){
       const providers = [
         { name:'AWS', tema:'AWS', sv:{
@@ -386,7 +400,7 @@
         const arr = Array.isArray(data) ? data : (data.preguntas || []);
         if(!Array.isArray(arr) || arr.length===0) throw new Error('Estructura inesperada o vacía.');
 
-        difficultyMode = 'normal'; // NUEVO: por defecto al cargar manual
+        difficultyMode = 'normal';
         allQuestions = arr.map(q => ({...q}));
         questions = allQuestions.slice();
         populateTemas();
@@ -399,6 +413,7 @@
 
     // ========= Controles =========
     document.getElementById('prevBtn').addEventListener('click', ()=>{ if(index>0){ index--; updateView() } });
+    document.getElementById('nextBtn').addEventListener('click', ()=>{ if(index<questions.length-1){ index--; index++; updateView() } else if(index === questions.length-1){ /* nada */ } });
     document.getElementById('nextBtn').addEventListener('click', ()=>{ if(index<questions.length-1){ index++; updateView() } });
     document.getElementById('doubtBtn').addEventListener('click', ()=>{ toggleDoubt(); });
     document.getElementById('checkBtn').addEventListener('click', ()=>{ checkCurrent(); });
@@ -413,7 +428,7 @@
       appEl.classList.add('hidden');
       landing.classList.remove('hidden');
       selectedSubject = null;
-      difficultyMode = 'normal'; // NUEVO reset
+      difficultyMode = 'normal';
       headerTitle.textContent = 'Sin preguntas cargadas';
       enunciado.textContent = 'Selecciona una asignatura para empezar.';
       autoHint.textContent = '';
@@ -422,7 +437,7 @@
     });
     regenPDBtn.addEventListener('click', ()=>{
       if(selectedSubject === 'PD'){
-        difficultyMode = 'normal'; // NUEVO
+        difficultyMode = 'normal';
         allQuestions = generatePDQuestions();
         questions = allQuestions.slice();
         populateTemas();
@@ -431,7 +446,6 @@
         setStatus('Banco PD regenerado.');
       }
     });
-    // NUEVO: botón PD muy difícil
     pdHardBtn.addEventListener('click', ()=>{
       if(selectedSubject === 'PD'){
         tryLoadPDHard();
@@ -439,13 +453,13 @@
         alert('El modo muy difícil solo está disponible para PD.');
       }
     });
-    // /NUEVO
 
     // Botones grandes de la pantalla de selección
     document.getElementById('btnITIL').addEventListener('click', ()=> selectSubject('ITIL', true));
+    document.getElementById('btnITILHard').addEventListener('click', ()=> selectSubject('ITIL_HARD', true));
     document.getElementById('btnPD').addEventListener('click', ()=> selectSubject('PD', true));
 
-    // Deep-link: ?asignatura=itil|pd
+    // Deep-link: ?asignatura=itil|itil_hard|pd
     window.addEventListener('load', ()=>{
       const p = new URLSearchParams(location.search);
       const a = (p.get('asignatura')||'').toUpperCase();
@@ -458,12 +472,16 @@
       selectedSubject = subjectKey;
       landing.classList.add('hidden');
       appEl.classList.remove('hidden');
-      difficultyMode = 'normal'; // NUEVO
+
+      difficultyMode = (subjectKey === 'ITIL_HARD') ? 'hard' : 'normal';
+
       document.title = `Tester ${SUBJECTS[subjectKey].label} - Estudio y Examen`;
       headerTitle.textContent = `[${SUBJECTS[subjectKey].label}] Sin preguntas cargadas`;
       autoHint.textContent = `Asignatura: ${SUBJECTS[subjectKey].label}`;
+
       regenPDBtn.style.display = subjectKey === 'PD' ? 'inline-block' : 'none';
-      pdHardBtn.style.display = subjectKey === 'PD' ? 'inline-block' : 'none'; // NUEVO
+      pdHardBtn.style.display   = subjectKey === 'PD' ? 'inline-block' : 'none';
+
       setStatus('Preparado');
       if(autoLoad) tryAutoLoadForSubject(subjectKey);
     }
@@ -476,13 +494,20 @@
       document.getElementById('progressLabel').textContent = `0/${allQuestions.length}`;
     }
 
-    function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]] } return a }
+    function shuffle(a){
+      for(let i=a.length-1;i>0;i--){
+        const j=Math.floor(Math.random()*(i+1));
+        [a[i],a[j]]=[a[j],a[i]];
+      }
+      return a;
+    }
 
     function updateView(){
       if(questions.length===0){
         headerTitle.textContent=`[${selectedSubject? SUBJECTS[selectedSubject].label : '—'}] Sin preguntas cargadas`;
         enunciado.textContent='Cargue un JSON con preguntas (botón “Intentar cargar…” o “Carga manual”).';
-        opts.innerHTML=''; progressBar.style.width='0%';
+        opts.innerHTML='';
+        progressBar.style.width='0%';
         document.getElementById('progressLabel').textContent = `0/0`;
         return;
       }

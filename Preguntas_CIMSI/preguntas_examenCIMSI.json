@@ -1,0 +1,2528 @@
+[
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 1,
+    "enunciado": "¿Qué describe mejor a ITIL dentro de la gestión de servicios TI?",
+    "opciones": [
+      "Una norma certificable al estilo de ISO 20000",
+      "Una metodología prescriptiva paso a paso",
+      "Un conjunto de buenas prácticas para la gestión de servicios TI",
+      "Una herramienta software de ticketing de incidencias"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 2,
+    "enunciado": "Según ITIL 4, ¿cuál es el objetivo fundamental de un servicio TI para el cliente?",
+    "opciones": [
+      "Transferir la propiedad de todos los activos tecnológicos al cliente",
+      "Proporcionar resultados deseados sin que el cliente asuma costes y riesgos específicos",
+      "Reducir el número de usuarios que acceden al sistema",
+      "Aumentar el CAPEX del cliente a corto plazo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 3,
+    "enunciado": "En términos de ITIL, el valor de un servicio se descompone en dos grandes componentes. ¿Cuáles son?",
+    "opciones": [
+      "Disponibilidad y continuidad",
+      "Utilidad y garantía",
+      "Seguridad y capacidad",
+      "Coste y retorno de inversión"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 4,
+    "enunciado": "¿Cuál de los siguientes roles es responsable de contratar el servicio y acordar los niveles de servicio (SLA) con el proveedor?",
+    "opciones": [
+      "Usuario",
+      "Proveedor de servicio",
+      "Cliente",
+      "Sponsor"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 5,
+    "enunciado": "En el sistema de valor del servicio de ITIL 4, ¿qué elemento proporciona la dirección y control general a la organización y sus servicios?",
+    "opciones": [
+      "Prácticas",
+      "Cadena de valor del servicio",
+      "Mejora continua",
+      "Gobierno"
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 6,
+    "enunciado": "¿Qué afirmación distingue mejor un proceso de un proyecto en el contexto de ITIL?",
+    "opciones": [
+      "Un proceso es temporal y un proyecto es continuo",
+      "Un proceso es continuo y repetible, mientras que un proyecto es temporal y con un objetivo concreto",
+      "Ambos son siempre temporales",
+      "Ambos tienen siempre el mismo equipo asignado de forma permanente"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 7,
+    "enunciado": "¿Cuál de las siguientes NO es una de las cuatro dimensiones de la gestión de servicios en ITIL 4?",
+    "opciones": [
+      "Organizaciones y personas",
+      "Información y tecnología",
+      "Socios y suministradores",
+      "Finanzas y contabilidad avanzada"
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 8,
+    "enunciado": "En la cadena de valor del servicio, ¿qué actividad se centra en entender y documentar requisitos de clientes y usuarios?",
+    "opciones": [
+      "Diseñar",
+      "Implicar",
+      "Obtener y construir",
+      "Transicionar"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 9,
+    "enunciado": "¿Qué actividad de la cadena de valor del servicio se asocia principalmente con la puesta en producción de nuevos componentes del servicio?",
+    "opciones": [
+      "Planificar",
+      "Entregar y apoyar",
+      "Transicionar",
+      "Mejorar"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 10,
+    "enunciado": "La base de datos de configuración (CMDB) almacena principalmente:",
+    "opciones": [
+      "Todas las transacciones económicas del servicio",
+      "La infraestructura, los elementos de configuración y sus relaciones, estado e histórico",
+      "Únicamente los incidentes graves de producción",
+      "Los contratos legales con proveedores y clientes"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 11,
+    "enunciado": "¿Qué tipo de elemento se considera un CI (Configuration Item) en gestión de la configuración?",
+    "opciones": [
+      "Solo servidores físicos y virtuales",
+      "Solo aplicaciones de negocio críticas",
+      "Cualquier componente que deba ser gestionado para proveer un servicio TI",
+      "Exclusivamente dispositivos de red gestionados"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 12,
+    "enunciado": "¿Cuál es el objetivo principal de la gestión del cambio en ITIL?",
+    "opciones": [
+      "Aplicar cambios lo más rápido posible, sin importar el riesgo",
+      "Asegurar que los cambios se aplican de forma controlada, minimizando riesgos e impactos",
+      "Registrar únicamente los cambios de emergencia",
+      "Evitar cualquier cambio en la infraestructura TI"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 13,
+    "enunciado": "Un cambio de tipo emergencia se caracteriza por:",
+    "opciones": [
+      "Ser de muy bajo riesgo y totalmente estándar",
+      "Tener alto riesgo y requerir una evaluación rápida por un comité especializado",
+      "No necesitar aprobación del CAB",
+      "Ser siempre solicitado por el cliente final"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 14,
+    "enunciado": "¿Qué actividad corresponde a gestión de incidencias y NO a gestión de problemas?",
+    "opciones": [
+      "Encontrar la causa raíz de una caída recurrente",
+      "Documentar un error conocido en la base de datos de errores",
+      "Restaurar el servicio lo antes posible tras una caída",
+      "Analizar tendencias para evitar incidentes futuros"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 15,
+    "enunciado": "¿Qué afirmación describe mejor la relación entre incidente y problema en ITIL?",
+    "opciones": [
+      "Un incidente siempre es consecuencia de un problema, y cada problema solo genera un incidente",
+      "Un problema puede originar uno o varios incidentes, y se centra en la causa raíz",
+      "Los problemas son menos graves que los incidentes",
+      "Incidentes y problemas son sinónimos en ITIL"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 16,
+    "enunciado": "¿Qué práctica ITIL se encarga específicamente de asegurar que la nueva versión de un servicio ha sido probada y es apta para su despliegue?",
+    "opciones": [
+      "Gestión de incidencias",
+      "Gestión de la configuración",
+      "Validación y pruebas del servicio",
+      "Atención al usuario (service desk)"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 17,
+    "enunciado": "¿Cuál es el objetivo de la mejora continua en el contexto de ITIL?",
+    "opciones": [
+      "Reducir únicamente los costes de infraestructura",
+      "Optimizar servicios, prácticas y la cadena de valor del servicio de forma iterativa",
+      "Eliminar prácticas que no estén automatizadas",
+      "Actualizar la CMDB cada año"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 18,
+    "enunciado": "¿Qué principio guía de ITIL 4 enfatiza que se debe empezar desde la situación actual y no desde un diseño idealizado?",
+    "opciones": [
+      "Foco en el valor",
+      "Empieza donde estés",
+      "Optimizar y automatizar",
+      "Colaborar y promover la visibilidad"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 19,
+    "enunciado": "¿Qué principio ITIL está más directamente relacionado con evitar complejidad innecesaria en procesos y herramientas?",
+    "opciones": [
+      "Mantenerlo simple y práctico",
+      "Pensar y trabajar de manera holística",
+      "Progresa iterativamente con retroalimentación",
+      "Colaborar y promover la visibilidad"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 20,
+    "enunciado": "¿Cuál de las siguientes prácticas ITIL se considera de gestión de servicios y NO de gestión general?",
+    "opciones": [
+      "Gestión financiera TI",
+      "Gestión de la disponibilidad",
+      "Gestión de la fuerza de trabajo y talento",
+      "Estrategia"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 21,
+    "enunciado": "En el ejemplo de la gotera en una casa usado para ilustrar ITIL, ¿qué representa la acción de cortar el agua temporalmente?",
+    "opciones": [
+      "Una solicitud de cambio estándar",
+      "Una acción de gestión de problemas como solución temporal",
+      "Una mejora continua",
+      "Una tarea de gestión de la configuración"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 22,
+    "enunciado": "¿Qué órgano, presidido por el gestor de cambios, evalúa los cambios significativos en la infraestructura TI?",
+    "opciones": [
+      "Comité de Disponibilidad",
+      "Service Desk",
+      "Comité Asesor del Cambio (CAB)",
+      "Comité de Seguridad TI"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 23,
+    "enunciado": "Una Solicitud de Cambio (RFC) puede originarse en varios puntos. ¿Cuál de estos es un origen típico según ITIL?",
+    "opciones": [
+      "Únicamente desde la dirección general",
+      "Solo desde el proveedor externo",
+      "Desde la gestión de problemas, incidencias u otros procesos que identifiquen la necesidad",
+      "Exclusivamente desde el departamento legal"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 24,
+    "enunciado": "¿Qué tipo de prácticas de ITIL engloban aspectos como \"Cambio de la organización\" y \"Fuerza de trabajo y talento\"?",
+    "opciones": [
+      "Prácticas de gestión técnica",
+      "Prácticas de gestión de servicios",
+      "Prácticas de gestión general",
+      "Prácticas de gestión financiera"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 25,
+    "enunciado": "¿Qué práctica es la más directamente responsable de registrar y resolver solicitudes de los usuarios que no son fallos del servicio (por ejemplo, peticiones de acceso)?",
+    "opciones": [
+      "Gestión de incidencias",
+      "Gestión de problemas",
+      "Gestión de peticiones de servicio",
+      "Gestión de la configuración"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 26,
+    "enunciado": "¿Cuál de las siguientes actividades suele realizar el Service Desk (Atención al usuario)?",
+    "opciones": [
+      "Aprobar todos los cambios de alto riesgo",
+      "Registrar incidencias y servir de punto de contacto único con el usuario",
+      "Diseñar la arquitectura del servicio",
+      "Definir la política de backups corporativa"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 27,
+    "enunciado": "La transición desde el foco tradicional en la tecnología al foco en el valor implica que:",
+    "opciones": [
+      "La TI pasa a ser un fin en sí misma",
+      "Se prioriza la resolución reactiva de problemas sobre la prevención",
+      "Se alinean los servicios TI con los objetivos de negocio y la entrega de valor",
+      "Se eliminan los procesos documentados en favor de la improvisación"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 28,
+    "enunciado": "¿Cuál de las siguientes métricas es más adecuada para evaluar el rendimiento de la gestión de incidencias?",
+    "opciones": [
+      "Tiempo medio entre fallos (MTBF)",
+      "Número de CIs en la CMDB",
+      "Número de incidencias resueltas por unidad de tiempo y su tiempo medio de resolución",
+      "Porcentaje de proyectos entregados a tiempo"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 29,
+    "enunciado": "En la cadena de valor del servicio, ¿qué actividad está más relacionada con la recopilación de métricas y el análisis para futuras mejoras?",
+    "opciones": [
+      "Implicar",
+      "Planificar",
+      "Obtener y construir",
+      "Mejorar"
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "Tema 1 - Gestión de servicios TI e ITIL",
+    "qnum": 30,
+    "enunciado": "¿Cuál de las siguientes afirmaciones sobre la tecnología en ITIL es correcta?",
+    "opciones": [
+      "La tecnología es un fin en sí misma y la prioridad principal",
+      "La tecnología es un medio para entregar valor al negocio",
+      "La tecnología sustituye a la necesidad de procesos",
+      "La tecnología hace innecesaria la gestión de servicios"
+    ],
+    "correcta": 1
+  },
+
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 1,
+    "enunciado": "¿Cuál es el objetivo principal de la planificación de capacidad en un servicio TI?",
+    "opciones": [
+      "Maximizar el número de servidores independientemente del coste",
+      "Asegurar que la capacidad satisface la demanda actual y futura de forma coste-efectiva",
+      "Minimizar el número de usuarios concurrentes",
+      "Garantizar que nunca se utiliza más del 30% de CPU"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 2,
+    "enunciado": "¿Qué técnicas se mencionan como instrumentos para planificar capacidad?",
+    "opciones": [
+      "Análisis de riesgo legal y auditorías",
+      "Modelos analíticos como teoría de colas y simulaciones de carga",
+      "Solo pruebas de aceptación de usuario",
+      "Exclusivamente benchmarking con carga real"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 3,
+    "enunciado": "Un sistema escalable, según las diapositivas, debe ser capaz de manejar la adición de usuarios y recursos sin:",
+    "opciones": [
+      "Aumentar el número de réplicas",
+      "Sufrir una degradación notable de rendimiento ni incrementar excesivamente la complejidad de administración",
+      "Cambiar la arquitectura física",
+      "Modificar la versión del sistema operativo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 4,
+    "enunciado": "El escalado vertical (scale up) se caracteriza por:",
+    "opciones": [
+      "Añadir nuevos nodos al sistema, repartiendo la carga",
+      "Añadir recursos (CPU, memoria, disco) a un nodo existente",
+      "Reducir el número de peticiones entrantes",
+      "Mover todas las aplicaciones a la nube pública"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 5,
+    "enunciado": "El escalado horizontal (scale out) implica principalmente:",
+    "opciones": [
+      "Aumentar la frecuencia del procesador del servidor principal",
+      "Añadir más memoria RAM a un único servidor",
+      "Añadir nuevos nodos al sistema y distribuir la carga entre ellos",
+      "Incrementar el ancho de banda de la tarjeta de red de un servidor"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 6,
+    "enunciado": "¿Qué efecto tiene, en general, aumentar el número de nodos en el sistema sobre la confiabilidad (reliability)?",
+    "opciones": [
+      "Siempre la aumenta, porque hay más nodos",
+      "Siempre la reduce, porque cada nodo es un punto único de fallo",
+      "Puede reducir la probabilidad de que todos los nodos estén funcionando simultáneamente",
+      "No tiene ningún efecto sobre la confiabilidad"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 7,
+    "enunciado": "¿Cuál de las siguientes combinaciones de escalado y tecnología es correcta según las tablas de las diapositivas?",
+    "opciones": [
+      "En entorno físico, scale out consiste en añadir más CPU al mismo servidor",
+      "En entorno virtual, scale up consiste en añadir más CPU virtual al mismo nodo",
+      "En cloud computing, scale up siempre implica comprar nuevo hardware",
+      "En entorno virtual, scale out consiste en reducir el número de conexiones virtuales"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 8,
+    "enunciado": "La eficiencia de escalado se define como:",
+    "opciones": [
+      "E(N) = N / C(N)",
+      "E(N) = X(1) / X(N)",
+      "E(N) = C(N) / N",
+      "E(N) = X(N) / N^2"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 9,
+    "enunciado": "Dada la capacidad relativa C(N) = X(N) / X(1), ¿qué representa N / C(N) en las gráficas de escalabilidad?",
+    "opciones": [
+      "La eficiencia de escalado",
+      "El inverso de la eficiencia, usado para linealizar la parábola de escalabilidad",
+      "El throughput total",
+      "El número de usuarios virtuales normalizado"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 10,
+    "enunciado": "¿Cuál de las siguientes afirmaciones sobre replicación de servicios es correcta?",
+    "opciones": [
+      "Un servicio está replicado cuando tiene una sola instancia lógica visible",
+      "Un servicio está replicado cuando tiene más de una instancia lógica idéntica que aparece al usuario como una sola",
+      "La replicación solo tiene sentido para bases de datos y no para servicios",
+      "La replicación elimina siempre la necesidad de balanceadores de carga"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 11,
+    "enunciado": "Para reducir fallos de conectividad o retardo, las diapositivas recomiendan que las réplicas se sitúen:",
+    "opciones": [
+      "En la misma máquina física",
+      "Geográficamente lo más cercanas posible",
+      "Distribuidas geográficamente",
+      "Solo en la misma red de área local (LAN)"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 12,
+    "enunciado": "Para maximizar la confiabilidad y la disponibilidad en un sistema replicado, suele ser preferible que las réplicas estén:",
+    "opciones": [
+      "Muy cercanas, para controlar mejor los fallos",
+      "Lejos, para complicar la sincronización",
+      "Solo en el mismo servidor físico",
+      "Ubicadas en discos locales no redundantes"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 13,
+    "enunciado": "Una de las aproximaciones para mantener consistencia en sistemas replicados es:",
+    "opciones": [
+      "Permitir actualizaciones solo en la réplica menos cargada",
+      "Replicar únicamente información que no cambia",
+      "No replicar datos y confiar solo en cache local",
+      "Aplicar las actualizaciones solo en la primera réplica creada"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 14,
+    "enunciado": "En un sistema replicado consistente, ¿qué se exige respecto a la información contenida en los nodos?",
+    "opciones": [
+      "Que sea idéntica desde el punto de vista de quien la lee",
+      "Que haya pequeñas diferencias permitidas entre copias",
+      "Que solo se garantice la consistencia eventual sin restricciones",
+      "Que las escrituras se apliquen primero a la réplica más antigua"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 15,
+    "enunciado": "¿Qué componente introduce una IP virtual (VIP) para abstraer una granja de servidores como un único servidor lógico?",
+    "opciones": [
+      "Servidor DNS primario",
+      "Balanceador de carga",
+      "Servidor de bases de datos",
+      "Proxy de caché"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 16,
+    "enunciado": "¿Qué propósito tienen las probes generadas por un balanceador de carga?",
+    "opciones": [
+      "Medir el ancho de banda disponible entre clientes",
+      "Comprobar si una aplicación está disponible en un servidor real mediante peticiones sintéticas",
+      "Incrementar artificialmente la carga sobre los servidores",
+      "Reducir el número de conexiones concurrentes en el sistema"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 17,
+    "enunciado": "El algoritmo round-robin en un balanceador de carga:",
+    "opciones": [
+      "Envía siempre las nuevas conexiones al servidor menos cargado",
+      "Asigna cada nueva conexión al siguiente servidor disponible en una lista cíclica",
+      "Calcula un hash de la IP del cliente para asignar servidor",
+      "Solo funciona con protocolos sin estado"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 18,
+    "enunciado": "El algoritmo de \"menos conexiones\" en un balanceador de carga tiende a:",
+    "opciones": [
+      "Elegir el servidor con menor número de conexiones activas",
+      "Elegir el servidor con mayor latencia",
+      "Rotar servidores sin tener en cuenta su estado",
+      "Elegir siempre el mismo servidor hasta saturarlo"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 19,
+    "enunciado": "¿Qué característica distingue al algoritmo de hashing en un balanceador de carga?",
+    "opciones": [
+      "Usa una tabla de conexiones ordenada por tiempo",
+      "Selecciona servidor según el resultado de una función hash aplicada a algún parámetro de la petición",
+      "Asigna todas las peticiones a un servidor maestro",
+      "Distribuye el tráfico de forma completamente aleatoria"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 20,
+    "enunciado": "La stickiness table utilizada por un balanceador de carga sirve para:",
+    "opciones": [
+      "Registrar el número de peticiones por segundo",
+      "Mantener la sesión de un cliente en el mismo servidor entre múltiples peticiones",
+      "Almacenar copias de los datos de aplicación",
+      "Ajustar dinámicamente el ancho de banda asignado"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 21,
+    "enunciado": "En caching distribuido, un lease (arrendamiento) asociado a un dato cacheado indica que:",
+    "opciones": [
+      "No se puede leer el dato hasta que expire el lease",
+      "Durante un tiempo, el dato se garantiza inmutable y por tanto consistente",
+      "El dato será replicado automáticamente en todas las cachés",
+      "El dato se invalida inmediatamente tras su lectura"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 22,
+    "enunciado": "En la estrategia de callbacks para mantener la consistencia de cachés, el nodo propietario del dato:",
+    "opciones": [
+      "Nunca registra qué nodos tienen copias del dato",
+      "Envía notificaciones a los nodos que tienen copias cuando el dato cambia",
+      "Invalida periódicamente todos los datos cacheados sin avisar",
+      "Solo permite lecturas mientras el dato está bloqueado"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 23,
+    "enunciado": "Los hints (pistas) en caching suelen caracterizarse por:",
+    "opciones": [
+      "Requerir siempre protocolos estrictos de consistencia",
+      "Poder estar desactualizados, asumiendo que se detectará el error cuando se usen",
+      "Almacenar solo información transaccional crítica",
+      "Evitar cualquier acceso al origen de los datos"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 24,
+    "enunciado": "¿Qué parámetro de rendimiento mide los bits por segundo que pueden atravesar el balanceador de carga?",
+    "opciones": [
+      "Throughput",
+      "Conexiones concurrentes",
+      "Latencia media",
+      "Ancho de banda"
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 25,
+    "enunciado": "En las gráficas de capacidad X(N) vs usuarios virtuales N, una caída de X(N) al aumentar N suele indicar:",
+    "opciones": [
+      "Sobredimensionamiento perfecto",
+      "Saturación del sistema y pérdida de escalabilidad",
+      "Mejora lineal de rendimiento",
+      "Exceso de caché disponible"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 26,
+    "enunciado": "¿Cuál de estas afirmaciones sobre los costes de escalado es coherente con las diapositivas?",
+    "opciones": [
+      "Escalar siempre horizontalmente minimiza la complejidad administrativa",
+      "Escalar verticalmente nunca eleva los costes",
+      "Se debe buscar un compromiso entre coste, capacidad y complejidad administrativa",
+      "La planificación de capacidad ignora los costes y solo considera el rendimiento"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 27,
+    "enunciado": "¿Qué peligro se menciona respecto a la carga administrativa al aumentar el número de nodos?",
+    "opciones": [
+      "La carga administrativa siempre se reduce en un sistema distribuido",
+      "Puede crecer demasiado si no se automatizan tareas y procesos",
+      "Los sistemas distribuidos no requieren administración",
+      "Los nodos adicionales siempre se autogestionan"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 28,
+    "enunciado": "¿Cuál de las siguientes métricas se usa directamente para calcular la capacidad relativa C(N)?",
+    "opciones": [
+      "X(N), throughput con N usuarios",
+      "Tiempo medio de respuesta",
+      "Número de fallos por hora",
+      "Tamaño de la caché"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 29,
+    "enunciado": "¿Qué tipo de test es más apropiado para evaluar el impacto de cambios de configuración antes de desplegarlos en producción?",
+    "opciones": [
+      "Test con carga simulada en un entorno controlado",
+      "Test solo con usuarios reales en producción",
+      "Test manual sin carga",
+      "Revisión de código sin ejecutar el sistema"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 2 - Capacidad, rendimiento y escalado",
+    "qnum": 30,
+    "enunciado": "En el modelo de escalabilidad parabólico de Gunther, los parámetros alfa y beta representan:",
+    "opciones": [
+      "Constantes de latencia de red y de disco",
+      "Factores que capturan la sobrecarga de contenido compartido y de coherencia en el sistema",
+      "El número de réplicas y de cachés",
+      "Los límites físico y virtual de capacidad"
+    ],
+    "correcta": 1
+  },
+
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 1,
+    "enunciado": "Según las diapositivas, la virtualización se define como:",
+    "opciones": [
+      "La migración de todos los servicios a la nube",
+      "La emulación transparente de un recurso TI que ofrece prestaciones no disponibles en el recurso físico",
+      "La instalación de más memoria RAM en un servidor físico",
+      "La ejecución de aplicaciones en contenedores ligeros"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 2,
+    "enunciado": "¿Qué propiedad clave debe cumplir la virtualización respecto a los consumidores del recurso?",
+    "opciones": [
+      "Debe ser siempre visible que el recurso es virtual",
+      "La transparencia: los consumidores no pueden distinguir el recurso virtual de su equivalente físico",
+      "Debe limitar necesariamente el rendimiento respecto al hardware físico",
+      "Debe impedir la ejecución de software antiguo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 3,
+    "enunciado": "¿Qué elemento software es responsable de dar soporte a las máquinas virtuales y gestionar la correspondencia entre recursos físicos y virtuales?",
+    "opciones": [
+      "El sistema operativo invitado",
+      "El firmware de la BIOS",
+      "El monitor de máquinas virtuales (MMV) o hipervisor",
+      "El servidor DHCP"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 4,
+    "enunciado": "¿Cuál es una ventaja clave de usar máquinas virtuales según las diapositivas?",
+    "opciones": [
+      "Eliminar la necesidad de aislar usuarios",
+      "Facilitar la ejecución de software antiguo o con dependencias específicas",
+      "Impedir consolidar servidores",
+      "Evitar la necesidad de copias de seguridad"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 5,
+    "enunciado": "¿Cuál es la diferencia principal entre un hipervisor tipo 1 y tipo 2?",
+    "opciones": [
+      "El tipo 1 se ejecuta directamente sobre el hardware y el tipo 2 sobre un sistema operativo anfitrión",
+      "El tipo 1 solo sirve para entornos de escritorio",
+      "El tipo 2 solo sirve para data centers grandes",
+      "No existe diferencia técnica entre ambos"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 6,
+    "enunciado": "VMware GSX, según se explica en las diapositivas, se caracteriza por:",
+    "opciones": [
+      "Ejecutarse directamente sobre el hardware sin sistema operativo",
+      "Ejecutarse sobre el sistema operativo como una aplicación más",
+      "No permitir la creación de hardware virtual",
+      "No soportar máquinas virtuales concurrentes"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 7,
+    "enunciado": "¿Cuál de los siguientes NO es un objetivo típico de la virtualización de servidores?",
+    "opciones": [
+      "Consolidar servidores infradimensionados",
+      "Aislar entornos y mejorar la seguridad",
+      "Permitir que varios sistemas operativos compartan el mismo hardware",
+      "Aumentar el número de máquinas físicas necesarias"
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 8,
+    "enunciado": "En la taxonomía de la virtualización se identifican al menos tres áreas principales. ¿Cuál de las siguientes NO es una de ellas?",
+    "opciones": [
+      "Virtualización de tecnologías de red",
+      "Virtualización de tecnologías de almacenamiento",
+      "Virtualización de tecnologías de servidores",
+      "Virtualización de procesos de negocio financieros"
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 9,
+    "enunciado": "En una SAN, el soft zoning se caracteriza por:",
+    "opciones": [
+      "Aplicar restricciones reales de comunicación en el fabric a nivel de hardware",
+      "Ser menos seguro porque solo controla qué dispositivos se anuncian por nombre",
+      "Impedir cualquier conexión de dispositivos no autorizados por dirección",
+      "Exigir filtrado de tramas por hardware dedicado"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 10,
+    "enunciado": "El hard zoning en una SAN proporciona:",
+    "opciones": [
+      "Menos seguridad que el soft zoning",
+      "Restricción real de la comunicación entre dispositivos en el fabric mediante mecanismos hardware",
+      "Solo filtrado lógico de nombres de dispositivos",
+      "Una forma de etiquetar servidores sin efecto en la seguridad"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 11,
+    "enunciado": "RAID 1, según las diapositivas, se conoce típicamente como:",
+    "opciones": [
+      "Striping sin redundancia",
+      "Mirroring, duplicando los bloques en cada disco del conjunto",
+      "Paridad distribuida",
+      "Codificación de borrado"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 12,
+    "enunciado": "RAID 5 se caracteriza, entre otras cosas, por:",
+    "opciones": [
+      "No ofrecer ninguna redundancia",
+      "Duplicar todos los datos en dos discos",
+      "Crear bloques de paridad distribuidos entre los discos para poder recuperar la secuencia completa",
+      "Requerir únicamente dos discos"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 13,
+    "enunciado": "En la virtualización de disk arrays, la replicación síncrona se distingue porque:",
+    "opciones": [
+      "Es más rápida pero pierde datos ante fallos",
+      "Reconoce la escritura en el primario solo tras confirmar que los datos se han escrito en el secundario",
+      "No requiere confirmación del array secundario",
+      "Se realiza sincrónicamente solo en lecturas"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 14,
+    "enunciado": "¿Qué problema motivó la introducción de virtualización de servidores según las diapositivas?",
+    "opciones": [
+      "Los servidores estaban sobredimensionados para los picos de carga",
+      "Los servidores estaban demasiado infrautilizados salvo en picos, provocando infrautilización el resto del tiempo",
+      "Las redes eran demasiado rápidas",
+      "Las bases de datos no podían escalar verticalmente"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 15,
+    "enunciado": "¿Qué es DRS (Distributed Resource Scheduling) en entornos de virtualización?",
+    "opciones": [
+      "Un protocolo de routing de capa 3",
+      "Un mecanismo para transferir automáticamente VMs entre hosts para balancear el uso de recursos",
+      "Un sistema de copias de seguridad en la nube",
+      "Un algoritmo de hashing para balanceo de carga de red"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 16,
+    "enunciado": "¿Cuál es la función principal de FT (Fault Tolerance) en un entorno de máquinas virtuales?",
+    "opciones": [
+      "Reiniciar automáticamente el hipervisor al fallar",
+      "Proporcionar redundancia para VMs de forma que una máquina shadow asuma funciones sin interrupción",
+      "Reemplazar el almacenamiento local por remoto",
+      "Aumentar la velocidad de la red física"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 17,
+    "enunciado": "¿Qué capacidad ofrece IPMI (Intelligent Platform Management Interface) en el contexto de virtualización?",
+    "opciones": [
+      "Configurar VLANs dinámicamente",
+      "Poner servidores físicos en modo de ahorro energético o gestionarlos remotamente a bajo nivel",
+      "Configurar reglas de firewall a nivel de hipervisor",
+      "Migrar VMs entre hipervisores"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 18,
+    "enunciado": "En una arquitectura de red virtualizada con NSX, el plano de gestión se caracteriza porque:",
+    "opciones": [
+      "Gestiona el reenvío de tráfico entre interfaces de red",
+      "Contiene los nodos que definen las reglas de routing dinámico",
+      "Proporciona el punto único de configuración mediante GUI o API para terceros",
+      "Solo se encarga de cifrar el tráfico de datos"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 19,
+    "enunciado": "En NSX, el plano de control está compuesto por:",
+    "opciones": [
+      "NSX vSwitch y Edge Services Gateway",
+      "NSX Controller Cluster y Control VM que definen el reenvío de tráfico",
+      "Solo un switch físico central",
+      "Un conjunto de routers hardware de capa 3"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 20,
+    "enunciado": "El plano de datos (o de reenvío) en NSX se encarga de:",
+    "opciones": [
+      "Autenticar usuarios",
+      "Gestionar todo el tráfico que atraviesa interfaces de red, con elementos como NSX vSwitch y Edge Services Gateway",
+      "Almacenar la configuración de políticas de seguridad",
+      "Monitorizar solo eventos de log"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 21,
+    "enunciado": "NVGRE y VXLAN son ejemplos de tecnologías que:",
+    "opciones": [
+      "Virtualizan el almacenamiento en red",
+      "Permiten encapsular tramas de capa 2 sobre redes IP de capa 3 para virtualización de red",
+      "Imponen autenticación fuerte de usuarios",
+      "Solo se usan en redes de área personal"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 22,
+    "enunciado": "Una característica clave de la virtualización de red es que permite:",
+    "opciones": [
+      "Configurar puertos físicos sin necesidad de software",
+      "Tratar redes virtuales como si fueran máquinas virtuales: crear, copiar, mover o aprovisionar automáticamente",
+      "Eliminar la necesidad de switches físicos",
+      "Aumentar automáticamente la velocidad de la fibra óptica"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 23,
+    "enunciado": "¿Qué problema intenta resolver la migración en vivo de una VM entre dos hosts?",
+    "opciones": [
+      "La falta de almacenamiento local",
+      "La necesidad de reubicar cargas sin interrumpir el servicio, equilibrando uso de recursos o permitiendo mantenimiento",
+      "La imposibilidad de usar varios hipervisores",
+      "La redundancia de tarjetas de red"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 24,
+    "enunciado": "Durante la migración en vivo, ¿qué ocurre con el estado de memoria de la VM?",
+    "opciones": [
+      "Se descarta y la VM se reinicia en el host destino",
+      "Se copia gradualmente al host destino hasta sincronizarse y luego se pausa en el origen",
+      "Se mantiene exclusivamente en el host origen",
+      "Se guarda en disco y se recupera tras la migración"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 25,
+    "enunciado": "¿Qué tipo de recursos se pueden virtualizar en la taxonomía presentada en las diapositivas?",
+    "opciones": [
+      "Solo CPU y memoria",
+      "Tecnologías de red, almacenamiento y servidores",
+      "Únicamente aplicaciones de usuario",
+      "Exclusivamente bases de datos relacionales"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 26,
+    "enunciado": "¿Qué componente de un entorno virtualizado representa la plataforma hardware subyacente cuyos recursos se comparten?",
+    "opciones": [
+      "La máquina invitada (guest)",
+      "El host",
+      "El controlador de dominio",
+      "El switch virtual"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 27,
+    "enunciado": "¿Por qué el aumento de la velocidad de los procesadores favoreció la adopción de máquinas virtuales?",
+    "opciones": [
+      "Porque permite eliminar la sobrecarga de virtualización",
+      "Porque hace aceptable el sobrecoste de virtualización frente a los beneficios de aislamiento y consolidación",
+      "Porque impide usar sistemas operativos antiguos",
+      "Porque reduce el consumo energético de los data centers"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 28,
+    "enunciado": "¿Qué ventaja relacionada con la gestión de software aporta la virtualización de máquinas?",
+    "opciones": [
+      "Obliga a usar solo el último sistema operativo",
+      "Permite encapsular entornos de ejecución completos, facilitando despliegue, rollback y pruebas",
+      "Impide ejecutar varias versiones de una aplicación",
+      "Elimina la necesidad de copias de seguridad"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 29,
+    "enunciado": "En la definición de virtualización, la \"emulación\" hace referencia a:",
+    "opciones": [
+      "Aumentar la frecuencia del procesador físico",
+      "Ocultar atributos reales del recurso",
+      "Aparentar que un recurso TI tiene características que en realidad no tiene",
+      "Mejorar únicamente el rendimiento del hardware físico"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 3 - Virtualización y data centers",
+    "qnum": 30,
+    "enunciado": "En la definición de virtualización, la \"disimulación\" hace referencia a:",
+    "opciones": [
+      "Aparentar capacidades inexistentes",
+      "Ocultar un atributo real del recurso del conocimiento de otros",
+      "Reducir el número de usuarios",
+      "Prohibir acceso concurrente al hardware"
+    ],
+    "correcta": 1
+  },
+
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 1,
+    "enunciado": "Según las diapositivas, el cloud computing se basa principalmente en los conceptos de:",
+    "opciones": [
+      "Redundancia y latencia",
+      "Virtualización y abstracción",
+      "Caching y replicación",
+      "Balanceo de carga y RAID"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 2,
+    "enunciado": "¿Cuál de los siguientes NO es un modelo de despliegue de cloud clásico?",
+    "opciones": [
+      "Public Cloud",
+      "Private Cloud",
+      "Hybrid Cloud",
+      "Legacy Cloud"
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 3,
+    "enunciado": "En un modelo de Public Cloud, los recursos se proporcionan:",
+    "opciones": [
+      "Solo dentro de la red interna de la organización",
+      "Dinámicamente a través de Internet por un proveedor de servicios que usa recursos de terceros",
+      "Únicamente en un data center propiedad del cliente",
+      "Siempre mediante hardware on-premise dedicado"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 4,
+    "enunciado": "¿Cuál es la principal ventaja del modelo Private Cloud frente al Public Cloud, según las diapositivas?",
+    "opciones": [
+      "Coste siempre menor",
+      "Gestión de datos y procesos dentro de la organización, sin restricciones legales o de seguridad propias de redes públicas",
+      "Capacidad de escalado ilimitada",
+      "Ausencia total de necesidad de administración"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 5,
+    "enunciado": "En el modelo Hybrid Cloud:",
+    "opciones": [
+      "Solo se usan proveedores externos",
+      "Solo se usan recursos internos",
+      "Se integran proveedores internos y externos",
+      "No hay necesidad de seguridad de la información"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 6,
+    "enunciado": "¿Cuál de los siguientes es un modelo de servicio cloud según las diapositivas?",
+    "opciones": [
+      "Database as a Service",
+      "IaaS, PaaS y SaaS",
+      "Firewall as a Service",
+      "Ticketing as a Service"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 7,
+    "enunciado": "¿Cuál de las siguientes responsabilidades suele asumir el proveedor en un modelo IaaS?",
+    "opciones": [
+      "Gestión de la aplicación de negocio completa",
+      "Gestión de red en bruto, almacenamiento y computación",
+      "Diseño funcional de la aplicación del cliente",
+      "Gestión de usuarios finales y su formación"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 8,
+    "enunciado": "¿Qué característica se asocia típicamente con una plataforma PaaS según las diapositivas?",
+    "opciones": [
+      "Acceso de bajo nivel a todo el hardware",
+      "Entorno de desarrollo integrado y herramientas de gestión del ciclo de vida de la aplicación",
+      "Gestión directa de routers y switches físicos",
+      "Gestión manual de todas las máquinas virtuales"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 9,
+    "enunciado": "Una característica clave de SaaS es que:",
+    "opciones": [
+      "El cliente gestiona la infraestructura y el proveedor solo ofrece la aplicación",
+      "El proveedor entrega la aplicación lista para usar, accesible normalmente vía web, sin que el cliente gestione la infraestructura subyacente",
+      "Siempre se despliega en cloud privado",
+      "Obliga a desarrollar la aplicación en lenguajes específicos del proveedor"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 10,
+    "enunciado": "¿Cuál de las siguientes es una característica típica de PaaS mencionada en las diapositivas?",
+    "opciones": [
+      "Soporte de multiusuario (multi-tenant), seguridad y escalabilidad",
+      "Acceso directo a la BIOS de los servidores",
+      "Imposibilidad de monitorizar el rendimiento",
+      "Requerir siempre máquinas físicas dedicadas"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 11,
+    "enunciado": "¿Qué riesgo específico se menciona al evaluar despliegues en cloud?",
+    "opciones": [
+      "Imposibilidad de escalar recursos",
+      "Riesgos de seguridad como pérdida de privacidad y acceso no autorizado",
+      "Falta de diversidad de proveedores",
+      "Imposibilidad de medir el uso"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 12,
+    "enunciado": "Entre los riesgos a evaluar para un despliegue cloud se incluyen:",
+    "opciones": [
+      "Solo la latencia de red",
+      "Riesgos de seguridad y la interrupción de la disponibilidad",
+      "Únicamente el coste de licencias",
+      "La imposibilidad de realizar backups"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 13,
+    "enunciado": "Una característica esencial del cloud computing (según NIST) es el autoservicio bajo demanda, que implica:",
+    "opciones": [
+      "Que los recursos se asignan únicamente por tickets manuales",
+      "Que el cliente puede provisionar recursos sin interacción humana con el proveedor",
+      "Que los recursos solo pueden asignarse una vez al día",
+      "Que el proveedor debe aprobar cada petición por correo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 14,
+    "enunciado": "El pooling de recursos en cloud computing significa que:",
+    "opciones": [
+      "Cada cliente tiene hardware dedicado y aislado",
+      "Los recursos físicos y virtuales se agrupan y se reasignan dinámicamente según la demanda, ocultando su localización",
+      "Los recursos nunca se comparten entre clientes",
+      "No es posible escalar los recursos dinámicamente"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 15,
+    "enunciado": "¿Qué componente de OpenStack se encarga principalmente del ciclo de vida de las instancias de computación?",
+    "opciones": [
+      "Keystone",
+      "Nova",
+      "Neutron",
+      "Glance"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 16,
+    "enunciado": "En OpenStack, ¿qué servicio proporciona la conectividad de red para las instancias?",
+    "opciones": [
+      "Nova",
+      "Glance",
+      "Neutron",
+      "Cinder"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 17,
+    "enunciado": "¿Qué componente de OpenStack ofrece almacenamiento de bloques persistente para las instancias?",
+    "opciones": [
+      "Swift",
+      "Keystone",
+      "Cinder",
+      "Dashboard"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 18,
+    "enunciado": "En una arquitectura básica multinodo de OpenStack, los componentes se suelen agrupar lógicamente en:",
+    "opciones": [
+      "Solo capa de computación",
+      "Control, red y computación",
+      "Almacenamiento y virtualización",
+      "Seguridad y monitorización"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 19,
+    "enunciado": "El concepto de Cloud Native Infrastructure implica:",
+    "opciones": [
+      "Que la infraestructura se gestiona de forma estática y manual",
+      "Diseñar infraestructuras que puedan ser descritas como código y ajustarse dinámicamente al entorno",
+      "Usar exclusivamente servidores físicos dedicados",
+      "No utilizar virtualización ni contenedores"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 20,
+    "enunciado": "Un objetivo de las aplicaciones cloud native es:",
+    "opciones": [
+      "Estar estrechamente acopladas al hardware concreto donde se ejecutan",
+      "Aprovechar las capacidades de la plataforma para reducir tiempos de desarrollo y automatizar el ciclo de vida",
+      "Impedir el escalado automático",
+      "Evitar el uso de APIs de la plataforma PaaS"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 21,
+    "enunciado": "En SDN (Software-Defined Networking), la separación lógica clave es:",
+    "opciones": [
+      "Entre almacenamiento y computación",
+      "Entre plano de control y plano de datos",
+      "Entre frontend y backend",
+      "Entre cloud público y privado"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 22,
+    "enunciado": "Un beneficio de SDN es que permite:",
+    "opciones": [
+      "Gestionar la red de forma centralizada mediante un controlador que programa dispositivos de forwarding",
+      "Eliminar todos los switches físicos",
+      "Evitar la virtualización de red",
+      "Que solo una VLAN pueda existir por switch"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 23,
+    "enunciado": "¿Qué protocolo se menciona comúnmente asociado a SDN para programar flujos en switches?",
+    "opciones": [
+      "HTTP",
+      "OpenFlow",
+      "SNMPv1",
+      "FTP"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 24,
+    "enunciado": "Una característica de los modelos de servicio cloud es la \"transparencia\" respecto al mundo físico, lo que significa:",
+    "opciones": [
+      "El cliente conoce todos los detalles del hardware subyacente",
+      "El cliente contrata recursos sin preocuparse de su implementación física",
+      "El proveedor debe publicar todos los planos del data center",
+      "Los recursos siempre se asignan en hardware dedicado"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 25,
+    "enunciado": "Un ejemplo típico de proveedor IaaS mencionado en las diapositivas es:",
+    "opciones": [
+      "Google Apps",
+      "Amazon EC2",
+      "Salesforce.com",
+      "Oracle On Demand"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 26,
+    "enunciado": "¿Cuál de los siguientes ejemplos se corresponde con SaaS?",
+    "opciones": [
+      "Google Apps",
+      "Amazon EC2",
+      "Eucalyptus",
+      "GoGrid CloudCenter"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 27,
+    "enunciado": "En un entorno PaaS, una limitación típica que puede imponer la plataforma es:",
+    "opciones": [
+      "Limitar tiempos de ejecución, bibliotecas o servicios que pueden integrarse con las aplicaciones",
+      "Impedir el uso de cualquier base de datos",
+      "Exigir siempre hardware dedicado",
+      "Prohibir el acceso a Internet desde las aplicaciones"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 28,
+    "enunciado": "Las aplicaciones que adoptaron la ejecución en una plataforma cloud y se integran con su ciclo de vida automatizado son el origen de:",
+    "opciones": [
+      "Las arquitecturas monolíticas clásicas",
+      "Lo que hoy se denomina aplicaciones cloud native",
+      "La desvirtualización de servicios",
+      "Los mainframes de última generación"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 29,
+    "enunciado": "¿Qué tipo de riesgos de seguridad se menciona explícitamente en el análisis de riesgos para despliegues cloud?",
+    "opciones": [
+      "Exceso de redundancia",
+      "Pérdida de privacidad y pérdida de información por acceso no autorizado",
+      "Demasiado poco pooling de recursos",
+      "Latencia cero"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 4 - Cloud computing, SDN y plataformas",
+    "qnum": 30,
+    "enunciado": "¿Cuál de las siguientes capacidades se menciona como soporte típico de un proveedor IaaS además de red, almacenamiento y computación?",
+    "opciones": [
+      "Gestión de identidad y acceso, provisioning e inventario",
+      "Desarrollo de la lógica de negocio del cliente",
+      "Formación a usuarios finales",
+      "Diseño gráfico de la interfaz de usuario"
+    ],
+    "correcta": 0
+  },
+
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 1,
+    "enunciado": "Según las diapositivas, un microservicio se caracteriza principalmente por ser:",
+    "opciones": [
+      "Un servicio de granularidad gruesa que integra varios subsistemas",
+      "Un servicio pequeño y autónomo, generalmente de un único propósito",
+      "Una base de datos distribuida",
+      "Un script de automatización de despliegues"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 2,
+    "enunciado": "Una característica importante de los microservicios es que:",
+    "opciones": [
+      "Se despliegan siempre todos juntos en un mismo servidor",
+      "Ocultan su representación interna y exponen una API al exterior",
+      "Comparten siempre la misma base de datos monolítica",
+      "No pueden evolucionar de forma independiente"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 3,
+    "enunciado": "La granularidad de los microservicios afecta a:",
+    "opciones": [
+      "Solo a la facilidad de programación, no al rendimiento",
+      "Rendimiento y gestión de transacciones, ya que una granularidad demasiado fina incrementa comunicaciones y transacciones",
+      "Únicamente al uso de memoria del sistema",
+      "Solo a la forma de documentar APIs"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 4,
+    "enunciado": "En la comparación SOA vs microservicios, los servicios en SOA suelen:",
+    "opciones": [
+      "Ser de un único propósito y muy pequeños",
+      "Variar en tamaño, pudiendo abarcar funcionalidad de subsistemas completos",
+      "Ser siempre más pequeños que un microservicio",
+      "No utilizar ninguna mensajería intermedia"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 5,
+    "enunciado": "Los Business Services en una arquitectura orientada a servicios se caracterizan por:",
+    "opciones": [
+      "Ser servicios concretos de bajo nivel",
+      "Ser servicios abstractos de alto nivel que definen operaciones clave del negocio",
+      "Ser exclusivos de una sola aplicación",
+      "Implementar tareas no funcionales como logging y monitorización"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 6,
+    "enunciado": "Los Enterprise Services se describen como:",
+    "opciones": [
+      "Servicios abstractos sin implementación",
+      "Servicios concretos de grano grueso que implementan la funcionalidad de los Business Services",
+      "Servicios limitados a un contexto específico de aplicación",
+      "Servicios que solo implementan tareas de seguridad"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 7,
+    "enunciado": "Los Application Services se caracterizan por:",
+    "opciones": [
+      "Ser servicios abstractos de alto nivel empresarial",
+      "Ser servicios específicos de aplicación de granularidad fina y contexto limitado",
+      "Ser servicios de infraestructura no funcionales",
+      "No poder ser invocados desde interfaces de usuario"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 8,
+    "enunciado": "Los Infrastructure Services en SOA se usan principalmente para:",
+    "opciones": [
+      "Implementar tareas no funcionales reutilizables por otros servicios",
+      "Definir reglas de negocio",
+      "Persistir datos de usuario",
+      "Gestionar exclusivamente el hardware de red"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 9,
+    "enunciado": "¿Por qué los contenedores son plataformas ideales para desplegar microservicios según las diapositivas?",
+    "opciones": [
+      "Porque almacenan datos localmente de forma permanente",
+      "Porque están concebidos para no almacenar datos localmente y obtenerlos de ubicaciones externas, siendo auto-contenidos, portables y consistentes",
+      "Porque solo soportan una única tecnología de desarrollo",
+      "Porque no requieren ningún tipo de orquestación"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 10,
+    "enunciado": "El principio de Single Concern Principle (SCP) aplicado a contenedores implica que:",
+    "opciones": [
+      "Un contenedor debe encargarse de múltiples responsabilidades relacionadas",
+      "Un contenedor debe abordar un único asunto o responsabilidad",
+      "Un contenedor debe incluir toda la lógica de negocio",
+      "Los contenedores se agrupan en un único proceso monolítico"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 11,
+    "enunciado": "Cuando un microservicio en un contenedor necesita abordar múltiples tareas, las diapositivas recomiendan:",
+    "opciones": [
+      "Combinar toda la lógica en un único contenedor más grande",
+      "Crear contenedores múltiples y combinarlos mediante patrones, manteniendo un solo asunto por contenedor",
+      "Dividir el contenedor en máquinas virtuales",
+      "Pasar a una arquitectura monolítica"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 12,
+    "enunciado": "Una aplicación en contenedores debe proporcionar APIs de estado para:",
+    "opciones": [
+      "Controlar solo el uso de CPU",
+      "Permitir que el entorno de ejecución observe el estado (vitalidad y disponibilidad) y actúe en consecuencia",
+      "Reiniciar el host físico a demanda",
+      "Exponer la configuración interna del sistema operativo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 13,
+    "enunciado": "Las aplicaciones en contenedores deben registrar eventos importantes en:",
+    "opciones": [
+      "Ficheros binarios propietarios",
+      "La salida estándar (STDOUT) y el error estándar (STDERR)",
+      "Solo en la base de datos de producción",
+      "Un sistema de archivos de red privado"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 14,
+    "enunciado": "Las aplicaciones en contenedores deberían integrarse con bibliotecas de rastreo y métricas como:",
+    "opciones": [
+      "OpenTracing o Prometheus",
+      "DHCP y DNS",
+      "RAID y SAN",
+      "FTP y TFTP"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 15,
+    "enunciado": "Una propiedad importante de las aplicaciones en contenedores en entornos cloud nativos es que se consideran:",
+    "opciones": [
+      "Mutables: se modifican in situ según el entorno",
+      "Inmutables: una vez creadas, no se espera que cambien entre entornos",
+      "Estáticas: no pueden actualizarse nunca",
+      "Locales: deben almacenar siempre todos los datos dentro del contenedor"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 16,
+    "enunciado": "Seguir el principio de inmutabilidad de imágenes de contenedor implica que:",
+    "opciones": [
+      "Se deben crear imágenes ligeramente diferentes para cada entorno",
+      "Cualquier cambio da lugar a una nueva imagen reutilizada en todos los entornos",
+      "Nunca se puede actualizar una aplicación",
+      "La configuración debe estar embebida en la imagen"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 17,
+    "enunciado": "Una motivación clave para migrar aplicaciones a contenedores es que los contenedores deben:",
+    "opciones": [
+      "Ser permanentes y no reemplazables",
+      "Ser lo más efímeros posible y estar listos para ser reemplazados por otra instancia en cualquier momento",
+      "Mantener todo el estado localmente",
+      "Requerir tiempos de arranque muy largos"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 18,
+    "enunciado": "Para cumplir con la filosofía cloud native, las aplicaciones en contenedores deben mantener su estado:",
+    "opciones": [
+      "Dentro del sistema de archivos del contenedor",
+      "Externalizado, de forma distribuida y redundante",
+      "En memoria volátil del host",
+      "En ficheros temporales locales"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 19,
+    "enunciado": "¿Qué aspecto mejora un contenedor que expone APIs de estado y responde correctamente a eventos de la plataforma?",
+    "opciones": [
+      "La compatibilidad con sistemas operativos antiguos",
+      "La capacidad de recuperación y la experiencia de usuario",
+      "La dependencia del hardware específico",
+      "La dificultad de automatizar despliegues"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 20,
+    "enunciado": "En una arquitectura orientada a microservicios, la heterogeneidad se refiere a:",
+    "opciones": [
+      "Uso obligatorio de un único lenguaje de programación",
+      "Posibilidad de utilizar diferentes tecnologías por servicio, adoptando nuevas tecnologías más rápido",
+      "Imposibilidad de integrar nuevas tecnologías",
+      "Uso exclusivo de tecnologías propietarias"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 21,
+    "enunciado": "La resiliencia en microservicios implica que:",
+    "opciones": [
+      "El fallo de un microservicio detiene todo el sistema",
+      "El fallo de un microservicio no debe propagarse, permitiendo que el resto continúe trabajando",
+      "No hay necesidad de mecanismos de comunicación robustos",
+      "La red nunca puede fallar"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 22,
+    "enunciado": "La facilidad de despliegue en microservicios se relaciona con que:",
+    "opciones": [
+      "Cualquier cambio exige desplegar todo el sistema completo",
+      "Los cambios en un único servicio se despliegan de manera independiente, permitiendo despliegues rápidos y rollback sencillo",
+      "Nunca se hace rollback de versiones",
+      "Se centraliza todo el despliegue en un único servidor"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 23,
+    "enunciado": "En términos de escalado en una arquitectura de microservicios:",
+    "opciones": [
+      "Siempre se escala todo el sistema globalmente",
+      "Se escala preferentemente solo el microservicio que lo requiere, mejorando control de costes",
+      "No es posible escalar microservicios individualmente",
+      "El escalado horizontal no se recomienda"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 24,
+    "enunciado": "La alineación organizativa con microservicios persigue que:",
+    "opciones": [
+      "Mucha gente trabaje sobre el mismo bloque de código",
+      "Cada equipo sea dueño de uno o pocos servicios, optimizando productividad",
+      "Todos los microservicios sean gestionados por un único equipo central",
+      "No haya relación entre estructura organizativa y arquitectura"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 25,
+    "enunciado": "¿Qué papel juegan el messaging middleware y estándares como XML/WSDL/BPEL en SOA?",
+    "opciones": [
+      "No tienen relación con SOA",
+      "Sirven como puente entre Business Services abstractos y Enterprise Services concretos",
+      "Solo sirven para monitorización",
+      "Se usan únicamente para tareas de backup"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 26,
+    "enunciado": "¿Cuál de estas afirmaciones sobre microservicios encapsulados en contenedores es correcta?",
+    "opciones": [
+      "Deben almacenar todo su estado dentro del contenedor",
+      "Son auto-contenidos, portables y consistentes a través de entornos",
+      "No se recomienda su reutilización",
+      "No pueden ser reemplazados una vez desplegados"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 27,
+    "enunciado": "En la filosofía de contenedores, ¿qué se recomienda respecto al tiempo de arranque y parada de las aplicaciones?",
+    "opciones": [
+      "Que el arranque sea lento para asegurar consistencia",
+      "Que arranquen y se detengan rápidamente para facilitar reprogramación y escalado",
+      "Que nunca se detengan una vez en marcha",
+      "Que solo arranquen manualmente"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 28,
+    "enunciado": "¿Cuál es una motivación clave para que los contenedores sean \"lo más efímeros posible\"?",
+    "opciones": [
+      "Reducir la necesidad de monitorización",
+      "Facilitar reemplazos ante fallos, escalado o migraciones sin depender de su estado interno",
+      "Evitar el uso de sistemas de logging",
+      "Mantener configuraciones embebidas"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 29,
+    "enunciado": "Una consecuencia de seguir el principio de imagen inmutable de contenedores es que:",
+    "opciones": [
+      "Se generan múltiples imágenes casi iguales por entorno, complicando la gestión",
+      "Se reutiliza la misma imagen en todos los entornos, variando solo la configuración externalizada",
+      "No se pueden aplicar parches de seguridad",
+      "Se prohíbe cualquier tipo de configuración dinámica"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 5 - Microservicios, SOA y contenedores",
+    "qnum": 30,
+    "enunciado": "¿Qué requisito previo es fundamental para automatizar las actualizaciones de contenedores y su ciclo de vida de forma unificada?",
+    "opciones": [
+      "Que el contenedor aloje múltiples servicios",
+      "Que el contenedor proporcione APIs para que la plataforma observe su estado y actúe",
+      "Que el contenedor escriba logs en ficheros propietarios",
+      "Que el contenedor solo ejecute procesos interactivos"
+    ],
+    "correcta": 1
+  },
+
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 1,
+    "enunciado": "En el modelo de faltas–errores–fallos, una errata de un programador en el código se considera:",
+    "opciones": [
+      "Un fallo (failure)",
+      "Un error efectivo",
+      "Una falta (fault)",
+      "Un incidente"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 2,
+    "enunciado": "¿Qué ocurre cuando una falta software latente se activa durante la ejecución?",
+    "opciones": [
+      "Se convierte en error efectivo y puede conducir a un fallo si afecta a la prestación del servicio",
+      "Se elimina automáticamente por el compilador",
+      "No tiene efecto apreciable",
+      "Genera siempre un fallo catastrófico del hardware"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 3,
+    "enunciado": "La fiabilidad R(t) de un sistema se define como:",
+    "opciones": [
+      "La probabilidad de fallo en el intervalo [0, t]",
+      "La probabilidad de que el sistema funcione correctamente durante todo el intervalo considerado",
+      "El tiempo medio de reparación",
+      "La tasa de fallos por millón de horas"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 4,
+    "enunciado": "La disponibilidad A de un sistema, en términos de MTTF y MTTR, viene dada por:",
+    "opciones": [
+      "A = MTTR / (MTTF + MTTR)",
+      "A = MTTF / (MTTF + MTTR)",
+      "A = MTBF / MTTR",
+      "A = MTTR / MTBF"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 5,
+    "enunciado": "Si un sistema tiene MTTF muy grande y MTTR muy pequeño, su disponibilidad A:",
+    "opciones": [
+      "Tiende a valores cercanos a 0",
+      "Tiende a valores cercanos a 1",
+      "Es independiente de MTTF y MTTR",
+      "Solo depende del número de usuarios"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 6,
+    "enunciado": "La función de fiabilidad R(t) con ley exponencial de fallos se expresa como:",
+    "opciones": [
+      "R(t) = 1 − e^(−λt)",
+      "R(t) = e^(−λt)",
+      "R(t) = λt",
+      "R(t) = t / λ"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 7,
+    "enunciado": "En la distribución de Weibull para fiabilidad, un parámetro β > 1 indica:",
+    "opciones": [
+      "Tasa de fallos constante",
+      "Tasa de fallos decreciente",
+      "Tasa de fallos creciente",
+      "Ausencia de fallos"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 8,
+    "enunciado": "En un sistema en serie con componentes independientes, la fiabilidad global R_series es:",
+    "opciones": [
+      "La suma de las fiabilidades individuales",
+      "El producto de las fiabilidades de los componentes",
+      "El máximo de las fiabilidades individuales",
+      "El mínimo de las fiabilidades individuales"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 9,
+    "enunciado": "En un sistema puramente redundante en paralelo con dos componentes A y B independientes, la fiabilidad R_parallel se expresa como:",
+    "opciones": [
+      "R_parallel = R_A × R_B",
+      "R_parallel = R_A + R_B − R_A × R_B",
+      "R_parallel = (R_A + R_B) / 2",
+      "R_parallel = 1 − R_A × R_B"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 10,
+    "enunciado": "La tasa de fallos FR expresada en las diapositivas se mide como:",
+    "opciones": [
+      "Fallos por segundo",
+      "Fallos por día",
+      "Fallos por millón de horas",
+      "Fallos por usuario"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 11,
+    "enunciado": "El análisis de fiabilidad puede hacerse de forma cualitativa mediante:",
+    "opciones": [
+      "Solo tests de estrés",
+      "Reliability block diagrams (RBD) y fault tree analysis (FTA)",
+      "Medición de throughput",
+      "Simulación de carga con usuarios reales"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 12,
+    "enunciado": "En el proceso de lucha contra las faltas y errores, la \"eliminación de errores\" se realiza principalmente mediante:",
+    "opciones": [
+      "Rollback y rollforward",
+      "Compensación mediante redundancia",
+      "Corrección del estado interno del sistema para volver a un estado estable",
+      "Aumento de la carga del sistema"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 13,
+    "enunciado": "¿Qué técnica de recuperación consiste en devolver el sistema a un estado anterior válido?",
+    "opciones": [
+      "Rollforward",
+      "Rollback",
+      "Compensation",
+      "Reconfiguración"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 14,
+    "enunciado": "¿Qué técnica de recuperación consiste en avanzar el estado del sistema hacia un nuevo estado estable sin volver atrás?",
+    "opciones": [
+      "Rollback",
+      "Rollforward",
+      "Compensation",
+      "Reinicio en frío"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 15,
+    "enunciado": "La compensación (compensation) como técnica de tolerancia a fallos se basa en:",
+    "opciones": [
+      "Ignorar el error y continuar",
+      "Ocultar el error usando redundancia en el sistema",
+      "Reiniciar el sistema completo",
+      "Detener el servicio inmediatamente"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 16,
+    "enunciado": "La detección de errores en explotación se considera una tarea:",
+    "opciones": [
+      "Puntual, realizada solo antes del despliegue",
+      "Continua, tanto concurrente durante el servicio como preventiva cuando no se presta",
+      "Innecesaria si el sistema fue validado",
+      "Limitada únicamente a auditorías anuales"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 17,
+    "enunciado": "El mantenimiento predictivo en explotación se orienta a:",
+    "opciones": [
+      "Corregir faltas que ya han producido errores visibles",
+      "Eliminar faltas latentes antes de que produzcan errores",
+      "Probar nuevas funcionalidades",
+      "Actualizar hardware obsoleto sin planificación"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 18,
+    "enunciado": "Una técnica de gestión de errores que \"amortigua\" el impacto de errores sin eliminarlos necesariamente es:",
+    "opciones": [
+      "Gestión de faltas",
+      "Gestión de errores",
+      "Gestión de cambios",
+      "Gestión de capacidad"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 19,
+    "enunciado": "La modularidad como técnica de diseño para fiabilidad implica que cada módulo debe ser:",
+    "opciones": [
+      "Una unidad de servicio, contención de faltas y unidad mantenible",
+      "Un contenedor para múltiples servicios no relacionados",
+      "Dependiente de todos los demás módulos",
+      "Imposible de reemplazar individualmente"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 20,
+    "enunciado": "El principio fail-fast recomienda que un módulo:",
+    "opciones": [
+      "Se mantenga en estados intermedios durante mucho tiempo",
+      "O funcione correctamente o falle por completo, evitando estados intermedios difíciles de tratar",
+      "Nunca informe de sus errores",
+      "Intente ocultar errores internos sin notificación"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 21,
+    "enunciado": "Evitar puntos únicos de fallo (SPOF) suele lograrse mediante:",
+    "opciones": [
+      "Reducir el número de componentes redundantes",
+      "Introducir redundancia a varios niveles: hardware, lógica, datos y comunicaciones",
+      "Centralizar toda la lógica en un único servidor",
+      "Eliminar la monitorización"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 22,
+    "enunciado": "Mantener un control de capacidad del sistema ayuda a:",
+    "opciones": [
+      "Identificar el punto en el que empiezan los fallos por saturación",
+      "Reemplazar la necesidad de monitorización",
+      "Evitar el escalado horizontal",
+      "Eliminar la necesidad de pruebas de rendimiento"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 23,
+    "enunciado": "Un test de disponibilidad futura puede basarse en:",
+    "opciones": [
+      "Solo en la opinión de los operadores",
+      "Evaluar mecanismos de disponibilidad con carga simulada o real y analizar datos históricos para modelos predictivos",
+      "Medir únicamente la CPU en horas valle",
+      "Ignorar datos históricos a partir de cierto umbral"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 24,
+    "enunciado": "¿Qué tipo de tests se usan para evaluar el impacto de cambios de configuración en sistemas ya en producción?",
+    "opciones": [
+      "Solo tests sin carga",
+      "Tests con carga real reinyectada o simulada representativa",
+      "Solo revisión de código",
+      "Pruebas manuales sin métricas"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 25,
+    "enunciado": "¿Qué objetivo se persigue con técnicas como escalado, replicación y distribución en el contexto de tolerancia a fallos?",
+    "opciones": [
+      "Reducir la complejidad del sistema",
+      "Que la ocurrencia de faltas no implique necesariamente fallos de servicio",
+      "Maximizar el número de puntos únicos de fallo",
+      "Eliminar la necesidad de redundancia"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 26,
+    "enunciado": "En verificación estática durante el desarrollo, las técnicas usadas incluyen:",
+    "opciones": [
+      "Tests de estrés con usuarios reales",
+      "Recorridos de código, análisis de flujo de datos, compilación y chequeo de vulnerabilidades",
+      "Rollforward y rollback",
+      "Reinicio periódico de servidores"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 27,
+    "enunciado": "La verificación dinámica durante el desarrollo se corresponde básicamente con:",
+    "opciones": [
+      "Testing con patrones o valores de entrada aleatorios",
+      "Documentación de requisitos",
+      "Revisión contractual",
+      "Cifrado de datos"
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 28,
+    "enunciado": "¿Cuál de las siguientes afirmaciones sobre eliminación de faltas es correcta?",
+    "opciones": [
+      "Siempre se realiza en explotación",
+      "Durante el desarrollo incluye diagnóstico, corrección y verificación regresiva",
+      "No requiere verificación posterior",
+      "Se limita a apagar y encender el sistema"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 29,
+    "enunciado": "En un análisis cuantitativo de fiabilidad, el objetivo es:",
+    "opciones": [
+      "Clasificar modos de fallo sin medir probabilidades",
+      "Evaluar probabilísticamente la satisfacción de atributos como fiabilidad y disponibilidad",
+      "Eliminar todas las faltas del sistema",
+      "Diseñar nuevos protocolos de red"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 6 - Disponibilidad, fiabilidad, tolerancia a fallos y testing",
+    "qnum": 30,
+    "enunciado": "Respecto al benchmarking de disponibilidad, además de métricas técnicas, las diapositivas mencionan que también deben probarse:",
+    "opciones": [
+      "Únicamente los mecanismos hardware",
+      "Procedimientos de vuelta atrás, monitorización y respuesta de recursos humanos y terceros",
+      "Solo la rapidez de discos y redes",
+      "Solo la carga CPU media"
+    ],
+    "correcta": 1
+  },
+
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 1,
+    "enunciado": "Según la norma EN 13306, el mantenimiento se define como:",
+    "opciones": [
+      "Conjunto de acciones técnicas realizadas solo al final de la vida útil",
+      "Combinación de acciones técnicas, administrativas y de gestión a lo largo del ciclo de vida para conservar o devolver un equipo a un estado funcional",
+      "Actividad puntual de reparación cuando el sistema falla",
+      "Conjunto de inversiones en nuevos equipos"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 2,
+    "enunciado": "¿Cuál de los siguientes NO es un tipo tradicional de mantenimiento descrito en las diapositivas?",
+    "opciones": [
+      "Correctivo",
+      "Preventivo",
+      "Predictivo",
+      "Financiero"
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 3,
+    "enunciado": "El mantenimiento proactivo se orienta a:",
+    "opciones": [
+      "Reparar únicamente tras el fallo",
+      "Detectar y prevenir incidencias antes de que ocurran",
+      "Solo a analizar costes",
+      "Reemplazar siempre el equipo completo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 4,
+    "enunciado": "El mantenimiento perfectivo, según la terminología IEEE y UNE, se centra en:",
+    "opciones": [
+      "Corregir errores de programación",
+      "Mejorar el rendimiento del servicio como parte de la mejora continua",
+      "Reparar fallos de hardware",
+      "Reducir el número de usuarios"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 5,
+    "enunciado": "En el modelo de costes de calidad, los costes de fallo pueden llegar a ser:",
+    "opciones": [
+      "Similares al coste de prevención",
+      "Inferiores siempre al valor de venta",
+      "Hasta diez veces el valor de venta según Wilson (1986)",
+      "Irrelevantes frente a los costes de prevención"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 6,
+    "enunciado": "Los costes de baja fiabilidad se modelan en las diapositivas como:",
+    "opciones": [
+      "CAPEX únicamente",
+      "OPEX únicamente",
+      "Coste de mantenimiento correctivo más impacto en producción y ambiental (riesgo)",
+      "Coste de licencias software exclusivamente"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 7,
+    "enunciado": "CAPEX se refiere a:",
+    "opciones": [
+      "Gastos operativos para explotar activos",
+      "Gastos de capital para adquisición o actualización de activos físicos",
+      "Gastos de personal exclusivamente",
+      "Costes de licencias de software"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 8,
+    "enunciado": "OPEX se refiere a:",
+    "opciones": [
+      "Gastos de capital",
+      "Gastos operativos para operar los activos",
+      "Gastos en formación",
+      "Gastos en auditorías legales"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 9,
+    "enunciado": "La mantenibilidad M(t) se define como:",
+    "opciones": [
+      "La probabilidad de fallo antes de t",
+      "La probabilidad de que una tarea de mantenimiento se complete satisfactoriamente antes de un tiempo t",
+      "El tiempo máximo de reparación",
+      "La tasa de fallos por unidad de tiempo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 10,
+    "enunciado": "En el modelo exponencial de mantenibilidad, el parámetro μ representa:",
+    "opciones": [
+      "La tasa de fallos",
+      "La frecuencia de la tarea de mantenimiento, inversa de MDMT (MTTR)",
+      "El tiempo total de parada",
+      "El coste del mantenimiento"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 11,
+    "enunciado": "Si los tiempos de reparación siguen una distribución exponencial con μ, la probabilidad M(t) de reparar antes de t se expresa como:",
+    "opciones": [
+      "M(t) = e^(−μt)",
+      "M(t) = 1 − e^(−μt)",
+      "M(t) = μt",
+      "M(t) = t / μ"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 12,
+    "enunciado": "Según el caso de estudio de mantenibilidad, el MTTR se calcula como:",
+    "opciones": [
+      "MTTR = min(TTR_i)",
+      "MTTR = max(TTR_i)",
+      "MTTR = (1/n) × Σ TTR_i",
+      "MTTR = n × Σ TTR_i"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 13,
+    "enunciado": "En ITIL, el mantenimiento de la infraestructura TI está integrado principalmente en la práctica de:",
+    "opciones": [
+      "Gestión financiera",
+      "Gestión de plataformas e infraestructuras",
+      "Gestión del conocimiento",
+      "Gestión de despliegues"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 14,
+    "enunciado": "¿Cuál de las siguientes tareas es propia del mantenimiento específico de TI y no del mantenimiento industrial clásico?",
+    "opciones": [
+      "Lubricación de motores",
+      "Gestión de logs, copias de seguridad y actualizaciones",
+      "Revisión de válvulas mecánicas",
+      "Control de temperatura de calderas"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 15,
+    "enunciado": "Los logs se definen en las diapositivas como:",
+    "opciones": [
+      "Ficheros binarios sin significado",
+      "Registros en fichero de la actividad de los distintos componentes de la infraestructura (SO, middleware, aplicaciones)",
+      "Copias de seguridad completas del sistema",
+      "Listados de usuarios autorizados"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 16,
+    "enunciado": "Una de las dificultades clave en la gestión de logs es:",
+    "opciones": [
+      "Su escaso volumen",
+      "Manejar grandes volúmenes, heterogeneidad de formatos y necesidad de correlación en sistemas distribuidos",
+      "Que no pueden rotarse",
+      "Que solo se generan en formato estándar W3C"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 17,
+    "enunciado": "¿Qué paso se recomienda en la planificación de la gestión de logs?",
+    "opciones": [
+      "Definir primero la herramienta y luego los objetivos",
+      "Definir requisitos y objetivos, qué logs recoger y para qué",
+      "Eliminar logs antiguos sin política definida",
+      "Desactivar el logging en sistemas críticos"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 18,
+    "enunciado": "En Linux, los logs suelen almacenarse en:",
+    "opciones": [
+      "/etc/log",
+      "/var/log",
+      "/usr/logs",
+      "/tmp"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 19,
+    "enunciado": "En sistemas Linux, el demonio clásico para la gestión de logs es:",
+    "opciones": [
+      "systemd",
+      "syslogd o rsyslogd",
+      "cron",
+      "httpd"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 20,
+    "enunciado": "La política de rotación de logs tiene como objetivo:",
+    "opciones": [
+      "Incrementar indefinidamente el tamaño de los ficheros de log",
+      "Controlar el espacio y el tiempo de retención de logs, eliminando o archivando versiones antiguas",
+      "Evitar que se borren logs nunca",
+      "Anonimizar usuarios"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 21,
+    "enunciado": "En el diseño de copias de seguridad, se menciona explícitamente la necesidad de:",
+    "opciones": [
+      "No hacer copias de metadatos",
+      "Incluir metadatos (permisos, propietarios, ACLs) y definir políticas de retención",
+      "Limitarse a copias incrementales",
+      "No comprobar la validez de la copia"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 22,
+    "enunciado": "¿Cuál de los siguientes NO es un tipo de copia mencionado?",
+    "opciones": [
+      "Incremental",
+      "Diferencial",
+      "Total",
+      "Aleatoria"
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 23,
+    "enunciado": "La gestión de actualizaciones incluye:",
+    "opciones": [
+      "Solo instalar actualizaciones críticas de hardware",
+      "Herramientas y procedimientos para mantener los sistemas actualizados desde firmware a aplicaciones",
+      "Ignorar boletines de seguridad de fabricantes",
+      "Aplicar parches sin pasar por gestión de cambios"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 24,
+    "enunciado": "Las actualizaciones de software se tratan en ITIL como:",
+    "opciones": [
+      "Incidencias",
+      "Problemas",
+      "Cambios dentro del proceso de Gestión del Cambio",
+      "Eventos de monitorización"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 25,
+    "enunciado": "Los fabricantes suelen clasificar sus actualizaciones en función de:",
+    "opciones": [
+      "El tamaño del fichero",
+      "La criticidad (crítica, importante, moderada, baja)",
+      "El tipo de dispositivo donde se instala",
+      "El idioma del sistema operativo"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 26,
+    "enunciado": "Los boletines como \"Microsoft Technical Security Notifications\" o \"Hispasec una-al-día\" se usan para:",
+    "opciones": [
+      "Notificar cambios de licencia",
+      "Informar de nuevas vulnerabilidades y parches disponibles",
+      "Actualizar documentación interna",
+      "Reiniciar automáticamente sistemas"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 27,
+    "enunciado": "Al planificar procedimientos de arranque y parada de sistemas, es esencial considerar:",
+    "opciones": [
+      "El orden es indiferente",
+      "La dependencia entre componentes, utilizando información de la CMDB y árboles de dependencia",
+      "Solo la disponibilidad de personal",
+      "Únicamente el consumo energético"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 28,
+    "enunciado": "Respecto al orden de arranque y parada de sistemas, las diapositivas señalan que:",
+    "opciones": [
+      "El orden de arranque y parada es arbitrario",
+      "El orden de arranque debe ser el mismo que el de parada",
+      "El procedimiento de arranque sigue el orden inverso al de parada",
+      "No se requiere documentar el orden"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 29,
+    "enunciado": "En la práctica, cuando se compra infraestructura TI, a menudo se contrata con el proveedor:",
+    "opciones": [
+      "Solo formación a usuarios",
+      "Un mantenimiento que suele durar el periodo de garantía, con tiempos máximos de reparación acordados",
+      "Mantenimiento de por vida",
+      "Ningún mantenimiento formal"
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "Tema 7 - Mantenimiento de infraestructuras TI, logs y copias de seguridad",
+    "qnum": 30,
+    "enunciado": "Aunque el mantenimiento con el proveedor finalice, las diapositivas destacan que deben mantenerse siempre procesos como:",
+    "opciones": [
+      "Solo la gestión financiera",
+      "Monitorización, prevención, gestión de incidencias y gestión de capacidad",
+      "Exclusivamente la gestión de activos",
+      "Únicamente la gestión de problemas"
+    ],
+    "correcta": 1
+  }
+]
