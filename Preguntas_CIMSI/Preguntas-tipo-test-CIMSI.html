@@ -20,23 +20,28 @@
     .enunciado{min-height:120px;white-space:pre-wrap;padding:12px;border-radius:8px;background:linear-gradient(180deg,#081127,#071029);border:1px solid #14243a}
     .opts{display:flex;flex-direction:column;gap:6px}
     .opt{background:#0a1220;padding:10px;border-radius:8px;border:1px solid #122033;cursor:pointer}
-    .opt.selected{outline:2px solid rgba(37,99,235,.25)}
-    .opt.correct{background:rgba(22,163,74,.12);border-color:rgba(22,163,74,.2)}
-    .opt.wrong{background:rgba(220,38,38,.12);border-color:rgba(220,38,38,.2)}
+    .opt.selected{outline:2px solid rgba(37,99,235,.4)}
+    .opt.correct{background:rgba(22,163,74,.12);border-color:rgba(22,163,74,.3)}
+    .opt.wrong{background:rgba(220,38,38,.12);border-color:rgba(220,38,38,.3)}
     .footer{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
     .sidebar{display:flex;flex-direction:column;gap:10px}
     .doubts{height:60vh;overflow:auto;background:#061323;padding:8px;border-radius:8px;border:1px solid #102035}
     .progress{height:10px;background:#082033;border-radius:8px;overflow:hidden}
     .progress>i{display:block;height:100%;background:linear-gradient(90deg,#0ea5e9,#2563eb)}
+    .helper{font-size:12px;color:var(--muted)}
     @media(max-width:1200px){.app{grid-template-columns:1fr 260px}}
     @media(max-width:900px){.app{grid-template-columns:1fr;height:auto}.sidebar{order:2}}
     @media(max-width:600px){
-      body{font-size:15px}h1{font-size:16px}button{font-size:13px;padding:6px 8px}
-      .card{padding:12px}.controls{gap:6px}.enunciado{min-height:100px;font-size:14px}
-      .opt{padding:8px;font-size:14px}.footer{flex-direction:column;align-items:flex-start}
+      body{font-size:15px}
+      h1{font-size:16px}
+      button{font-size:13px;padding:6px 8px}
+      .card{padding:12px}
+      .controls{gap:6px}
+      .enunciado{min-height:100px;font-size:14px}
+      .opt{padding:8px;font-size:14px}
+      .footer{flex-direction:column;align-items:flex-start}
     }
 
-    /* Pantalla de selección de asignatura */
     .landing{
       position:fixed; inset:0; display:grid; place-items:center; z-index:9999;
       background:radial-gradient(1200px 600px at 50% -10%, rgba(37,99,235,.15), transparent), #0b1220;
@@ -55,13 +60,13 @@
       padding:28px 20px; border-radius:16px; font-size:22px; cursor:pointer;
       transition:transform .05s ease, box-shadow .15s ease, border-color .2s ease;
       box-shadow:0 10px 24px rgba(2,6,23,.45);
+      color:#fff;
     }
     .bigbtn:hover{transform:translateY(-1px); border-color:#274a8f}
     .hidden{display:none}
   </style>
 </head>
 <body>
-  <!-- Pantalla de selección -->
   <div id="landing" class="landing">
     <div class="box">
       <h2>¿Qué asignatura quieres estudiar?</h2>
@@ -75,7 +80,6 @@
     </div>
   </div>
 
-  <!-- App del generador -->
   <div id="app" class="app hidden">
     <div class="card main">
       <header>
@@ -95,6 +99,7 @@
       </header>
 
       <div id="enunciado" class="enunciado">Selecciona una asignatura para cargar preguntas automáticamente, o usa “Carga manual”.</div>
+      <div id="modeHint" class="helper"></div>
       <div class="opts" id="opts"></div>
 
       <div class="footer">
@@ -136,16 +141,14 @@
   </div>
 
   <script>
-    // ========= Config de asignaturas =========
     const SUBJECTS = {
       ITIL:      { label: 'CIMSI', slug: 'cimsi' },
       ITIL_HARD: { label: 'CIMSI', slug: 'cimsi-hard' },
       PD:        { label: 'PD',    slug: 'pd' },
       SIE:       { label: 'SIE',   slug: 'sie' }
     };
-    let selectedSubject = null; // 'ITIL' | 'ITIL_HARD' | 'PD' | 'SIE'
 
-    // ========= Estado =========
+    let selectedSubject = null;
     let allQuestions = [];
     let questions = [];
     let index = 0;
@@ -153,13 +156,13 @@
     let userAnswers = {};
     let doubts = new Set();
     let checkedQuestions = new Set();
-    let difficultyMode = 'normal'; // 'normal' | 'hard'
+    let difficultyMode = 'normal';
 
-    // ========= DOM =========
     const landing = document.getElementById('landing');
     const appEl = document.getElementById('app');
     const headerTitle = document.getElementById('headerTitle');
     const enunciado = document.getElementById('enunciado');
+    const modeHint = document.getElementById('modeHint');
     const opts = document.getElementById('opts');
     const feedback = document.getElementById('feedback');
     const solution = document.getElementById('solution');
@@ -175,7 +178,6 @@
 
     const setStatus = (s) => statusText.textContent = s;
 
-    // ========= Utilidades =========
     function baseRoot(){
       const isPages = location.hostname.endsWith('github.io');
       const repoSegment = isPages ? location.pathname.split('/').filter(Boolean)[0] : '';
@@ -261,7 +263,7 @@
     function getSelectedIndices(q){
       const ans = userAnswers[index];
       if (isMultiQuestion(q)) {
-        return Array.isArray(ans) ? [...ans].sort((a,b)=>a-b) : [];
+        return Array.isArray(ans) ? ans.slice().sort((a,b)=>a-b) : [];
       }
       return (ans === undefined || ans === -1) ? [] : [ans];
     }
@@ -273,7 +275,9 @@
     }
 
     function clearOptionStyles(){
-      document.querySelectorAll('.opt').forEach(el=>el.classList.remove('selected','correct','wrong'));
+      document.querySelectorAll('.opt').forEach(el=>{
+        el.classList.remove('selected','correct','wrong');
+      });
     }
 
     function selectDOMOptions(indices=[]){
@@ -284,7 +288,6 @@
       });
     }
 
-    // ========= Carga automática =========
     async function tryAutoLoadForSubject(subjectKey){
       const candidates = jsonCandidatesFor(subjectKey);
       if (candidates.length) {
@@ -380,7 +383,6 @@
       return false;
     }
 
-    // ========= Generador de preguntas PD =========
     function generatePDQuestions(){
       const providers = [
         { name:'AWS', tema:'AWS', sv:{
@@ -476,7 +478,6 @@
       return out;
     }
 
-    // ========= Carga manual =========
     document.getElementById('fileInput')?.addEventListener('change', async (e)=>{
       const f = e.target.files?.[0];
       if(!f) return;
@@ -502,7 +503,6 @@
       }
     });
 
-    // ========= Controles =========
     document.getElementById('prevBtn').addEventListener('click', ()=>{
       if(index>0){
         index--;
@@ -522,11 +522,11 @@
     document.getElementById('examBtn').addEventListener('click', ()=>{ startExam(20); });
 
     temaFilter.addEventListener('change', ()=>{
-      filterByTema(temaFilter.value=='Todos' ? null : temaFilter.value);
+      filterByTema(temaFilter.value === 'Todos' ? null : temaFilter.value);
     });
 
     temaSelect.addEventListener('change', ()=>{
-      filterByTema(temaSelect.value=='Todos' ? null : temaSelect.value);
+      filterByTema(temaSelect.value === 'Todos' ? null : temaSelect.value);
     });
 
     tryAutoBtn.addEventListener('click', ()=>{
@@ -544,6 +544,7 @@
       difficultyMode = 'normal';
       headerTitle.textContent = 'Sin preguntas cargadas';
       enunciado.textContent = 'Selecciona una asignatura para empezar.';
+      modeHint.textContent = '';
       autoHint.textContent = '';
       regenPDBtn.style.display = 'none';
       pdHardBtn.style.display = 'none';
@@ -585,7 +586,6 @@
       else setStatus('Elige una asignatura para empezar');
     });
 
-    // ========= Lógica de asignatura =========
     function selectSubject(subjectKey, autoLoad=false){
       selectedSubject = subjectKey;
       landing.classList.add('hidden');
@@ -596,15 +596,17 @@
       document.title = `Tester ${SUBJECTS[subjectKey].label} - Estudio y Examen`;
       headerTitle.textContent = `[${SUBJECTS[subjectKey].label}] Sin preguntas cargadas`;
       autoHint.textContent = `Asignatura: ${SUBJECTS[subjectKey].label}`;
+      modeHint.textContent = subjectKey === 'SIE'
+        ? 'En SIE puedes marcar varias opciones.'
+        : 'En esta asignatura solo se marca una opción.';
 
       regenPDBtn.style.display = subjectKey === 'PD' ? 'inline-block' : 'none';
-      pdHardBtn.style.display   = subjectKey === 'PD' ? 'inline-block' : 'none';
+      pdHardBtn.style.display = subjectKey === 'PD' ? 'inline-block' : 'none';
 
       setStatus('Preparado');
       if(autoLoad) tryAutoLoadForSubject(subjectKey);
     }
 
-    // ========= UI =========
     function populateTemas(){
       const temas = ['Todos', ...Array.from(new Set(allQuestions.map(q=>q.tema || 'Sin tema'))).sort()];
       temaSelect.innerHTML = temas.map(t=>`<option>${t}</option>`).join('');
@@ -616,6 +618,7 @@
       if(questions.length===0){
         headerTitle.textContent=`[${selectedSubject ? SUBJECTS[selectedSubject].label : '—'}] Sin preguntas cargadas`;
         enunciado.textContent='Cargue un JSON con preguntas (botón “Intentar cargar…” o “Carga manual”).';
+        modeHint.textContent = '';
         opts.innerHTML='';
         progressBar.style.width='0%';
         document.getElementById('progressLabel').textContent = `0/0`;
@@ -627,10 +630,14 @@
 
       const subjectLabel = SUBJECTS[selectedSubject]?.label || '—';
       const diffLabel = difficultyMode === 'hard' ? ' (Muy difícil)' : '';
-      const modeLabel = isMultiQuestion(q) ? ' | Selección múltiple' : ' | Respuesta única';
-      headerTitle.textContent = `[${subjectLabel}${diffLabel}] ${q.tema || 'Tema'} — Pregunta ${index+1}/${questions.length} [${modeExam ? 'Examen' : 'Estudio'}${modeLabel}]`;
+      const typeLabel = isMultiQuestion(q) ? 'Selección múltiple' : 'Respuesta única';
+      headerTitle.textContent = `[${subjectLabel}${diffLabel}] ${q.tema || 'Tema'} — Pregunta ${index+1}/${questions.length} [${modeExam ? 'Examen' : 'Estudio'} | ${typeLabel}]`;
 
       enunciado.textContent = q.enunciado;
+      modeHint.textContent = isMultiQuestion(q)
+        ? 'Marca una o varias opciones y pulsa “Comprobar”.'
+        : 'Marca una opción y pulsa “Comprobar”.';
+
       opts.innerHTML = '';
 
       q._opcionesMezcladas.forEach((op,i)=>{
@@ -659,17 +666,22 @@
       const q = questions[index];
 
       if(isMultiQuestion(q)){
-        const current = Array.isArray(userAnswers[index]) ? [...userAnswers[index]] : [];
-        const pos = current.indexOf(i);
-        if(pos >= 0) current.splice(pos, 1);
-        else current.push(i);
+        let current = Array.isArray(userAnswers[index]) ? [...userAnswers[index]] : [];
+
+        if(current.includes(i)){
+          current = current.filter(x => x !== i);
+        } else {
+          current.push(i);
+        }
+
         current.sort((a,b)=>a-b);
         userAnswers[index] = current;
         selectDOMOptions(current);
-      }else{
-        userAnswers[index] = i;
-        selectDOMOptions([i]);
+        return;
       }
+
+      userAnswers[index] = i;
+      selectDOMOptions([i]);
     }
 
     function checkCurrent(){
