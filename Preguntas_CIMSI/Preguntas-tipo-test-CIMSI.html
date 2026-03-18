@@ -4,7 +4,7 @@
   <meta name="google-adsense-account" content="ca-pub-4549916057843860">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tester CIMSI/PD - Estudio y Examen</title>
+  <title>Tester CIMSI/PD/SIE - Estudio y Examen</title>
   <style>
     :root { --accent:#2563eb; --success:#16a34a; --danger:#dc2626; --muted:#6b7280; }
     html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;background:#0f172a;color:#e6eef8}
@@ -70,6 +70,7 @@
         <button class="bigbtn" id="btnITIL">🧩 CIMSI</button>
         <button class="bigbtn" id="btnITILHard">🔥 CIMSI Difícil</button>
         <button class="bigbtn" id="btnPD">📘 PD</button>
+        <button class="bigbtn" id="btnSIE">📝 SIE</button>
       </div>
     </div>
   </div>
@@ -140,9 +141,10 @@
     const SUBJECTS = {
       ITIL:      { label: 'CIMSI', slug: 'cimsi' },
       ITIL_HARD: { label: 'CIMSI', slug: 'cimsi-hard' }, // CIMSI difícil
-      PD:        { label: 'PD',    slug: 'pd' }
+      PD:        { label: 'PD',    slug: 'pd' },
+      SIE:       { label: 'SIE',   slug: 'sie' }
     };
-    let selectedSubject = null; // 'ITIL' | 'ITIL_HARD' | 'PD'
+    let selectedSubject = null; // 'ITIL' | 'ITIL_HARD' | 'PD' | 'SIE'
 
     // ========= Estado =========
     let allQuestions = [];
@@ -201,6 +203,12 @@
         return [
           `${root}Preguntas_CIMSI/preguntas_estudioPD.json`,
           `${root}preguntas_estudioPD.json`
+        ];
+      }
+      if (subjectKey === 'SIE') {
+        return [
+          `${root}Preguntas_CIMSI/preguntas_estudioSIE.json`,
+          `${root}preguntas_estudioSIE.json`
         ];
       }
       return [];
@@ -413,7 +421,6 @@
 
     // ========= Controles =========
     document.getElementById('prevBtn').addEventListener('click', ()=>{ if(index>0){ index--; updateView() } });
-    document.getElementById('nextBtn').addEventListener('click', ()=>{ if(index<questions.length-1){ index--; index++; updateView() } else if(index === questions.length-1){ /* nada */ } });
     document.getElementById('nextBtn').addEventListener('click', ()=>{ if(index<questions.length-1){ index++; updateView() } });
     document.getElementById('doubtBtn').addEventListener('click', ()=>{ toggleDoubt(); });
     document.getElementById('checkBtn').addEventListener('click', ()=>{ checkCurrent(); });
@@ -458,8 +465,9 @@
     document.getElementById('btnITIL').addEventListener('click', ()=> selectSubject('ITIL', true));
     document.getElementById('btnITILHard').addEventListener('click', ()=> selectSubject('ITIL_HARD', true));
     document.getElementById('btnPD').addEventListener('click', ()=> selectSubject('PD', true));
+    document.getElementById('btnSIE').addEventListener('click', ()=> selectSubject('SIE', true));
 
-    // Deep-link: ?asignatura=itil|itil_hard|pd
+    // Deep-link: ?asignatura=itil|itil_hard|pd|sie
     window.addEventListener('load', ()=>{
       const p = new URLSearchParams(location.search);
       const a = (p.get('asignatura')||'').toUpperCase();

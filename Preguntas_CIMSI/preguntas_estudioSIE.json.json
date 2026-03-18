@@ -1,0 +1,712 @@
+[
+  {
+    "tema": "Práctica 1",
+    "qnum": 1,
+    "enunciado": "¿En qué lenguajes de programación trabajamos con Bonita?",
+    "opciones": [
+      "En backend se usa Groovy y Java.",
+      "En frontend se usa JavaScript y AngularJS.",
+      "En backend se usa Python.",
+      "En frontend se usa React."
+    ],
+    "correctas": [
+      0,
+      1
+    ]
+  },
+  {
+    "tema": "Práctica 1",
+    "qnum": 2,
+    "enunciado": "¿Cuáles son los elementos principales de Bonita BPM?",
+    "opciones": [
+      "Organización.",
+      "Business Data Model (BDM).",
+      "Formularios/Aplicaciones.",
+      "Process/Case/Task."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 1",
+    "qnum": 3,
+    "enunciado": "¿Cuáles son las versiones que existen de Bonita BPM?",
+    "opciones": [
+      "Bonita Studio es la versión de desarrollo.",
+      "Bonita Runtime es la versión de producción.",
+      "Bonita Studio integra H2 y Tomcat.",
+      "Bonita Runtime aparece para desplegar el sistema final."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 2",
+    "qnum": 4,
+    "enunciado": "¿Qué elementos se pueden definir al registrar una organización?",
+    "opciones": [
+      "Grupos y subgrupos.",
+      "Roles.",
+      "Usuarios.",
+      "Membresías."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 2",
+    "qnum": 5,
+    "enunciado": "¿Qué debemos saber sobre activar una organización?",
+    "opciones": [
+      "Solo una organización puede quedar activa en el proyecto.",
+      "Hay que volver a desplegar si cambias la organización.",
+      "Hay que escoger el usuario por defecto de 'Ejecutar'.",
+      "La organización activa será la disponible en el servidor al ejecutar procesos."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 2",
+    "qnum": 6,
+    "enunciado": "¿Qué diferencia hay entre los datos de la organización y los del BDM?",
+    "opciones": [
+      "La organización guarda información de empleados.",
+      "El BDM guarda datos de negocio como pedidos o productos.",
+      "Ambos almacenan exactamente el mismo tipo de información.",
+      "La organización se usa para datos de todo tipo sin relación con personas."
+    ],
+    "correctas": [
+      0,
+      1
+    ]
+  },
+  {
+    "tema": "Práctica 2",
+    "qnum": 7,
+    "enunciado": "¿Cómo podemos configurar los atributos de un objeto de negocio?",
+    "opciones": [
+      "Se definen en la pestaña 'Modelo'.",
+      "Un atributo puede tener tipo primitivo.",
+      "Un atributo puede tener como tipo otro objeto definido previamente.",
+      "Para fechas se puede usar DATE ONLY, DATE-TIME (NO TIME-ZONE) y DATE-TIME (TIME-ZONE)."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 2",
+    "qnum": 8,
+    "enunciado": "¿Qué atributos automáticos podemos observar en la base de datos para los objetos del BDM?",
+    "opciones": [
+      "PersistenceId identifica unívocamente el registro.",
+      "PersistenceVersion indica cuántas veces se modificó el registro.",
+      "CreationUsername se crea siempre por defecto.",
+      "DeleteTimestamp se crea siempre por defecto."
+    ],
+    "correctas": [
+      0,
+      1
+    ]
+  },
+  {
+    "tema": "Práctica 2",
+    "qnum": 9,
+    "enunciado": "¿Qué aspectos podemos configurar de los atributos compuestos?",
+    "opciones": [
+      "El tipo de relación: agregación o composición.",
+      "La forma de carga: LAZY o EAGER.",
+      "El puerto de despliegue del servidor.",
+      "La política de acceso del Tomcat."
+    ],
+    "correctas": [
+      0,
+      1
+    ]
+  },
+  {
+    "tema": "Práctica 2",
+    "qnum": 10,
+    "enunciado": "¿Para qué sirve la pestaña 'Restricciones' al configurar un objeto de negocio en el BDM?",
+    "opciones": [
+      "Permite crear restricciones UNIQUE.",
+      "Puede aplicarse a un atributo individual o a combinaciones.",
+      "La base de datos bloquea altas o cambios que violen la restricción.",
+      "Sirve para configurar automáticamente el motor BPM."
+    ],
+    "correctas": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "tema": "Práctica 2",
+    "qnum": 11,
+    "enunciado": "¿Para qué sirve la pestaña 'Consultas' al configurar un objeto de negocio en el BDM?",
+    "opciones": [
+      "Define consultas de la API por defecto.",
+      "Las consultas se expresan en JPQL.",
+      "Se pueden usar desde backend y frontend.",
+      "Permite crear consultas personalizadas."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 2",
+    "qnum": 12,
+    "enunciado": "¿Cómo podemos visualizar información sobre el BDM desplegado en Bonita Studio?",
+    "opciones": [
+      "Con la consola H2.",
+      "Con GraphQL Voyager.",
+      "Con un cliente REST o incluso un navegador moderno.",
+      "Solo desde la ventana de Git integrada."
+    ],
+    "correctas": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "tema": "Práctica 3",
+    "qnum": 13,
+    "enunciado": "¿Qué opciones tenemos para hacer copia de seguridad de lo que desarrollamos en Bonita Studio?",
+    "opciones": [
+      "Importar/Exportar creando un fichero .bos.",
+      "Exportar o importar BDM u organización en .xml.",
+      "Usar Git con repositorio y token de acceso.",
+      "Clonar repositorios usando la misma versión de Bonita Studio."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 3",
+    "qnum": 14,
+    "enunciado": "¿Qué es y para qué sirve la Bonita User Application?",
+    "opciones": [
+      "Permite consultar tareas pendientes y completarlas.",
+      "Permite ver casos abiertos y cerrados.",
+      "Permite iniciar procesos disponibles para el usuario.",
+      "Al entrar desde 'Aplicaciones' inicia sesión con el usuario por defecto."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 3",
+    "qnum": 15,
+    "enunciado": "¿Qué es y para qué sirve la Bonita Administrator Application?",
+    "opciones": [
+      "Permite instalar procesos.",
+      "Permite eliminar casos y consultar tareas fallidas.",
+      "Permite modificar la organización y gestionar aplicaciones.",
+      "En Bonita Studio todos los usuarios tienen por defecto perfil User y Administrator."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 3",
+    "qnum": 16,
+    "enunciado": "¿De qué elementos organizativos disponemos en Bonita Studio para estructurar el sistema BPM?",
+    "opciones": [
+      "Proyectos.",
+      "Diagramas.",
+      "Procesos.",
+      "Sendas."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 3",
+    "qnum": 17,
+    "enunciado": "¿Qué acciones lleva a cabo Bonita Studio al pulsar el botón 'Ejecutar'?",
+    "opciones": [
+      "Compila el proceso y se detiene si hay error.",
+      "Elimina el proceso del servidor si existe con la misma versión.",
+      "Despliega el proceso, abre Bonita User Application e inicia el proceso.",
+      "Borra automáticamente el BDM y la organización."
+    ],
+    "correctas": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "tema": "Práctica 3",
+    "qnum": 18,
+    "enunciado": "¿Qué ocurre si usamos el botón 'Desplegar' y seleccionamos un elemento ya desplegado antes?",
+    "opciones": [
+      "Se crea siempre una nueva versión automática.",
+      "Se bloquea el despliegue hasta reiniciar Bonita Studio.",
+      "Se conserva el elemento anterior y se ignora el nuevo.",
+      "Se elimina la organización activa."
+    ],
+    "correctas": []
+  },
+  {
+    "tema": "Práctica 3",
+    "qnum": 19,
+    "enunciado": "¿Cuáles son algunos elementos BPMN disponibles en la paleta de Bonita Studio?",
+    "opciones": [
+      "Tareas de servicio, humanas y de script.",
+      "Compuertas AND, XOR y OR.",
+      "Eventos de inicio/fin, terminación y temporizador.",
+      "Clases Java persistentes obligatorias para cada tarea."
+    ],
+    "correctas": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "tema": "Práctica 3",
+    "qnum": 20,
+    "enunciado": "¿Cuáles son las características principales de UI Designer?",
+    "opciones": [
+      "Es un editor web integrado que se abre en el navegador.",
+      "Usa JavaScript y Angular para interfaces dinámicas.",
+      "Desacopla interfaz y procesos mediante contratos.",
+      "Puede acceder a datos del proceso y del BDM mediante API."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 3",
+    "qnum": 21,
+    "enunciado": "¿Qué tipos de formularios podemos utilizar en Bonita Studio?",
+    "opciones": [
+      "Formulario de instanciación para iniciar un caso nuevo.",
+      "Formulario de tarea para interactuar en un caso ya iniciado.",
+      "El formulario de instanciación se asocia al pool.",
+      "El formulario de tarea se asocia a una tarea humana."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 4",
+    "qnum": 22,
+    "enunciado": "¿Qué podemos destacar sobre los actores?",
+    "opciones": [
+      "Son nombres simbólicos para personas que intervienen en el proceso.",
+      "Cada tarea humana debe asociarse con un actor.",
+      "El iniciador es el actor que debe iniciar el proceso.",
+      "Un proceso puede no tener iniciador o incluso no tener actores."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 4",
+    "qnum": 23,
+    "enunciado": "¿Cómo se realiza el mapeo de los actores a las personas de la organización?",
+    "opciones": [
+      "Forma parte de la configuración del proceso.",
+      "Hay que seleccionar el actor que quieres mapear.",
+      "Se pueden asignar usuarios usando la organización y sus grupos/roles.",
+      "Se hace escribiendo consultas SQL en H2."
+    ],
+    "correctas": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "tema": "Práctica 4",
+    "qnum": 24,
+    "enunciado": "¿Qué usuarios pueden iniciar un proceso?",
+    "opciones": [
+      "Solo pueden iniciarlo los usuarios mapeados al actor iniciador.",
+      "Los mapeados al actor iniciador son los únicos que lo ven en la pestaña 'Procesos'.",
+      "El botón 'Ejecutar' ignora ese mapeo y siempre inicia el proceso.",
+      "Un usuario no mapeado puede iniciar por 'Ejecutar' aunque luego no vea tareas posteriores."
+    ],
+    "correctas": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 4",
+    "qnum": 25,
+    "enunciado": "¿Para qué se utilizan los filtros de actores?",
+    "opciones": [
+      "Tienen preferencia sobre el mapeo configurado.",
+      "Son dinámicos y se asignan en tiempo de ejecución.",
+      "Pueden definirse en una tarea humana o en toda una senda.",
+      "Se pueden obtener del Marketplace o implementar nuevos."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 4",
+    "qnum": 26,
+    "enunciado": "¿Qué tipos de variables podemos crear en un proceso?",
+    "opciones": [
+      "Variables de negocio del BDM.",
+      "Variables de proceso visibles en todo el proceso.",
+      "Variables locales visibles solo donde se definen.",
+      "Para variables de proceso o locales pueden usarse tipos Java/Groovy como String, Integer o Map."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 4",
+    "qnum": 27,
+    "enunciado": "¿Qué son, para qué se usan y cómo se usan los contratos?",
+    "opciones": [
+      "Definen los datos necesarios para iniciar un proceso o completar una tarea.",
+      "El formulario debe devolver valores que satisfagan el contrato.",
+      "Son opcionales si solo quieres mostrar información y no pedir datos.",
+      "Se definen en la pestaña 'Ejecución' del pool o de la tarea."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 4",
+    "qnum": 28,
+    "enunciado": "¿Qué código puede generar un contrato automáticamente?",
+    "opciones": [
+      "Puede crearse manual o automáticamente.",
+      "Si se genera automáticamente, crea campos a partir de atributos de un objeto de negocio.",
+      "Si el dato es un documento, puede crear un campo de tipo FILE.",
+      "Genera automáticamente consultas JPQL personalizadas."
+    ],
+    "correctas": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "tema": "Práctica 4",
+    "qnum": 29,
+    "enunciado": "¿Para qué sirve la pestaña 'Restricciones' al configurar un contrato?",
+    "opciones": [
+      "Permite indicar condiciones que deben cumplirse para que el contrato sea válido.",
+      "Sirve para activar la organización del proyecto.",
+      "Genera automáticamente el BDM del proceso.",
+      "Solo controla el estilo visual del formulario."
+    ],
+    "correctas": [
+      0
+    ]
+  },
+  {
+    "tema": "Práctica 4",
+    "qnum": 30,
+    "enunciado": "¿Qué relaciones se establecen entre un contrato y el formulario obtenido a partir de él?",
+    "opciones": [
+      "El formulario puede traer ya los widgets y el código para satisfacer el contrato.",
+      "formOutput es la variable encargada de cumplimentar el contrato.",
+      "En instanciación, formInput contiene los valores iniciales o por defecto.",
+      "En edición, los valores actuales pueden recuperarse vía API como valores iniciales."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 4",
+    "qnum": 31,
+    "enunciado": "¿Qué hay que tener en cuenta respecto al tipo Long al diseñar procesos?",
+    "opciones": [
+      "Existe incompatibilidad entre Long de Java/Groovy y tipos numéricos de JavaScript.",
+      "Si un objeto BDM tiene Long y generas contrato, Bonita usará TEXT.",
+      "Si pides un Long manualmente en el contrato, conviene usar TEXT y convertir.",
+      "Long solo puede utilizarse dentro de tareas humanas."
+    ],
+    "correctas": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "tema": "Práctica 4",
+    "qnum": 32,
+    "enunciado": "¿Cuál es el orden adecuado a la hora de diseñar un proceso?",
+    "opciones": [
+      "Crear primero las variables de negocio necesarias.",
+      "Después inicializar la variable de negocio según sea registro nuevo o existente.",
+      "Si una tarea modifica la variable, definir contrato de edición en la tarea.",
+      "Crear los formularios asociados al contrato de instanciación o edición."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 5",
+    "qnum": 33,
+    "enunciado": "¿Qué widgets de tipo contenedor tiene UI Designer por defecto?",
+    "opciones": [
+      "Container.",
+      "Tabscontainer.",
+      "Formcontainer.",
+      "Modal container."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "tema": "Práctica 5",
+    "qnum": 34,
+    "enunciado": "¿Qué widgets para mostrar texto tiene UI Designer por defecto?",
+    "opciones": [
+      "Title.",
+      "Text.",
+      "Chart.",
+      "Date Picker."
+    ],
+    "correctas": [
+      0,
+      1
+    ]
+  },
+  {
+    "tema": "Práctica 5",
+    "qnum": 35,
+    "enunciado": "¿Qué widgets para insertar texto tiene UI Designer por defecto?",
+    "opciones": [
+      "Currency Input e Input.",
+      "Text area y Rich text area.",
+      "Autocomplete.",
+      "Checklist."
+    ],
+    "correctas": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "tema": "Práctica 5",
+    "qnum": 36,
+    "enunciado": "¿Qué widgets para ejecutar acciones tiene UI Designer por defecto?",
+    "opciones": [
+      "Button.",
+      "SaveButton.",
+      "Link.",
+      "Tabscontainer."
+    ],
+    "correctas": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "tema": "Práctica 5",
+    "qnum": 37,
+    "enunciado": "¿Qué widgets de selección tiene UI Designer por defecto?",
+    "opciones": [
+      "Radio buttons.",
+      "Select.",
+      "Checklist.",
+      "File Viewer."
+    ],
+    "correctas": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "tema": "Práctica 5",
+    "qnum": 38,
+    "enunciado": "¿Cómo configuramos un 'Select' en UI Designer si tenemos los datos en un objeto JSON?",
+    "opciones": [
+      "En Available values se pone la lista del JSON.",
+      "En Displayed key se indica el campo que se muestra.",
+      "En Returned key se indica el campo que se guarda.",
+      "Hay que convertir el JSON en XML antes de usarlo."
+    ],
+    "correctas": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "tema": "Práctica 5",
+    "qnum": 39,
+    "enunciado": "¿Cómo controlamos el aspecto de formularios y aplicaciones según el dispositivo?",
+    "opciones": [
+      "Seleccionando arriba a la derecha el tipo de dispositivo.",
+      "Adaptando la apariencia para móvil, tablet, portátil o pantalla grande.",
+      "Definiendo perfiles User y Administrator.",
+      "Editando la versión del proceso."
+    ],
+    "correctas": [
+      0,
+      1
+    ]
+  },
+  {
+    "tema": "Práctica 5",
+    "qnum": 40,
+    "enunciado": "¿Qué widgets para usar ficheros tiene UI Designer por defecto?",
+    "opciones": [
+      "File Viewer.",
+      "Upload.",
+      "Image.",
+      "Rich text area."
+    ],
+    "correctas": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "tema": "Práctica 5",
+    "qnum": 41,
+    "enunciado": "¿Qué widgets para usar fechas tiene UI Designer por defecto?",
+    "opciones": [
+      "Date Picker.",
+      "Date Time Picker.",
+      "En Date Picker hay que tener en cuenta si debe considerarse el timezone.",
+      "El único widget de fechas es Calendar Table."
+    ],
+    "correctas": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "tema": "Práctica 5",
+    "qnum": 42,
+    "enunciado": "¿Qué widgets para visualizar conjuntos de datos tiene UI Designer por defecto?",
+    "opciones": [
+      "Chart.",
+      "Data source SQL.",
+      "GraphQL Voyager.",
+      "Tomcat Viewer."
+    ],
+    "correctas": [
+      0
+    ]
+  },
+  {
+    "tema": "Práctica 5",
+    "qnum": 43,
+    "enunciado": "¿Cómo y para qué podemos usar los filtros de Angular?",
+    "opciones": [
+      "Sirven para formatear datos en DataTable o Text.",
+      "Se aplican con el símbolo '|'.",
+      "Ejemplos: uiDate, number y lowercase.",
+      "Solo pueden usarse en el backend de Bonita."
+    ],
+    "correctas": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "tema": "Práctica 5",
+    "qnum": 44,
+    "enunciado": "¿Puedo crear mis propios widgets y usarlos en UI Designer?",
+    "opciones": [
+      "Sí, puedes crearlos desde cero.",
+      "También puedes partir de un widget existente.",
+      "Se puede abrir su implementación con la opción 'Ver…'.",
+      "Después puedes adaptar el código y guardarlo con otro nombre."
+    ],
+    "correctas": [
+      0,
+      1,
+      2,
+      3
+    ]
+  }
+]
