@@ -6,13 +6,10 @@
     "opciones": [
       "En backend se usa Groovy y Java.",
       "En frontend se usa JavaScript y AngularJS.",
-      "En backend se usa Python.",
-      "En frontend se usa React."
+      "En backend se usa Python como lenguaje principal de Bonita.",
+      "En frontend se usa React de forma nativa en UI Designer."
     ],
-    "correctas": [
-      0,
-      1
-    ]
+    "correctas": [0, 1]
   },
   {
     "tema": "Práctica 1",
@@ -21,15 +18,10 @@
     "opciones": [
       "Organización.",
       "Business Data Model (BDM).",
-      "Formularios/Aplicaciones.",
-      "Process/Case/Task."
+      "Formularios y aplicaciones.",
+      "La configuración DNS del servidor."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 1",
@@ -37,16 +29,11 @@
     "enunciado": "¿Cuáles son las versiones que existen de Bonita BPM?",
     "opciones": [
       "Bonita Studio es la versión de desarrollo.",
-      "Bonita Runtime es la versión de producción.",
-      "Bonita Studio integra H2 y Tomcat.",
-      "Bonita Runtime aparece para desplegar el sistema final."
+      "Bonita Runtime es la versión orientada a producción.",
+      "Bonita Studio integra H2 y Tomcat para desarrollo local.",
+      "Bonita Runtime se utiliza también para modelar visualmente diagramas en lugar de Studio."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 2",
@@ -56,14 +43,9 @@
       "Grupos y subgrupos.",
       "Roles.",
       "Usuarios.",
-      "Membresías."
+      "Consultas JPQL del BDM."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 2",
@@ -71,31 +53,23 @@
     "enunciado": "¿Qué debemos saber sobre activar una organización?",
     "opciones": [
       "Solo una organización puede quedar activa en el proyecto.",
-      "Hay que volver a desplegar si cambias la organización.",
-      "Hay que escoger el usuario por defecto de 'Ejecutar'.",
-      "La organización activa será la disponible en el servidor al ejecutar procesos."
+      "Si cambias la organización activa, puede hacer falta volver a desplegar.",
+      "Hay que escoger el usuario por defecto desde 'Ejecutar'.",
+      "Activar una organización regenera automáticamente el BDM desplegado."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 2",
     "qnum": 6,
     "enunciado": "¿Qué diferencia hay entre los datos de la organización y los del BDM?",
     "opciones": [
-      "La organización guarda información de empleados.",
+      "La organización guarda información de empleados o usuarios.",
       "El BDM guarda datos de negocio como pedidos o productos.",
-      "Ambos almacenan exactamente el mismo tipo de información.",
-      "La organización se usa para datos de todo tipo sin relación con personas."
+      "Ambos se usan indistintamente para la autenticación y el login.",
+      "La organización está pensada para modelar entidades de negocio persistentes como facturas."
     ],
-    "correctas": [
-      0,
-      1
-    ]
+    "correctas": [0, 1]
   },
   {
     "tema": "Práctica 2",
@@ -105,14 +79,9 @@
       "Se definen en la pestaña 'Modelo'.",
       "Un atributo puede tener tipo primitivo.",
       "Un atributo puede tener como tipo otro objeto definido previamente.",
-      "Para fechas se puede usar DATE ONLY, DATE-TIME (NO TIME-ZONE) y DATE-TIME (TIME-ZONE)."
+      "Los atributos de fecha solo pueden definirse como DATE ONLY."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 2",
@@ -120,14 +89,11 @@
     "enunciado": "¿Qué atributos automáticos podemos observar en la base de datos para los objetos del BDM?",
     "opciones": [
       "PersistenceId identifica unívocamente el registro.",
-      "PersistenceVersion indica cuántas veces se modificó el registro.",
-      "CreationUsername se crea siempre por defecto.",
-      "DeleteTimestamp se crea siempre por defecto."
+      "PersistenceVersion refleja la versión persistente del registro.",
+      "DeleteTimestamp se crea siempre por defecto en todos los objetos.",
+      "Todos los objetos crean automáticamente un campo de usuario creador."
     ],
-    "correctas": [
-      0,
-      1
-    ]
+    "correctas": [0, 1]
   },
   {
     "tema": "Práctica 2",
@@ -137,12 +103,9 @@
       "El tipo de relación: agregación o composición.",
       "La forma de carga: LAZY o EAGER.",
       "El puerto de despliegue del servidor.",
-      "La política de acceso del Tomcat."
+      "La definición del actor iniciador."
     ],
-    "correctas": [
-      0,
-      1
-    ]
+    "correctas": [0, 1]
   },
   {
     "tema": "Práctica 2",
@@ -151,31 +114,22 @@
     "opciones": [
       "Permite crear restricciones UNIQUE.",
       "Puede aplicarse a un atributo individual o a combinaciones.",
-      "La base de datos bloquea altas o cambios que violen la restricción.",
-      "Sirve para configurar automáticamente el motor BPM."
+      "La base de datos impide altas o cambios que violen la restricción.",
+      "Sirve para sustituir los contratos del proceso."
     ],
-    "correctas": [
-      0,
-      1,
-      2
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 2",
     "qnum": 11,
     "enunciado": "¿Para qué sirve la pestaña 'Consultas' al configurar un objeto de negocio en el BDM?",
     "opciones": [
-      "Define consultas de la API por defecto.",
+      "Permite crear consultas personalizadas accesibles desde la API.",
       "Las consultas se expresan en JPQL.",
       "Se pueden usar desde backend y frontend.",
-      "Permite crear consultas personalizadas."
+      "Sustituye al modelado de relaciones entre objetos."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 2",
@@ -187,28 +141,19 @@
       "Con un cliente REST o incluso un navegador moderno.",
       "Solo desde la ventana de Git integrada."
     ],
-    "correctas": [
-      0,
-      1,
-      2
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 3",
     "qnum": 13,
     "enunciado": "¿Qué opciones tenemos para hacer copia de seguridad de lo que desarrollamos en Bonita Studio?",
     "opciones": [
-      "Importar/Exportar creando un fichero .bos.",
+      "Importar o exportar creando un fichero .bos.",
       "Exportar o importar BDM u organización en .xml.",
       "Usar Git con repositorio y token de acceso.",
-      "Clonar repositorios usando la misma versión de Bonita Studio."
+      "Basta con copiar la carpeta temporal de ejecución para recuperar el proyecto completo."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 3",
@@ -218,14 +163,9 @@
       "Permite consultar tareas pendientes y completarlas.",
       "Permite ver casos abiertos y cerrados.",
       "Permite iniciar procesos disponibles para el usuario.",
-      "Al entrar desde 'Aplicaciones' inicia sesión con el usuario por defecto."
+      "Permite modificar el mapeo global de actores de la organización."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 3",
@@ -235,14 +175,9 @@
       "Permite instalar procesos.",
       "Permite eliminar casos y consultar tareas fallidas.",
       "Permite modificar la organización y gestionar aplicaciones.",
-      "En Bonita Studio todos los usuarios tienen por defecto perfil User y Administrator."
+      "Todos los usuarios tienen por defecto a la vez perfil User y Administrator."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 3",
@@ -252,14 +187,9 @@
       "Proyectos.",
       "Diagramas.",
       "Procesos.",
-      "Sendas."
+      "Tablas H2 como elemento de modelado BPMN."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 3",
@@ -271,11 +201,7 @@
       "Despliega el proceso, abre Bonita User Application e inicia el proceso.",
       "Borra automáticamente el BDM y la organización."
     ],
-    "correctas": [
-      0,
-      1,
-      2
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 3",
@@ -284,7 +210,7 @@
     "opciones": [
       "Se crea siempre una nueva versión automática.",
       "Se bloquea el despliegue hasta reiniciar Bonita Studio.",
-      "Se conserva el elemento anterior y se ignora el nuevo.",
+      "Se conserva el elemento anterior y se ignora siempre el nuevo.",
       "Se elimina la organización activa."
     ],
     "correctas": []
@@ -296,14 +222,10 @@
     "opciones": [
       "Tareas de servicio, humanas y de script.",
       "Compuertas AND, XOR y OR.",
-      "Eventos de inicio/fin, terminación y temporizador.",
+      "Eventos de inicio, fin, terminación y temporizador.",
       "Clases Java persistentes obligatorias para cada tarea."
     ],
-    "correctas": [
-      0,
-      1,
-      2
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 3",
@@ -313,14 +235,9 @@
       "Es un editor web integrado que se abre en el navegador.",
       "Usa JavaScript y Angular para interfaces dinámicas.",
       "Desacopla interfaz y procesos mediante contratos.",
-      "Puede acceder a datos del proceso y del BDM mediante API."
+      "Solo puede leer datos del proceso, nunca del BDM."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 3",
@@ -330,14 +247,9 @@
       "Formulario de instanciación para iniciar un caso nuevo.",
       "Formulario de tarea para interactuar en un caso ya iniciado.",
       "El formulario de instanciación se asocia al pool.",
-      "El formulario de tarea se asocia a una tarea humana."
+      "El formulario de tarea se asocia exclusivamente a tareas de servicio."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 4",
@@ -347,14 +259,9 @@
       "Son nombres simbólicos para personas que intervienen en el proceso.",
       "Cada tarea humana debe asociarse con un actor.",
       "El iniciador es el actor que debe iniciar el proceso.",
-      "Un proceso puede no tener iniciador o incluso no tener actores."
+      "Todo proceso debe tener obligatoriamente al menos un actor humano."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 4",
@@ -363,14 +270,10 @@
     "opciones": [
       "Forma parte de la configuración del proceso.",
       "Hay que seleccionar el actor que quieres mapear.",
-      "Se pueden asignar usuarios usando la organización y sus grupos/roles.",
-      "Se hace escribiendo consultas SQL en H2."
+      "Se pueden asignar usuarios usando la organización y sus grupos o roles.",
+      "Se hace escribiendo consultas SQL directamente sobre H2."
     ],
-    "correctas": [
-      0,
-      1,
-      2
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 4",
@@ -382,11 +285,7 @@
       "El botón 'Ejecutar' ignora ese mapeo y siempre inicia el proceso.",
       "Un usuario no mapeado puede iniciar por 'Ejecutar' aunque luego no vea tareas posteriores."
     ],
-    "correctas": [
-      1,
-      2,
-      3
-    ]
+    "correctas": [1, 2, 3]
   },
   {
     "tema": "Práctica 4",
@@ -396,14 +295,9 @@
       "Tienen preferencia sobre el mapeo configurado.",
       "Son dinámicos y se asignan en tiempo de ejecución.",
       "Pueden definirse en una tarea humana o en toda una senda.",
-      "Se pueden obtener del Marketplace o implementar nuevos."
+      "Solo pueden usarse si vienen preinstalados y no se pueden ampliar."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 4",
@@ -413,14 +307,9 @@
       "Variables de negocio del BDM.",
       "Variables de proceso visibles en todo el proceso.",
       "Variables locales visibles solo donde se definen.",
-      "Para variables de proceso o locales pueden usarse tipos Java/Groovy como String, Integer o Map."
+      "Las variables de proceso o locales solo aceptan tipos primitivos, nunca Map u objetos Java/Groovy."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 4",
@@ -429,15 +318,10 @@
     "opciones": [
       "Definen los datos necesarios para iniciar un proceso o completar una tarea.",
       "El formulario debe devolver valores que satisfagan el contrato.",
-      "Son opcionales si solo quieres mostrar información y no pedir datos.",
+      "Son obligatorios incluso aunque el formulario solo muestre información y no pida datos.",
       "Se definen en la pestaña 'Ejecución' del pool o de la tarea."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 3]
   },
   {
     "tema": "Práctica 4",
@@ -449,11 +333,7 @@
       "Si el dato es un documento, puede crear un campo de tipo FILE.",
       "Genera automáticamente consultas JPQL personalizadas."
     ],
-    "correctas": [
-      0,
-      1,
-      2
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 4",
@@ -465,26 +345,19 @@
       "Genera automáticamente el BDM del proceso.",
       "Solo controla el estilo visual del formulario."
     ],
-    "correctas": [
-      0
-    ]
+    "correctas": [0]
   },
   {
     "tema": "Práctica 4",
     "qnum": 30,
     "enunciado": "¿Qué relaciones se establecen entre un contrato y el formulario obtenido a partir de él?",
     "opciones": [
-      "El formulario puede traer ya los widgets y el código para satisfacer el contrato.",
+      "El formulario puede traer ya widgets y código orientados a satisfacer el contrato.",
       "formOutput es la variable encargada de cumplimentar el contrato.",
       "En instanciación, formInput contiene los valores iniciales o por defecto.",
-      "En edición, los valores actuales pueden recuperarse vía API como valores iniciales."
+      "El formulario nunca necesita ajustes manuales si se genera desde contrato."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 4",
@@ -496,11 +369,7 @@
       "Si pides un Long manualmente en el contrato, conviene usar TEXT y convertir.",
       "Long solo puede utilizarse dentro de tareas humanas."
     ],
-    "correctas": [
-      0,
-      1,
-      2
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 4",
@@ -510,14 +379,9 @@
       "Crear primero las variables de negocio necesarias.",
       "Después inicializar la variable de negocio según sea registro nuevo o existente.",
       "Si una tarea modifica la variable, definir contrato de edición en la tarea.",
-      "Crear los formularios asociados al contrato de instanciación o edición."
+      "Es mejor empezar por mapear actores y dejar la parte de datos para el final."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 5",
@@ -527,14 +391,9 @@
       "Container.",
       "Tabscontainer.",
       "Formcontainer.",
-      "Modal container."
+      "Data Table Container."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 5",
@@ -546,10 +405,7 @@
       "Chart.",
       "Date Picker."
     ],
-    "correctas": [
-      0,
-      1
-    ]
+    "correctas": [0, 1]
   },
   {
     "tema": "Práctica 5",
@@ -561,11 +417,7 @@
       "Autocomplete.",
       "Checklist."
     ],
-    "correctas": [
-      0,
-      1,
-      2
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 5",
@@ -577,11 +429,7 @@
       "Link.",
       "Tabscontainer."
     ],
-    "correctas": [
-      0,
-      1,
-      2
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 5",
@@ -593,11 +441,7 @@
       "Checklist.",
       "File Viewer."
     ],
-    "correctas": [
-      0,
-      1,
-      2
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 5",
@@ -609,11 +453,7 @@
       "En Returned key se indica el campo que se guarda.",
       "Hay que convertir el JSON en XML antes de usarlo."
     ],
-    "correctas": [
-      0,
-      1,
-      2
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 5",
@@ -625,10 +465,7 @@
       "Definiendo perfiles User y Administrator.",
       "Editando la versión del proceso."
     ],
-    "correctas": [
-      0,
-      1
-    ]
+    "correctas": [0, 1]
   },
   {
     "tema": "Práctica 5",
@@ -640,11 +477,7 @@
       "Image.",
       "Rich text area."
     ],
-    "correctas": [
-      0,
-      1,
-      2
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 5",
@@ -656,11 +489,7 @@
       "En Date Picker hay que tener en cuenta si debe considerarse el timezone.",
       "El único widget de fechas es Calendar Table."
     ],
-    "correctas": [
-      0,
-      1,
-      2
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 5",
@@ -672,9 +501,7 @@
       "GraphQL Voyager.",
       "Tomcat Viewer."
     ],
-    "correctas": [
-      0
-    ]
+    "correctas": [0]
   },
   {
     "tema": "Práctica 5",
@@ -686,11 +513,7 @@
       "Ejemplos: uiDate, number y lowercase.",
       "Solo pueden usarse en el backend de Bonita."
     ],
-    "correctas": [
-      0,
-      1,
-      2
-    ]
+    "correctas": [0, 1, 2]
   },
   {
     "tema": "Práctica 5",
@@ -700,13 +523,8 @@
       "Sí, puedes crearlos desde cero.",
       "También puedes partir de un widget existente.",
       "Se puede abrir su implementación con la opción 'Ver…'.",
-      "Después puedes adaptar el código y guardarlo con otro nombre."
+      "Solo pueden usarse tras recompilar manualmente Bonita Runtime con Maven."
     ],
-    "correctas": [
-      0,
-      1,
-      2,
-      3
-    ]
+    "correctas": [0, 1, 2]
   }
 ]
