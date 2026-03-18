@@ -89,7 +89,6 @@
           <button id="doubtBtn" title="Marcar/Demarcar como dudosa">★ Dudosa</button>
           <button id="examBtn" style="background:#f59e0b">Iniciar Examen (20)</button>
           <button id="regenPDBtn" class="ghost" style="display:none">Generar PD</button>
-          <!-- Botón modo muy difícil PD -->
           <button id="pdHardBtn" class="ghost" style="display:none;border-color:#b91c1c">PD Muy Difícil</button>
           <button id="changeSubject" class="ghost" title="Volver a elegir asignatura">Cambiar asignatura</button>
         </div>
@@ -140,7 +139,7 @@
     // ========= Config de asignaturas =========
     const SUBJECTS = {
       ITIL:      { label: 'CIMSI', slug: 'cimsi' },
-      ITIL_HARD: { label: 'CIMSI', slug: 'cimsi-hard' }, // CIMSI difícil
+      ITIL_HARD: { label: 'CIMSI', slug: 'cimsi-hard' },
       PD:        { label: 'PD',    slug: 'pd' },
       SIE:       { label: 'SIE',   slug: 'sie' }
     };
@@ -176,16 +175,15 @@
 
     const setStatus = (s) => statusText.textContent = s;
 
-    // ========= Utilidades de URL (GitHub Pages friendly) =========
+    // ========= Utilidades =========
     function baseRoot(){
       const isPages = location.hostname.endsWith('github.io');
       const repoSegment = isPages ? location.pathname.split('/').filter(Boolean)[0] : '';
       return `${location.origin}/${repoSegment ? repoSegment + '/' : ''}`;
     }
 
-    // Candidatos de rutas para cada asignatura
     function jsonCandidatesFor(subjectKey){
-      const root = baseRoot(); // maneja GitHub Pages /<repo>/
+      const root = baseRoot();
       if (subjectKey === 'ITIL') {
         return [
           `${root}Preguntas_CIMSI/preguntas_estudioCIMSI.json`,
@@ -193,7 +191,6 @@
         ];
       }
       if (subjectKey === 'ITIL_HARD') {
-        // JSON "tipo test" para CIMSI difícil
         return [
           `${root}Preguntas_CIMSI/preguntas_examenCIMSI.json`,
           `${root}preguntas_examenCIMSI.json`
@@ -214,7 +211,80 @@
       return [];
     }
 
-    // ========= Carga automática según asignatura =========
+    function shuffle(a){
+      for(let i=a.length-1;i>0;i--){
+        const j=Math.floor(Math.random()*(i+1));
+        [a[i],a[j]]=[a[j],a[i]];
+      }
+      return a;
+    }
+
+    function isMultiQuestion(q){
+      return selectedSubject === 'SIE' || Array.isArray(q.correctas);
+    }
+
+    function getOriginalCorrectIndices(q){
+      if (Array.isArray(q.correctas)) {
+        return [...new Set(q.correctas.filter(n => Number.isInteger(n)))].sort((a,b)=>a-b);
+      }
+      if (Number.isInteger(q.correcta)) {
+        return [q.correcta];
+      }
+      return [];
+    }
+
+    function prepareQuestion(q){
+      if (q._prepared) return;
+
+      const opciones = q.opciones.map((op,i)=>({texto:op,i}));
+      const mezcladas = shuffle(opciones.slice());
+
+      q._opcionesMezcladas = mezcladas;
+
+      const originalCorrects = getOriginalCorrectIndices(q);
+      q._correctIndices = mezcladas
+        .map((op, idx) => originalCorrects.includes(op.i) ? idx : -1)
+        .filter(idx => idx !== -1)
+        .sort((a,b)=>a-b);
+
+      q._prepared = true;
+    }
+
+    function arraysEqual(a,b){
+      if(a.length !== b.length) return false;
+      for(let i=0;i<a.length;i++){
+        if(a[i] !== b[i]) return false;
+      }
+      return true;
+    }
+
+    function getSelectedIndices(q){
+      const ans = userAnswers[index];
+      if (isMultiQuestion(q)) {
+        return Array.isArray(ans) ? [...ans].sort((a,b)=>a-b) : [];
+      }
+      return (ans === undefined || ans === -1) ? [] : [ans];
+    }
+
+    function formatSolution(q){
+      return q._correctIndices
+        .map(i => `${'abcd'[i]}) ${q._opcionesMezcladas[i].texto}`)
+        .join(' | ');
+    }
+
+    function clearOptionStyles(){
+      document.querySelectorAll('.opt').forEach(el=>el.classList.remove('selected','correct','wrong'));
+    }
+
+    function selectDOMOptions(indices=[]){
+      clearOptionStyles();
+      indices.forEach(i=>{
+        const el = document.querySelector(`.opt[data-i='${i}']`);
+        if(el) el.classList.add('selected');
+      });
+    }
+
+    // ========= Carga automática =========
     async function tryAutoLoadForSubject(subjectKey){
       const candidates = jsonCandidatesFor(subjectKey);
       if (candidates.length) {
@@ -230,13 +300,16 @@
           const arr = Array.isArray(data) ? data : (data.preguntas || []);
           if(!Array.isArray(arr) || arr.length===0) throw new Error('JSON vacío o estructura inesperada');
 
-          // dificultad según asignatura
           difficultyMode = (subjectKey === 'ITIL_HARD') ? 'hard' : 'normal';
 
           allQuestions = arr.map(q => ({...q}));
           questions = allQuestions.slice();
           populateTemas();
-          index = 0; modeExam=false; userAnswers={}; doubts=new Set(); checkedQuestions=new Set();
+          index = 0;
+          modeExam = false;
+          userAnswers = {};
+          doubts = new Set();
+          checkedQuestions = new Set();
           updateView();
           setStatus('Banco cargado.');
           return true;
@@ -245,13 +318,16 @@
         }
       }
 
-      // Fallback: si es PD, generamos preguntas automáticamente
       if(subjectKey === 'PD'){
         difficultyMode = 'normal';
         allQuestions = generatePDQuestions();
         questions = allQuestions.slice();
         populateTemas();
-        index = 0; modeExam=false; userAnswers={}; doubts=new Set(); checkedQuestions=new Set();
+        index = 0;
+        modeExam = false;
+        userAnswers = {};
+        doubts = new Set();
+        checkedQuestions = new Set();
         updateView();
         setStatus('Banco generado para PD.');
         autoHint.textContent = 'Usando preguntas generadas (no se encontró JSON de PD).';
@@ -263,7 +339,6 @@
       return false;
     }
 
-    // ========= NUEVO: Carga automática PD muy difícil =========
     async function tryLoadPDHard(){
       if(selectedSubject !== 'PD'){
         alert('El modo muy difícil solo está disponible para PD.');
@@ -288,7 +363,11 @@
           allQuestions = arr.map(q => ({...q}));
           questions = allQuestions.slice();
           populateTemas();
-          index = 0; modeExam=false; userAnswers={}; doubts=new Set(); checkedQuestions=new Set();
+          index = 0;
+          modeExam = false;
+          userAnswers = {};
+          doubts = new Set();
+          checkedQuestions = new Set();
           updateView();
           setStatus('Banco PD muy difícil cargado.');
           return true;
@@ -300,9 +379,8 @@
       alert('No se encontró el JSON de PD muy difícil. Asegúrate de que existe y tiene el formato correcto.');
       return false;
     }
-    // ========= FIN NUEVO =========
 
-    // ========= Generador de preguntas PD (fallback simple) =========
+    // ========= Generador de preguntas PD =========
     function generatePDQuestions(){
       const providers = [
         { name:'AWS', tema:'AWS', sv:{
@@ -398,7 +476,7 @@
       return out;
     }
 
-    // ========= Carga manual desde archivo =========
+    // ========= Carga manual =========
     document.getElementById('fileInput')?.addEventListener('change', async (e)=>{
       const f = e.target.files?.[0];
       if(!f) return;
@@ -412,25 +490,53 @@
         allQuestions = arr.map(q => ({...q}));
         questions = allQuestions.slice();
         populateTemas();
-        index = 0; modeExam=false; userAnswers={}; doubts=new Set(); checkedQuestions=new Set();
-        updateView(); setStatus('Banco cargado desde archivo.');
+        index = 0;
+        modeExam = false;
+        userAnswers = {};
+        doubts = new Set();
+        checkedQuestions = new Set();
+        updateView();
+        setStatus('Banco cargado desde archivo.');
       }catch(err){
         alert('JSON inválido: ' + err.message);
       }
     });
 
     // ========= Controles =========
-    document.getElementById('prevBtn').addEventListener('click', ()=>{ if(index>0){ index--; updateView() } });
-    document.getElementById('nextBtn').addEventListener('click', ()=>{ if(index<questions.length-1){ index++; updateView() } });
+    document.getElementById('prevBtn').addEventListener('click', ()=>{
+      if(index>0){
+        index--;
+        updateView();
+      }
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', ()=>{
+      if(index<questions.length-1){
+        index++;
+        updateView();
+      }
+    });
+
     document.getElementById('doubtBtn').addEventListener('click', ()=>{ toggleDoubt(); });
     document.getElementById('checkBtn').addEventListener('click', ()=>{ checkCurrent(); });
-    document.getElementById('examBtn').addEventListener('click', ()=>{ startExam(20) });
-    temaFilter.addEventListener('change', ()=>{ filterByTema(temaFilter.value=='Todos'?null:temaFilter.value) });
-    temaSelect.addEventListener('change', ()=>{ filterByTema(temaSelect.value=='Todos'?null:temaSelect.value) });
-    tryAutoBtn.addEventListener('click', ()=> {
-      if(!selectedSubject){ alert('Primero elige una asignatura.'); return; }
+    document.getElementById('examBtn').addEventListener('click', ()=>{ startExam(20); });
+
+    temaFilter.addEventListener('change', ()=>{
+      filterByTema(temaFilter.value=='Todos' ? null : temaFilter.value);
+    });
+
+    temaSelect.addEventListener('change', ()=>{
+      filterByTema(temaSelect.value=='Todos' ? null : temaSelect.value);
+    });
+
+    tryAutoBtn.addEventListener('click', ()=>{
+      if(!selectedSubject){
+        alert('Primero elige una asignatura.');
+        return;
+      }
       tryAutoLoadForSubject(selectedSubject);
     });
+
     document.getElementById('changeSubject').addEventListener('click', ()=>{
       appEl.classList.add('hidden');
       landing.classList.remove('hidden');
@@ -442,17 +548,23 @@
       regenPDBtn.style.display = 'none';
       pdHardBtn.style.display = 'none';
     });
+
     regenPDBtn.addEventListener('click', ()=>{
       if(selectedSubject === 'PD'){
         difficultyMode = 'normal';
         allQuestions = generatePDQuestions();
         questions = allQuestions.slice();
         populateTemas();
-        index = 0; modeExam=false; userAnswers={}; doubts=new Set(); checkedQuestions=new Set();
+        index = 0;
+        modeExam = false;
+        userAnswers = {};
+        doubts = new Set();
+        checkedQuestions = new Set();
         updateView();
         setStatus('Banco PD regenerado.');
       }
     });
+
     pdHardBtn.addEventListener('click', ()=>{
       if(selectedSubject === 'PD'){
         tryLoadPDHard();
@@ -461,13 +573,11 @@
       }
     });
 
-    // Botones grandes de la pantalla de selección
     document.getElementById('btnITIL').addEventListener('click', ()=> selectSubject('ITIL', true));
     document.getElementById('btnITILHard').addEventListener('click', ()=> selectSubject('ITIL_HARD', true));
     document.getElementById('btnPD').addEventListener('click', ()=> selectSubject('PD', true));
     document.getElementById('btnSIE').addEventListener('click', ()=> selectSubject('SIE', true));
 
-    // Deep-link: ?asignatura=itil|itil_hard|pd|sie
     window.addEventListener('load', ()=>{
       const p = new URLSearchParams(location.search);
       const a = (p.get('asignatura')||'').toUpperCase();
@@ -494,56 +604,50 @@
       if(autoLoad) tryAutoLoadForSubject(subjectKey);
     }
 
-    // ========= Utilidades UI =========
+    // ========= UI =========
     function populateTemas(){
-      const temas = ['Todos',...Array.from(new Set(allQuestions.map(q=>q.tema || 'Sin tema'))).sort()];
+      const temas = ['Todos', ...Array.from(new Set(allQuestions.map(q=>q.tema || 'Sin tema'))).sort()];
       temaSelect.innerHTML = temas.map(t=>`<option>${t}</option>`).join('');
       temaFilter.innerHTML = temaSelect.innerHTML;
       document.getElementById('progressLabel').textContent = `0/${allQuestions.length}`;
     }
 
-    function shuffle(a){
-      for(let i=a.length-1;i>0;i--){
-        const j=Math.floor(Math.random()*(i+1));
-        [a[i],a[j]]=[a[j],a[i]];
-      }
-      return a;
-    }
-
     function updateView(){
       if(questions.length===0){
-        headerTitle.textContent=`[${selectedSubject? SUBJECTS[selectedSubject].label : '—'}] Sin preguntas cargadas`;
+        headerTitle.textContent=`[${selectedSubject ? SUBJECTS[selectedSubject].label : '—'}] Sin preguntas cargadas`;
         enunciado.textContent='Cargue un JSON con preguntas (botón “Intentar cargar…” o “Carga manual”).';
         opts.innerHTML='';
         progressBar.style.width='0%';
         document.getElementById('progressLabel').textContent = `0/0`;
         return;
       }
+
       const q = questions[index];
-      const opciones = q.opciones.map((op,i)=>({texto:op,i}));
-      const mezcladas = shuffle(opciones.slice());
-      q._opcionesMezcladas = mezcladas;
-      q._correctaIndex = mezcladas.findIndex(op => op.i === q.correcta);
+      prepareQuestion(q);
 
       const subjectLabel = SUBJECTS[selectedSubject]?.label || '—';
       const diffLabel = difficultyMode === 'hard' ? ' (Muy difícil)' : '';
-      headerTitle.textContent = `[${subjectLabel}${diffLabel}] ${q.tema || 'Tema'} — Pregunta ${index+1}/${questions.length} [${modeExam? 'Examen':'Estudio'}]`;
+      const modeLabel = isMultiQuestion(q) ? ' | Selección múltiple' : ' | Respuesta única';
+      headerTitle.textContent = `[${subjectLabel}${diffLabel}] ${q.tema || 'Tema'} — Pregunta ${index+1}/${questions.length} [${modeExam ? 'Examen' : 'Estudio'}${modeLabel}]`;
 
       enunciado.textContent = q.enunciado;
       opts.innerHTML = '';
 
-      mezcladas.forEach((op,i)=>{
+      q._opcionesMezcladas.forEach((op,i)=>{
         const div = document.createElement('div');
-        div.className='opt'; div.dataset.i=i;
+        div.className='opt';
+        div.dataset.i=i;
         div.innerHTML = `<strong>${'abcd'[i]})</strong> ${op.texto}`;
         div.addEventListener('click', ()=>selectOption(i));
         opts.appendChild(div);
       });
 
-      const sel = userAnswers[index] ?? -1;
-      if(sel!==-1) selectDOMOption(sel,false);
+      const selected = getSelectedIndices(q);
+      if(selected.length) selectDOMOptions(selected);
 
-      feedback.textContent=''; solution.textContent='';
+      feedback.textContent='';
+      solution.textContent='';
+
       const pct = Math.round(((index+1)/questions.length)*100);
       progressBar.style.width = pct + '%';
       document.getElementById('progressLabel').textContent = `${index+1}/${questions.length}`;
@@ -551,53 +655,105 @@
       setStatus('Listo');
     }
 
-    function selectOption(i){ userAnswers[index]=i; selectDOMOption(i,true) }
-    function selectDOMOption(i){
-      document.querySelectorAll('.opt').forEach(el=>el.classList.remove('selected','correct','wrong'));
-      const el = document.querySelector(`.opt[data-i='${i}']`);
-      if(el) el.classList.add('selected');
+    function selectOption(i){
+      const q = questions[index];
+
+      if(isMultiQuestion(q)){
+        const current = Array.isArray(userAnswers[index]) ? [...userAnswers[index]] : [];
+        const pos = current.indexOf(i);
+        if(pos >= 0) current.splice(pos, 1);
+        else current.push(i);
+        current.sort((a,b)=>a-b);
+        userAnswers[index] = current;
+        selectDOMOptions(current);
+      }else{
+        userAnswers[index] = i;
+        selectDOMOptions([i]);
+      }
     }
 
     function checkCurrent(){
       const q = questions[index];
-      const sel = userAnswers[index] ?? -1;
-      if(sel===-1){
-        feedback.textContent='No has seleccionado una opción.';
-        feedback.style.color='var(--muted)';
-        solution.textContent=`Solución: ${'abcd'[q._correctaIndex]}) ${q._opcionesMezcladas[q._correctaIndex].texto}`;
+      const selected = getSelectedIndices(q);
+      const correct = [...q._correctIndices].sort((a,b)=>a-b);
+
+      if(selected.length === 0){
+        feedback.textContent = isMultiQuestion(q)
+          ? 'No has seleccionado ninguna opción.'
+          : 'No has seleccionado una opción.';
+        feedback.style.color = 'var(--muted)';
+        solution.textContent = `Solución: ${formatSolution(q)}`;
         return;
       }
+
       checkedQuestions.add(index);
-      if(sel===q._correctaIndex){
-        feedback.textContent='✔ ¡Correcto!'; feedback.style.color='var(--success)';
-        document.querySelector(`.opt[data-i='${sel}']`).classList.add('correct');
+      clearOptionStyles();
+
+      const ok = arraysEqual(selected, correct);
+
+      q._opcionesMezcladas.forEach((_, i)=>{
+        const el = document.querySelector(`.opt[data-i='${i}']`);
+        if(!el) return;
+
+        if(selected.includes(i)) el.classList.add('selected');
+        if(correct.includes(i)) el.classList.add('correct');
+        if(selected.includes(i) && !correct.includes(i)) el.classList.add('wrong');
+      });
+
+      if(ok){
+        feedback.textContent='✔ ¡Correcto!';
+        feedback.style.color='var(--success)';
+        solution.textContent='';
       }else{
-        feedback.textContent='✖ Incorrecto.'; feedback.style.color='var(--danger)';
-        document.querySelector(`.opt[data-i='${sel}']`).classList.add('wrong');
-        solution.textContent=`Solución: ${'abcd'[q._correctaIndex]}) ${q._opcionesMezcladas[q._correctaIndex].texto}`;
+        feedback.textContent='✖ Incorrecto.';
+        feedback.style.color='var(--danger)';
+        solution.textContent=`Solución: ${formatSolution(q)}`;
       }
     }
 
-    function toggleDoubt(){ doubts.has(index)? doubts.delete(index): doubts.add(index); refreshDoubtsList() }
+    function toggleDoubt(){
+      doubts.has(index) ? doubts.delete(index) : doubts.add(index);
+      refreshDoubtsList();
+    }
+
     function refreshDoubtsList(){
-      doubtsList.innerHTML=''; if(doubts.size===0){ doubtsList.textContent='—'; return }
+      doubtsList.innerHTML='';
+      if(doubts.size===0){
+        doubtsList.textContent='—';
+        return;
+      }
       Array.from(doubts).sort((a,b)=>a-b).forEach(i=>{
-        const q=questions[i]; const el=document.createElement('div');
-        el.textContent=`${i+1}. ${q.tema||'Tema'}`; el.style.padding='4px 6px'; el.style.cursor='pointer';
-        el.addEventListener('click', ()=>{ index=i; updateView() }); doubtsList.appendChild(el);
+        const q=questions[i];
+        const el=document.createElement('div');
+        el.textContent=`${i+1}. ${q.tema||'Tema'}`;
+        el.style.padding='4px 6px';
+        el.style.cursor='pointer';
+        el.addEventListener('click', ()=>{
+          index=i;
+          updateView();
+        });
+        doubtsList.appendChild(el);
       });
     }
 
     function filterByTema(tema){
-      questions = tema? allQuestions.filter(q=>q.tema===tema) : allQuestions.slice();
-      index=0; userAnswers={}; doubts=new Set(); modeExam=false; populateTemas(); updateView();
+      questions = tema ? allQuestions.filter(q=>q.tema===tema) : allQuestions.slice();
+      index = 0;
+      userAnswers = {};
+      doubts = new Set();
+      modeExam = false;
+      populateTemas();
+      updateView();
     }
 
     function startExam(num){
       if(allQuestions.length===0) return alert('Carga primero preguntas.');
-      modeExam=true; userAnswers={}; doubts=new Set();
-      questions = [...allQuestions].sort(()=>Math.random()-0.5).slice(0,Math.min(num,allQuestions.length));
-      index=0; updateView();
+      modeExam = true;
+      userAnswers = {};
+      doubts = new Set();
+      questions = [...allQuestions].sort(()=>Math.random()-0.5).slice(0, Math.min(num, allQuestions.length));
+      index = 0;
+      updateView();
     }
   </script>
 </body>
