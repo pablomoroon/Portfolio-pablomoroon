@@ -76,6 +76,7 @@
         <button class="bigbtn" id="btnITILHard">🔥 CIMSI Difícil</button>
         <button class="bigbtn" id="btnPD">📘 PD</button>
         <button class="bigbtn" id="btnSIE">📝 SIE</button>
+        <button class="bigbtn" id="btnSIE">📝 SIE-2</button>
       </div>
     </div>
   </div>
@@ -145,7 +146,8 @@
       ITIL:      { label: 'CIMSI', slug: 'cimsi' },
       ITIL_HARD: { label: 'CIMSI', slug: 'cimsi-hard' },
       PD:        { label: 'PD',    slug: 'pd' },
-      SIE:       { label: 'SIE',   slug: 'sie' }
+      SIE:       { label: 'SIE',   slug: 'sie' },
+      SIE_2:       { label: 'SIE_2',   slug: 'sie_2' }
     };
 
     let selectedSubject = null;
@@ -210,6 +212,12 @@
           `${root}preguntas_estudioSIE.json`
         ];
       }
+      if (subjectKey === 'SIE_2') {
+        return [
+          `${root}Preguntas_CIMSI/preguntas_estudioSIE_2.json`,
+          `${root}preguntas_estudioSIE_2.json`
+        ];
+}
       return [];
     }
 
@@ -222,7 +230,7 @@
     }
 
     function isMultiQuestion(q){
-      return selectedSubject === 'SIE' || Array.isArray(q.correctas);
+      return selectedSubject === 'SIE' || selectedSubject === 'SIE_2' || Array.isArray(q.correctas);
     }
 
     function getOriginalCorrectIndices(q){
@@ -578,6 +586,7 @@
     document.getElementById('btnITILHard').addEventListener('click', ()=> selectSubject('ITIL_HARD', true));
     document.getElementById('btnPD').addEventListener('click', ()=> selectSubject('PD', true));
     document.getElementById('btnSIE').addEventListener('click', ()=> selectSubject('SIE', true));
+    document.getElementById('btnSIE_2').addEventListener('click', ()=> selectSubject('SIE_2', true));
 
     window.addEventListener('load', ()=>{
       const p = new URLSearchParams(location.search);

@@ -1,0 +1,254 @@
+[
+  {
+    "tema": "Práctica 6",
+    "qnum": 1,
+    "enunciado": "¿Qué combinaciones recogen correctamente tipos de variables disponibles en UI Designer?",
+    "opciones": [
+      "String y JSON.",
+      "External API y Business data.",
+      "URL parameter y Javascript.",
+      "Documento y variable de proceso del pool como tipos propios de variable de UI Designer."
+    ],
+    "correctas": [0, 1, 2]
+  },
+  {
+    "tema": "Práctica 6",
+    "qnum": 2,
+    "enunciado": "Sobre la evaluación de variables creadas en UI Designer, ¿qué afirmaciones son correctas?",
+    "opciones": [
+      "Angular gestiona las dependencias entre variables.",
+      "Las variables solo se reevalúan al enviar definitivamente el formulario.",
+      "El desarrollador debe invocar manualmente una operación Groovy para refrescar cada variable.",
+      "Una variable se reevalúa automáticamente cuando cambia algún dato del formulario que le afecta."
+    ],
+    "correctas": [0, 3]
+  },
+  {
+    "tema": "Práctica 6",
+    "qnum": 3,
+    "enunciado": "Respecto a formInput y formOutput en formularios de Bonita, ¿qué opciones son correctas?",
+    "opciones": [
+      "formInput se crea automáticamente en formularios de instanciación y es de tipo JSON.",
+      "formOutput se crea automáticamente en formularios y es de tipo Javascript.",
+      "formInput y formOutput son siempre variables String creadas manualmente por el diseñador.",
+      "Es habitual conectar widgets con campos de formInput y construir formOutput a partir de formInput, aunque puede modificarse con Javascript."
+    ],
+    "correctas": [0, 1, 3]
+  },
+  {
+    "tema": "Práctica 6",
+    "qnum": 4,
+    "enunciado": "¿Qué pasos o ideas son válidos para iniciar un proceso desde una página/formulario enviando datos por URL?",
+    "opciones": [
+      "Usar un widget Link que apunte al formulario de instanciación del proceso y configurar sus parámetros de URL.",
+      "Crear el objeto de parámetros {dato: valor} con una variable JSON si el valor es constante o con Javascript si debe generarse dinámicamente.",
+      "Recuperar el valor enviado exclusivamente con una variable External API que lea la sesión del usuario.",
+      "En el formulario de instanciación del proceso destino, usar una variable URL parameter para recuperar el campo enviado."
+    ],
+    "correctas": [0, 1, 3]
+  },
+  {
+    "tema": "Práctica 6",
+    "qnum": 5,
+    "enunciado": "Para obtener datos del usuario que ha iniciado sesión, ¿qué afirmaciones son correctas?",
+    "opciones": [
+      "Puede usarse una variable External API con la consulta .../API/system/session/1.",
+      "La variable External API almacena el objeto JSON o array de objetos JSON devuelto por la query REST.",
+      "Debe crearse obligatoriamente una variable Business Data sobre un objeto de negocio llamado Usuario.",
+      "La consulta recupera datos internos de Bonita mediante su API REST."
+    ],
+    "correctas": [0, 1, 3]
+  },
+  {
+    "tema": "Práctica 6",
+    "qnum": 6,
+    "enunciado": "Si queremos recuperar un objeto del BDM desde UI Designer, ¿qué opciones son correctas?",
+    "opciones": [
+      "Puede usarse una variable Business Data seleccionando el objeto de negocio y la consulta a realizar.",
+      "También puede lograrse con una variable External API, porque una Business Data tiene un equivalente vía API REST.",
+      "El valor recuperado por Business Data es directamente una entidad Java del BDM, no JSON.",
+      "Deben completarse los parámetros de la consulta, como filtros y paginación cuando correspondan."
+    ],
+    "correctas": [0, 1, 3]
+  },
+  {
+    "tema": "Práctica 6",
+    "qnum": 7,
+    "enunciado": "¿Cuáles son formas correctas de acceder en UI Designer a variables creadas?",
+    "opciones": [
+      "En código de una variable Javascript, anteponiendo el prefijo $data.",
+      "En el atributo Texto de un widget Text, usando la notación AngularJS {{miVariable}}.",
+      "Al configurar variables External API o Business Data.",
+      "Desde un widget, invocando directamente un DAO Groovy del BDM sin pasar por variables."
+    ],
+    "correctas": [0, 1, 2]
+  },
+  {
+    "tema": "Práctica 7",
+    "qnum": 1,
+    "enunciado": "Sobre el comportamiento de las compuertas XOR, AND y OR, ¿qué afirmaciones son correctas?",
+    "opciones": [
+      "En una XOR se activa un único flujo de salida, normalmente mediante condiciones booleanas o una salida por defecto.",
+      "En una AND se espera a que lleguen todos los flujos de entrada y se activan todos los flujos de salida.",
+      "En una OR se espera siempre a todos los flujos de entrada antes de evaluar cualquier salida.",
+      "En una OR se espera a cada flujo de entrada que llegue y se evalúan las salidas, pudiendo usar condiciones."
+    ],
+    "correctas": [0, 1, 3]
+  },
+  {
+    "tema": "Práctica 7",
+    "qnum": 2,
+    "enunciado": "¿Dónde y cómo se configuran correctamente las condiciones de una compuerta?",
+    "opciones": [
+      "En la pestaña General, seleccionando el flujo correspondiente.",
+      "Seleccionando cada flujo de salida que requiera condición, no como una única expresión global de toda la compuerta.",
+      "En UI Designer, dentro del atributo Valor del widget que abre la tarea.",
+      "En el filtro de actores de la tarea anterior, porque la condición pertenece al usuario asignado."
+    ],
+    "correctas": [0, 1]
+  },
+  {
+    "tema": "Práctica 7",
+    "qnum": 3,
+    "enunciado": "En un proceso con validación, ¿qué características son correctas?",
+    "opciones": [
+      "Suele comenzar con una solicitud de un usuario y requerir la respuesta de otro usuario.",
+      "Implica usuarios con distintos niveles o responsabilidades y exige controlar flujo y acceso a tareas.",
+      "El estado de una variable de negocio puede alimentar una XOR para informar al solicitante del resultado.",
+      "La respuesta a una solicitud debe ser visible para cualquier usuario con el mismo perfil que el solicitante, aunque no la iniciara."
+    ],
+    "correctas": [0, 1, 2]
+  },
+  {
+    "tema": "Práctica 8",
+    "qnum": 1,
+    "enunciado": "¿Qué afirmaciones describen correctamente los conectores en Bonita?",
+    "opciones": [
+      "Permiten interactuar con otros sistemas, como bases de datos, correo, CRM o servicios cloud.",
+      "Un proyecto nuevo ya incluye todos los conectores por defecto y solo hay que activarlos.",
+      "Normalmente hay que instalar el conector necesario desde el Marketplace y luego puede reutilizarse.",
+      "También es posible implementar conectores propios."
+    ],
+    "correctas": [0, 2, 3]
+  },
+  {
+    "tema": "Práctica 8",
+    "qnum": 2,
+    "enunciado": "Sobre el uso de conectores en tareas, ¿qué opciones son correctas?",
+    "opciones": [
+      "Lo habitual es asociarlos a tareas de servicio; Bonita puede permitir otros tipos, aunque avise por incumplir la anotación BPMN.",
+      "Pueden adjuntarse al inicio o al final de la tarea desde la pestaña Ejecución.",
+      "Al configurarlos se decide si son de entrada o de salida y se completan parámetros de entrada y salida del asistente.",
+      "Solo pueden añadirse como Assets de UI Designer, nunca desde la configuración de una tarea."
+    ],
+    "correctas": [0, 1, 2]
+  },
+  {
+    "tema": "Práctica 8",
+    "qnum": 3,
+    "enunciado": "Respecto a las aplicaciones creadas con UI Designer, ¿qué afirmaciones son correctas?",
+    "opciones": [
+      "Además de formularios, UI Designer permite diseñar páginas web para crear aplicaciones.",
+      "Pueden mostrar datos del sistema o iniciar procesos sin necesidad de usar la Bonita User App.",
+      "El descriptor de aplicación define, entre otras cosas, nombre, páginas de menú/no menú, perfil y página inicial.",
+      "Cada fichero de aplicación solo puede contener un descriptor, por lo que no puede separarse por perfil."
+    ],
+    "correctas": [0, 1, 2]
+  },
+  {
+    "tema": "Práctica 8",
+    "qnum": 4,
+    "enunciado": "Para usar una aplicación en Bonita, ¿qué acciones son necesarias según los apuntes?",
+    "opciones": [
+      "Desplegarla en el servidor.",
+      "Acceder a la URL asociada a la aplicación.",
+      "Ejecutarla únicamente desde la previsualización de UI Designer, sin desplegar.",
+      "Entrar obligatoriamente por la Bonita User App y navegar por su menú estándar."
+    ],
+    "correctas": [0, 1]
+  },
+  {
+    "tema": "Práctica 9",
+    "qnum": 1,
+    "enunciado": "¿Dónde podemos escribir o incorporar código para personalizar un sistema BPM en Bonita?",
+    "opciones": [
+      "En scripts Groovy o Java dentro de tareas de Script, operaciones o valores predeterminados.",
+      "Creando nuevos filtros de actores o nuevos conectores.",
+      "En variables y recursos Javascript de UI Designer, o importando librerías y recursos externos.",
+      "Definiendo consultas DAO directamente dentro de un fichero CSS de la pestaña Assets."
+    ],
+    "correctas": [0, 1, 2]
+  },
+  {
+    "tema": "Práctica 9",
+    "qnum": 2,
+    "enunciado": "¿Qué puede añadirse a páginas o formularios usando la pestaña Assets de UI Designer?",
+    "opciones": [
+      "CSS para definir directivas y usarlas desde la configuración de widgets.",
+      "Javascript mediante un fichero .js local o una librería online, usable desde variables.",
+      "Imágenes locales o externas, por ejemplo para mostrarlas con un widget Image.",
+      "Contratos de proceso y objetos del BDM, que se definen como Assets visuales."
+    ],
+    "correctas": [0, 1, 2]
+  },
+  {
+    "tema": "Práctica 9",
+    "qnum": 3,
+    "enunciado": "Sobre las variables de tipo Documento, ¿qué afirmaciones son correctas?",
+    "opciones": [
+      "Permiten trabajar con ficheros en un proceso y se definen en Documentos dentro del apartado Datos del pool.",
+      "Pueden recibir valor seleccionando un fichero o mediante un contrato y su formulario correspondiente.",
+      "El orden recomendado es crear la variable Documento, crear el contrato con Añadir desde datos... y después crear el formulario.",
+      "Siempre debe fijarse un contenido inicial distinto de Ninguno antes de crear el contrato, o no se vinculará."
+    ],
+    "correctas": [0, 1, 2]
+  },
+  {
+    "tema": "Práctica 9",
+    "qnum": 4,
+    "enunciado": "Respecto a editar o reutilizar documentos ya creados en Bonita, ¿qué afirmaciones son correctas?",
+    "opciones": [
+      "Un documento puede editarse desde un formulario asociado a una tarea humana creando el contrato con Añadir desde datos... y acción Editar.",
+      "Al crear el formulario desde ese contrato, Bonita genera las variables y el widget necesarios.",
+      "Cualquier proceso puede recuperar nativamente el documento por el nombre de la variable original, sin guardar información adicional.",
+      "Para recuperarlo desde otros procesos, formularios o páginas puede ser necesario guardar información en el BDM y gestionar la recuperación vía API."
+    ],
+    "correctas": [0, 1, 3]
+  },
+  {
+    "tema": "Práctica 9",
+    "qnum": 5,
+    "enunciado": "Si termina, se elimina un caso o se elimina el proceso asociado a documentos, ¿qué afirmaciones son correctas?",
+    "opciones": [
+      "Al terminar el caso en el que se crea el documento, Bonita lo guarda en la base de datos del sistema y puede recuperarse vía API.",
+      "Bonita no proporciona un mecanismo nativo para recuperarlo desde otros procesos, formularios o páginas.",
+      "En un sistema real, una buena opción sería usar un gestor documental externo.",
+      "Si se elimina el caso o proceso donde se creó el documento, el documento permanece recuperable indefinidamente en la base de datos."
+    ],
+    "correctas": [0, 1, 2]
+  },
+  {
+    "tema": "Práctica 9",
+    "qnum": 6,
+    "enunciado": "¿Qué tipos de eventos o usos de eventos se mencionan en Bonita?",
+    "opciones": [
+      "Esperar un tiempo determinado.",
+      "Capturar errores de ejecución en alguna tarea.",
+      "Enviar y recibir mensajes entre procesos o pools.",
+      "Compilar automáticamente Assets Javascript cuando se despliega una página."
+    ],
+    "correctas": [0, 1, 2]
+  },
+  {
+    "tema": "Práctica 9",
+    "qnum": 7,
+    "enunciado": "Sobre eventos temporizadores y temporizadores no interruptores, ¿qué afirmaciones son correctas?",
+    "opciones": [
+      "Un evento temporizador puede detener el flujo hasta que transcurra una duración o se alcance una fecha concreta.",
+      "Un evento de tiempo no interruptor puede adherirse al borde de una tarea e iniciarse junto a ella.",
+      "Cuando vence el temporizador no interruptor, la tarea a la que está adherido se cancela automáticamente.",
+      "El temporizador no interruptor no interrumpe la tarea cuando transcurre el tiempo o se alcanza la fecha indicada."
+    ],
+    "correctas": [0, 1, 3]
+  }
+]
