@@ -46,8 +46,8 @@ body {
 }
 
 .container {
-  max-width: 1350px;
-  padding: 16px;
+  max-width: 1250px;
+  padding: 14px;
   margin: 0 auto;
   width: 100%;
 }
@@ -68,7 +68,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 12px 16px;
+  padding: 12px 14px;
   flex-wrap: wrap;
 }
 
@@ -100,6 +100,10 @@ nav {
   color: var(--muted);
   font-weight: 600;
   margin-bottom: -2px;
+}
+
+.name {
+  font-weight: 800;
 }
 
 .hamburger {
@@ -136,7 +140,7 @@ nav {
 /* HERO */
 
 .hero {
-  padding: 40px 16px 12px;
+  padding: 34px 14px 10px;
 }
 
 .hero h1 {
@@ -235,7 +239,7 @@ h2.section-title {
 
 .grid {
   display: grid;
-  gap: 20px;
+  gap: 16px;
   grid-template-columns: 1fr;
   align-items: stretch;
 }
@@ -246,7 +250,7 @@ h2.section-title {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -271,8 +275,10 @@ h2.section-title {
   box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
 }
 
+/* IMAGEN DE LA TARJETA */
+
 .thumb {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 8;
   border-bottom: 1px solid var(--border);
   background-size: cover;
   background-position: center;
@@ -288,7 +294,7 @@ h2.section-title {
   display: block;
 }
 
-/* Por si alguna miniatura usa ASCII o pre */
+/* Por si alguna miniatura usa ASCII o <pre> */
 
 .thumb pre,
 .ascii-preview {
@@ -297,33 +303,33 @@ h2.section-title {
   height: 100%;
   overflow: hidden;
   white-space: pre;
-  font-size: 7px;
+  font-size: 6px;
   line-height: 1;
-  padding: 10px;
+  padding: 8px;
 }
 
 /* CUERPO DE LA TARJETA */
 
 .card-body {
-  padding: 18px;
+  padding: 14px;
   display: grid;
-  gap: 10px;
+  gap: 8px;
   align-content: start;
   min-width: 0;
 }
 
 .card h3 {
   margin: 0;
-  font-size: clamp(19px, 2.2vw, 24px);
-  line-height: 1.25;
+  font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.2;
   overflow-wrap: break-word;
 }
 
 .card p {
   margin: 0;
   color: var(--muted);
-  font-size: clamp(15px, 1.7vw, 18px);
-  line-height: 1.4;
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 1.35;
   overflow-wrap: break-word;
   text-align: justify;
   hyphens: auto;
@@ -353,7 +359,7 @@ h2.section-title {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 0 18px 18px;
+  padding: 0 14px 14px;
   align-self: end;
 }
 
@@ -363,8 +369,8 @@ h2.section-title {
   background: var(--bg);
   color: var(--text);
   font-weight: 700;
-  padding: 10px 14px;
-  border-radius: 12px;
+  padding: 8px 12px;
+  border-radius: 11px;
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
