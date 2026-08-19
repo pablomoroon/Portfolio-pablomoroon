@@ -1,0 +1,85 @@
+{
+  "propios": [
+    {
+      "id": "generacion-preguntas",
+      "title": "Generación de preguntas",
+      "desc": "Aplicación creada para poder estudiar para distintas asignaturas, mediante la realización de múltiples preguntas tipo TEST.",
+      "image": "imagenes/tipotest.jpg",
+      "tags": ["HTML", "CSS", "JS"],
+      "links": [
+        { "label": "Demo", "url": "Preguntas_CIMSI/Preguntas-tipo-test-CIMSI.html", "primary": true },
+        { "label": "Código", "url": "https://github.com/pablomoroon/CIMSI-testGenerator/blob/main/Preguntas_CIMSI/Preguntas-tipo-test-CIMSI.html", "primary": false }
+      ]
+    },
+    {
+      "id": "chatbot-gnius",
+      "title": "Chatbot para Academia Gnius",
+      "desc": "Desarrollo de un chatbot en WhatsApp para resolver preguntas acerca de la academia. A su vez, permite acceder a apuntes y contenido exclusivos para los alumnos.",
+      "image": "imagenes/chatbot.jpg",
+      "tags": ["Meta", "WhatsApp", "Python"],
+      "links": []
+    }
+  ],
+  "uni": [
+    {
+      "id": "club-deportivo",
+      "title": "Base de datos de un club deportivo",
+      "desc": "Proyecto realizado en la asignatura IISSI 1, sobre la creación de una base de datos a un club deportivo.",
+      "image": "imagenes/club-deportivo.jpg",
+      "tags": ["SQL"],
+      "links": [
+        { "label": "Repo", "url": "https://github.com/pablomoroon/Base-de-Datos-de-un-Club-Deportivo", "primary": true }
+      ]
+    },
+    {
+      "id": "photo-gallery",
+      "title": "Creación de una galería de fotos online",
+      "desc": "Página web realizada durante la asignatura IISSI 2, en la que se muestra una galería de fotos donde te puedes registrar y subir imágenes.",
+      "image": "imagenes/photo-gallery.png",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "links": [
+        { "label": "Repo", "url": "https://github.com/pablomoroon/Photo-Gallery-IISSI-2", "primary": true }
+      ]
+    },
+    {
+      "id": "tanques",
+      "title": "Videojuego de batalla de Zombies VS Humanos",
+      "desc": "Videojuego realizado en la asignatura Programación Declarativa, sobre una batalla entre zombies y humanos que toman acción propia.",
+      "image": "imagenes/tanques.png",
+      "tags": ["Haskell"],
+      "links": [
+        { "label": "Repo", "url": "https://github.com/pablomoroon/Tanks-Battlefield-2D-PD", "primary": true }
+      ]
+    },
+    {
+      "id": "juego-de-la-vida",
+      "title": "Optimización del código: \"El Juego de la Vida de Conway\"",
+      "desc": "Trabajo de optimización realizado en la asignatura Arquitectura de Sistemas Distribuidos, donde partimos de un código secuencial y aplicamos distintas optimizaciones vistas en la asignatura para mejorar el rendimiento.",
+      "image": "imagenes/juegoDeLaVida.png",
+      "tags": ["C"],
+      "links": [
+        { "label": "Repo", "url": "https://github.com/pablomoroon/TRABAJO-ASD", "primary": true }
+      ]
+    },
+    {
+      "id": "erp-bpm-clinica",
+      "title": "Implantación de un sistema ERP y BPM en una empresa",
+      "desc": "Trabajo realizado en la asignatura Sistemas de Información Empresariales, donde hemos implantado un sistema ERP y BPM en una clínica privada para la gestión integral de los procesos asistenciales y administrativos.",
+      "image": "imagenes/logo-clinica.png",
+      "tags": ["Bonita", "Odoo"],
+      "links": [
+        { "label": "Repo", "url": "https://github.com/pablomoroon/CLINICA-TU-SALUD-PROYECTO-SIE", "primary": true }
+      ]
+    },
+    {
+      "id": "ml-dl",
+      "title": "Trabajo acerca del Machine Learning y Deep Learning",
+      "desc": "Trabajo realizado en la asignatura Ampliación de Inteligencia Artificial en el que se trabaja con diversos ejercicios sobre el Machine Learning y el Deep Learning.",
+      "image": "imagenes/deep-learning.jpg",
+      "tags": ["Machine Learning", "Deep Learning"],
+      "links": [
+        { "label": "Repo", "url": "https://github.com/pablomoroon/Trabajo-AIA-DEEP_LEARNING", "primary": true }
+      ]
+    }
+  ]
+}

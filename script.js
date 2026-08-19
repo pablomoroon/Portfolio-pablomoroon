@@ -7,47 +7,77 @@ menuBtn.addEventListener('click', () => {
   menuBtn.textContent = menu.classList.contains('open') ? "✖" : "≡";
 });
 
-// Filtros y búsqueda
-const state = { query: "", type: "all", tech: new Set() };
-const chips = document.querySelectorAll('.chip');
-const input = document.getElementById('q');
-const clearBtn = document.getElementById('clearSearch');
-const cards = [...document.querySelectorAll('.card')];
+document.getElementById('year').textContent = new Date().getFullYear();
 
-function normalize(str){ return (str || '').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, ''); }
+// Renderizado de tarjetas a partir de data.json
+function renderCard(p) {
+  const article = document.createElement('article');
+  article.className = 'card';
 
-function applyFilters(){
-  const q = normalize(state.query);
-  cards.forEach(card => {
-    const type = card.dataset.type;
-    const tags = card.dataset.tags || '';
-    const text = (card.innerText || '').toLowerCase();
-    const matchType = state.type === 'all' || state.type === type;
-    const matchTech = state.tech.size === 0 || [...state.tech].every(t => tags.includes(t));
-    const matchQuery = !q || normalize(text + ' ' + tags).includes(q);
-    const visible = matchType && matchTech && matchQuery;
-    card.style.display = visible ? 'grid' : 'none';
-  });
+  const thumb = document.createElement('div');
+  thumb.className = 'thumb';
+  thumb.setAttribute('aria-hidden', 'true');
+  if (p.image) {
+    thumb.style.backgroundImage = `url('${p.image}')`;
+  }
+
+  const body = document.createElement('div');
+  body.className = 'card-body';
+
+  const h3 = document.createElement('h3');
+  h3.textContent = p.title || '';
+
+  const desc = document.createElement('p');
+  desc.textContent = p.desc || '';
+
+  body.appendChild(h3);
+  body.appendChild(desc);
+
+  if (Array.isArray(p.tags) && p.tags.length) {
+    const tagsWrap = document.createElement('div');
+    tagsWrap.className = 'tags';
+    p.tags.forEach(t => {
+      const span = document.createElement('span');
+      span.className = 'tag';
+      span.textContent = t;
+      tagsWrap.appendChild(span);
+    });
+    body.appendChild(tagsWrap);
+  }
+
+  article.appendChild(thumb);
+  article.appendChild(body);
+
+  if (Array.isArray(p.links) && p.links.length) {
+    const actions = document.createElement('div');
+    actions.className = 'card-actions';
+    p.links.forEach(l => {
+      const a = document.createElement('a');
+      a.className = 'btn' + (l.primary ? ' primary' : '');
+      a.href = l.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = l.label || 'Enlace';
+      actions.appendChild(a);
+    });
+    article.appendChild(actions);
+  }
+
+  return article;
 }
 
-chips.forEach(chip => {
-  chip.addEventListener('click', () => {
-    const filter = chip.dataset.filter;
-    const tech = chip.dataset.tech;
-    if (filter){
-      state.type = filter;
-      document.querySelectorAll('.chip[data-filter]').forEach(c => c.dataset.active = 'false');
-      chip.dataset.active = 'true';
-    }
-    if (tech){
-      if (state.tech.has(tech)) state.tech.delete(tech); else state.tech.add(tech);
-      chip.dataset.active = chip.dataset.active === 'true' ? 'false' : 'true';
-    }
-    applyFilters();
-  });
-});
+async function loadProjects() {
+  const gridPropios = document.getElementById('grid-propios');
+  const gridUni = document.getElementById('grid-uni');
+  try {
+    const res = await fetch('data.json', { cache: 'no-store' });
+    const data = await res.json();
 
-input.addEventListener('input', (e) => { state.query = e.target.value; applyFilters(); });
-clearBtn.addEventListener('click', () => { input.value = ''; state.query = ''; applyFilters(); input.focus(); });
+    (data.propios || []).forEach(p => gridPropios.appendChild(renderCard(p)));
+    (data.uni || []).forEach(p => gridUni.appendChild(renderCard(p)));
+  } catch (err) {
+    console.error('No se pudieron cargar los proyectos:', err);
+  }
+}
 
-document.getElementById('year').textContent = new Date().getFullYear();
+loadProjects();

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Administrar proyectos — Portfolio</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="imagenes/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="container" aria-label="Principal">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"><span>∴</span></div>
+        <div>
+          <div class="subtitle">Portfolio</div>
+          <div class="name">Panel de administración</div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="admin-shell">
+    <p style="font-family: var(--font-mono); font-size: 13px; color: var(--muted);">
+      Esta página no aparece en el menú ni se indexa. Solo funciona si introduces un token de GitHub con permiso de escritura sobre tu repositorio, así que solo tú puedes usarla de verdad.
+    </p>
+
+    <!-- Conexión -->
+    <section class="admin-card">
+      <h2>1 · Conexión con GitHub</h2>
+      <div class="field-row">
+        <div class="field">
+          <label for="owner">Usuario/organización</label>
+          <input type="text" id="owner" placeholder="pablomoroon">
+        </div>
+        <div class="field">
+          <label for="repo">Repositorio</label>
+          <input type="text" id="repo" placeholder="pablomoroon.github.io">
+        </div>
+      </div>
+      <div class="field">
+        <label for="branch">Rama</label>
+        <input type="text" id="branch" placeholder="main" value="main">
+      </div>
+      <div class="field">
+        <label for="token">Token de acceso personal (fine-grained, permiso "Contents: Read and write")</label>
+        <input type="password" id="token" placeholder="github_pat_...">
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="remember">
+        <label for="remember">Recordar en este dispositivo (no lo hagas en un ordenador compartido)</label>
+      </div>
+      <button class="btn primary" id="connectBtn" type="button">Conectar y cargar proyectos</button>
+      <div class="status-msg" id="connectStatus"></div>
+    </section>
+
+    <!-- Proyectos existentes -->
+    <section class="admin-card" id="existingSection" style="display:none;">
+      <h2>2 · Proyectos actuales</h2>
+      <p style="font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); margin-top:-8px;">Pequeñas webs</p>
+      <div class="existing-list" id="listPropios"></div>
+      <p style="font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); margin-top:16px;">Universidad</p>
+      <div class="existing-list" id="listUni"></div>
+    </section>
+
+    <!-- Nuevo proyecto -->
+    <section class="admin-card" id="newSection" style="display:none;">
+      <h2>3 · Añadir un proyecto nuevo</h2>
+      <div class="field">
+        <label for="section">Sección</label>
+        <select id="section">
+          <option value="propios">Proyectos propios</option>
+          <option value="uni">Proyectos universidad</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="title">Título</label>
+        <input type="text" id="title" placeholder="Nombre del proyecto">
+      </div>
+      <div class="field">
+        <label for="desc">Descripción</label>
+        <textarea id="desc" placeholder="De qué trata el proyecto"></textarea>
+      </div>
+      <div class="field">
+        <label for="tags">Etiquetas (separadas por comas)</label>
+        <input type="text" id="tags" placeholder="HTML, CSS, JS">
+      </div>
+      <div class="field">
+        <label for="imageFile">Imagen de portada (opcional, se sube a /imagenes)</label>
+        <input type="file" id="imageFile" accept="image/*">
+      </div>
+
+      <div class="field">
+        <label>Enlace 1 (ej. Demo o Repo)</label>
+        <div class="link-row">
+          <input type="text" id="link1label" placeholder="Etiqueta (Demo)">
+          <input type="url" id="link1url" placeholder="https://...">
+          <span></span>
+        </div>
+      </div>
+      <div class="field">
+        <label>Enlace 2 (opcional)</label>
+        <div class="link-row">
+          <input type="text" id="link2label" placeholder="Etiqueta (Código)">
+          <input type="url" id="link2url" placeholder="https://...">
+          <span></span>
+        </div>
+      </div>
+
+      <button class="btn primary" id="publishBtn" type="button">Publicar proyecto</button>
+      <div class="status-msg" id="publishStatus"></div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
