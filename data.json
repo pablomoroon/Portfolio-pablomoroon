@@ -34,6 +34,30 @@
         "Python"
       ],
       "links": []
+    },
+    {
+      "id": "contador-de-sushi",
+      "title": "Contador de Sushi",
+      "desc": "Una PWA que permite llevar el conteo de piezas de sushi que comes durante una comida. Esta nos permite guardar las distintas comidas que hayamos realizado, mostrándonos el número de piezas totales comidas o el número de piezas por mes, entre otras estadísticas.",
+      "image": "imagenes/contador-de-sushi.png",
+      "tags": [
+        "PWA",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "links": [
+        {
+          "label": "Repo",
+          "url": "https://github.com/pablomoroon/Contador-de-sushi",
+          "primary": true
+        },
+        {
+          "label": "Demo",
+          "url": "https://pablomoroon.github.io/Contador-de-sushi/",
+          "primary": false
+        }
+      ]
     }
   ],
   "uni": [
