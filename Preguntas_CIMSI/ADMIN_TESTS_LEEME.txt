@@ -1,0 +1,37 @@
+ADMINISTRAR ASIGNATURAS DEL TEST LAB
+====================================
+
+1. Abre /admin.html en tu GitHub Pages.
+2. Introduce usuario, repositorio, rama y un token Fine-grained de GitHub con permiso:
+   Contents: Read and write.
+3. Pulsa "Conectar y cargar contenido".
+4. Baja hasta "Asignaturas y bancos tipo test".
+5. Para añadir una asignatura:
+   - Nombre visible.
+   - Grupo/sección.
+   - Texto corto e icono.
+   - Una respuesta o respuesta múltiple.
+   - Selecciona el JSON de preguntas.
+   - Pulsa "Añadir asignatura".
+6. La página de tests leerá automáticamente Preguntas_CIMSI/bancos.json.
+
+SEGURIDAD
+---------
+El panel admin.html puede conocerse públicamente porque está en una web estática,
+pero no permite escribir en el repositorio sin tu token de GitHub. No pongas nunca
+el token dentro del código ni de un JSON del repositorio. Si marcas "Recordar",
+se guarda solo en el navegador de ese dispositivo.
+
+FORMATO JSON DE RESPUESTA ÚNICA
+-------------------------------
+[
+  {
+    "tema": "Tema 1",
+    "qnum": 1,
+    "enunciado": "Pregunta...",
+    "opciones": ["A", "B", "C", "D"],
+    "correcta": 0
+  }
+]
+
+Para respuesta múltiple puede usarse "correctas": [0, 2].

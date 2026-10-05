@@ -515,3 +515,13 @@ footer a:hover {
   font-family: var(--font-mono);
   font-size: 13px;
 }
+
+/* ==== ADMIN · BANCOS DE TEST ==== */
+.admin-shell{max-width:880px}
+.admin-help{font-family:var(--font-mono);font-size:12.5px;color:var(--muted);line-height:1.55;margin:-6px 0 14px}
+.field-row.three-cols{grid-template-columns:.45fr 1fr 1fr}
+.field input[type="file"]{font:inherit;font-size:13px;padding:10px;border:1px dashed var(--border);border-radius:9px;background:var(--bg);color:var(--muted);width:100%}
+.field input[type="file"]::file-selector-button{border:1px solid var(--border);background:var(--card);color:var(--ink);padding:7px 10px;border-radius:7px;margin-right:10px;cursor:pointer}
+.field-note{font-family:var(--font-mono);font-size:11px;color:var(--muted);line-height:1.45}
+.admin-actions{display:flex;gap:8px;flex-wrap:wrap}.existing-item.bank-item{align-items:flex-start}.bank-copy{min-width:0}.bank-copy strong{display:block}.bank-copy small{display:block;color:var(--muted);font-family:var(--font-mono);font-size:11px;margin-top:3px;word-break:break-word}.existing-actions{display:flex;gap:8px;flex:0 0 auto}.existing-item .edit,.existing-item .del{border:none;background:none;cursor:pointer;font-family:var(--font-mono);font-size:12px}.existing-item .edit{color:var(--accent-teal)}
+@media(max-width:640px){.field-row,.field-row.three-cols{grid-template-columns:1fr}.existing-item.bank-item{flex-direction:column}.existing-actions{width:100%;justify-content:flex-end}}

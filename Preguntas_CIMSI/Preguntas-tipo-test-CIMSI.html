@@ -3,1074 +3,221 @@
 <head>
   <meta name="google-adsense-account" content="ca-pub-4549916057843860">
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tester CIMSI/PD/SIE - Estudio y Examen</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#060912" />
+  <title>Test Lab · Portfolio</title>
   <style>
     :root{
-      --bg:#060912;
-      --bg-2:#0a1020;
-      --panel:#0c1426;
-      --panel-2:#101b31;
-      --panel-3:#0a1222;
-      --border:#1d2a44;
-      --border-strong:#314467;
-      --text:#eef4ff;
-      --muted:#8fa1bd;
-      --muted-2:#61738f;
-      --accent:#6d5dfc;
-      --accent-2:#2563eb;
-      --cyan:#22d3ee;
-      --success:#22c55e;
-      --danger:#ef4444;
-      --warning:#f59e0b;
-      --shadow:0 22px 55px rgba(0,0,0,.32);
-      --radius:20px;
+      --bg:#060912;--bg2:#0a1020;--panel:#0c1426;--panel2:#101b31;--border:#1d2a44;
+      --text:#eef4ff;--muted:#8fa1bd;--muted2:#61738f;--accent:#6d5dfc;--accent2:#2563eb;
+      --cyan:#22d3ee;--success:#22c55e;--danger:#ef4444;--warning:#f59e0b;--radius:18px;
+      --shadow:0 18px 45px rgba(0,0,0,.30)
     }
-
     *{box-sizing:border-box}
-    html{color-scheme:dark;scroll-behavior:smooth}
-    html,body{min-height:100%;margin:0}
-    body{
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(900px 520px at 10% -5%, rgba(109,93,252,.19), transparent 68%),
-        radial-gradient(800px 500px at 95% 0%, rgba(34,211,238,.10), transparent 65%),
-        var(--bg);
-      -webkit-font-smoothing:antialiased;
-    }
-
-    button,select,input{font:inherit}
-    button{color:inherit}
-    .hidden{display:none!important}
+    html{color-scheme:dark;-webkit-text-size-adjust:100%}
+    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text)}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:
+      radial-gradient(900px 520px at 10% -5%,rgba(109,93,252,.18),transparent 68%),
+      radial-gradient(800px 500px at 95% 0%,rgba(34,211,238,.09),transparent 65%),var(--bg);-webkit-font-smoothing:antialiased}
+    button,select,input{font:inherit} button{color:inherit}.hidden{display:none!important}
 
     /* LANDING */
-    .landing{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:40px 20px;
-      position:relative;
-      overflow:hidden;
-    }
-    .landing::before{
-      content:"";
-      position:absolute;inset:0;
-      background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
-      background-size:34px 34px;
-      mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),transparent 85%);
-      pointer-events:none;
-    }
-    .landing-shell{width:min(1120px,100%);position:relative;z-index:1}
-    .landing-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:44px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand-mark{
-      width:42px;height:42px;border-radius:13px;display:grid;place-items:center;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
-      box-shadow:0 12px 30px rgba(109,93,252,.32);
-      font-weight:900;letter-spacing:-.04em;
-    }
-    .brand-copy strong{display:block;font-size:14px;letter-spacing:.12em;text-transform:uppercase}
-    .brand-copy span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
-    .landing-badge{border:1px solid var(--border);background:rgba(12,20,38,.72);padding:8px 12px;border-radius:999px;color:var(--muted);font-size:12px;backdrop-filter:blur(10px)}
-    .landing-head{text-align:center;max-width:780px;margin:0 auto 32px}
-    .eyebrow{color:var(--cyan);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
-    .landing h1{font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-.045em;margin:0}
-    .landing h1 span{background:linear-gradient(90deg,#fff 10%,#b9c8ff 48%,#69e6f4);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .landing .lead{max-width:660px;margin:18px auto 0;color:var(--muted);font-size:16px;line-height:1.65}
+    .landing{min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:34px 18px;position:relative;overflow:hidden}
+    .landing:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(to bottom,#000,transparent 88%);pointer-events:none}
+    .landing-shell{width:min(1120px,100%);position:relative;z-index:1}.landing-top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:34px}
+    .brand{display:flex;align-items:center;gap:12px}.brand-mark{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 12px 30px rgba(109,93,252,.32);font-weight:900}
+    .brand-copy strong{display:block;font-size:14px;letter-spacing:.12em;text-transform:uppercase}.brand-copy span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+    .landing-badge{border:1px solid var(--border);background:rgba(12,20,38,.74);padding:8px 12px;border-radius:999px;color:var(--muted);font-size:12px;backdrop-filter:blur(10px)}
+    .landing-head{text-align:center;max-width:790px;margin:0 auto 28px}.eyebrow{color:var(--cyan);font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:11px}
+    .landing h1{font-size:clamp(32px,5vw,56px);line-height:1.03;letter-spacing:-.045em;margin:0}.landing h1 span{background:linear-gradient(90deg,#fff 10%,#b9c8ff 48%,#69e6f4);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .landing .lead{max-width:680px;margin:16px auto 0;color:var(--muted);font-size:15px;line-height:1.62}
+    .bank-section{margin-top:24px}.bank-section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:10px}.bank-section-head h2{font-size:15px;margin:0}.bank-section-head p{font-size:11px;margin:0;color:var(--muted)}
+    .bank-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}.bigbtn{text-align:left;position:relative;min-height:126px;padding:16px;border-radius:17px;border:1px solid var(--border);background:linear-gradient(180deg,rgba(16,27,49,.94),rgba(10,18,34,.94));cursor:pointer;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.15);transition:.17s ease}
+    .bigbtn:after{content:"";position:absolute;width:105px;height:105px;border-radius:50%;right:-44px;top:-48px;background:var(--card-glow,rgba(109,93,252,.17))}.bigbtn:hover{transform:translateY(-2px);border-color:#465d8a;background:linear-gradient(180deg,#13203a,#0b1528)}
+    .bigbtn:focus-visible{outline:3px solid rgba(109,93,252,.35);outline-offset:2px}.bigbtn[data-accent="cyan"]{--card-glow:rgba(34,211,238,.18);border-color:#1f3f4c}.bigbtn[data-accent="warning"]{--card-glow:rgba(245,158,11,.22);border-color:#44341f}
+    .bank-icon{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.06);font-size:18px;margin-bottom:15px}.bank-title{display:block;font-weight:850;font-size:14px;letter-spacing:-.01em}.bank-meta{display:flex;gap:7px;align-items:center;color:var(--muted);font-size:10.5px;margin-top:6px}.dot{width:5px;height:5px;border-radius:50%;background:var(--accent)}
 
-    .bank-section{margin-top:26px}
-    .bank-section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:12px}
-    .bank-section-head h2{font-size:15px;margin:0;letter-spacing:.02em}
-    .bank-section-head p{font-size:12px;margin:0;color:var(--muted)}
-    .bank-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-    .bigbtn{
-      text-align:left;position:relative;min-height:142px;padding:18px;border-radius:18px;
-      border:1px solid var(--border);background:linear-gradient(180deg,rgba(16,27,49,.94),rgba(10,18,34,.94));
-      cursor:pointer;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.16);
-      transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,background .18s ease;
-    }
-    .bigbtn::after{content:"";position:absolute;width:110px;height:110px;border-radius:50%;right:-45px;top:-52px;background:var(--card-glow,rgba(109,93,252,.18));filter:blur(2px)}
-    .bigbtn:hover{transform:translateY(-3px);border-color:#465d8a;box-shadow:0 18px 38px rgba(0,0,0,.26);background:linear-gradient(180deg,#13203a,#0b1528)}
-    .bigbtn:focus-visible{outline:3px solid rgba(109,93,252,.35);outline-offset:2px}
-    .bank-icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.06);font-size:19px;margin-bottom:18px}
-    .bank-title{display:block;font-weight:800;font-size:15px;letter-spacing:-.01em}
-    .bank-meta{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:11px;margin-top:7px}
-    .dot{width:5px;height:5px;border-radius:50%;background:var(--accent)}
-    .pmp-card{--card-glow:rgba(245,158,11,.22);border-color:#44341f}
-    .pmbok-card{--card-glow:rgba(34,211,238,.17);border-color:#1f3f4c}
-    .pmp-card .dot{background:var(--warning)}
-    .pmbok-card .dot{background:var(--cyan)}
+    /* QUIZ */
+    .app{width:min(1600px,100%);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 282px;gap:12px;padding:12px;height:100dvh;min-height:0;overflow:hidden}
+    .card{background:linear-gradient(180deg,rgba(13,22,41,.97),rgba(9,16,30,.97));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .main{height:100%;min-height:0;min-width:0;overflow:hidden;display:flex;flex-direction:column}.quiz-header{padding:12px 16px 10px;border-bottom:1px solid var(--border);background:rgba(12,20,38,.68);backdrop-filter:blur(12px);flex:0 0 auto}
+    .quiz-head-row{display:flex;align-items:center;justify-content:space-between;gap:12px}.quiz-title-wrap{min-width:0}.quiz-kicker{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:5px}.mini-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 7px;border-radius:999px;font-size:9px;font-weight:850;letter-spacing:.07em;text-transform:uppercase;border:1px solid #263653;background:#101a30;color:#9eb1d2}.mini-badge.live{color:#b9f6ff;border-color:#19485a;background:#0b2630}
+    #headerTitle{font-size:15px;line-height:1.25;margin:0;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:760px}.controls{display:flex;gap:6px;align-items:center;justify-content:flex-end;flex-wrap:wrap}.control-label{font-size:10px;color:var(--muted);font-weight:700}
+    select{background:#0a1325;border:1px solid var(--border);color:var(--text);padding:7px 9px;border-radius:9px;outline:none;max-width:190px;font-size:11px}select:focus{border-color:#4c5f89;box-shadow:0 0 0 3px rgba(109,93,252,.14)}
+    button.action{border:1px solid transparent;background:linear-gradient(135deg,var(--accent),var(--accent2));padding:7px 9px;border-radius:9px;cursor:pointer;font-size:10.5px;font-weight:800;white-space:nowrap;transition:.15s ease}button.action:hover{filter:brightness(1.08);transform:translateY(-1px)}button.ghost{background:#0b1528;border-color:var(--border)}button.warn{background:#2a2010;border-color:#63491b;color:#ffd58a}.progress-wrap{padding:0 16px;background:rgba(12,20,38,.68);flex:0 0 auto}.progress{height:3px;background:#121e35;overflow:hidden}.progress>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--cyan));transition:width .2s ease}
 
-    /* QUIZ APP */
-    .app{width:min(1480px,100%);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:18px;padding:22px;min-height:100vh}
-    .card{background:linear-gradient(180deg,rgba(13,22,41,.96),rgba(9,16,30,.96));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .main{padding:0;overflow:hidden;display:flex;flex-direction:column;min-width:0}
-    .quiz-header{padding:20px 22px 16px;border-bottom:1px solid var(--border);background:rgba(12,20,38,.68);backdrop-filter:blur(12px)}
-    .quiz-head-row{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
-    .quiz-title-wrap{min-width:0}
-    .quiz-kicker{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:7px}
-    .mini-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 8px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;border:1px solid #263653;background:#101a30;color:#9eb1d2}
-    .mini-badge.live{color:#b9f6ff;border-color:#19485a;background:#0b2630}
-    h1{font-size:17px;line-height:1.35;margin:0;letter-spacing:-.015em}
-    .controls{display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
-    label.control-label{font-size:11px;color:var(--muted);font-weight:700}
-    select{background:#0a1325;border:1px solid var(--border);color:var(--text);padding:9px 10px;border-radius:10px;outline:none;max-width:230px}
-    select:focus{border-color:#4c5f89;box-shadow:0 0 0 3px rgba(109,93,252,.14)}
-    button.action{border:1px solid transparent;background:linear-gradient(135deg,var(--accent),var(--accent-2));padding:9px 12px;border-radius:10px;cursor:pointer;font-size:12px;font-weight:750;white-space:nowrap;box-shadow:0 6px 18px rgba(37,99,235,.14);transition:transform .15s ease,filter .15s ease,border-color .15s ease}
-    button.action:hover{filter:brightness(1.08);transform:translateY(-1px)}
-    button.ghost{background:#0b1528;border:1px solid var(--border);box-shadow:none}
-    button.ghost:hover{border-color:#3b5078;background:#101d35}
-    button.warn{background:#2a2010;border-color:#63491b;color:#ffd58a;box-shadow:none}
-    button.star{background:#231a10;border-color:#62431b;color:#fbd38d;box-shadow:none}
-    .progress-wrap{padding:0 22px;background:rgba(12,20,38,.68)}
-    .progress{height:4px;background:#121e35;overflow:hidden}
-    .progress>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--cyan));box-shadow:0 0 15px rgba(34,211,238,.28);transition:width .25s ease}
+    .question-shell{padding:14px 20px 10px;display:flex;flex-direction:column;gap:10px;flex:1 1 auto;min-height:0;overflow:hidden}.question-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;flex:0 0 auto}.helper{font-size:10.5px;color:var(--muted)}.keyboard-hint{font-size:9px;color:var(--muted2);white-space:nowrap}kbd{border:1px solid #2a3b5a;background:#0b1425;border-radius:5px;padding:1px 4px;font-size:8px;color:#a9b9d1}
+    .enunciado{white-space:pre-wrap;font-size:clamp(17px,1.62vw,23px);line-height:1.38;font-weight:780;letter-spacing:-.018em;padding:2px 0;flex:0 0 auto;max-width:1100px}.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;align-content:start;flex:0 0 auto}.opt{background:linear-gradient(180deg,#0d182b,#0b1527);padding:10px 11px;border-radius:12px;border:1px solid var(--border);cursor:pointer;display:flex;align-items:flex-start;gap:9px;line-height:1.34;font-size:12.5px;transition:.12s ease;user-select:none;min-width:0}.opt:hover{transform:translateY(-1px);border-color:#3a4d72;background:#101d34}.opt strong{flex:0 0 25px;width:25px;height:25px;border-radius:8px;display:grid;place-items:center;text-transform:uppercase;background:#131f36;border:1px solid #263859;color:#b9c8e2;font-size:10.5px;margin-top:-1px}.opt.selected{border-color:#6556ec;background:linear-gradient(180deg,rgba(109,93,252,.13),rgba(37,99,235,.08));box-shadow:0 0 0 2px rgba(109,93,252,.09)}.opt.selected strong{background:#5144c8;border-color:#7b70ff;color:#fff}.opt.correct{background:rgba(34,197,94,.10);border-color:rgba(34,197,94,.5)}.opt.correct strong{background:#125b30;border-color:#258c4b;color:#d9ffe8}.opt.wrong{background:rgba(239,68,68,.10);border-color:rgba(239,68,68,.48)}.opt.wrong strong{background:#702323;border-color:#a73c3c;color:#ffe1e1}
+    .feedback-panel{min-height:34px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex:1 1 auto;min-height:0;overflow:hidden;padding-top:1px}#feedback{font-weight:850;font-size:12px}#solution{margin-top:3px;color:#fda4af;font-size:10.5px;line-height:1.35}
+    .footer{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid var(--border);padding:9px 14px;background:#091323;flex:0 0 auto}.nav-group{display:flex;gap:7px;align-items:center}.nav-btn{border:1px solid var(--border);background:#0d182b;color:var(--text);padding:8px 11px;border-radius:10px;cursor:pointer;font-weight:800;font-size:10.5px}.nav-btn:hover{background:#12203a;border-color:#3c5075}.check-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent;padding-inline:17px}.status-wrap{text-align:right;min-width:130px}#statusText{font-size:9.5px;color:var(--muted)}#progressLabel{font-size:11px;font-weight:850;color:#dce7fb;margin-bottom:1px}
 
-    .question-shell{padding:28px 28px 22px;display:flex;flex-direction:column;gap:18px;flex:1}
-    .question-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    .helper{font-size:12px;color:var(--muted)}
-    .enunciado{white-space:pre-wrap;font-size:clamp(18px,2vw,23px);line-height:1.55;font-weight:700;letter-spacing:-.018em;padding:4px 0 2px;max-width:980px}
-    .opts{display:grid;grid-template-columns:1fr;gap:10px;margin-top:2px}
-    .opt{
-      background:linear-gradient(180deg,#0d182b,#0b1527);padding:14px 15px;border-radius:14px;border:1px solid var(--border);cursor:pointer;
-      display:flex;align-items:flex-start;gap:11px;line-height:1.45;font-size:14px;transition:transform .12s ease,border-color .15s ease,background .15s ease,box-shadow .15s ease;user-select:none;
-    }
-    .opt:hover{transform:translateY(-1px);border-color:#3a4d72;background:#101d34}
-    .opt strong{flex:0 0 28px;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;text-transform:uppercase;background:#131f36;border:1px solid #263859;color:#b9c8e2;font-size:12px;margin-top:-2px}
-    .opt.selected{border-color:#6556ec;background:linear-gradient(180deg,rgba(109,93,252,.13),rgba(37,99,235,.08));box-shadow:0 0 0 2px rgba(109,93,252,.12)}
-    .opt.selected strong{background:#5144c8;border-color:#7b70ff;color:#fff}
-    .opt.correct{background:rgba(34,197,94,.10);border-color:rgba(34,197,94,.5);box-shadow:0 0 0 2px rgba(34,197,94,.08)}
-    .opt.correct strong{background:#125b30;border-color:#258c4b;color:#d9ffe8}
-    .opt.wrong{background:rgba(239,68,68,.10);border-color:rgba(239,68,68,.48)}
-    .opt.wrong strong{background:#702323;border-color:#a73c3c;color:#ffe1e1}
+    .sidebar{height:100%;min-height:0;display:grid;grid-template-rows:auto minmax(90px,1fr) auto auto;gap:9px;overflow:hidden}.side-card{padding:12px;border-radius:15px;box-shadow:none;min-height:0}.side-title{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11px;font-weight:850;margin-bottom:9px}.side-title span{color:var(--muted);font-size:9px;font-weight:600}.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}.stat{background:#091426;border:1px solid var(--border);border-radius:10px;padding:8px}.stat b{display:block;font-size:16px;letter-spacing:-.03em}.stat span{font-size:9px;color:var(--muted)}.doubts-card{display:flex;flex-direction:column}.doubts{flex:1;min-height:0;overflow:auto;background:#091426;padding:6px;border-radius:10px;border:1px solid var(--border);color:#c7d3e6;font-size:10px;scrollbar-width:thin}.doubt-item{padding:6px;border-radius:7px;cursor:pointer;margin-bottom:2px}.doubt-item:hover{background:#101d34}.side-select{width:100%;max-width:none}.full-btn{width:100%;margin-top:4px}.auto-hint{margin-top:6px;font-size:9px;color:var(--muted);word-break:break-word;line-height:1.35}
 
-    .feedback-panel{min-height:48px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding-top:3px}
-    #feedback{font-weight:850;font-size:14px}
-    #solution{margin-top:5px;color:#fda4af;font-size:13px;line-height:1.45}
-    .keyboard-hint{font-size:10px;color:var(--muted-2);white-space:nowrap;padding-top:2px}
-    kbd{border:1px solid #2a3b5a;background:#0b1425;border-radius:5px;padding:2px 5px;font-size:9px;color:#a9b9d1}
+    /* Ajuste automático si una pregunta es excepcionalmente larga */
+    .main.fit-compact .quiz-header{padding-block:8px}.main.fit-compact .question-shell{padding:9px 16px 7px;gap:7px}.main.fit-compact .enunciado{font-size:15px;line-height:1.28}.main.fit-compact .opt{font-size:11.5px;padding:8px 9px;line-height:1.28}.main.fit-compact .feedback-panel{min-height:25px}.main.fit-compact .footer{padding-block:7px}
+    .main.fit-tight .quiz-kicker,.main.fit-tight .keyboard-hint{display:none}.main.fit-tight .enunciado{font-size:14px;line-height:1.24}.main.fit-tight .opt{font-size:10.5px;padding:7px 8px}.main.fit-tight .opt strong{width:22px;height:22px;flex-basis:22px;font-size:9.5px}.main.fit-tight .question-shell{padding-block:7px;gap:6px}
 
-    .footer{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--border);padding:15px 22px;background:#091323;flex-wrap:wrap}
-    .nav-group{display:flex;gap:8px;align-items:center}
-    .nav-btn{border:1px solid var(--border);background:#0d182b;color:var(--text);padding:10px 13px;border-radius:11px;cursor:pointer;font-weight:750;font-size:12px}
-    .nav-btn:hover{background:#12203a;border-color:#3c5075}
-    .check-btn{background:linear-gradient(135deg,var(--accent),var(--accent-2));border-color:transparent;padding-inline:18px}
-    .status-wrap{text-align:right;min-width:175px}
-    #statusText{font-size:11px;color:var(--muted)}
-    #progressLabel{font-size:12px;font-weight:800;color:#dce7fb;margin-bottom:2px}
-
-    .sidebar{display:flex;flex-direction:column;gap:12px;min-width:0}
-    .side-card{padding:16px;border-radius:17px;box-shadow:none}
-    .side-title{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;font-weight:850;letter-spacing:.02em;margin-bottom:12px}
-    .side-title span{color:var(--muted);font-size:10px;font-weight:600}
-    .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-    .stat{background:#091426;border:1px solid var(--border);border-radius:12px;padding:11px}
-    .stat b{display:block;font-size:19px;letter-spacing:-.03em}
-    .stat span{font-size:10px;color:var(--muted)}
-    .doubts{max-height:310px;overflow:auto;background:#091426;padding:7px;border-radius:12px;border:1px solid var(--border);color:#c7d3e6;font-size:12px}
-    .doubts>div{border-radius:8px;margin-bottom:3px}
-    .doubts>div:hover{background:#101d34}
-    .side-select{width:100%;margin-top:5px;max-width:none}
-    .full-btn{width:100%;margin-top:8px}
-    .auto-hint{margin-top:8px;font-size:10px;color:var(--muted);word-break:break-word;line-height:1.45}
-    .filebox{border:1px dashed #2c3b59;border-radius:12px;padding:11px;background:#091426}
-    input[type=file]{width:100%;font-size:10px;color:var(--muted)}
-    input[type=file]::file-selector-button{border:1px solid var(--border);background:#101b30;color:#dce6f7;border-radius:8px;padding:7px 8px;margin-right:8px;cursor:pointer}
-
-    @media(max-width:1150px){
-      .bank-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-      .app{grid-template-columns:minmax(0,1fr) 280px;padding:14px}
-    }
+    @media(max-width:1200px){.app{grid-template-columns:minmax(0,1fr) 248px}.sidebar{gap:7px}.side-card{padding:10px}.controls .control-label{display:none}.bank-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
     @media(max-width:900px){
-      .bank-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .app{grid-template-columns:1fr;height:auto}
-      .sidebar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));order:2}
-      .quiz-head-row{flex-direction:column}
-      .controls{justify-content:flex-start}
-    }
-    @media(max-width:620px){
-      .landing{padding:24px 14px}.landing-top{margin-bottom:32px}.landing-badge{display:none}
-      .landing h1{font-size:37px}.landing .lead{font-size:14px}.bank-grid{grid-template-columns:1fr}.bigbtn{min-height:118px}
-      .app{padding:8px}.sidebar{grid-template-columns:1fr}.quiz-header{padding:16px}.question-shell{padding:22px 16px 17px}.footer{padding:13px 14px}
-      .controls{width:100%}.controls select{max-width:100%;flex:1 1 100%}.controls button{flex:1 1 auto}
-      .enunciado{font-size:18px}.opt{font-size:13px;padding:13px 12px}.keyboard-hint{display:none}
-      .status-wrap{text-align:left}.footer{align-items:stretch}.nav-group{width:100%}.nav-btn{flex:1}
-    }
+      body.quiz-active{overflow:auto}.app{height:auto;min-height:100dvh;overflow:visible;grid-template-columns:1fr;padding:8px}.main{height:auto;min-height:calc(100dvh - 16px);overflow:visible}.question-shell{overflow:visible;padding:18px 14px 13px}.opts{grid-template-columns:1fr}.enunciado{font-size:18px;line-height:1.45}.opt{font-size:13px;padding:12px}.sidebar{height:auto;overflow:visible;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto}.doubts{max-height:220px}.quiz-head-row{align-items:flex-start;flex-direction:column}.controls{justify-content:flex-start;width:100%}.controls select{max-width:none;flex:1}.main.fit-compact .enunciado,.main.fit-tight .enunciado{font-size:18px}.main.fit-compact .opt,.main.fit-tight .opt{font-size:13px;padding:12px}.main.fit-tight .quiz-kicker,.main.fit-tight .keyboard-hint{display:flex}.bank-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:600px){.landing{padding:22px 12px}.landing-top{margin-bottom:28px}.landing-badge{display:none}.landing h1{font-size:36px}.landing .lead{font-size:13px}.bank-grid{grid-template-columns:1fr}.bigbtn{min-height:106px}.quiz-header{padding:12px}.question-meta{align-items:flex-start}.keyboard-hint{display:none}.footer{align-items:stretch;flex-direction:column}.nav-group{width:100%}.nav-btn{flex:1}.status-wrap{text-align:left;min-width:0}.sidebar{grid-template-columns:1fr}.controls button{flex:1 1 auto}.controls select{flex:1 1 100%}#headerTitle{white-space:normal}.side-card{padding:12px}}
+    @media(min-width:901px){body.quiz-active{overflow:hidden}}
   </style>
 </head>
 <body>
   <div id="landing" class="landing">
     <div class="landing-shell">
       <div class="landing-top">
-        <div class="brand">
-          <div class="brand-mark">PM</div>
-          <div class="brand-copy">
-            <strong>Test Lab</strong>
-            <span>Portfolio · Pablo Morón</span>
-          </div>
-        </div>
+        <div class="brand"><div class="brand-mark">PM</div><div class="brand-copy"><strong>Test Lab</strong><span>Portfolio · Pablo Morón</span></div></div>
         <div class="landing-badge">Estudio · práctica · examen</div>
       </div>
-
       <div class="landing-head">
         <div class="eyebrow">Banco de preguntas</div>
         <h1><span>Entrena como si ya estuvieras en el examen.</span></h1>
-        <p class="lead">Elige un banco, filtra por tema, marca dudas y practica con preguntas mezcladas. Los bancos PMBOK/PMP incluyen escenarios de dificultad alta.</p>
+        <p class="lead">Elige una asignatura, filtra por tema, marca dudas y practica con preguntas mezcladas. Las asignaturas se actualizan desde tu panel de administración.</p>
       </div>
-
-      <section class="bank-section">
-        <div class="bank-section-head">
-          <h2>PMBOK 8 / PMP</h2>
-          <p>Los dos bancos nuevos</p>
-        </div>
-        <div class="bank-grid">
-          <button class="bigbtn pmbok-card" id="btnPMBOK">
-            <span class="bank-icon">◆</span>
-            <span class="bank-title">PMBOK 8 · Difícil</span>
-            <span class="bank-meta"><span class="dot"></span>90 preguntas · nivel alto</span>
-          </button>
-          <button class="bigbtn pmp-card" id="btnPMPHard">
-            <span class="bank-icon">⚡</span>
-            <span class="bank-title">PMP HARD · 80/20</span>
-            <span class="bank-meta"><span class="dot"></span>100 preguntas · 80% situacionales</span>
-          </button>
-        </div>
-      </section>
-
-      <section class="bank-section">
-        <div class="bank-section-head">
-          <h2>Otros bancos</h2>
-          <p>CIMSI · PD · SIE</p>
-        </div>
-        <div class="bank-grid">
-          <button class="bigbtn" id="btnITIL">
-            <span class="bank-icon">◈</span>
-            <span class="bank-title">CIMSI</span>
-            <span class="bank-meta"><span class="dot"></span>Estudio general</span>
-          </button>
-          <button class="bigbtn" id="btnITILHard">
-            <span class="bank-icon">▲</span>
-            <span class="bank-title">CIMSI · Difícil</span>
-            <span class="bank-meta"><span class="dot"></span>Simulación exigente</span>
-          </button>
-          <button class="bigbtn" id="btnPD">
-            <span class="bank-icon">▣</span>
-            <span class="bank-title">PD</span>
-            <span class="bank-meta"><span class="dot"></span>Banco + modo muy difícil</span>
-          </button>
-          <button class="bigbtn" id="btnSIE">
-            <span class="bank-icon">≡</span>
-            <span class="bank-title">SIE</span>
-            <span class="bank-meta"><span class="dot"></span>Selección múltiple</span>
-          </button>
-          <button class="bigbtn" id="btnSIE_2">
-            <span class="bank-icon">Ⅱ</span>
-            <span class="bank-title">SIE · 2</span>
-            <span class="bank-meta"><span class="dot"></span>Segundo banco</span>
-          </button>
-        </div>
-      </section>
+      <div id="bankSections"></div>
     </div>
   </div>
 
   <div id="app" class="app hidden">
-    <main class="card main">
+    <main id="mainCard" class="card main">
       <div class="quiz-header">
         <div class="quiz-head-row">
-          <div class="quiz-title-wrap">
-            <div class="quiz-kicker">
-              <span class="mini-badge live">Banco activo</span>
-              <span class="mini-badge" id="subjectBadge">TEST</span>
-            </div>
-            <h1 id="headerTitle">Sin preguntas cargadas</h1>
-          </div>
+          <div class="quiz-title-wrap"><div class="quiz-kicker"><span class="mini-badge live">Banco activo</span><span class="mini-badge" id="subjectBadge">TEST</span></div><h1 id="headerTitle">Sin preguntas cargadas</h1></div>
           <div class="controls">
-            <label class="control-label" for="temaSelect">Tema</label>
-            <select id="temaSelect"><option>Todos</option></select>
-            <button id="examBtn" class="action warn">Examen · 20</button>
-            <button id="doubtBtn" class="action star" title="Marcar/Demarcar como dudosa">☆ Dudosa</button>
-            <button id="regenPDBtn" class="action ghost" style="display:none">Generar PD</button>
-            <button id="pdHardBtn" class="action ghost" style="display:none;border-color:#7f1d1d">PD Muy Difícil</button>
-            <button id="changeSubject" class="action ghost" title="Volver a elegir banco">Cambiar banco</button>
+            <label class="control-label" for="temaSelect">Tema</label><select id="temaSelect"><option>Todos</option></select>
+            <button id="examBtn" class="action warn">Examen · 20</button><button id="doubtBtn" class="action ghost">☆ Dudosa</button><button id="changeSubject" class="action ghost">Cambiar banco</button>
           </div>
         </div>
       </div>
-      <div class="progress-wrap"><div class="progress" aria-hidden="true"><i id="progressBar"></i></div></div>
-
-      <section class="question-shell">
-        <div class="question-meta">
-          <div id="modeHint" class="helper"></div>
-          <div class="keyboard-hint"><kbd>1–4</kbd> elegir · <kbd>Enter</kbd> comprobar · <kbd>← →</kbd> navegar</div>
-        </div>
+      <div class="progress-wrap"><div class="progress"><i id="progressBar"></i></div></div>
+      <section id="questionShell" class="question-shell">
+        <div class="question-meta"><div id="modeHint" class="helper"></div><div class="keyboard-hint"><kbd>1–4</kbd> elegir · <kbd>Enter</kbd> comprobar · <kbd>← →</kbd> navegar</div></div>
         <div id="enunciado" class="enunciado">Selecciona un banco de preguntas para comenzar.</div>
         <div class="opts" id="opts"></div>
-        <div class="feedback-panel">
-          <div>
-            <span id="feedback"></span>
-            <div id="solution"></div>
-          </div>
-        </div>
+        <div class="feedback-panel"><div><span id="feedback"></span><div id="solution"></div></div></div>
       </section>
-
-      <div class="footer">
-        <div class="nav-group">
-          <button id="prevBtn" class="nav-btn">← Anterior</button>
-          <button id="checkBtn" class="nav-btn check-btn">Comprobar</button>
-          <button id="nextBtn" class="nav-btn">Siguiente →</button>
-        </div>
-        <div class="status-wrap">
-          <div id="progressLabel">0/0</div>
-          <div id="statusText">Elige un banco para empezar</div>
-        </div>
-      </div>
+      <div class="footer"><div class="nav-group"><button id="prevBtn" class="nav-btn">← Anterior</button><button id="checkBtn" class="nav-btn check-btn">Comprobar</button><button id="nextBtn" class="nav-btn">Siguiente →</button></div><div class="status-wrap"><div id="progressLabel">0/0</div><div id="statusText">Elige un banco</div></div></div>
     </main>
 
     <aside class="sidebar">
-      <section class="card side-card">
-        <div class="side-title">Progreso <span>sesión actual</span></div>
-        <div class="stats-grid">
-          <div class="stat"><b id="statAnswered">0</b><span>respondidas</span></div>
-          <div class="stat"><b id="statChecked">0</b><span>comprobadas</span></div>
-          <div class="stat"><b id="statDoubts">0</b><span>dudosas</span></div>
-          <div class="stat"><b id="statTotal">0</b><span>preguntas</span></div>
-        </div>
-      </section>
-
-      <section class="card side-card">
-        <div class="side-title">Preguntas dudosas <span>toca para volver</span></div>
-        <div class="doubts" id="doubtsList">—</div>
-      </section>
-
-      <section class="card side-card">
-        <div class="side-title">Filtrar por tema</div>
-        <select id="temaFilter" class="side-select"><option>Todos</option></select>
-      </section>
-
-      <section class="card side-card">
-        <div class="side-title">Banco de preguntas <span>recargar</span></div>
-        <button id="tryAuto" class="action ghost full-btn">Recargar JSON actual</button>
-        <div id="autoHint" class="auto-hint"></div>
-      </section>
-
-      <section class="card side-card">
-        <div class="side-title">Carga manual <span>JSON local</span></div>
-        <div class="filebox"><input type="file" id="fileInput" accept="application/json"></div>
-      </section>
+      <section class="card side-card"><div class="side-title">Progreso <span>sesión actual</span></div><div class="stats-grid"><div class="stat"><b id="statAnswered">0</b><span>respondidas</span></div><div class="stat"><b id="statChecked">0</b><span>comprobadas</span></div><div class="stat"><b id="statDoubts">0</b><span>dudosas</span></div><div class="stat"><b id="statTotal">0</b><span>preguntas</span></div></div></section>
+      <section class="card side-card doubts-card"><div class="side-title">Preguntas dudosas <span>toca para volver</span></div><div class="doubts" id="doubtsList">—</div></section>
+      <section class="card side-card"><div class="side-title">Filtrar por tema</div><select id="temaFilter" class="side-select"><option>Todos</option></select></section>
+      <section class="card side-card"><div class="side-title">Banco <span id="bankCount">—</span></div><button id="reloadBtn" class="action ghost full-btn">Recargar JSON actual</button><div id="autoHint" class="auto-hint"></div></section>
     </aside>
   </div>
 
-  <script>
-    const SUBJECTS = {
-      PMBOK:     { label: 'PMBOK 8', slug: 'pmbok-dificil' },
-      PMP_HARD:  { label: 'PMP HARD · 80/20',  slug: 'pmp-hard' },
-      ITIL:      { label: 'CIMSI', slug: 'cimsi' },
-      ITIL_HARD: { label: 'CIMSI · Difícil', slug: 'cimsi-hard' },
-      PD:        { label: 'PD', slug: 'pd' },
-      SIE:       { label: 'SIE', slug: 'sie' },
-      SIE_2:     { label: 'SIE · 2', slug: 'sie_2' }
-    };
+<script>
+const FALLBACK_BANKS = [
+  {id:'PMBOK',label:'PMBOK 8 · Difícil',group:'PMBOK 8 / PMP',meta:'90 preguntas · nivel alto',icon:'◆',file:'preguntas_PMBOOK8_S1_S2_S3_dificil.json',mode:'single',difficulty:'hard',accent:'cyan'},
+  {id:'PMP_HARD',label:'PMP HARD · 80/20',group:'PMBOK 8 / PMP',meta:'100 preguntas · 80% situacionales',icon:'⚡',file:'preguntas_PMP_HARD_S1_S2_S3_80_20.json',mode:'single',difficulty:'hard',accent:'warning'},
+  {id:'CIMSI',label:'CIMSI',group:'Otros bancos',meta:'Estudio general',icon:'◈',file:'preguntas_estudioCIMSI.json',mode:'single',difficulty:'normal'},
+  {id:'CIMSI_HARD',label:'CIMSI · Difícil',group:'Otros bancos',meta:'Simulación exigente',icon:'▲',file:'preguntas_examenCIMSI.json',mode:'single',difficulty:'hard'},
+  {id:'PD',label:'PD',group:'Otros bancos',meta:'Banco de estudio',icon:'▣',file:'preguntas_estudioPD.json',mode:'single',difficulty:'normal'},
+  {id:'PD_HARD',label:'PD · Muy difícil',group:'Otros bancos',meta:'Banco avanzado',icon:'◇',file:'preguntas_estudioPD_dificil.json',mode:'single',difficulty:'hard'},
+  {id:'SIE',label:'SIE',group:'Otros bancos',meta:'Selección múltiple',icon:'≡',file:'preguntas_estudioSIE.json',mode:'multi',difficulty:'normal'},
+  {id:'SIE_2',label:'SIE · 2',group:'Otros bancos',meta:'Segundo banco',icon:'Ⅱ',file:'preguntas_estudioSIE_2.json',mode:'multi',difficulty:'normal'}
+];
 
-    let selectedSubject = null;
-    let allQuestions = [];
-    let questions = [];
-    let index = 0;
-    let modeExam = false;
-    let userAnswers = {};
-    let doubts = new Set();
-    let checkedQuestions = new Set();
-    let difficultyMode = 'normal';
+let bankList=[]; let bankMap={}; let selectedBank=null;
+let allQuestions=[]; let questions=[]; let index=0; let modeExam=false;
+const answers=new Map(); const doubts=new Set(); const checked=new Set();
+let uidCounter=0;
 
-    const landing = document.getElementById('landing');
-    const appEl = document.getElementById('app');
-    const headerTitle = document.getElementById('headerTitle');
-    const enunciado = document.getElementById('enunciado');
-    const modeHint = document.getElementById('modeHint');
-    const opts = document.getElementById('opts');
-    const feedback = document.getElementById('feedback');
-    const solution = document.getElementById('solution');
-    const progressBar = document.getElementById('progressBar');
-    const statusText = document.getElementById('statusText');
-    const doubtsList = document.getElementById('doubtsList');
-    const temaSelect = document.getElementById('temaSelect');
-    const temaFilter = document.getElementById('temaFilter');
-    const tryAutoBtn = document.getElementById('tryAuto');
-    const autoHint = document.getElementById('autoHint');
-    const regenPDBtn = document.getElementById('regenPDBtn');
-    const pdHardBtn = document.getElementById('pdHardBtn');
-    const subjectBadge = document.getElementById('subjectBadge');
-    const statAnswered = document.getElementById('statAnswered');
-    const statChecked = document.getElementById('statChecked');
-    const statDoubts = document.getElementById('statDoubts');
-    const statTotal = document.getElementById('statTotal');
+const $=id=>document.getElementById(id);
+const landing=$('landing'),app=$('app'),mainCard=$('mainCard'),questionShell=$('questionShell'),bankSections=$('bankSections');
+const headerTitle=$('headerTitle'),subjectBadge=$('subjectBadge'),enunciado=$('enunciado'),opts=$('opts'),feedback=$('feedback'),solution=$('solution'),modeHint=$('modeHint');
+const temaSelect=$('temaSelect'),temaFilter=$('temaFilter'),progressBar=$('progressBar'),statusText=$('statusText'),progressLabel=$('progressLabel'),doubtsList=$('doubtsList'),autoHint=$('autoHint');
+const statAnswered=$('statAnswered'),statChecked=$('statChecked'),statDoubts=$('statDoubts'),statTotal=$('statTotal'),bankCount=$('bankCount');
+const setStatus=s=>statusText.textContent=s;
 
-    const setStatus = (s) => statusText.textContent = s;
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function escapeHTML(s){return String(s??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
 
-    function baseRoot(){
-      const isPages = location.hostname.endsWith('github.io');
-      const repoSegment = isPages ? location.pathname.split('/').filter(Boolean)[0] : '';
-      return `${location.origin}/${repoSegment ? repoSegment + '/' : ''}`;
-    }
-
-    function jsonCandidatesFor(subjectKey){
-      const root = baseRoot();
-      if (subjectKey === 'PMBOK') {
-        return [
-          `${root}Preguntas_CIMSI/preguntas_PMBOOK8_S1_S2_S3_dificil.json`,
-          `${root}preguntas_PMBOOK8_S1_S2_S3_dificil.json`
-        ];
-      }
-      if (subjectKey === 'PMP_HARD') {
-        return [
-          `${root}Preguntas_CIMSI/preguntas_PMP_HARD_S1_S2_S3_80_20.json`,
-          `${root}preguntas_PMP_HARD_S1_S2_S3_80_20.json`
-        ];
-      }
-      if (subjectKey === 'ITIL') {
-        return [
-          `${root}Preguntas_CIMSI/preguntas_estudioCIMSI.json`,
-          `${root}preguntas_estudioCIMSI.json`
-        ];
-      }
-      if (subjectKey === 'ITIL_HARD') {
-        return [
-          `${root}Preguntas_CIMSI/preguntas_examenCIMSI.json`,
-          `${root}preguntas_examenCIMSI.json`
-        ];
-      }
-      if (subjectKey === 'PD') {
-        return [
-          `${root}Preguntas_CIMSI/preguntas_estudioPD.json`,
-          `${root}preguntas_estudioPD.json`
-        ];
-      }
-      if (subjectKey === 'SIE') {
-        return [
-          `${root}Preguntas_CIMSI/preguntas_estudioSIE.json`,
-          `${root}preguntas_estudioSIE.json`
-        ];
-      }
-      if (subjectKey === 'SIE_2') {
-        return [
-          `${root}Preguntas_CIMSI/preguntas_estudioSIE_2.json`,
-          `${root}preguntas_estudioSIE_2.json`
-        ];
+async function loadConfig(){
+  try{
+    const r=await fetch('bancos.json',{cache:'no-store'}); if(!r.ok) throw new Error('HTTP '+r.status);
+    const data=await r.json(); bankList=Array.isArray(data)?data:(data.subjects||[]); if(!bankList.length) throw new Error('Sin bancos');
+  }catch(e){console.warn('Usando configuración integrada:',e);bankList=FALLBACK_BANKS.slice()}
+  bankMap=Object.fromEntries(bankList.map(b=>[String(b.id),b])); renderLanding();
 }
-      return [];
-    }
 
-    function shuffle(a){
-      for(let i=a.length-1;i>0;i--){
-        const j=Math.floor(Math.random()*(i+1));
-        [a[i],a[j]]=[a[j],a[i]];
-      }
-      return a;
-    }
-
-    function isMultiQuestion(q){
-      return selectedSubject === 'SIE' || selectedSubject === 'SIE_2' || Array.isArray(q.correctas);
-    }
-
-    function getOriginalCorrectIndices(q){
-      if (Array.isArray(q.correctas)) {
-        return [...new Set(q.correctas.filter(n => Number.isInteger(n)))].sort((a,b)=>a-b);
-      }
-      if (Number.isInteger(q.correcta)) {
-        return [q.correcta];
-      }
-      return [];
-    }
-
-    function prepareQuestion(q){
-      if (q._prepared) return;
-
-      const opciones = q.opciones.map((op,i)=>({texto:op,i}));
-      const mezcladas = shuffle(opciones.slice());
-
-      q._opcionesMezcladas = mezcladas;
-
-      const originalCorrects = getOriginalCorrectIndices(q);
-      q._correctIndices = mezcladas
-        .map((op, idx) => originalCorrects.includes(op.i) ? idx : -1)
-        .filter(idx => idx !== -1)
-        .sort((a,b)=>a-b);
-
-      q._prepared = true;
-    }
-
-    function arraysEqual(a,b){
-      if(a.length !== b.length) return false;
-      for(let i=0;i<a.length;i++){
-        if(a[i] !== b[i]) return false;
-      }
-      return true;
-    }
-
-    function getSelectedIndices(q){
-      const ans = userAnswers[index];
-      if (isMultiQuestion(q)) {
-        return Array.isArray(ans) ? ans.slice().sort((a,b)=>a-b) : [];
-      }
-      return (ans === undefined || ans === -1) ? [] : [ans];
-    }
-
-    function formatSolution(q){
-      return q._correctIndices
-        .map(i => `${'abcd'[i]}) ${q._opcionesMezcladas[i].texto}`)
-        .join(' | ');
-    }
-
-    function clearOptionStyles(){
-      document.querySelectorAll('.opt').forEach(el=>{
-        el.classList.remove('selected','correct','wrong');
-      });
-    }
-
-    function selectDOMOptions(indices=[]){
-      clearOptionStyles();
-      indices.forEach(i=>{
-        const el = document.querySelector(`.opt[data-i='${i}']`);
-        if(el) el.classList.add('selected');
-      });
-    }
-
-    async function tryAutoLoadForSubject(subjectKey){
-      const candidates = jsonCandidatesFor(subjectKey);
-      if (candidates.length) {
-        autoHint.textContent = `Buscando en: ${candidates.map(c => c.replace(location.origin,'')).join('  •  ')}`;
-      }
-      for(const url of candidates){
-        try{
-          setStatus('Cargando: ' + url);
-          const r = await fetch(url, { cache: 'no-store' });
-          if(!r.ok) throw new Error(`HTTP ${r.status}`);
-          const txt = (await r.text()).replace(/^\uFEFF/, '');
-          const data = JSON.parse(txt);
-          const arr = Array.isArray(data) ? data : (data.preguntas || []);
-          if(!Array.isArray(arr) || arr.length===0) throw new Error('JSON vacío o estructura inesperada');
-
-          difficultyMode = ['ITIL_HARD','PMBOK','PMP_HARD'].includes(subjectKey) ? 'hard' : 'normal';
-
-          allQuestions = arr.map(q => ({...q}));
-          questions = allQuestions.slice();
-          populateTemas();
-          index = 0;
-          modeExam = false;
-          userAnswers = {};
-          doubts = new Set();
-          checkedQuestions = new Set();
-          updateView();
-          setStatus('Banco cargado.');
-          return true;
-        }catch(e){
-          console.warn('No se pudo cargar en', url, e);
-        }
-      }
-
-      if(subjectKey === 'PD'){
-        difficultyMode = 'normal';
-        allQuestions = generatePDQuestions();
-        questions = allQuestions.slice();
-        populateTemas();
-        index = 0;
-        modeExam = false;
-        userAnswers = {};
-        doubts = new Set();
-        checkedQuestions = new Set();
-        updateView();
-        setStatus('Banco generado para PD.');
-        autoHint.textContent = 'Usando preguntas generadas (no se encontró JSON de PD).';
-        return true;
-      }
-
-      setStatus('No se pudo cargar automáticamente ningún JSON.');
-      alert('No se pudo cargar automáticamente el JSON de la asignatura. Puedes usar "Carga manual".');
-      return false;
-    }
-
-    async function tryLoadPDHard(){
-      if(selectedSubject !== 'PD'){
-        alert('El modo muy difícil solo está disponible para PD.');
-        return false;
-      }
-      const root = baseRoot();
-      const candidates = [
-        `${root}Preguntas_CIMSI/preguntas_estudioPD_dificil.json`,
-        `${root}preguntas_estudioPD_dificil.json`
-      ];
-      autoHint.textContent = `Modo muy difícil PD. Buscando en: ${candidates.map(c => c.replace(location.origin,'')).join('  •  ')}`;
-      for(const url of candidates){
-        try{
-          setStatus('Cargando (PD muy difícil): ' + url);
-          const r = await fetch(url, { cache: 'no-store' });
-          if(!r.ok) throw new Error(`HTTP ${r.status}`);
-          const txt = (await r.text()).replace(/^\uFEFF/, '');
-          const data = JSON.parse(txt);
-          const arr = Array.isArray(data) ? data : (data.preguntas || []);
-          if(!Array.isArray(arr) || arr.length===0) throw new Error('JSON vacío o estructura inesperada');
-          difficultyMode = 'hard';
-          allQuestions = arr.map(q => ({...q}));
-          questions = allQuestions.slice();
-          populateTemas();
-          index = 0;
-          modeExam = false;
-          userAnswers = {};
-          doubts = new Set();
-          checkedQuestions = new Set();
-          updateView();
-          setStatus('Banco PD muy difícil cargado.');
-          return true;
-        }catch(e){
-          console.warn('No se pudo cargar PD difícil en', url, e);
-        }
-      }
-      setStatus('No se pudo cargar el JSON de PD muy difícil.');
-      alert('No se encontró el JSON de PD muy difícil. Asegúrate de que existe y tiene el formato correcto.');
-      return false;
-    }
-
-    function generatePDQuestions(){
-      const providers = [
-        { name:'AWS', tema:'AWS', sv:{
-          object:'Amazon S3', vm:'Amazon EC2', sql:'Amazon RDS', k8s:'Amazon EKS', container:'Amazon ECS',
-          functions:'AWS Lambda', cdn:'Amazon CloudFront', monitoring:'Amazon CloudWatch',
-          queue:'Amazon SQS', nosql:'Amazon DynamoDB', iac:'AWS CloudFormation', identity:'AWS IAM'
-        }},
-        { name:'Azure', tema:'Azure', sv:{
-          object:'Azure Blob Storage', vm:'Azure Virtual Machines', sql:'Azure SQL Database', k8s:'Azure Kubernetes Service (AKS)', container:'Azure Container Instances',
-          functions:'Azure Functions', cdn:'Azure CDN', monitoring:'Azure Monitor',
-          queue:'Azure Queue Storage', nosql:'Azure Cosmos DB', iac:'Azure Resource Manager (ARM/Bicep)', identity:'Azure Active Directory (Entra ID)'
-        }},
-        { name:'GCP', tema:'GCP', sv:{
-          object:'Google Cloud Storage', vm:'Compute Engine', sql:'Cloud SQL', k8s:'Google Kubernetes Engine (GKE)', container:'Cloud Run',
-          functions:'Cloud Functions', cdn:'Cloud CDN', monitoring:'Cloud Monitoring',
-          queue:'Pub/Sub', nosql:'Firestore', iac:'Deployment Manager', identity:'Cloud IAM'
-        }}
-      ];
-
-      const pools = {
-        object:['Amazon S3','Azure Blob Storage','Google Cloud Storage','Amazon EBS','Azure Files','EFS'],
-        vm:['Amazon EC2','Azure Virtual Machines','Compute Engine','AWS Fargate','App Engine','App Service'],
-        sql:['Amazon RDS','Azure SQL Database','Cloud SQL','Cloud Spanner','BigQuery','DynamoDB'],
-        k8s:['Amazon EKS','Azure Kubernetes Service (AKS)','Google Kubernetes Engine (GKE)','Amazon ECS','App Service','Cloud Run'],
-        functions:['AWS Lambda','Azure Functions','Cloud Functions','AWS Fargate','Cloud Run','App Service'],
-        cdn:['Amazon CloudFront','Azure CDN','Cloud CDN','Azure Front Door','S3 Transfer Acceleration','Cloudflare'],
-        monitoring:['Amazon CloudWatch','Azure Monitor','Cloud Monitoring','Datadog','New Relic','Prometheus'],
-        queue:['Amazon SQS','Azure Queue Storage','Pub/Sub','Amazon Kinesis','Azure Service Bus','RabbitMQ'],
-        nosql:['Amazon DynamoDB','Azure Cosmos DB','Firestore','Bigtable','Redis','MongoDB Atlas'],
-        iac:['AWS CloudFormation','Azure Resource Manager (ARM/Bicep)','Deployment Manager','Terraform','Pulumi','Ansible'],
-        identity:['AWS IAM','Azure Active Directory (Entra ID)','Cloud IAM','Okta','Auth0','Keycloak']
-      };
-
-      const wrong3 = (correct, arr) => {
-        const pool = arr.filter(x => x !== correct);
-        const pick = [];
-        while(pick.length<3 && pool.length){
-          const i = Math.floor(Math.random()*pool.length);
-          pick.push(pool.splice(i,1)[0]);
-        }
-        return pick;
-      };
-
-      const qprov = (p, field, texto) => ({
-        tema: p.tema,
-        enunciado: texto,
-        opciones: [p.sv[field], ...wrong3(p.sv[field], pools[field])],
-        correcta: 0
-      });
-
-      let out = [];
-      providers.forEach(p=>{
-        out.push(qprov(p,'object',`[PD] ¿Qué servicio de ${p.name} es almacenamiento de objetos?`));
-        out.push(qprov(p,'vm',`[PD] ¿Qué servicio de ${p.name} provee máquinas virtuales?`));
-        out.push(qprov(p,'sql',`[PD] ¿Qué servicio administrado de ${p.name} ofrece bases de datos relacionales?`));
-        out.push(qprov(p,'nosql',`[PD] ¿Qué servicio de ${p.name} es NoSQL clave-valor/documentos?`));
-        out.push(qprov(p,'functions',`[PD] ¿Qué servicio de ${p.name} permite ejecutar funciones sin servidor?`));
-        out.push(qprov(p,'k8s',`[PD] ¿Cuál es el servicio gestionado de Kubernetes en ${p.name}?`));
-        out.push(qprov(p,'cdn',`[PD] ¿Qué servicio de ${p.name} es una red de entrega de contenido (CDN)?`));
-        out.push(qprov(p,'monitoring',`[PD] ¿Qué servicio de ${p.name} se usa para monitorización y *logging*?`));
-        out.push(qprov(p,'queue',`[PD] ¿Qué servicio de ${p.name} ofrece colas de mensajería?`));
-        out.push(qprov(p,'iac',`[PD] ¿Qué solución nativa de ${p.name} es “infraestructura como código”?`));
-        out.push(qprov(p,'identity',`[PD] ¿Qué servicio de ${p.name} gestiona identidades y permisos?`));
-      });
-
-      const conceptos = [
-        {
-          tema:'Conceptos PD',
-          enunciado:'[PD] ¿Cuál describe mejor el modelo de “responsabilidad compartida”?',
-          opciones:[
-            'El proveedor asegura la seguridad de la nube; el cliente, la seguridad en la nube (configuraciones, datos, identidades).',
-            'El proveedor es 100% responsable de todo.',
-            'El cliente es 100% responsable de todo.',
-            'La responsabilidad se delega a un tercero por completo.'
-          ],
-          correcta: 0
-        },
-        {
-          tema:'Conceptos PD',
-          enunciado:'[PD] ¿Qué es una Zona de Disponibilidad (AZ)?',
-          opciones:[
-            'Uno o más centros de datos aislados dentro de una misma región.',
-            'Una ciudad donde hay clientes.',
-            'Una VPC que segmenta redes privadas.',
-            'Un grupo de cuentas bajo una organización.'
-          ],
-          correcta: 0
-        }
-      ];
-
-      out = out.concat(conceptos);
-      out.sort(()=>Math.random()-0.5);
-      return out;
-    }
-
-    document.getElementById('fileInput')?.addEventListener('change', async (e)=>{
-      const f = e.target.files?.[0];
-      if(!f) return;
-      try{
-        const txt = (await f.text()).replace(/^\uFEFF/,'');
-        const data = JSON.parse(txt);
-        const arr = Array.isArray(data) ? data : (data.preguntas || []);
-        if(!Array.isArray(arr) || arr.length===0) throw new Error('Estructura inesperada o vacía.');
-
-        difficultyMode = 'normal';
-        allQuestions = arr.map(q => ({...q}));
-        questions = allQuestions.slice();
-        populateTemas();
-        index = 0;
-        modeExam = false;
-        userAnswers = {};
-        doubts = new Set();
-        checkedQuestions = new Set();
-        updateView();
-        setStatus('Banco cargado desde archivo.');
-      }catch(err){
-        alert('JSON inválido: ' + err.message);
-      }
-    });
-
-    document.getElementById('prevBtn').addEventListener('click', ()=>{
-      if(index>0){
-        index--;
-        updateView();
-      }
-    });
-
-    document.getElementById('nextBtn').addEventListener('click', ()=>{
-      if(index<questions.length-1){
-        index++;
-        updateView();
-      }
-    });
-
-    document.getElementById('doubtBtn').addEventListener('click', ()=>{ toggleDoubt(); });
-    document.getElementById('checkBtn').addEventListener('click', ()=>{ checkCurrent(); });
-    document.getElementById('examBtn').addEventListener('click', ()=>{ startExam(20); });
-
-    temaFilter.addEventListener('change', ()=>{
-      filterByTema(temaFilter.value === 'Todos' ? null : temaFilter.value);
-    });
-
-    temaSelect.addEventListener('change', ()=>{
-      filterByTema(temaSelect.value === 'Todos' ? null : temaSelect.value);
-    });
-
-    tryAutoBtn.addEventListener('click', ()=>{
-      if(!selectedSubject){
-        alert('Primero elige una asignatura.');
-        return;
-      }
-      tryAutoLoadForSubject(selectedSubject);
-    });
-
-    document.getElementById('changeSubject').addEventListener('click', ()=>{
-      appEl.classList.add('hidden');
-      landing.classList.remove('hidden');
-      selectedSubject = null;
-      difficultyMode = 'normal';
-      headerTitle.textContent = 'Sin preguntas cargadas';
-      subjectBadge.textContent = 'TEST';
-      enunciado.textContent = 'Selecciona una asignatura para empezar.';
-      modeHint.textContent = '';
-      autoHint.textContent = '';
-      regenPDBtn.style.display = 'none';
-      pdHardBtn.style.display = 'none';
-    });
-
-    regenPDBtn.addEventListener('click', ()=>{
-      if(selectedSubject === 'PD'){
-        difficultyMode = 'normal';
-        allQuestions = generatePDQuestions();
-        questions = allQuestions.slice();
-        populateTemas();
-        index = 0;
-        modeExam = false;
-        userAnswers = {};
-        doubts = new Set();
-        checkedQuestions = new Set();
-        updateView();
-        setStatus('Banco PD regenerado.');
-      }
-    });
-
-    pdHardBtn.addEventListener('click', ()=>{
-      if(selectedSubject === 'PD'){
-        tryLoadPDHard();
-      }else{
-        alert('El modo muy difícil solo está disponible para PD.');
-      }
-    });
-
-    document.getElementById('btnPMBOK').addEventListener('click', ()=> selectSubject('PMBOK', true));
-    document.getElementById('btnPMPHard').addEventListener('click', ()=> selectSubject('PMP_HARD', true));
-    document.getElementById('btnITIL').addEventListener('click', ()=> selectSubject('ITIL', true));
-    document.getElementById('btnITILHard').addEventListener('click', ()=> selectSubject('ITIL_HARD', true));
-    document.getElementById('btnPD').addEventListener('click', ()=> selectSubject('PD', true));
-    document.getElementById('btnSIE').addEventListener('click', ()=> selectSubject('SIE', true));
-    document.getElementById('btnSIE_2').addEventListener('click', ()=> selectSubject('SIE_2', true));
-
-    window.addEventListener('load', ()=>{
-      const p = new URLSearchParams(location.search);
-      const a = (p.get('asignatura')||'').toUpperCase();
-      if(a && SUBJECTS[a]) selectSubject(a, true);
-      else setStatus('Elige una asignatura para empezar');
-    });
-
-    function selectSubject(subjectKey, autoLoad=false){
-      selectedSubject = subjectKey;
-      landing.classList.add('hidden');
-      appEl.classList.remove('hidden');
-
-      difficultyMode = ['ITIL_HARD','PMBOK','PMP_HARD'].includes(subjectKey) ? 'hard' : 'normal';
-
-      document.title = `Tester ${SUBJECTS[subjectKey].label} - Estudio y Examen`;
-      headerTitle.textContent = `[${SUBJECTS[subjectKey].label}] Sin preguntas cargadas`;
-      autoHint.textContent = `Asignatura: ${SUBJECTS[subjectKey].label}`;
-      subjectBadge.textContent = SUBJECTS[subjectKey].label;
-      modeHint.textContent = (subjectKey === 'SIE' || subjectKey === 'SIE_2')
-        ? 'Selección múltiple · puedes marcar varias respuestas.'
-        : (subjectKey === 'PMP_HARD'
-            ? 'PMP HARD · casos situacionales y distractores plausibles.'
-            : 'Respuesta única · elige la mejor opción.');
-
-      regenPDBtn.style.display = subjectKey === 'PD' ? 'inline-block' : 'none';
-      pdHardBtn.style.display = subjectKey === 'PD' ? 'inline-block' : 'none';
-
-      setStatus('Preparado');
-      if(autoLoad) tryAutoLoadForSubject(subjectKey);
-    }
-
-    function updateStats(){
-      const answered = Object.values(userAnswers).filter(v => Array.isArray(v) ? v.length > 0 : v !== undefined && v !== -1).length;
-      statAnswered.textContent = answered;
-      statChecked.textContent = checkedQuestions.size;
-      statDoubts.textContent = doubts.size;
-      statTotal.textContent = questions.length || allQuestions.length || 0;
-    }
-
-    function restoreCheckedState(q){
-      if(!checkedQuestions.has(index)) return false;
-      const selected = getSelectedIndices(q);
-      const correct = [...q._correctIndices].sort((a,b)=>a-b);
-      const ok = arraysEqual(selected, correct);
-      clearOptionStyles();
-      q._opcionesMezcladas.forEach((_, i)=>{
-        const el = document.querySelector(`.opt[data-i='${i}']`);
-        if(!el) return;
-        if(selected.includes(i)) el.classList.add('selected');
-        if(correct.includes(i)) el.classList.add('correct');
-        if(selected.includes(i) && !correct.includes(i)) el.classList.add('wrong');
-      });
-      feedback.textContent = ok ? '✔ ¡Correcto!' : '✖ Incorrecto.';
-      feedback.style.color = ok ? 'var(--success)' : 'var(--danger)';
-      solution.textContent = ok ? '' : `Solución: ${formatSolution(q)}`;
-      return true;
-    }
-
-    function populateTemas(){
-      const temas = ['Todos', ...Array.from(new Set(allQuestions.map(q=>q.tema || 'Sin tema'))).sort()];
-      temaSelect.innerHTML = temas.map(t=>`<option>${t}</option>`).join('');
-      temaFilter.innerHTML = temaSelect.innerHTML;
-      document.getElementById('progressLabel').textContent = `0/${allQuestions.length}`;
-    }
-
-    function updateView(){
-      if(questions.length===0){
-        headerTitle.textContent=`[${selectedSubject ? SUBJECTS[selectedSubject].label : '—'}] Sin preguntas cargadas`;
-        enunciado.textContent='Cargue un JSON con preguntas (botón “Intentar cargar…” o “Carga manual”).';
-        modeHint.textContent = '';
-        opts.innerHTML='';
-        progressBar.style.width='0%';
-        document.getElementById('progressLabel').textContent = `0/0`;
-        updateStats();
-        return;
-      }
-
-      const q = questions[index];
-      prepareQuestion(q);
-
-      const subjectLabel = SUBJECTS[selectedSubject]?.label || '—';
-      const diffLabel = difficultyMode === 'hard' ? ' (Muy difícil)' : '';
-      const typeLabel = isMultiQuestion(q) ? 'Selección múltiple' : 'Respuesta única';
-      headerTitle.textContent = `${q.tema || 'Tema'} · Pregunta ${index+1} de ${questions.length}`;
-      subjectBadge.textContent = `${subjectLabel}${diffLabel} · ${modeExam ? 'Examen' : 'Estudio'} · ${typeLabel}`;
-
-      enunciado.textContent = q.enunciado;
-      modeHint.textContent = isMultiQuestion(q)
-        ? 'Marca una o varias opciones y pulsa “Comprobar”.'
-        : 'Marca una opción y pulsa “Comprobar”.';
-
-      opts.innerHTML = '';
-
-      q._opcionesMezcladas.forEach((op,i)=>{
-        const div = document.createElement('div');
-        div.className='opt';
-        div.dataset.i=i;
-        div.innerHTML = `<strong>${'abcd'[i]})</strong> ${op.texto}`;
-        div.addEventListener('click', ()=>selectOption(i));
-        opts.appendChild(div);
-      });
-
-      const selected = getSelectedIndices(q);
-      if(selected.length) selectDOMOptions(selected);
-
-      feedback.textContent='';
-      solution.textContent='';
-      restoreCheckedState(q);
-
-      const pct = Math.round(((index+1)/questions.length)*100);
-      progressBar.style.width = pct + '%';
-      document.getElementById('progressLabel').textContent = `${index+1}/${questions.length}`;
-      refreshDoubtsList();
-      updateStats();
-      setStatus('Listo');
-    }
-
-    function selectOption(i){
-      const q = questions[index];
-
-      if(isMultiQuestion(q)){
-        let current = Array.isArray(userAnswers[index]) ? [...userAnswers[index]] : [];
-
-        if(current.includes(i)){
-          current = current.filter(x => x !== i);
-        } else {
-          current.push(i);
-        }
-
-        current.sort((a,b)=>a-b);
-        userAnswers[index] = current;
-        selectDOMOptions(current);
-        updateStats();
-        return;
-      }
-
-      userAnswers[index] = i;
-      selectDOMOptions([i]);
-      updateStats();
-    }
-
-    function checkCurrent(){
-      const q = questions[index];
-      const selected = getSelectedIndices(q);
-      const correct = [...q._correctIndices].sort((a,b)=>a-b);
-
-      if(selected.length === 0){
-        feedback.textContent = isMultiQuestion(q)
-          ? 'No has seleccionado ninguna opción.'
-          : 'No has seleccionado una opción.';
-        feedback.style.color = 'var(--muted)';
-        solution.textContent = `Solución: ${formatSolution(q)}`;
-        return;
-      }
-
-      checkedQuestions.add(index);
-      updateStats();
-      clearOptionStyles();
-
-      const ok = arraysEqual(selected, correct);
-
-      q._opcionesMezcladas.forEach((_, i)=>{
-        const el = document.querySelector(`.opt[data-i='${i}']`);
-        if(!el) return;
-
-        if(selected.includes(i)) el.classList.add('selected');
-        if(correct.includes(i)) el.classList.add('correct');
-        if(selected.includes(i) && !correct.includes(i)) el.classList.add('wrong');
-      });
-
-      if(ok){
-        feedback.textContent='✔ ¡Correcto!';
-        feedback.style.color='var(--success)';
-        solution.textContent='';
-      }else{
-        feedback.textContent='✖ Incorrecto.';
-        feedback.style.color='var(--danger)';
-        solution.textContent=`Solución: ${formatSolution(q)}`;
-      }
-    }
-
-    function toggleDoubt(){
-      doubts.has(index) ? doubts.delete(index) : doubts.add(index);
-      refreshDoubtsList();
-      updateStats();
-    }
-
-    function refreshDoubtsList(){
-      doubtsList.innerHTML='';
-      if(doubts.size===0){
-        doubtsList.textContent='—';
-        return;
-      }
-      Array.from(doubts).sort((a,b)=>a-b).forEach(i=>{
-        const q=questions[i];
-        const el=document.createElement('div');
-        el.textContent=`${i+1}. ${q.tema||'Tema'}`;
-        el.style.padding='4px 6px';
-        el.style.cursor='pointer';
-        el.addEventListener('click', ()=>{
-          index=i;
-          updateView();
-        });
-        doubtsList.appendChild(el);
-      });
-    }
-
-    function filterByTema(tema){
-      questions = tema ? allQuestions.filter(q=>q.tema===tema) : allQuestions.slice();
-      index = 0;
-      userAnswers = {};
-      doubts = new Set();
-      modeExam = false;
-      populateTemas();
-      updateView();
-    }
-
-    function startExam(num){
-      if(allQuestions.length===0) return alert('Carga primero preguntas.');
-      modeExam = true;
-      userAnswers = {};
-      doubts = new Set();
-      questions = [...allQuestions].sort(()=>Math.random()-0.5).slice(0, Math.min(num, allQuestions.length));
-      index = 0;
-      updateView();
-    }
-
-    document.addEventListener('keydown', (e)=>{
-      if(appEl.classList.contains('hidden') || e.target.matches('select,input')) return;
-      if(['1','2','3','4'].includes(e.key)){
-        const i = Number(e.key) - 1;
-        if(questions[index] && i < (questions[index]._opcionesMezcladas?.length || questions[index].opciones?.length || 0)) selectOption(i);
-      } else if(e.key === 'Enter'){
-        e.preventDefault();
-        checkCurrent();
-      } else if(e.key === 'ArrowLeft' && index > 0){
-        index--; updateView();
-      } else if(e.key === 'ArrowRight' && index < questions.length-1){
-        index++; updateView();
-      }
-    });
-  </script>
+function renderLanding(){
+  bankSections.innerHTML='';
+  const groups=[]; bankList.forEach(b=>{const g=b.group||'Asignaturas';if(!groups.includes(g))groups.push(g)});
+  groups.forEach(group=>{
+    const list=bankList.filter(b=>(b.group||'Asignaturas')===group); const sec=document.createElement('section'); sec.className='bank-section';
+    sec.innerHTML=`<div class="bank-section-head"><h2>${escapeHTML(group)}</h2><p>${list.length} ${list.length===1?'banco':'bancos'}</p></div><div class="bank-grid"></div>`;
+    const grid=sec.querySelector('.bank-grid');
+    list.forEach(b=>{const btn=document.createElement('button');btn.className='bigbtn';btn.dataset.accent=b.accent||'';btn.innerHTML=`<span class="bank-icon">${escapeHTML(b.icon||'●')}</span><span class="bank-title">${escapeHTML(b.label||b.id)}</span><span class="bank-meta"><span class="dot"></span>${escapeHTML(b.meta||'Banco de preguntas')}</span>`;btn.addEventListener('click',()=>selectBank(b.id,true));grid.appendChild(btn)});
+    bankSections.appendChild(sec);
+  });
+}
+
+function normalizeQuestions(arr){
+  return arr.map(q=>({...q,_uid:`q${++uidCounter}_${Math.random().toString(36).slice(2,8)}`}));
+}
+function getBank(){return selectedBank?bankMap[selectedBank]:null}
+function isMulti(q){const b=getBank();return b?.mode==='multi'||Array.isArray(q.correctas)}
+function originalCorrect(q){if(Array.isArray(q.correctas))return [...new Set(q.correctas.filter(Number.isInteger))].sort((a,b)=>a-b);return Number.isInteger(q.correcta)?[q.correcta]:[]}
+function prepare(q){if(q._prepared)return;const mix=shuffle((q.opciones||[]).map((texto,i)=>({texto,i})));q._mix=mix;const correct=originalCorrect(q);q._correct=mix.map((op,i)=>correct.includes(op.i)?i:-1).filter(i=>i>=0).sort((a,b)=>a-b);q._prepared=true}
+function selectedIndices(q){const a=answers.get(q._uid);return isMulti(q)?(Array.isArray(a)?a.slice().sort((x,y)=>x-y):[]):(Number.isInteger(a)?[a]:[])}
+function same(a,b){return a.length===b.length&&a.every((v,i)=>v===b[i])}
+function formatSolution(q){return q._correct.map(i=>`${'ABCD'[i]}) ${q._mix[i].texto}`).join(' · ')}
+
+async function selectBank(id,auto=true){
+  if(!bankMap[id])return; selectedBank=id; landing.classList.add('hidden');app.classList.remove('hidden');document.body.classList.add('quiz-active');
+  const b=getBank();document.title=`${b.label} · Test Lab`;subjectBadge.textContent=b.label;headerTitle.textContent=`${b.label} · cargando…`;autoHint.textContent=b.file||'';
+  modeHint.textContent=b.mode==='multi'?'Selección múltiple · puedes marcar varias respuestas.':'Respuesta única · elige la mejor opción.';
+  if(auto) await loadCurrentBank();
+}
+
+async function loadCurrentBank(){
+  const b=getBank();if(!b)return;setStatus('Cargando banco…');
+  try{
+    const r=await fetch(encodeURI(b.file),{cache:'no-store'});if(!r.ok)throw new Error(`HTTP ${r.status}`);const txt=(await r.text()).replace(/^\uFEFF/,'');const data=JSON.parse(txt);const arr=Array.isArray(data)?data:(data.preguntas||[]);if(!arr.length)throw new Error('JSON vacío');
+    allQuestions=normalizeQuestions(arr);questions=allQuestions.slice();index=0;modeExam=false;answers.clear();doubts.clear();checked.clear();populateThemes();updateView();setStatus('Banco cargado');bankCount.textContent=`${allQuestions.length} preguntas`;
+  }catch(e){console.error(e);setStatus('Error al cargar');enunciado.textContent=`No se pudo cargar ${b.file}. Revisa que el JSON exista en la carpeta Preguntas_CIMSI.`;opts.innerHTML='';headerTitle.textContent=b.label}
+}
+
+function populateThemes(){
+  const themes=['Todos',...Array.from(new Set(allQuestions.map(q=>q.tema||'Sin tema'))).sort()];const html=themes.map(t=>`<option>${escapeHTML(t)}</option>`).join('');temaSelect.innerHTML=html;temaFilter.innerHTML=html
+}
+function currentQ(){return questions[index]}
+function clearOptionStyles(){opts.querySelectorAll('.opt').forEach(el=>el.classList.remove('selected','correct','wrong'))}
+function paintSelected(q){clearOptionStyles();selectedIndices(q).forEach(i=>opts.querySelector(`.opt[data-i="${i}"]`)?.classList.add('selected'))}
+
+function updateView(){
+  if(!questions.length){headerTitle.textContent=`${getBank()?.label||'Banco'} · sin preguntas`;enunciado.textContent='No hay preguntas en este filtro.';opts.innerHTML='';progressBar.style.width='0%';progressLabel.textContent='0/0';updateStats();return}
+  if(index>=questions.length)index=questions.length-1;const q=currentQ();prepare(q);headerTitle.textContent=`${q.tema||'Tema'} · Pregunta ${index+1} de ${questions.length}`;
+  subjectBadge.textContent=`${getBank()?.label||'TEST'} · ${modeExam?'Examen':'Estudio'}${isMulti(q)?' · múltiple':''}`;enunciado.textContent=q.enunciado||'';modeHint.textContent=isMulti(q)?'Marca una o varias opciones y pulsa “Comprobar”.':'Marca una opción y pulsa “Comprobar”.';opts.innerHTML='';
+  q._mix.forEach((op,i)=>{const div=document.createElement('div');div.className='opt';div.dataset.i=i;div.innerHTML=`<strong>${'ABCD'[i]})</strong><span>${escapeHTML(op.texto)}</span>`;div.addEventListener('click',()=>selectOption(i));opts.appendChild(div)});paintSelected(q);feedback.textContent='';solution.textContent='';restoreChecked(q);
+  progressBar.style.width=`${Math.round(((index+1)/questions.length)*100)}%`;progressLabel.textContent=`${index+1}/${questions.length}`;refreshDoubts();updateStats();setStatus('Listo');fitQuestion()
+}
+
+function selectOption(i){const q=currentQ();if(!q)return;if(isMulti(q)){let a=Array.isArray(answers.get(q._uid))?[...answers.get(q._uid)]:[];a=a.includes(i)?a.filter(x=>x!==i):[...a,i];a.sort((x,y)=>x-y);answers.set(q._uid,a)}else answers.set(q._uid,i);paintSelected(q);updateStats()}
+function checkCurrent(){const q=currentQ();if(!q)return;const selected=selectedIndices(q),correct=[...q._correct];if(!selected.length){feedback.textContent='Selecciona una opción antes de comprobar.';feedback.style.color='var(--muted)';return}checked.add(q._uid);clearOptionStyles();q._mix.forEach((_,i)=>{const el=opts.querySelector(`.opt[data-i="${i}"]`);if(selected.includes(i))el.classList.add('selected');if(correct.includes(i))el.classList.add('correct');if(selected.includes(i)&&!correct.includes(i))el.classList.add('wrong')});const ok=same(selected,correct);feedback.textContent=ok?'✔ ¡Correcto!':'✖ Incorrecto.';feedback.style.color=ok?'var(--success)':'var(--danger)';solution.textContent=ok?'':`Solución: ${formatSolution(q)}`;updateStats();fitQuestion()}
+function restoreChecked(q){if(!checked.has(q._uid))return;const selected=selectedIndices(q),correct=[...q._correct],ok=same(selected,correct);q._mix.forEach((_,i)=>{const el=opts.querySelector(`.opt[data-i="${i}"]`);if(selected.includes(i))el.classList.add('selected');if(correct.includes(i))el.classList.add('correct');if(selected.includes(i)&&!correct.includes(i))el.classList.add('wrong')});feedback.textContent=ok?'✔ ¡Correcto!':'✖ Incorrecto.';feedback.style.color=ok?'var(--success)':'var(--danger)';solution.textContent=ok?'':`Solución: ${formatSolution(q)}`}
+
+function updateStats(){const visibleIds=new Set(questions.map(q=>q._uid));statAnswered.textContent=[...answers.entries()].filter(([id,v])=>visibleIds.has(id)&&(Array.isArray(v)?v.length:Number.isInteger(v))).length;statChecked.textContent=[...checked].filter(id=>visibleIds.has(id)).length;statDoubts.textContent=[...doubts].filter(id=>visibleIds.has(id)).length;statTotal.textContent=questions.length}
+function toggleDoubt(){const q=currentQ();if(!q)return;doubts.has(q._uid)?doubts.delete(q._uid):doubts.add(q._uid);refreshDoubts();updateStats()}
+function refreshDoubts(){doubtsList.innerHTML='';const items=questions.filter(q=>doubts.has(q._uid));if(!items.length){doubtsList.textContent='—';return}items.forEach(q=>{const i=questions.indexOf(q),el=document.createElement('div');el.className='doubt-item';el.textContent=`${i+1}. ${q.tema||'Tema'}`;el.addEventListener('click',()=>{index=i;updateView()});doubtsList.appendChild(el)})}
+function filterTheme(theme){questions=theme==='Todos'?allQuestions.slice():allQuestions.filter(q=>(q.tema||'Sin tema')===theme);index=0;modeExam=false;updateView()}
+function startExam(n=20){if(!allQuestions.length)return;questions=shuffle(allQuestions.slice()).slice(0,Math.min(n,allQuestions.length));index=0;modeExam=true;updateView()}
+
+function fitQuestion(){
+  if(innerWidth<=900)return;mainCard.classList.remove('fit-compact','fit-tight');requestAnimationFrame(()=>{if(questionShell.scrollHeight>questionShell.clientHeight+2){mainCard.classList.add('fit-compact');requestAnimationFrame(()=>{if(questionShell.scrollHeight>questionShell.clientHeight+2)mainCard.classList.add('fit-tight')})}})
+}
+
+$('prevBtn').addEventListener('click',()=>{if(index>0){index--;updateView()}});$('nextBtn').addEventListener('click',()=>{if(index<questions.length-1){index++;updateView()}});$('checkBtn').addEventListener('click',checkCurrent);$('doubtBtn').addEventListener('click',toggleDoubt);$('examBtn').addEventListener('click',()=>startExam(20));$('reloadBtn').addEventListener('click',loadCurrentBank);
+temaSelect.addEventListener('change',e=>{temaFilter.value=e.target.value;filterTheme(e.target.value)});temaFilter.addEventListener('change',e=>{temaSelect.value=e.target.value;filterTheme(e.target.value)});
+$('changeSubject').addEventListener('click',()=>{app.classList.add('hidden');landing.classList.remove('hidden');document.body.classList.remove('quiz-active');selectedBank=null;allQuestions=[];questions=[];answers.clear();doubts.clear();checked.clear();mainCard.classList.remove('fit-compact','fit-tight')});
+window.addEventListener('resize',fitQuestion);
+document.addEventListener('keydown',e=>{if(app.classList.contains('hidden')||e.target.matches('select,input,textarea'))return;if(['1','2','3','4'].includes(e.key)){const i=+e.key-1;if(currentQ()&&i<(currentQ().opciones||[]).length)selectOption(i)}else if(e.key==='Enter'){e.preventDefault();checkCurrent()}else if(e.key==='ArrowLeft'&&index>0){index--;updateView()}else if(e.key==='ArrowRight'&&index<questions.length-1){index++;updateView()}});
+
+(async()=>{await loadConfig();const p=new URLSearchParams(location.search),requested=p.get('asignatura');if(requested){const key=Object.keys(bankMap).find(k=>k.toLowerCase()===requested.toLowerCase());if(key)selectBank(key,true)}setStatus('Elige una asignatura para empezar')})();
+</script>
 </body>
 </html>

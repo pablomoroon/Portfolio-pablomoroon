@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "subjects": [
+    {
+      "id": "PMBOK",
+      "label": "PMBOK 8 · Difícil",
+      "group": "PMBOK 8 / PMP",
+      "meta": "90 preguntas · nivel alto",
+      "icon": "◆",
+      "file": "preguntas_PMBOOK8_S1_S2_S3_dificil.json",
+      "mode": "single",
+      "difficulty": "hard",
+      "accent": "cyan"
+    },
+    {
+      "id": "PMP_HARD",
+      "label": "PMP HARD · 80/20",
+      "group": "PMBOK 8 / PMP",
+      "meta": "100 preguntas · 80% situacionales",
+      "icon": "⚡",
+      "file": "preguntas_PMP_HARD_S1_S2_S3_80_20.json",
+      "mode": "single",
+      "difficulty": "hard",
+      "accent": "warning"
+    },
+    {
+      "id": "CIMSI",
+      "label": "CIMSI",
+      "group": "Otros bancos",
+      "meta": "Estudio general",
+      "icon": "◈",
+      "file": "preguntas_estudioCIMSI.json",
+      "mode": "single",
+      "difficulty": "normal"
+    },
+    {
+      "id": "CIMSI_HARD",
+      "label": "CIMSI · Difícil",
+      "group": "Otros bancos",
+      "meta": "Simulación exigente",
+      "icon": "▲",
+      "file": "preguntas_examenCIMSI.json",
+      "mode": "single",
+      "difficulty": "hard"
+    },
+    {
+      "id": "PD",
+      "label": "PD",
+      "group": "Otros bancos",
+      "meta": "Banco de estudio",
+      "icon": "▣",
+      "file": "preguntas_estudioPD.json",
+      "mode": "single",
+      "difficulty": "normal"
+    },
+    {
+      "id": "PD_HARD",
+      "label": "PD · Muy difícil",
+      "group": "Otros bancos",
+      "meta": "Banco avanzado",
+      "icon": "◇",
+      "file": "preguntas_estudioPD_dificil.json",
+      "mode": "single",
+      "difficulty": "hard"
+    },
+    {
+      "id": "SIE",
+      "label": "SIE",
+      "group": "Otros bancos",
+      "meta": "Selección múltiple",
+      "icon": "≡",
+      "file": "preguntas_estudioSIE.json",
+      "mode": "multi",
+      "difficulty": "normal"
+    },
+    {
+      "id": "SIE_2",
+      "label": "SIE · 2",
+      "group": "Otros bancos",
+      "meta": "Segundo banco",
+      "icon": "Ⅱ",
+      "file": "preguntas_estudioSIE_2.json",
+      "mode": "multi",
+      "difficulty": "normal"
+    }
+  ]
+}

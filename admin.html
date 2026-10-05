@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Administrar proyectos — Portfolio</title>
+  <title>Administrar portfolio y tests — Portfolio</title>
   <link rel="icon" type="image/png" sizes="32x32" href="imagenes/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
         <div class="logo" aria-hidden="true"><span>∴</span></div>
         <div>
           <div class="subtitle">Portfolio</div>
-          <div class="name">Panel de administración</div>
+          <div class="name">Panel de administración · Proyectos y tests</div>
         </div>
       </div>
     </nav>
@@ -56,7 +56,7 @@
         <input type="checkbox" id="remember">
         <label for="remember">Recordar en este dispositivo (no lo hagas en un ordenador compartido)</label>
       </div>
-      <button class="btn primary" id="connectBtn" type="button">Conectar y cargar proyectos</button>
+      <button class="btn primary" id="connectBtn" type="button">Conectar y cargar contenido</button>
       <div class="status-msg" id="connectStatus"></div>
     </section>
 
@@ -116,6 +116,68 @@
       <button class="btn primary" id="publishBtn" type="button">Publicar proyecto</button>
       <div class="status-msg" id="publishStatus"></div>
     </section>
+
+    <!-- Bancos de preguntas -->
+    <section class="admin-card" id="quizSection" style="display:none;">
+      <h2>4 · Asignaturas y bancos tipo test</h2>
+      <p class="admin-help">Desde aquí puedes añadir, editar u ocultar asignaturas del Test Lab. Los cambios se publican directamente en GitHub. La web pública no necesita tocar código.</p>
+      <div class="existing-list" id="bankList"></div>
+    </section>
+
+    <section class="admin-card" id="bankFormSection" style="display:none;">
+      <h2 id="bankFormTitle">5 · Añadir una asignatura</h2>
+      <div class="field-row">
+        <div class="field">
+          <label for="bankLabel">Nombre visible</label>
+          <input type="text" id="bankLabel" placeholder="Ej. Redes · Tema 1-3">
+        </div>
+        <div class="field">
+          <label for="bankId">Identificador (opcional)</label>
+          <input type="text" id="bankId" placeholder="REDES_T1_T3">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="bankGroup">Grupo / sección</label>
+          <input type="text" id="bankGroup" value="Otros bancos" placeholder="Ej. Redes, PMBOK, Universidad">
+        </div>
+        <div class="field">
+          <label for="bankMeta">Texto corto</label>
+          <input type="text" id="bankMeta" placeholder="Ej. 80 preguntas · nivel alto">
+        </div>
+      </div>
+      <div class="field-row three-cols">
+        <div class="field">
+          <label for="bankIcon">Icono</label>
+          <input type="text" id="bankIcon" value="●" maxlength="3">
+        </div>
+        <div class="field">
+          <label for="bankMode">Tipo de respuesta</label>
+          <select id="bankMode">
+            <option value="single">Una respuesta</option>
+            <option value="multi">Respuesta múltiple</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="bankDifficulty">Dificultad visual</label>
+          <select id="bankDifficulty">
+            <option value="normal">Normal</option>
+            <option value="hard">Difícil</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="bankJsonFile">JSON de preguntas</label>
+        <input type="file" id="bankJsonFile" accept="application/json,.json">
+        <small class="field-note" id="bankFileNote">Al crear una asignatura nueva, selecciona su JSON. Al editar, solo hace falta elegir otro archivo si quieres sustituirlo.</small>
+      </div>
+      <div class="admin-actions">
+        <button class="btn primary" id="publishBankBtn" type="button">Añadir asignatura</button>
+        <button class="btn" id="cancelBankEditBtn" type="button" style="display:none;">Cancelar edición</button>
+      </div>
+      <div class="status-msg" id="bankStatus"></div>
+    </section>
+
   </main>
 
   <script src="admin.js"></script>
