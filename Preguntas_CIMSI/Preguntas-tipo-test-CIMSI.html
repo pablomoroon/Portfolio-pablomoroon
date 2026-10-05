@@ -6,148 +6,370 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Tester CIMSI/PD/SIE - Estudio y Examen</title>
   <style>
-    :root { --accent:#2563eb; --success:#16a34a; --danger:#dc2626; --muted:#6b7280; }
-    html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;background:#0f172a;color:#e6eef8}
-    .app{display:grid;grid-template-columns:1fr 320px;gap:18px;height:100vh;padding:18px}
-    .card{background:#071029;border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(2,6,23,.6)}
-    header{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:12px}
-    h1{font-size:18px;margin:0;flex:1}
-    .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-    select{background:#0b1220;border:1px solid #102030;color:inherit;padding:6px 8px;border-radius:6px}
-    button{background:var(--accent);border:0;padding:8px 10px;border-radius:8px;color:#fff;cursor:pointer;font-size:14px;white-space:nowrap}
-    button.ghost{background:transparent;border:1px solid #14243a}
-    .main{display:flex;flex-direction:column;gap:10px}
-    .enunciado{min-height:120px;white-space:pre-wrap;padding:12px;border-radius:8px;background:linear-gradient(180deg,#081127,#071029);border:1px solid #14243a}
-    .opts{display:flex;flex-direction:column;gap:6px}
-    .opt{background:#0a1220;padding:10px;border-radius:8px;border:1px solid #122033;cursor:pointer}
-    .opt.selected{outline:2px solid rgba(37,99,235,.4)}
-    .opt.correct{background:rgba(22,163,74,.12);border-color:rgba(22,163,74,.3)}
-    .opt.wrong{background:rgba(220,38,38,.12);border-color:rgba(220,38,38,.3)}
-    .footer{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
-    .sidebar{display:flex;flex-direction:column;gap:10px}
-    .doubts{height:60vh;overflow:auto;background:#061323;padding:8px;border-radius:8px;border:1px solid #102035}
-    .progress{height:10px;background:#082033;border-radius:8px;overflow:hidden}
-    .progress>i{display:block;height:100%;background:linear-gradient(90deg,#0ea5e9,#2563eb)}
-    .helper{font-size:12px;color:var(--muted)}
-    @media(max-width:1200px){.app{grid-template-columns:1fr 260px}}
-    @media(max-width:900px){.app{grid-template-columns:1fr;height:auto}.sidebar{order:2}}
-    @media(max-width:600px){
-      body{font-size:15px}
-      h1{font-size:16px}
-      button{font-size:13px;padding:6px 8px}
-      .card{padding:12px}
-      .controls{gap:6px}
-      .enunciado{min-height:100px;font-size:14px}
-      .opt{padding:8px;font-size:14px}
-      .footer{flex-direction:column;align-items:flex-start}
+    :root{
+      --bg:#060912;
+      --bg-2:#0a1020;
+      --panel:#0c1426;
+      --panel-2:#101b31;
+      --panel-3:#0a1222;
+      --border:#1d2a44;
+      --border-strong:#314467;
+      --text:#eef4ff;
+      --muted:#8fa1bd;
+      --muted-2:#61738f;
+      --accent:#6d5dfc;
+      --accent-2:#2563eb;
+      --cyan:#22d3ee;
+      --success:#22c55e;
+      --danger:#ef4444;
+      --warning:#f59e0b;
+      --shadow:0 22px 55px rgba(0,0,0,.32);
+      --radius:20px;
     }
 
+    *{box-sizing:border-box}
+    html{color-scheme:dark;scroll-behavior:smooth}
+    html,body{min-height:100%;margin:0}
+    body{
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 520px at 10% -5%, rgba(109,93,252,.19), transparent 68%),
+        radial-gradient(800px 500px at 95% 0%, rgba(34,211,238,.10), transparent 65%),
+        var(--bg);
+      -webkit-font-smoothing:antialiased;
+    }
+
+    button,select,input{font:inherit}
+    button{color:inherit}
+    .hidden{display:none!important}
+
+    /* LANDING */
     .landing{
-      position:fixed; inset:0; display:grid; place-items:center; z-index:9999;
-      background:radial-gradient(1200px 600px at 50% -10%, rgba(37,99,235,.15), transparent), #0b1220;
-      padding:24px;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 20px;
+      position:relative;
+      overflow:hidden;
     }
-    .landing .box{max-width:900px;width:100%;text-align:center}
-    .landing h2{margin:0 0 16px 0; font-size:28px}
-    .landing p{margin:0 0 24px 0; color:var(--muted)}
-    .landing .grid{
-      display:grid;
-      gap:16px;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    .landing::before{
+      content:"";
+      position:absolute;inset:0;
+      background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+      background-size:34px 34px;
+      mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),transparent 85%);
+      pointer-events:none;
     }
+    .landing-shell{width:min(1120px,100%);position:relative;z-index:1}
+    .landing-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:44px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-mark{
+      width:42px;height:42px;border-radius:13px;display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      box-shadow:0 12px 30px rgba(109,93,252,.32);
+      font-weight:900;letter-spacing:-.04em;
+    }
+    .brand-copy strong{display:block;font-size:14px;letter-spacing:.12em;text-transform:uppercase}
+    .brand-copy span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+    .landing-badge{border:1px solid var(--border);background:rgba(12,20,38,.72);padding:8px 12px;border-radius:999px;color:var(--muted);font-size:12px;backdrop-filter:blur(10px)}
+    .landing-head{text-align:center;max-width:780px;margin:0 auto 32px}
+    .eyebrow{color:var(--cyan);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+    .landing h1{font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-.045em;margin:0}
+    .landing h1 span{background:linear-gradient(90deg,#fff 10%,#b9c8ff 48%,#69e6f4);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .landing .lead{max-width:660px;margin:18px auto 0;color:var(--muted);font-size:16px;line-height:1.65}
+
+    .bank-section{margin-top:26px}
+    .bank-section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:12px}
+    .bank-section-head h2{font-size:15px;margin:0;letter-spacing:.02em}
+    .bank-section-head p{font-size:12px;margin:0;color:var(--muted)}
+    .bank-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
     .bigbtn{
-      border:1px solid #1a2742; background:linear-gradient(180deg,#0e1b3a,#0b152c);
-      padding:28px 20px; border-radius:16px; font-size:22px; cursor:pointer;
-      transition:transform .05s ease, box-shadow .15s ease, border-color .2s ease;
-      box-shadow:0 10px 24px rgba(2,6,23,.45);
-      color:#fff;
+      text-align:left;position:relative;min-height:142px;padding:18px;border-radius:18px;
+      border:1px solid var(--border);background:linear-gradient(180deg,rgba(16,27,49,.94),rgba(10,18,34,.94));
+      cursor:pointer;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.16);
+      transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,background .18s ease;
     }
-    .bigbtn:hover{transform:translateY(-1px); border-color:#274a8f}
-    .hidden{display:none}
+    .bigbtn::after{content:"";position:absolute;width:110px;height:110px;border-radius:50%;right:-45px;top:-52px;background:var(--card-glow,rgba(109,93,252,.18));filter:blur(2px)}
+    .bigbtn:hover{transform:translateY(-3px);border-color:#465d8a;box-shadow:0 18px 38px rgba(0,0,0,.26);background:linear-gradient(180deg,#13203a,#0b1528)}
+    .bigbtn:focus-visible{outline:3px solid rgba(109,93,252,.35);outline-offset:2px}
+    .bank-icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.06);font-size:19px;margin-bottom:18px}
+    .bank-title{display:block;font-weight:800;font-size:15px;letter-spacing:-.01em}
+    .bank-meta{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:11px;margin-top:7px}
+    .dot{width:5px;height:5px;border-radius:50%;background:var(--accent)}
+    .pmp-card{--card-glow:rgba(245,158,11,.22);border-color:#44341f}
+    .pmbok-card{--card-glow:rgba(34,211,238,.17);border-color:#1f3f4c}
+    .pmp-card .dot{background:var(--warning)}
+    .pmbok-card .dot{background:var(--cyan)}
+
+    /* QUIZ APP */
+    .app{width:min(1480px,100%);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:18px;padding:22px;min-height:100vh}
+    .card{background:linear-gradient(180deg,rgba(13,22,41,.96),rgba(9,16,30,.96));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .main{padding:0;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+    .quiz-header{padding:20px 22px 16px;border-bottom:1px solid var(--border);background:rgba(12,20,38,.68);backdrop-filter:blur(12px)}
+    .quiz-head-row{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
+    .quiz-title-wrap{min-width:0}
+    .quiz-kicker{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:7px}
+    .mini-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 8px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;border:1px solid #263653;background:#101a30;color:#9eb1d2}
+    .mini-badge.live{color:#b9f6ff;border-color:#19485a;background:#0b2630}
+    h1{font-size:17px;line-height:1.35;margin:0;letter-spacing:-.015em}
+    .controls{display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+    label.control-label{font-size:11px;color:var(--muted);font-weight:700}
+    select{background:#0a1325;border:1px solid var(--border);color:var(--text);padding:9px 10px;border-radius:10px;outline:none;max-width:230px}
+    select:focus{border-color:#4c5f89;box-shadow:0 0 0 3px rgba(109,93,252,.14)}
+    button.action{border:1px solid transparent;background:linear-gradient(135deg,var(--accent),var(--accent-2));padding:9px 12px;border-radius:10px;cursor:pointer;font-size:12px;font-weight:750;white-space:nowrap;box-shadow:0 6px 18px rgba(37,99,235,.14);transition:transform .15s ease,filter .15s ease,border-color .15s ease}
+    button.action:hover{filter:brightness(1.08);transform:translateY(-1px)}
+    button.ghost{background:#0b1528;border:1px solid var(--border);box-shadow:none}
+    button.ghost:hover{border-color:#3b5078;background:#101d35}
+    button.warn{background:#2a2010;border-color:#63491b;color:#ffd58a;box-shadow:none}
+    button.star{background:#231a10;border-color:#62431b;color:#fbd38d;box-shadow:none}
+    .progress-wrap{padding:0 22px;background:rgba(12,20,38,.68)}
+    .progress{height:4px;background:#121e35;overflow:hidden}
+    .progress>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--cyan));box-shadow:0 0 15px rgba(34,211,238,.28);transition:width .25s ease}
+
+    .question-shell{padding:28px 28px 22px;display:flex;flex-direction:column;gap:18px;flex:1}
+    .question-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .helper{font-size:12px;color:var(--muted)}
+    .enunciado{white-space:pre-wrap;font-size:clamp(18px,2vw,23px);line-height:1.55;font-weight:700;letter-spacing:-.018em;padding:4px 0 2px;max-width:980px}
+    .opts{display:grid;grid-template-columns:1fr;gap:10px;margin-top:2px}
+    .opt{
+      background:linear-gradient(180deg,#0d182b,#0b1527);padding:14px 15px;border-radius:14px;border:1px solid var(--border);cursor:pointer;
+      display:flex;align-items:flex-start;gap:11px;line-height:1.45;font-size:14px;transition:transform .12s ease,border-color .15s ease,background .15s ease,box-shadow .15s ease;user-select:none;
+    }
+    .opt:hover{transform:translateY(-1px);border-color:#3a4d72;background:#101d34}
+    .opt strong{flex:0 0 28px;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;text-transform:uppercase;background:#131f36;border:1px solid #263859;color:#b9c8e2;font-size:12px;margin-top:-2px}
+    .opt.selected{border-color:#6556ec;background:linear-gradient(180deg,rgba(109,93,252,.13),rgba(37,99,235,.08));box-shadow:0 0 0 2px rgba(109,93,252,.12)}
+    .opt.selected strong{background:#5144c8;border-color:#7b70ff;color:#fff}
+    .opt.correct{background:rgba(34,197,94,.10);border-color:rgba(34,197,94,.5);box-shadow:0 0 0 2px rgba(34,197,94,.08)}
+    .opt.correct strong{background:#125b30;border-color:#258c4b;color:#d9ffe8}
+    .opt.wrong{background:rgba(239,68,68,.10);border-color:rgba(239,68,68,.48)}
+    .opt.wrong strong{background:#702323;border-color:#a73c3c;color:#ffe1e1}
+
+    .feedback-panel{min-height:48px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding-top:3px}
+    #feedback{font-weight:850;font-size:14px}
+    #solution{margin-top:5px;color:#fda4af;font-size:13px;line-height:1.45}
+    .keyboard-hint{font-size:10px;color:var(--muted-2);white-space:nowrap;padding-top:2px}
+    kbd{border:1px solid #2a3b5a;background:#0b1425;border-radius:5px;padding:2px 5px;font-size:9px;color:#a9b9d1}
+
+    .footer{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--border);padding:15px 22px;background:#091323;flex-wrap:wrap}
+    .nav-group{display:flex;gap:8px;align-items:center}
+    .nav-btn{border:1px solid var(--border);background:#0d182b;color:var(--text);padding:10px 13px;border-radius:11px;cursor:pointer;font-weight:750;font-size:12px}
+    .nav-btn:hover{background:#12203a;border-color:#3c5075}
+    .check-btn{background:linear-gradient(135deg,var(--accent),var(--accent-2));border-color:transparent;padding-inline:18px}
+    .status-wrap{text-align:right;min-width:175px}
+    #statusText{font-size:11px;color:var(--muted)}
+    #progressLabel{font-size:12px;font-weight:800;color:#dce7fb;margin-bottom:2px}
+
+    .sidebar{display:flex;flex-direction:column;gap:12px;min-width:0}
+    .side-card{padding:16px;border-radius:17px;box-shadow:none}
+    .side-title{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;font-weight:850;letter-spacing:.02em;margin-bottom:12px}
+    .side-title span{color:var(--muted);font-size:10px;font-weight:600}
+    .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .stat{background:#091426;border:1px solid var(--border);border-radius:12px;padding:11px}
+    .stat b{display:block;font-size:19px;letter-spacing:-.03em}
+    .stat span{font-size:10px;color:var(--muted)}
+    .doubts{max-height:310px;overflow:auto;background:#091426;padding:7px;border-radius:12px;border:1px solid var(--border);color:#c7d3e6;font-size:12px}
+    .doubts>div{border-radius:8px;margin-bottom:3px}
+    .doubts>div:hover{background:#101d34}
+    .side-select{width:100%;margin-top:5px;max-width:none}
+    .full-btn{width:100%;margin-top:8px}
+    .auto-hint{margin-top:8px;font-size:10px;color:var(--muted);word-break:break-word;line-height:1.45}
+    .filebox{border:1px dashed #2c3b59;border-radius:12px;padding:11px;background:#091426}
+    input[type=file]{width:100%;font-size:10px;color:var(--muted)}
+    input[type=file]::file-selector-button{border:1px solid var(--border);background:#101b30;color:#dce6f7;border-radius:8px;padding:7px 8px;margin-right:8px;cursor:pointer}
+
+    @media(max-width:1150px){
+      .bank-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .app{grid-template-columns:minmax(0,1fr) 280px;padding:14px}
+    }
+    @media(max-width:900px){
+      .bank-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .app{grid-template-columns:1fr;height:auto}
+      .sidebar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));order:2}
+      .quiz-head-row{flex-direction:column}
+      .controls{justify-content:flex-start}
+    }
+    @media(max-width:620px){
+      .landing{padding:24px 14px}.landing-top{margin-bottom:32px}.landing-badge{display:none}
+      .landing h1{font-size:37px}.landing .lead{font-size:14px}.bank-grid{grid-template-columns:1fr}.bigbtn{min-height:118px}
+      .app{padding:8px}.sidebar{grid-template-columns:1fr}.quiz-header{padding:16px}.question-shell{padding:22px 16px 17px}.footer{padding:13px 14px}
+      .controls{width:100%}.controls select{max-width:100%;flex:1 1 100%}.controls button{flex:1 1 auto}
+      .enunciado{font-size:18px}.opt{font-size:13px;padding:13px 12px}.keyboard-hint{display:none}
+      .status-wrap{text-align:left}.footer{align-items:stretch}.nav-group{width:100%}.nav-btn{flex:1}
+    }
   </style>
 </head>
 <body>
   <div id="landing" class="landing">
-    <div class="box">
-      <h2>¿Qué asignatura quieres estudiar?</h2>
-      <p>Elige una y te llevamos al generador de preguntas.</p>
-      <div class="grid">
-        <button class="bigbtn" id="btnITIL">🧩 CIMSI</button>
-        <button class="bigbtn" id="btnITILHard">🔥 CIMSI Difícil</button>
-        <button class="bigbtn" id="btnPD">📘 PD</button>
-        <button class="bigbtn" id="btnSIE">📝 SIE</button>
-        <button class="bigbtn" id="btnSIE">📝 SIE-2</button>
+    <div class="landing-shell">
+      <div class="landing-top">
+        <div class="brand">
+          <div class="brand-mark">PM</div>
+          <div class="brand-copy">
+            <strong>Test Lab</strong>
+            <span>Portfolio · Pablo Morón</span>
+          </div>
+        </div>
+        <div class="landing-badge">Estudio · práctica · examen</div>
       </div>
+
+      <div class="landing-head">
+        <div class="eyebrow">Banco de preguntas</div>
+        <h1><span>Entrena como si ya estuvieras en el examen.</span></h1>
+        <p class="lead">Elige un banco, filtra por tema, marca dudas y practica con preguntas mezcladas. Los bancos PMBOK/PMP incluyen escenarios de dificultad alta.</p>
+      </div>
+
+      <section class="bank-section">
+        <div class="bank-section-head">
+          <h2>PMBOK 8 / PMP</h2>
+          <p>Los dos bancos nuevos</p>
+        </div>
+        <div class="bank-grid">
+          <button class="bigbtn pmbok-card" id="btnPMBOK">
+            <span class="bank-icon">◆</span>
+            <span class="bank-title">PMBOK 8 · Difícil</span>
+            <span class="bank-meta"><span class="dot"></span>90 preguntas · nivel alto</span>
+          </button>
+          <button class="bigbtn pmp-card" id="btnPMPHard">
+            <span class="bank-icon">⚡</span>
+            <span class="bank-title">PMP HARD · 80/20</span>
+            <span class="bank-meta"><span class="dot"></span>100 preguntas · 80% situacionales</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="bank-section">
+        <div class="bank-section-head">
+          <h2>Otros bancos</h2>
+          <p>CIMSI · PD · SIE</p>
+        </div>
+        <div class="bank-grid">
+          <button class="bigbtn" id="btnITIL">
+            <span class="bank-icon">◈</span>
+            <span class="bank-title">CIMSI</span>
+            <span class="bank-meta"><span class="dot"></span>Estudio general</span>
+          </button>
+          <button class="bigbtn" id="btnITILHard">
+            <span class="bank-icon">▲</span>
+            <span class="bank-title">CIMSI · Difícil</span>
+            <span class="bank-meta"><span class="dot"></span>Simulación exigente</span>
+          </button>
+          <button class="bigbtn" id="btnPD">
+            <span class="bank-icon">▣</span>
+            <span class="bank-title">PD</span>
+            <span class="bank-meta"><span class="dot"></span>Banco + modo muy difícil</span>
+          </button>
+          <button class="bigbtn" id="btnSIE">
+            <span class="bank-icon">≡</span>
+            <span class="bank-title">SIE</span>
+            <span class="bank-meta"><span class="dot"></span>Selección múltiple</span>
+          </button>
+          <button class="bigbtn" id="btnSIE_2">
+            <span class="bank-icon">Ⅱ</span>
+            <span class="bank-title">SIE · 2</span>
+            <span class="bank-meta"><span class="dot"></span>Segundo banco</span>
+          </button>
+        </div>
+      </section>
     </div>
   </div>
 
   <div id="app" class="app hidden">
-    <div class="card main">
-      <header>
-        <h1 id="headerTitle">Sin preguntas cargadas</h1>
-        <div class="controls">
-          <label>Tema</label>
-          <select id="temaSelect"><option>Todos</option></select>
-          <button id="prevBtn" class="ghost">⟵ Anterior</button>
-          <button id="nextBtn" class="ghost">Siguiente ⟶</button>
-          <button id="checkBtn" title="Comprobar">Comprobar</button>
-          <button id="doubtBtn" title="Marcar/Demarcar como dudosa">★ Dudosa</button>
-          <button id="examBtn" style="background:#f59e0b">Iniciar Examen (20)</button>
-          <button id="regenPDBtn" class="ghost" style="display:none">Generar PD</button>
-          <button id="pdHardBtn" class="ghost" style="display:none;border-color:#b91c1c">PD Muy Difícil</button>
-          <button id="changeSubject" class="ghost" title="Volver a elegir asignatura">Cambiar asignatura</button>
+    <main class="card main">
+      <div class="quiz-header">
+        <div class="quiz-head-row">
+          <div class="quiz-title-wrap">
+            <div class="quiz-kicker">
+              <span class="mini-badge live">Banco activo</span>
+              <span class="mini-badge" id="subjectBadge">TEST</span>
+            </div>
+            <h1 id="headerTitle">Sin preguntas cargadas</h1>
+          </div>
+          <div class="controls">
+            <label class="control-label" for="temaSelect">Tema</label>
+            <select id="temaSelect"><option>Todos</option></select>
+            <button id="examBtn" class="action warn">Examen · 20</button>
+            <button id="doubtBtn" class="action star" title="Marcar/Demarcar como dudosa">☆ Dudosa</button>
+            <button id="regenPDBtn" class="action ghost" style="display:none">Generar PD</button>
+            <button id="pdHardBtn" class="action ghost" style="display:none;border-color:#7f1d1d">PD Muy Difícil</button>
+            <button id="changeSubject" class="action ghost" title="Volver a elegir banco">Cambiar banco</button>
+          </div>
         </div>
-      </header>
+      </div>
+      <div class="progress-wrap"><div class="progress" aria-hidden="true"><i id="progressBar"></i></div></div>
 
-      <div id="enunciado" class="enunciado">Selecciona una asignatura para cargar preguntas automáticamente, o usa “Carga manual”.</div>
-      <div id="modeHint" class="helper"></div>
-      <div class="opts" id="opts"></div>
+      <section class="question-shell">
+        <div class="question-meta">
+          <div id="modeHint" class="helper"></div>
+          <div class="keyboard-hint"><kbd>1–4</kbd> elegir · <kbd>Enter</kbd> comprobar · <kbd>← →</kbd> navegar</div>
+        </div>
+        <div id="enunciado" class="enunciado">Selecciona un banco de preguntas para comenzar.</div>
+        <div class="opts" id="opts"></div>
+        <div class="feedback-panel">
+          <div>
+            <span id="feedback"></span>
+            <div id="solution"></div>
+          </div>
+        </div>
+      </section>
 
       <div class="footer">
-        <div>
-          <span id="feedback" style="font-weight:700"></span>
-          <div id="solution" style="margin-top:6px;color:#fca5a5"></div>
+        <div class="nav-group">
+          <button id="prevBtn" class="nav-btn">← Anterior</button>
+          <button id="checkBtn" class="nav-btn check-btn">Comprobar</button>
+          <button id="nextBtn" class="nav-btn">Siguiente →</button>
         </div>
-        <div style="width:320px;max-width:100%">
-          <div class="progress" aria-hidden><i id="progressBar" style="width:0%"></i></div>
-          <div style="font-size:12px;color:var(--muted);margin-top:6px" id="statusText">Estado</div>
+        <div class="status-wrap">
+          <div id="progressLabel">0/0</div>
+          <div id="statusText">Elige un banco para empezar</div>
         </div>
       </div>
-    </div>
+    </main>
 
     <aside class="sidebar">
-      <div class="card">
-        <strong>Preguntas Dudosas</strong>
+      <section class="card side-card">
+        <div class="side-title">Progreso <span>sesión actual</span></div>
+        <div class="stats-grid">
+          <div class="stat"><b id="statAnswered">0</b><span>respondidas</span></div>
+          <div class="stat"><b id="statChecked">0</b><span>comprobadas</span></div>
+          <div class="stat"><b id="statDoubts">0</b><span>dudosas</span></div>
+          <div class="stat"><b id="statTotal">0</b><span>preguntas</span></div>
+        </div>
+      </section>
+
+      <section class="card side-card">
+        <div class="side-title">Preguntas dudosas <span>toca para volver</span></div>
         <div class="doubts" id="doubtsList">—</div>
-      </div>
+      </section>
 
-      <div class="card">
-        <strong>Progreso</strong>
-        <div style="margin-top:8px"><span id="progressLabel">0/0</span></div>
-        <div style="margin-top:8px;font-size:13px;color:var(--muted)">Filtrar por tema</div>
-        <select id="temaFilter" style="width:100%;margin-top:6px"><option>Todos</option></select>
-      </div>
+      <section class="card side-card">
+        <div class="side-title">Filtrar por tema</div>
+        <select id="temaFilter" class="side-select"><option>Todos</option></select>
+      </section>
 
-      <div class="card" style="text-align:center">
-        <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Carga automática</div>
-        <button id="tryAuto">Intentar cargar JSON de la asignatura</button>
-        <div id="autoHint" style="margin-top:6px;font-size:12px;color:var(--muted)"></div>
-      </div>
+      <section class="card side-card">
+        <div class="side-title">Banco de preguntas <span>recargar</span></div>
+        <button id="tryAuto" class="action ghost full-btn">Recargar JSON actual</button>
+        <div id="autoHint" class="auto-hint"></div>
+      </section>
 
-      <div class="card" style="text-align:center">
-        <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Carga manual (archivo local)</div>
-        <input type="file" id="fileInput" accept="application/json">
-      </div>
+      <section class="card side-card">
+        <div class="side-title">Carga manual <span>JSON local</span></div>
+        <div class="filebox"><input type="file" id="fileInput" accept="application/json"></div>
+      </section>
     </aside>
   </div>
 
   <script>
     const SUBJECTS = {
+      PMBOK:     { label: 'PMBOK 8', slug: 'pmbok-dificil' },
+      PMP_HARD:  { label: 'PMP HARD · 80/20',  slug: 'pmp-hard' },
       ITIL:      { label: 'CIMSI', slug: 'cimsi' },
-      ITIL_HARD: { label: 'CIMSI', slug: 'cimsi-hard' },
-      PD:        { label: 'PD',    slug: 'pd' },
-      SIE:       { label: 'SIE',   slug: 'sie' },
-      SIE_2:       { label: 'SIE_2',   slug: 'sie_2' }
+      ITIL_HARD: { label: 'CIMSI · Difícil', slug: 'cimsi-hard' },
+      PD:        { label: 'PD', slug: 'pd' },
+      SIE:       { label: 'SIE', slug: 'sie' },
+      SIE_2:     { label: 'SIE · 2', slug: 'sie_2' }
     };
 
     let selectedSubject = null;
@@ -177,6 +399,11 @@
     const autoHint = document.getElementById('autoHint');
     const regenPDBtn = document.getElementById('regenPDBtn');
     const pdHardBtn = document.getElementById('pdHardBtn');
+    const subjectBadge = document.getElementById('subjectBadge');
+    const statAnswered = document.getElementById('statAnswered');
+    const statChecked = document.getElementById('statChecked');
+    const statDoubts = document.getElementById('statDoubts');
+    const statTotal = document.getElementById('statTotal');
 
     const setStatus = (s) => statusText.textContent = s;
 
@@ -188,6 +415,18 @@
 
     function jsonCandidatesFor(subjectKey){
       const root = baseRoot();
+      if (subjectKey === 'PMBOK') {
+        return [
+          `${root}Preguntas_CIMSI/preguntas_PMBOOK8_S1_S2_S3_dificil.json`,
+          `${root}preguntas_PMBOOK8_S1_S2_S3_dificil.json`
+        ];
+      }
+      if (subjectKey === 'PMP_HARD') {
+        return [
+          `${root}Preguntas_CIMSI/preguntas_PMP_HARD_S1_S2_S3_80_20.json`,
+          `${root}preguntas_PMP_HARD_S1_S2_S3_80_20.json`
+        ];
+      }
       if (subjectKey === 'ITIL') {
         return [
           `${root}Preguntas_CIMSI/preguntas_estudioCIMSI.json`,
@@ -311,7 +550,7 @@
           const arr = Array.isArray(data) ? data : (data.preguntas || []);
           if(!Array.isArray(arr) || arr.length===0) throw new Error('JSON vacío o estructura inesperada');
 
-          difficultyMode = (subjectKey === 'ITIL_HARD') ? 'hard' : 'normal';
+          difficultyMode = ['ITIL_HARD','PMBOK','PMP_HARD'].includes(subjectKey) ? 'hard' : 'normal';
 
           allQuestions = arr.map(q => ({...q}));
           questions = allQuestions.slice();
@@ -551,6 +790,7 @@
       selectedSubject = null;
       difficultyMode = 'normal';
       headerTitle.textContent = 'Sin preguntas cargadas';
+      subjectBadge.textContent = 'TEST';
       enunciado.textContent = 'Selecciona una asignatura para empezar.';
       modeHint.textContent = '';
       autoHint.textContent = '';
@@ -582,6 +822,8 @@
       }
     });
 
+    document.getElementById('btnPMBOK').addEventListener('click', ()=> selectSubject('PMBOK', true));
+    document.getElementById('btnPMPHard').addEventListener('click', ()=> selectSubject('PMP_HARD', true));
     document.getElementById('btnITIL').addEventListener('click', ()=> selectSubject('ITIL', true));
     document.getElementById('btnITILHard').addEventListener('click', ()=> selectSubject('ITIL_HARD', true));
     document.getElementById('btnPD').addEventListener('click', ()=> selectSubject('PD', true));
@@ -600,20 +842,50 @@
       landing.classList.add('hidden');
       appEl.classList.remove('hidden');
 
-      difficultyMode = (subjectKey === 'ITIL_HARD') ? 'hard' : 'normal';
+      difficultyMode = ['ITIL_HARD','PMBOK','PMP_HARD'].includes(subjectKey) ? 'hard' : 'normal';
 
       document.title = `Tester ${SUBJECTS[subjectKey].label} - Estudio y Examen`;
       headerTitle.textContent = `[${SUBJECTS[subjectKey].label}] Sin preguntas cargadas`;
       autoHint.textContent = `Asignatura: ${SUBJECTS[subjectKey].label}`;
-      modeHint.textContent = subjectKey === 'SIE'
-        ? 'En SIE puedes marcar varias opciones.'
-        : 'En esta asignatura solo se marca una opción.';
+      subjectBadge.textContent = SUBJECTS[subjectKey].label;
+      modeHint.textContent = (subjectKey === 'SIE' || subjectKey === 'SIE_2')
+        ? 'Selección múltiple · puedes marcar varias respuestas.'
+        : (subjectKey === 'PMP_HARD'
+            ? 'PMP HARD · casos situacionales y distractores plausibles.'
+            : 'Respuesta única · elige la mejor opción.');
 
       regenPDBtn.style.display = subjectKey === 'PD' ? 'inline-block' : 'none';
       pdHardBtn.style.display = subjectKey === 'PD' ? 'inline-block' : 'none';
 
       setStatus('Preparado');
       if(autoLoad) tryAutoLoadForSubject(subjectKey);
+    }
+
+    function updateStats(){
+      const answered = Object.values(userAnswers).filter(v => Array.isArray(v) ? v.length > 0 : v !== undefined && v !== -1).length;
+      statAnswered.textContent = answered;
+      statChecked.textContent = checkedQuestions.size;
+      statDoubts.textContent = doubts.size;
+      statTotal.textContent = questions.length || allQuestions.length || 0;
+    }
+
+    function restoreCheckedState(q){
+      if(!checkedQuestions.has(index)) return false;
+      const selected = getSelectedIndices(q);
+      const correct = [...q._correctIndices].sort((a,b)=>a-b);
+      const ok = arraysEqual(selected, correct);
+      clearOptionStyles();
+      q._opcionesMezcladas.forEach((_, i)=>{
+        const el = document.querySelector(`.opt[data-i='${i}']`);
+        if(!el) return;
+        if(selected.includes(i)) el.classList.add('selected');
+        if(correct.includes(i)) el.classList.add('correct');
+        if(selected.includes(i) && !correct.includes(i)) el.classList.add('wrong');
+      });
+      feedback.textContent = ok ? '✔ ¡Correcto!' : '✖ Incorrecto.';
+      feedback.style.color = ok ? 'var(--success)' : 'var(--danger)';
+      solution.textContent = ok ? '' : `Solución: ${formatSolution(q)}`;
+      return true;
     }
 
     function populateTemas(){
@@ -631,6 +903,7 @@
         opts.innerHTML='';
         progressBar.style.width='0%';
         document.getElementById('progressLabel').textContent = `0/0`;
+        updateStats();
         return;
       }
 
@@ -640,7 +913,8 @@
       const subjectLabel = SUBJECTS[selectedSubject]?.label || '—';
       const diffLabel = difficultyMode === 'hard' ? ' (Muy difícil)' : '';
       const typeLabel = isMultiQuestion(q) ? 'Selección múltiple' : 'Respuesta única';
-      headerTitle.textContent = `[${subjectLabel}${diffLabel}] ${q.tema || 'Tema'} — Pregunta ${index+1}/${questions.length} [${modeExam ? 'Examen' : 'Estudio'} | ${typeLabel}]`;
+      headerTitle.textContent = `${q.tema || 'Tema'} · Pregunta ${index+1} de ${questions.length}`;
+      subjectBadge.textContent = `${subjectLabel}${diffLabel} · ${modeExam ? 'Examen' : 'Estudio'} · ${typeLabel}`;
 
       enunciado.textContent = q.enunciado;
       modeHint.textContent = isMultiQuestion(q)
@@ -663,11 +937,13 @@
 
       feedback.textContent='';
       solution.textContent='';
+      restoreCheckedState(q);
 
       const pct = Math.round(((index+1)/questions.length)*100);
       progressBar.style.width = pct + '%';
       document.getElementById('progressLabel').textContent = `${index+1}/${questions.length}`;
       refreshDoubtsList();
+      updateStats();
       setStatus('Listo');
     }
 
@@ -686,11 +962,13 @@
         current.sort((a,b)=>a-b);
         userAnswers[index] = current;
         selectDOMOptions(current);
+        updateStats();
         return;
       }
 
       userAnswers[index] = i;
       selectDOMOptions([i]);
+      updateStats();
     }
 
     function checkCurrent(){
@@ -708,6 +986,7 @@
       }
 
       checkedQuestions.add(index);
+      updateStats();
       clearOptionStyles();
 
       const ok = arraysEqual(selected, correct);
@@ -735,6 +1014,7 @@
     function toggleDoubt(){
       doubts.has(index) ? doubts.delete(index) : doubts.add(index);
       refreshDoubtsList();
+      updateStats();
     }
 
     function refreshDoubtsList(){
@@ -776,6 +1056,21 @@
       index = 0;
       updateView();
     }
+
+    document.addEventListener('keydown', (e)=>{
+      if(appEl.classList.contains('hidden') || e.target.matches('select,input')) return;
+      if(['1','2','3','4'].includes(e.key)){
+        const i = Number(e.key) - 1;
+        if(questions[index] && i < (questions[index]._opcionesMezcladas?.length || questions[index].opciones?.length || 0)) selectOption(i);
+      } else if(e.key === 'Enter'){
+        e.preventDefault();
+        checkCurrent();
+      } else if(e.key === 'ArrowLeft' && index > 0){
+        index--; updateView();
+      } else if(e.key === 'ArrowRight' && index < questions.length-1){
+        index++; updateView();
+      }
+    });
   </script>
 </body>
 </html>

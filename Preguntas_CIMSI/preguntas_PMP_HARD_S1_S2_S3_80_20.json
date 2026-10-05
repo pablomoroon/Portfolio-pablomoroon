@@ -1,0 +1,1202 @@
+[
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 1,
+    "enunciado": "Un patrocinador afirma que el proyecto ha sido un éxito porque el equipo entregó todos los módulos previstos. Sin embargo, seis meses después casi ningún usuario utiliza el sistema. ¿Cuál es la MEJOR interpretación según el enfoque de valor de PMBOK 8?",
+    "opciones": [
+      "Se alcanzaron outputs, pero no necesariamente outcomes ni valor para los interesados.",
+      "El proyecto fue exitoso porque el alcance técnico se completó.",
+      "El problema es exclusivamente de control de calidad del entregable.",
+      "La falta de uso demuestra que el proyecto debió gestionarse como una operación."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 2,
+    "enunciado": "Durante el desarrollo de una aplicación, un programador propone añadir un panel avanzado que el cliente no ha solicitado, alegando que 'quedará mejor'. No existe impacto relevante en plazo. ¿Qué debería hacer PRIMERO el Project Manager?",
+    "opciones": [
+      "Aprobarla porque no afecta al plazo.",
+      "Comprobar si la funcionalidad aporta valor solicitado y evitar incorporarla si constituye gold plating.",
+      "Solicitar al equipo que la implemente y documentarla al cierre.",
+      "Añadirla al alcance para evitar scope creep."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 3,
+    "enunciado": "Una organización está ejecutando cinco proyectos relacionados para implantar una nueva plataforma corporativa. Gestionados por separado, varios beneficios no se conseguirían. ¿Qué estructura de gestión encaja MEJOR?",
+    "opciones": [
+      "Un único proyecto porque todos contribuyen al mismo producto.",
+      "Una PMO que sustituya a los directores de proyecto.",
+      "Un programa que coordine los proyectos relacionados para obtener sinergias y beneficios conjuntos.",
+      "Una operación BAU porque el trabajo se prolongará varios años."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 4,
+    "enunciado": "El comité ejecutivo debe decidir qué iniciativas financiar, cuáles pausar y cómo repartir recursos limitados entre proyectos y programas no necesariamente relacionados. ¿Qué nivel de gestión está actuando principalmente?",
+    "opciones": [
+      "Gestión de programa, porque coordina beneficios comunes.",
+      "Dirección de proyecto, porque controla alcance, tiempo y coste.",
+      "Gestión de producto, porque mantiene el ciclo de vida de un único producto.",
+      "Gestión de portafolio, orientada a priorizar inversión y alinear iniciativas con la estrategia."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 5,
+    "enunciado": "Una empresa quiere que todos sus proyectos utilicen criterios homogéneos de gobernanza, plantillas, herramientas y guías de gestión. ¿Qué debería reforzar?",
+    "opciones": [
+      "La PMO, como estructura que estandariza y da soporte a la gobernanza de proyectos.",
+      "El rol de usuario final.",
+      "El Product Backlog.",
+      "La operación BAU."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 6,
+    "enunciado": "Un cliente pide reducir en un 40 % el tiempo medio de respuesta de un servicio. El equipo entrega un nuevo microservicio y da el trabajo por terminado. ¿Qué debería comprobar el PM A CONTINUACIÓN para evaluar valor?",
+    "opciones": [
+      "Si el código contiene más funcionalidades de las inicialmente previstas.",
+      "Si el uso del entregable produce realmente el resultado esperado de reducir el tiempo de respuesta.",
+      "Si el Product Owner ha aprobado todas las tareas internas.",
+      "Si el entregable puede clasificarse como activo monetario."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 7,
+    "enunciado": "El proyecto depende de cambios legislativos, condiciones del mercado y estándares del sector. El equipo está analizando esas influencias antes de planificar. ¿Cómo se clasifican principalmente?",
+    "opciones": [
+      "Activos de procesos de la organización.",
+      "Entregables del proyecto.",
+      "Factores ambientales externos de la empresa (EEF).",
+      "Lecciones aprendidas internas."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 8,
+    "enunciado": "Al preparar el proyecto, el PM consulta procedimientos corporativos, plantillas, acuerdos de nivel de servicio, lista de proveedores y lecciones aprendidas. ¿Qué está utilizando principalmente?",
+    "opciones": [
+      "Factores ambientales externos.",
+      "Beneficios intangibles.",
+      "Resultados estratégicos del producto.",
+      "Activos de los procesos de la organización."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 9,
+    "enunciado": "Se modifica el esquema de una base de datos. Antes de autorizar el cambio, el PM analiza cómo afectará a las API, la interfaz, la seguridad y otros subproyectos. ¿Qué principio de PMBOK 8 está aplicando MEJOR?",
+    "opciones": [
+      "Adoptar una visión holística.",
+      "Integrar la sostenibilidad.",
+      "Crear una cultura empoderada.",
+      "Enfocarse exclusivamente en el entregable técnico."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 10,
+    "enunciado": "Una organización detecta defectos demasiado tarde porque las pruebas se concentran al final. El PM quiere alinear el proyecto con los principios de PMBOK 8. ¿Cuál es la MEJOR acción?",
+    "opciones": [
+      "Aumentar el número de inspecciones únicamente antes del cierre.",
+      "Integrar la calidad desde el diseño mediante prácticas continuas como revisiones, pruebas y procesos estandarizados.",
+      "Trasladar toda la responsabilidad de calidad al cliente.",
+      "Eliminar criterios de aceptación para ganar velocidad."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 11,
+    "enunciado": "Un desarrollador descubre un fallo grave, pero teme comunicarlo porque en el pasado se castigó a quien reportaba errores. ¿Qué principio debería reforzar el PM PRIMERO?",
+    "opciones": [
+      "Sostenibilidad financiera.",
+      "Visión holística centrada en dependencias técnicas.",
+      "Cultura empoderada, fomentando autonomía, confianza y seguridad psicológica.",
+      "Gold plating para compensar el defecto."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 12,
+    "enunciado": "El director de proyecto oculta al Sponsor un riesgo técnico importante para evitar una mala impresión y espera resolverlo internamente. ¿Qué principio vulnera de forma más directa?",
+    "opciones": [
+      "Cultura empoderada.",
+      "Gestión del producto.",
+      "Enfoque predictivo.",
+      "Liderazgo responsable, por falta de transparencia y rendición de cuentas."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 13,
+    "enunciado": "Un equipo propone una arquitectura mucho más compleja que duplica el coste de mantenimiento futuro, aunque cumple hoy todos los requisitos. ¿Qué principio ofrece el argumento MÁS fuerte para revisar la decisión?",
+    "opciones": [
+      "Integrar la sostenibilidad, considerando deuda técnica y costes futuros.",
+      "Aumentar el gold plating para justificar la inversión.",
+      "Aplicar únicamente la visión de corto plazo del alcance.",
+      "Transformar el proyecto en una operación inmediatamente."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 14,
+    "enunciado": "El Sponsor quiere saber quién debe priorizar el Product Backlog y decidir qué funcionalidades aportan mayor valor al producto. ¿A quién corresponde principalmente?",
+    "opciones": [
+      "Al usuario final.",
+      "Al Product Owner.",
+      "A la PMO.",
+      "Al departamento regulador."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 15,
+    "enunciado": "En un proyecto, los requisitos del negocio están ambiguos y existe riesgo de que el producto no responda a la necesidad real. ¿Qué rol debería reforzarse para identificar, analizar y documentar requisitos?",
+    "opciones": [
+      "Sponsor.",
+      "End User como único responsable del alcance.",
+      "Business Analyst.",
+      "PMO como sustituta del equipo de análisis."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 16,
+    "enunciado": "Un proyecto está técnicamente listo, pero falta la aceptación final de quien definió expectativas y financia el servicio como cliente externo. ¿Qué rol tiene la responsabilidad más directa sobre aceptar la entrega?",
+    "opciones": [
+      "End User necesariamente.",
+      "PMO.",
+      "Agencia reguladora.",
+      "Customer/Cliente."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 17,
+    "enunciado": "La organización quiere iniciar un proyecto, pero el Sponsor aún no ha firmado el documento que autoriza formalmente su existencia. El jefe técnico propone empezar a consumir horas para no perder tiempo. ¿Qué debería hacer el PM?",
+    "opciones": [
+      "No iniciar el consumo formal de recursos del proyecto hasta contar con el Acta de Constitución aprobada.",
+      "Empezar, porque el acta solo es necesaria al cierre.",
+      "Sustituir el acta por un Product Backlog.",
+      "Pedir al usuario final que autorice el presupuesto."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 18,
+    "enunciado": "El Sponsor pide que el Acta de Constitución demuestre por qué el proyecto merece existir. ¿Qué relación debería quedar especialmente clara?",
+    "opciones": [
+      "La equivalencia entre proyecto y operación BAU.",
+      "La conexión entre el proyecto, el caso de negocio y los objetivos estratégicos de la organización.",
+      "La sustitución del portafolio por la PMO.",
+      "La lista exhaustiva de todas las tareas del cronograma detallado."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 19,
+    "enunciado": "El PM está redactando el acta de un subproyecto y quiere delimitar responsabilidades. ¿Qué pregunta ayuda MÁS directamente a definir el alcance?",
+    "opciones": [
+      "¿Qué métricas históricas existen en otros sectores?",
+      "¿Qué empleado tiene más antigüedad?",
+      "¿Qué se entregará y qué NO se entregará?",
+      "¿Qué funcionalidades extra podrían añadirse si sobra tiempo?"
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 20,
+    "enunciado": "Un equipo gestiona de forma continua incidencias y mantenimiento repetitivo de una plataforma ya operativa. ¿Cómo debería clasificarse ese trabajo principalmente?",
+    "opciones": [
+      "Como proyecto por definición, ya que utiliza recursos.",
+      "Como programa porque agrupa tareas.",
+      "Como portafolio porque tiene presupuesto.",
+      "Como operación (Business as Usual), por ser continuo y repetitivo."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 21,
+    "enunciado": "La organización lanza una iniciativa temporal para sustituir una plataforma antigua por otra nueva. Tiene fecha de inicio y fin, contexto único y pretende mejorar la eficiencia. ¿Qué característica confirma MEJOR que es un proyecto?",
+    "opciones": [
+      "Es temporal y único, y se emprende para crear valor y promover un cambio.",
+      "Es repetitivo y permanente.",
+      "No necesita interesados.",
+      "Solo puede existir fuera de programas y portafolios."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 22,
+    "enunciado": "Un producto digital seguirá evolucionando durante años mediante varios proyectos de mejoras. ¿Qué afirmación es MÁS adecuada sobre gestión de producto y gestión de proyectos?",
+    "opciones": [
+      "Son exactamente la misma disciplina.",
+      "La gestión de producto aporta visión y estrategia del ciclo de vida; los proyectos ejecutan cambios y entregas concretas.",
+      "La gestión de producto termina cuando finaliza el primer proyecto.",
+      "Los proyectos sustituyen por completo la estrategia de producto."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 23,
+    "enunciado": "La empresa obtiene mayor reputación, conocimiento interno y cumplimiento normativo tras un proyecto. ¿Cómo se clasifican principalmente esos beneficios?",
+    "opciones": [
+      "Como entregables físicos.",
+      "Como activos monetarios necesariamente.",
+      "Como beneficios intangibles.",
+      "Como fases del proyecto."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 24,
+    "enunciado": "El PM debe decidir si una solicitud de mejora responde a una necesidad real o a un deseo de 'hacer más'. ¿Qué criterio debería priorizar?",
+    "opciones": [
+      "La cantidad de funcionalidades desarrolladas.",
+      "El número de horas consumidas.",
+      "La preferencia técnica del desarrollador más senior.",
+      "El valor para los interesados y la alineación con necesidades y objetivos."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 25,
+    "enunciado": "¿Cuál es la estructura sintética de PMBOK 8 indicada en los temas?",
+    "opciones": [
+      "6 principios, 7 dominios de desempeño, 40 procesos y 5 áreas de enfoque.",
+      "12 principios, 8 dominios y 49 procesos.",
+      "10 áreas de conocimiento y 49 procesos.",
+      "5 principios, 7 dominios y 10 grupos de procesos."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 26,
+    "enunciado": "¿Cuál de las siguientes asociaciones es CORRECTA?",
+    "opciones": [
+      "Portafolio: solo proyectos técnicamente relacionados.",
+      "Programa: proyectos relacionados gestionados coordinadamente para obtener beneficios conjuntos.",
+      "PMO: conjunto de entregables de un único proyecto.",
+      "Operación: iniciativa temporal y única."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 27,
+    "enunciado": "¿Qué diferencia describe MEJOR output y outcome?",
+    "opciones": [
+      "Output es el beneficio financiero; outcome es el presupuesto.",
+      "Output y outcome son sinónimos.",
+      "Output es el entregable producido; outcome es el efecto o cambio derivado de utilizarlo.",
+      "Outcome es siempre tangible y output siempre intangible."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 28,
+    "enunciado": "¿Cuál de los siguientes NO es uno de los 6 principios de PMBOK 8 presentados en los temas?",
+    "opciones": [
+      "Adoptar una visión holística.",
+      "Integrar la calidad.",
+      "Enfocarse en el valor.",
+      "Maximizar el número de procesos obligatorios."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 29,
+    "enunciado": "¿Quién emite formalmente el Acta de Constitución y qué efecto principal produce?",
+    "opciones": [
+      "El Sponsor; autoriza el proyecto y confiere autoridad al Project Manager para aplicar recursos organizativos.",
+      "El End User; sustituye el caso de negocio.",
+      "La PMO; elimina la necesidad de Sponsor.",
+      "El Product Owner; aprueba automáticamente todos los cambios."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S1 - Fundamentos, valor, roles y principios PMBOK 8",
+    "qnum": 30,
+    "enunciado": "¿Qué afirmación distingue mejor proyecto y operación?",
+    "opciones": [
+      "Ambos son necesariamente temporales.",
+      "El proyecto es temporal y único; la operación es continua y repetitiva.",
+      "La operación no genera valor.",
+      "El proyecto siempre dura menos de un año."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 31,
+    "enunciado": "En un proyecto predictivo, cada decisión relevante pasa por Sponsor, PMO y comité formal, con roles y responsabilidades claramente definidos. ¿Qué tipo de gobernanza predomina?",
+    "opciones": [
+      "Gobernanza autoorganizada.",
+      "Ausencia de gobernanza.",
+      "Gobernanza estructurada.",
+      "Gestión exclusiva por Product Owner."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 32,
+    "enunciado": "Un equipo ágil tiene alta autonomía, pero distintos miembros empiezan a tomar decisiones contradictorias. ¿Qué debería hacer PRIMERO el PM o responsable de gobernanza?",
+    "opciones": [
+      "Centralizar de inmediato todas las decisiones en el Sponsor.",
+      "Eliminar la autonomía del equipo por completo.",
+      "Convertir el proyecto en una operación BAU.",
+      "Reforzar objetivos comunes, mecanismos de retroalimentación e indicadores compartidos para evitar fragmentación."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 33,
+    "enunciado": "El PM observa que el backlog crece, hay poca disponibilidad de interesados y los riesgos no se están revisando. Aún no existe retraso medible. ¿Cómo debería interpretar estas señales?",
+    "opciones": [
+      "Como indicadores predictivos (leading) que pueden anticipar problemas futuros.",
+      "Como indicadores retardados porque describen resultados ya consolidados.",
+      "Como criterios de aceptación del cliente.",
+      "Como métricas de cierre contractual."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 34,
+    "enunciado": "El comité recibe un informe con desviación de coste, retraso acumulado y recursos consumidos. ¿Qué tipo de indicadores son principalmente?",
+    "opciones": [
+      "Leading, porque predicen exclusivamente el futuro.",
+      "Indicadores retardados (lagging), porque reflejan hechos ya ocurridos.",
+      "Criterios SMART.",
+      "Factores ambientales externos."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 35,
+    "enunciado": "Un objetivo se formula como 'mejorar mucho la experiencia del usuario'. ¿Qué debería hacer el PM para alinearlo con SMART?",
+    "opciones": [
+      "Mantenerlo porque los objetivos cualitativos no necesitan plazo.",
+      "Convertirlo en una métrica de vanidad.",
+      "Reformularlo de manera específica, medible, alcanzable, realista y acotada en el tiempo.",
+      "Eliminar cualquier medida para evitar el efecto Hawthorne."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 36,
+    "enunciado": "El proyecto necesita durante tres meses especialistas en una tecnología que la empresa no posee y cuya demanda fluctúa. ¿Qué alternativa parece MÁS adecuada?",
+    "opciones": [
+      "Insourcing por definición.",
+      "Eliminar el requisito técnico.",
+      "Transformar el trabajo en operación.",
+      "Outsourcing para obtener habilidades especializadas y escalar capacidad de forma variable."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 37,
+    "enunciado": "Antes de contratar un servicio externo, el PM necesita decidir si conviene desarrollarlo con capacidad interna o comprarlo. ¿Qué análisis corresponde realizar?",
+    "opciones": [
+      "Make-or-Buy.",
+      "Análisis exclusivamente de interesados.",
+      "Phase Gate de cierre.",
+      "Gold plating técnico."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 38,
+    "enunciado": "El equipo tiene múltiples planes separados de riesgos, calidad, alcance, cronograma y recursos, pero existen contradicciones entre ellos. ¿Qué proceso debería abordarse PRIMERO?",
+    "opciones": [
+      "Cerrar el proyecto para eliminar inconsistencias.",
+      "Integrar y alinear los planes en un plan unificado de gestión del proyecto.",
+      "Gestionar únicamente la ejecución.",
+      "Transferir todos los planes al cliente sin reconciliarlos."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 39,
+    "enunciado": "El PM dedica semanas a documentar detalles que no aportan decisiones útiles. ¿Qué principio de planificación de los temas debería aplicar?",
+    "opciones": [
+      "Cuanto más detalle, mejor siempre.",
+      "No planificar hasta disponer de certeza total.",
+      "Fit-for-Purpose: planificar con información suficiente para avanzar con seguridad, pero no más de lo necesario.",
+      "Eliminar toda documentación para ganar agilidad."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 40,
+    "enunciado": "Un proveedor ofrece el precio más bajo, pero presenta poca experiencia técnica y una situación financiera inestable. ¿Qué debería hacer el PM antes de seleccionarlo?",
+    "opciones": [
+      "Elegirlo automáticamente por precio.",
+      "Descartar todos los proveedores externos.",
+      "Delegar la selección al usuario final sin criterios.",
+      "Evaluar conjuntamente coste, estabilidad financiera, capacidad técnica, experiencia y cumplimiento de requisitos."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 41,
+    "enunciado": "Durante la ejecución se aprueba una acción correctiva. ¿Qué debería hacer el equipo A CONTINUACIÓN?",
+    "opciones": [
+      "Implementar el cambio aprobado dentro de la ejecución del proyecto.",
+      "Esperar al cierre para aplicarlo.",
+      "Ignorarlo porque solo los defectos se ejecutan.",
+      "Modificar primero el caso de negocio sin necesidad."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 42,
+    "enunciado": "El equipo recopila datos de avance durante la ejecución. ¿Qué debería ocurrir después con esos datos?",
+    "opciones": [
+      "Archivarse sin análisis hasta el cierre.",
+      "Enviarse a monitoreo y control para analizarlos y convertirlos en información útil para decisiones.",
+      "Usarse únicamente para evaluar al desarrollador individual.",
+      "Sustituir el plan de gestión del proyecto."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 43,
+    "enunciado": "Se detectan defectos repetitivos. El PM quiere saber si el problema está en cómo se trabaja, no solo en el producto final. ¿Qué enfoque debe revisar primero?",
+    "opciones": [
+      "Control de calidad exclusivamente sobre entregables terminados.",
+      "Gestión de portafolio.",
+      "Aseguramiento de la calidad (QA), centrado en procesos y cumplimiento de estándares.",
+      "Cierre contractual."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 44,
+    "enunciado": "El equipo ejecuta pruebas sobre una versión para comprobar si cumple especificaciones y criterios definidos. ¿Qué actividad representa MEJOR?",
+    "opciones": [
+      "Aseguramiento de calidad exclusivamente sobre procesos.",
+      "Gestión de conocimiento tácito.",
+      "Planificación del aprovisionamiento.",
+      "Control de calidad (QC) sobre el entregable."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 45,
+    "enunciado": "Una auditoría revela que los procesos del proyecto no siguen las políticas corporativas. ¿Qué proceso debería reforzarse?",
+    "opciones": [
+      "Gestionar el aseguramiento de la calidad.",
+      "Controlar únicamente defectos del producto.",
+      "Cerrar el proyecto de inmediato.",
+      "Cambiar la estrategia de producto sin analizar causas."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 46,
+    "enunciado": "Un ingeniero senior conoce una técnica crítica que nunca ha documentado y solo puede explicarla mediante práctica y experiencia. ¿Qué tipo de conocimiento posee principalmente?",
+    "opciones": [
+      "Conocimiento explícito.",
+      "Conocimiento tácito.",
+      "Métrica retardada.",
+      "Artefacto de cierre."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 47,
+    "enunciado": "El PM quiere transferir conocimiento tácito desde expertos a nuevos miembros. ¿Cuál es la MEJOR estrategia?",
+    "opciones": [
+      "Limitarse a enviar una hoja de cálculo.",
+      "Evitar conversaciones para no introducir sesgos.",
+      "Favorecer mentorías, interacción directa, colaboración y sesiones de intercambio.",
+      "Esperar al cierre para preguntar qué sabían los expertos."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 48,
+    "enunciado": "El equipo usa IA para resumir entrevistas internas con información sensible. ¿Qué debería hacer PRIMERO la gobernanza del proyecto?",
+    "opciones": [
+      "Permitir cualquier uso porque la IA siempre acierta.",
+      "Eliminar todo conocimiento explícito del proyecto.",
+      "Sustituir a los interesados por la IA.",
+      "Definir políticas de IA responsable para regular captura, uso y protección de la información."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 49,
+    "enunciado": "El PM revisa tendencias y detecta una desviación probable, pero aún no ha decidido ninguna acción. ¿Qué está realizando principalmente?",
+    "opciones": [
+      "Monitoreo: recopilación y análisis para identificar áreas que requieren atención.",
+      "Control: implementación de acciones correctivas.",
+      "Cierre administrativo.",
+      "Aprovisionamiento externo."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 50,
+    "enunciado": "Tras analizar una desviación, el PM decide replanificar y aplicar una acción preventiva, haciendo seguimiento hasta resolverla. ¿Qué función está ejerciendo principalmente?",
+    "opciones": [
+      "Solo monitoreo.",
+      "Control.",
+      "Gestión de producto.",
+      "Gestión de beneficios intangibles."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 51,
+    "enunciado": "La productividad se mide por líneas de código diarias. Los programadores empiezan a duplicar código y añadir funciones innecesarias para mejorar la cifra. ¿Qué riesgo de medición se manifiesta?",
+    "opciones": [
+      "Correlación sin causalidad exclusivamente.",
+      "Falta de cierre contractual.",
+      "Efecto Hawthorne / distorsión de incentivos asociada a convertir la métrica en objetivo.",
+      "Exceso de conocimiento tácito."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 52,
+    "enunciado": "Un cuadro de mando muestra cientos de métricas que no llevan a ninguna decisión. ¿Qué debería hacer el PM?",
+    "opciones": [
+      "Añadir aún más métricas para aumentar precisión.",
+      "Eliminar todos los indicadores predictivos.",
+      "Medir solo actividades fáciles de completar.",
+      "Eliminar métricas de vanidad y centrarse en medidas relevantes y accionables."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 53,
+    "enunciado": "Un interesado solicita verbalmente un nuevo módulo que modificaría una línea base aprobada. ¿Qué debería hacer PRIMERO el Project Manager?",
+    "opciones": [
+      "Registrar por escrito la solicitud de cambio en el sistema de gestión.",
+      "Ordenar al equipo que empiece a desarrollarlo.",
+      "Aprobarlo si el Sponsor está de acuerdo verbalmente.",
+      "Analizar el coste antes de documentar la solicitud."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 54,
+    "enunciado": "Una solicitud de cambio ya está registrada. ¿Qué debería ocurrir A CONTINUACIÓN antes de la decisión del CCB o rol autorizado?",
+    "opciones": [
+      "Implementarla provisionalmente para comprobar si funciona.",
+      "Analizar su impacto en cronograma, coste, recursos y riesgos.",
+      "Cerrar el proyecto.",
+      "Actualizar directamente la línea base sin aprobación."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 55,
+    "enunciado": "Mientras el CCB evalúa una solicitud de cambio, ¿qué debería hacer el equipo con el trabajo ya planificado?",
+    "opciones": [
+      "Detener todo el proyecto automáticamente.",
+      "Implementar el cambio por adelantado.",
+      "Continuar ejecutando las tareas planificadas mientras se evalúa el cambio.",
+      "Eliminar las líneas base para evitar conflicto."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 56,
+    "enunciado": "Un proyecto se cancela antes de completar todos sus entregables. ¿Qué debería hacer el PM?",
+    "opciones": [
+      "Abandonar el proyecto sin cierre porque no tuvo éxito.",
+      "Eliminar toda la documentación para evitar responsabilidades.",
+      "Mantener los recursos asignados indefinidamente.",
+      "Ejecutar un cierre formal, documentar causas, preservar información y liberar recursos adecuadamente."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 57,
+    "enunciado": "En un proyecto predictivo terminado, falta la aceptación escrita del cliente y quedan facturas de proveedores pendientes. ¿Qué debería hacer el PM antes de darlo por cerrado?",
+    "opciones": [
+      "Completar el cierre administrativo y contractual, incluida aceptación formal y liquidación de pendientes.",
+      "Cerrar igualmente porque el producto está construido.",
+      "Transferir las facturas al equipo técnico.",
+      "Convertir el cierre en una retrospectiva ágil únicamente."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 58,
+    "enunciado": "Al final de una iteración ágil quedan riesgos no resueltos. ¿Cuál es la MEJOR acción?",
+    "opciones": [
+      "Borrarlos del registro al terminar el sprint.",
+      "Identificarlos y transferirlos explícitamente a siguientes iteraciones, cliente u operaciones según corresponda.",
+      "Considerarlos resueltos por definición.",
+      "Posponer su documentación hasta el final del producto."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 59,
+    "enunciado": "¿Cuáles son los 7 dominios de desempeño indicados en los temas?",
+    "opciones": [
+      "Integración, Tiempo, Coste, Calidad, Compras, Riesgos y Cierre.",
+      "Inicio, Planificación, Ejecución, Control, Cierre, Calidad y Valor.",
+      "Gobernanza, Alcance, Planificación, Finanzas, Interesados, Recursos y Riesgos.",
+      "Personas, Producto, Proceso, Tecnología, Mercado, Coste y Tiempo."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 60,
+    "enunciado": "¿Qué diferencia distingue MEJOR QA y QC?",
+    "opciones": [
+      "QA se aplica solo al cierre y QC solo al inicio.",
+      "QA es para proyectos ágiles y QC para predictivos.",
+      "No existe diferencia práctica entre ambos.",
+      "QA se orienta a los procesos; QC a los entregables y sus especificaciones."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 61,
+    "enunciado": "¿Qué secuencia refleja mejor el flujo formal de una solicitud de cambio?",
+    "opciones": [
+      "Registro → análisis de impacto → decisión → implementación si se aprueba.",
+      "Implementación → registro → análisis → decisión.",
+      "Decisión → implementación → registro.",
+      "Análisis → implementación → registro → cierre."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 62,
+    "enunciado": "¿Qué diferencia describe mejor conocimiento explícito y tácito?",
+    "opciones": [
+      "El tácito siempre está escrito y el explícito nunca.",
+      "El explícito es formal y codificable; el tácito está ligado a experiencia e intuición y es difícil de formalizar.",
+      "El explícito solo existe en software.",
+      "Ambos se transmiten con la misma facilidad."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 63,
+    "enunciado": "¿Cuál es el propósito principal de monitorear y controlar el desempeño?",
+    "opciones": [
+      "Sustituir el caso de negocio.",
+      "Eliminar todas las líneas base.",
+      "Rastrear, revisar e informar el progreso, y actuar sobre desviaciones respecto al plan.",
+      "Asignar exclusivamente recursos externos."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 64,
+    "enunciado": "¿Qué diferencia hay entre Plan Sourcing Strategy y Plan Resource Management según los temas?",
+    "opciones": [
+      "Son exactamente el mismo plan.",
+      "Sourcing solo gestiona riesgos y Resource Management solo calidad.",
+      "Resource Management se limita a proveedores externos.",
+      "Sourcing se centra en subcontratación externa; Resource Management en la gestión general de recursos, principalmente internos."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S2 - Gobernanza, procesos, calidad, métricas, cambios y cierre",
+    "qnum": 65,
+    "enunciado": "¿Qué diferencia describe MEJOR un indicador leading frente a uno lagging?",
+    "opciones": [
+      "El leading anticipa posibles desviaciones futuras; el lagging mide resultados o hechos ya ocurridos.",
+      "El leading solo puede ser financiero y el lagging solo técnico.",
+      "El leading se usa únicamente al cierre y el lagging únicamente al inicio.",
+      "No existe diferencia funcional entre ambos."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 66,
+    "enunciado": "Un proyecto termina una fase de diseño y debe decidir si pasa a construcción. Se revisan entregables aceptados, metas alcanzadas y obligaciones contractuales. ¿Qué se está comprobando principalmente?",
+    "opciones": [
+      "Criterios de entrada de la siguiente fase exclusivamente.",
+      "Criterios de salida (Exit Criteria) de la fase.",
+      "Métricas de vanidad.",
+      "Objetivos SMART del portafolio."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 67,
+    "enunciado": "Antes de iniciar una nueva fase, la organización revisa si hay recursos disponibles, si la fase es viable y si sigue alineada con la estrategia. ¿Qué está evaluando?",
+    "opciones": [
+      "Criterios de cierre contractual.",
+      "Solo entregables ya aceptados.",
+      "Criterios de entrada (Entry Criteria / Pre-Phase Gates).",
+      "Indicadores retardados del proyecto."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 68,
+    "enunciado": "En una Gate Review, el proyecto presenta desviaciones importantes pero recuperables. La dirección decide mantenerlo en la fase actual hasta corregirlas. ¿Qué decisión de gobernanza corresponde?",
+    "opciones": [
+      "Go sin modificaciones.",
+      "Park necesariamente.",
+      "No-Go definitivo.",
+      "Ajustar / Repetir."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 69,
+    "enunciado": "La organización suspende temporalmente un proyecto viable porque otra iniciativa estratégica requiere todos los recursos durante dos meses. ¿Qué decisión describe MEJOR la situación?",
+    "opciones": [
+      "Park / Pausar temporalmente.",
+      "No-Go definitivo.",
+      "Cierre exitoso.",
+      "Entrega continua."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 70,
+    "enunciado": "Al inicio de un proyecto existe mucha incertidumbre y los interesados todavía pueden influir con poco coste. ¿Qué estrategia de gestión es MÁS coherente?",
+    "opciones": [
+      "Evitar la participación de interesados hasta la ejecución.",
+      "Buscar feedback temprano y tomar decisiones importantes cuanto antes, cuando cambiar resulta menos costoso.",
+      "Posponer todas las decisiones porque el coste de cambio disminuye con el tiempo.",
+      "Congelar requisitos siempre, incluso con alta incertidumbre."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 71,
+    "enunciado": "Un proyecto tiene requisitos muy estables, alta regulación y un coste enorme si se modifica el producto una vez construido. ¿Qué enfoque de desarrollo es MÁS adecuado?",
+    "opciones": [
+      "Adaptativo puro.",
+      "Kanban continuo por definición.",
+      "Predictivo.",
+      "Sin ciclo de vida formal."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 72,
+    "enunciado": "Un equipo desarrolla un producto digital con requisitos cambiantes, feedback frecuente y solución técnica incierta. ¿Qué enfoque encaja MEJOR?",
+    "opciones": [
+      "Predictivo rígido con alcance congelado desde el inicio.",
+      "Operación BAU exclusivamente.",
+      "Cierre por fases sin iteración.",
+      "Adaptativo, combinando iteraciones e incrementos con feedback continuo."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 73,
+    "enunciado": "La construcción física de un centro de datos está muy definida, pero el software que se desplegará encima requiere experimentación continua. ¿Qué enfoque sería MÁS apropiado para el conjunto?",
+    "opciones": [
+      "Híbrido: predictivo para la infraestructura y adaptativo para el software.",
+      "Predictivo para todo por obligación.",
+      "Adaptativo para todo sin restricciones.",
+      "Eliminar la planificación de la infraestructura."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 74,
+    "enunciado": "Un proyecto es principalmente predictivo, pero usa retrospectivas y prototipos rápidos en un componente incierto. ¿Qué nivel de hibridación representa?",
+    "opciones": [
+      "Nivel 2: equilibrio completo.",
+      "Nivel 1: predominio predictivo con técnicas adaptativas puntuales.",
+      "Nivel 3: predominio adaptativo.",
+      "No es híbrido porque usa una línea base."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 75,
+    "enunciado": "Un proyecto funciona principalmente con sprints, pero conserva controles presupuestarios y regulatorios predictivos. ¿Qué nivel de hibridación representa MEJOR?",
+    "opciones": [
+      "Nivel 1 necesariamente.",
+      "Nivel 2 solo si no hay regulación.",
+      "Nivel 3: predominio adaptativo con elementos predictivos para restricciones del negocio.",
+      "Enfoque 100 % predictivo."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 76,
+    "enunciado": "El cliente necesita valor temprano, pero el alcance global puede definirse desde el principio. El PM quiere mantener una estructura predictiva. ¿Qué variante sería adecuada?",
+    "opciones": [
+      "Entrega única obligatoria.",
+      "Adaptativo puro sin planificación global.",
+      "Operación continua sin proyecto.",
+      "Entrega incremental predictiva: alcance global planificado y entregas funcionales por bloques."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 77,
+    "enunciado": "Un proyecto adaptativo organiza trabajo en sprints de dos semanas y prioriza un Product Backlog. ¿Qué rasgo esencial explica este diseño?",
+    "opciones": [
+      "Planificación en timeboxes cortos con refinamiento y feedback continuos.",
+      "Línea base rígida e inmutable de alcance.",
+      "Ausencia de priorización.",
+      "Una única entrega al final."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 78,
+    "enunciado": "Una organización jerárquica, con mando y control y baja tolerancia a la incertidumbre, debe escoger un enfoque. ¿Qué opción es inicialmente MÁS coherente?",
+    "opciones": [
+      "Un enfoque adaptativo puro con máxima autonomía desde el primer día.",
+      "Un enfoque más predictivo y estructurado.",
+      "Eliminar toda gobernanza.",
+      "Entrega continua sin controles."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 79,
+    "enunciado": "Un equipo pequeño, muy colaborativo y con acceso constante al cliente trabaja sobre un producto innovador. ¿Qué enfoque se ve favorecido?",
+    "opciones": [
+      "Predictivo por el tamaño reducido del equipo.",
+      "Operación BAU.",
+      "Adaptativo.",
+      "Cierre anticipado."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 80,
+    "enunciado": "El producto puede desplegarse en producción mediante automatización cada vez que un incremento probado está listo. ¿Qué cadencia de entrega describe MEJOR?",
+    "opciones": [
+      "Entrega única.",
+      "Entregas múltiples no programadas exclusivamente.",
+      "Cierre predictivo.",
+      "Entrega continua."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 81,
+    "enunciado": "El proyecto libera versiones exactamente cada dos semanas, aunque internamente se completen tareas en momentos distintos. ¿Qué cadencia predomina?",
+    "opciones": [
+      "Entregas periódicas.",
+      "Entrega única.",
+      "Entrega continua necesariamente.",
+      "No existe cadencia."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 82,
+    "enunciado": "Un profesor afirma que Inicio, Planificación, Ejecución, Monitoreo y Control, y Cierre son cinco fases obligatoriamente secuenciales. ¿Cuál es la MEJOR corrección?",
+    "opciones": [
+      "Son fases solo en proyectos adaptativos.",
+      "Son áreas de enfoque, no fases; pueden solaparse e iterarse a lo largo del ciclo de vida.",
+      "Son dominios de desempeño.",
+      "Son los cinco principios de PMBOK 8."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 83,
+    "enunciado": "En un proyecto ágil, en cada sprint se planifica, ejecuta, controla y revisa el trabajo. ¿Qué concepto explica MEJOR este comportamiento?",
+    "opciones": [
+      "Ausencia de ciclo de vida.",
+      "Separación estricta de áreas de enfoque.",
+      "Microciclos donde las áreas de enfoque se ejecutan de forma comprimida e iterativa.",
+      "Conversión del proyecto en portafolio."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 84,
+    "enunciado": "La organización tiene baja tolerancia al riesgo y alta regulación. Al adaptar el método, ¿qué tendencia es MÁS razonable?",
+    "opciones": [
+      "Eliminar controles para acelerar.",
+      "Maximizar autonomía sin límites.",
+      "Eliminar criterios de entrada y salida.",
+      "Incrementar estructura, controles y supervisión formal."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 85,
+    "enunciado": "El PM descubre que un proceso de aprobación no aporta valor en un proyecto pequeño y no es requerido por normativa. ¿Qué opción de tailoring es MÁS adecuada?",
+    "opciones": [
+      "Eliminarlo si no aporta valor y no es necesario para el contexto.",
+      "Mantenerlo siempre porque todos los procesos son obligatorios.",
+      "Añadir dos controles más para compensar.",
+      "Convertirlo en una fase del producto."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 86,
+    "enunciado": "Un proyecto entra en un entorno de alto riesgo regulatorio no previsto inicialmente. ¿Qué adaptación sería MÁS coherente?",
+    "opciones": [
+      "Eliminar procesos para mantener velocidad.",
+      "Añadir controles y actividades de gestión apropiados al nuevo nivel de riesgo y regulación.",
+      "Evitar documentar cambios en el enfoque.",
+      "Cambiar necesariamente a adaptativo puro."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 87,
+    "enunciado": "El PM cambia herramientas, entradas y salidas de un proceso para ajustarlas mejor al equipo sin eliminar el objetivo del proceso. ¿Qué tipo de adaptación está aplicando?",
+    "opciones": [
+      "Eliminar el proceso.",
+      "Cerrar una fase.",
+      "Modificar el proceso.",
+      "Convertirlo en operación."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 88,
+    "enunciado": "La empresa está aplicando un método estándar corporativo, pero el equipo detecta que no encaja del todo con el producto concreto. ¿Qué debería hacer A CONTINUACIÓN dentro del enfoque de adaptación?",
+    "opciones": [
+      "Ignorar el contexto porque la metodología corporativa es inmutable.",
+      "Cerrar el proyecto.",
+      "Eliminar la gobernanza del portafolio.",
+      "Adaptar para el proyecto, considerando producto, dinámicas del equipo y entorno cultural."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 89,
+    "enunciado": "Tras seleccionar y adaptar un enfoque, el equipo realiza retrospectivas y revisa el método en puertas de fase. ¿Qué principio de tailoring está aplicando?",
+    "opciones": [
+      "Mejora continua: la adaptación es dinámica y se revisa durante el proyecto.",
+      "Adaptación de una sola vez al inicio.",
+      "Congelación del ciclo de vida.",
+      "Cierre administrativo."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 90,
+    "enunciado": "Un proyecto grande tiene varios entregables con características muy distintas. Algunos son estables y otros altamente innovadores. ¿Qué debería considerar el PM?",
+    "opciones": [
+      "Obligar a que todos los entregables sigan el mismo enfoque.",
+      "Usar distintos enfoques dentro del mismo proyecto según la naturaleza de cada entregable.",
+      "Eliminar la gestión de interdependencias.",
+      "Convertir cada entregable automáticamente en una operación."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 91,
+    "enunciado": "Un proyecto tiene fecha final fija y crítica, requisitos estables y gran necesidad de control. ¿Qué factor favorece un enfoque predictivo?",
+    "opciones": [
+      "Alta volatilidad del alcance.",
+      "Necesidad de feedback continuo para descubrir requisitos.",
+      "La combinación de requisitos claros y una fecha límite final fija que exige fuerte control.",
+      "Equipo pequeño con máxima autonomía."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 92,
+    "enunciado": "El equipo necesita escoger el enfoque inicial y no sabe si será predictivo, adaptativo o híbrido. ¿Qué debería evaluar primero según el proceso de adaptación?",
+    "opciones": [
+      "Solo el gusto personal del PM.",
+      "Únicamente el presupuesto consumido hasta la fecha.",
+      "La retrospectiva de cierre antes de iniciar.",
+      "Cultura, equipo y características del proyecto mediante un análisis de idoneidad."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 93,
+    "enunciado": "Un entregable exige seguridad y cumplimiento normativo exhaustivo antes de su construcción. ¿Qué tendencia de enfoque es MÁS coherente?",
+    "opciones": [
+      "Predictiva, por la necesidad de planificación previa y control formal.",
+      "Adaptativa pura porque la regulación aumenta la incertidumbre.",
+      "Entrega continua sin criterios de aceptación.",
+      "Eliminar los controles de fase."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 94,
+    "enunciado": "¿Qué es una fase de proyecto?",
+    "opciones": [
+      "Un sinónimo de área de enfoque.",
+      "Una agrupación lógica de actividades correlacionadas que culminan en uno o varios entregables o resultados.",
+      "Un indicador retardado.",
+      "Un beneficio intangible."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 95,
+    "enunciado": "¿Qué afirmación sobre ciclo de vida del proyecto y ciclo de vida del producto es CORRECTA?",
+    "opciones": [
+      "Son siempre idénticos.",
+      "El ciclo de vida del producto termina cuando finaliza un proyecto.",
+      "Son conceptos distintos; el ciclo de vida del proyecto es independiente del ciclo de vida del producto.",
+      "El ciclo de vida del proyecto solo existe en enfoques predictivos."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 96,
+    "enunciado": "¿Cuáles son las 5 áreas de enfoque indicadas en los temas?",
+    "opciones": [
+      "Alcance, Coste, Tiempo, Calidad y Riesgo.",
+      "Gobernanza, Alcance, Finanzas, Recursos y Riesgos.",
+      "Ideación, Diseño, Código, Pruebas y Producción.",
+      "Inicio, Planificación, Ejecución, Monitoreo y Control, y Cierre."
+    ],
+    "correcta": 3
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 97,
+    "enunciado": "¿Qué combinación describe mejor la evolución típica de riesgo, influencia y coste de cambio?",
+    "opciones": [
+      "Riesgo e influencia de interesados son altos al inicio; el coste de cambiar aumenta conforme avanza el proyecto.",
+      "Todos aumentan con el tiempo.",
+      "Todos disminuyen con el tiempo.",
+      "El coste de cambio es máximo al inicio y disminuye después."
+    ],
+    "correcta": 0
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 98,
+    "enunciado": "¿Qué tres grandes categorías de factores se consideran para elegir el enfoque de desarrollo?",
+    "opciones": [
+      "Tiempo, coste y calidad exclusivamente.",
+      "Entregables, proyecto y organización.",
+      "Cliente, proveedor y regulador únicamente.",
+      "Fases, beneficios y operaciones."
+    ],
+    "correcta": 1
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 99,
+    "enunciado": "¿Cuáles son los tres niveles de adaptación descritos en los temas?",
+    "opciones": [
+      "Inicio, ejecución y cierre.",
+      "Gobernanza, alcance y finanzas.",
+      "Ciclo de vida y enfoque de desarrollo; procesos de gestión; compromiso y participación.",
+      "Producto, programa y portafolio."
+    ],
+    "correcta": 2
+  },
+  {
+    "tema": "S3 - Ciclo de vida, enfoques, cadencia, áreas de enfoque y adaptación",
+    "qnum": 100,
+    "enunciado": "¿Qué secuencia enumera correctamente las cadencias de entrega descritas en los temas?",
+    "opciones": [
+      "Predictiva, adaptativa, híbrida y operativa.",
+      "Inicio, planificación, ejecución y cierre.",
+      "Secuencial, iterativa, contractual y financiera.",
+      "Entrega única, entregas múltiples, entregas periódicas y entrega continua."
+    ],
+    "correcta": 3
+  }
+]
